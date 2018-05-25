@@ -1,33 +1,50 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react'
 import {Icon} from '../Icon';
 import {ThemeProvider} from 'styled-components';
 import {theme} from '../theme';
 
 import {TextBtn, Label, SpinnerButton} from './style';
 
-const propTypes = {
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  hrefString: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
-  loading: PropTypes.bool,
-  icon: PropTypes.string,
-  style: PropTypes.object,
-  className: PropTypes.string,
-  primary: PropTypes.bool,
-  secondary: PropTypes.bool,
-  iconPosition: PropTypes.oneOf(['left', 'right']),
-  color: PropTypes.string,
-  animated: PropTypes.oneOf(['classic']),
-  tag: PropTypes.string,
+type Props = {
+  /** Set button unable to click or not **/
+  disabled?: boolean,
+  /** Event when user clicked to button **/
+  onClick?: Function,
+  /** Set button to a link**/
+  hrefString?: string,
+  /** The size of button . The default size of button is default **/
+  size: 'small' | 'default' | 'medium' | 'large',
+  /** Set shape of button **/
+  shape?: 'circle' | 'rounded',
+  /** Button can show a loading**/
+  loading: boolean,
+  /** Set icon in button**/
+  icon?: string,
+  /** Add more style to button **/
+  style?: Object,
+  /** Add more class to button **/
+  className?: string,
+  /** Primary color of button **/
+  primary?: boolean,
+  /** Secondary color of button **/
+  secondary?: boolean,
+  /** move icon to left or right label. The default is left **/
+  iconPosition: 'left' | 'right',
+  /** Make your button animated**/
+  animated?: string,
+  /** Change tag name of button ... span, div, a v..v **/
+  tag?: string,
 
   /**
    * Defines HTML button type attribute
    * @defaultValue 'button'
    */
-  rule: PropTypes.oneOf(['button', 'reset', 'submit'])
-};
+  rule: 'button' | 'reset' | 'submit',
+  /****/
+  children?: any,
+}
+
 
 const defaultProps = {
   disabled: false,
@@ -36,13 +53,13 @@ const defaultProps = {
   loading: false,
   primary: false,
   secondary: false,
-  fullWidth: false,
   iconPosition: 'left',
   tag: "button",
   color: "",
 };
 
-class TextButton extends Component {
+class TextButton extends React.Component<Props> {
+  static defaultProps = defaultProps;
   render() {
     const {
       hrefString,
@@ -80,7 +97,5 @@ class TextButton extends Component {
   }
 }
 
-TextButton.propTypes = propTypes;
-TextButton.defaultProps = defaultProps;
 
 export default TextButton

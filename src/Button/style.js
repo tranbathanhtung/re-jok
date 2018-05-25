@@ -50,40 +50,6 @@ const classicAnimated = css `
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 `
-const hoverAnimated = css `
-${classicAnimated}
-&::after {
-    background-color: ${props => props.backgroundColor
-  ? props.backgroundColor
-  : props.primary
-    ? props.theme.primary.color
-    : props.secondary
-      ? props.theme.secondary.color
-      : "#fff"};
-}
-&::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    ${props => props.shape === "rounded"
-        ? css `
-        border-radius: 10rem;
-      `
-        : css `
-      border-radius: ${props => props.theme.size[props.size].borderRadius};
-
-      `}
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-
-`
 
 const basicAnimated = css `
 &:hover{

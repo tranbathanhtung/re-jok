@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react'
 import {Icon} from '../Icon';
-import {ThemeProvider, withComponent} from 'styled-components';
+import {ThemeProvider} from 'styled-components';
 import {theme} from '../theme';
 
 import {
@@ -12,48 +12,52 @@ import {
   IconBtn
 } from './style';
 
-const propTypes = {
+type Props = {
   /** Set button unable to click or not **/
-  disabled: PropTypes.bool,
+  disabled?: boolean,
   /** Event when user clicked to button **/
-  onClick: PropTypes.func,
+  onClick?: Function,
   /** Set button to a link**/
-  hrefString: PropTypes.string,
+  hrefString?: string,
   /** The size of button . The default size of button is default **/
-  size: PropTypes.oneOf(['small', 'default', 'medium', 'large']),
+  size: 'small' | 'default' | 'medium' | 'large',
   /** Set shape of button **/
-  shape: PropTypes.oneOf(['circle', 'rounded']),
+  shape?: 'circle' | 'rounded',
   /** Button can show a loading**/
-  loading: PropTypes.bool,
+  loading?: boolean,
   /** Set icon in button**/
-  icon: PropTypes.string,
+  icon?: string,
   /** Add more style to button **/
-  style: PropTypes.object,
+  style?: Object,
   /** Add more class to button **/
-  className: PropTypes.string,
+  className?: string,
   /** Primary color of button **/
-  primary: PropTypes.bool,
+  primary?: boolean,
   /** Secondary color of button **/
-  secondary: PropTypes.bool,
+  secondary?: boolean,
   /** Set width of button to 100%**/
-  fullWidth: PropTypes.bool,
+  fullWidth?: boolean,
   /** move icon to left or right label. The default is left **/
-  iconPosition: PropTypes.oneOf(['left', 'right']),
+  iconPosition: 'left' | 'right',
   /** if you don't want use primary or secondary , you can set your color to button **/
-  backgroundColor: PropTypes.string,
+  backgroundColor?: string,
   /** Make your button animated**/
-  animated: PropTypes.oneOf(['classic']),
+  animated?: string,
   /** Change tag name of button ... span, div, a v..v **/
-  tag: PropTypes.string,
+  tag?: string,
   /** Change type of button**/
-  variant: PropTypes.oneOf(['outline', 'inverted', 'raised', 'icon']),
+  variant: 'outline' | 'inverted' | 'raised' | 'icon',
 
   /**
    * Defines HTML button type attribute
    * @defaultValue 'button'
    */
-  rule: PropTypes.oneOf(['button', 'reset', 'submit'])
-};
+  rule: 'button' | 'reset' | 'submit',
+  /****/
+  children?: any,
+}
+
+
 
 const defaultProps = {
   disabled: false,
@@ -70,7 +74,8 @@ const defaultProps = {
   hrefString: "",
 };
 
-class Button extends Component {
+class Button extends React.Component<Props> {
+  static defaultProps = defaultProps;
   render() {
     const {
       tag,
@@ -83,9 +88,6 @@ class Button extends Component {
       secondary,
       icon,
       iconPosition,
-      rule,
-      fullWidth,
-      backgroundColor,
       variant
 
     } = this.props;
@@ -121,8 +123,5 @@ class Button extends Component {
     </ThemeProvider>)
   }
 }
-
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
 
 export default Button

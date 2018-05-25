@@ -1,20 +1,21 @@
+// @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import {ButtonDemo} from './Button/demo'
+import {AvatarDemo} from './Avatar/demo'
 
 
-
-
-import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
    <React.Fragment>
-
+    <ButtonDemo/>
+    <AvatarDemo/>
 
   </React.Fragment>
 
 
   ,
-    document.getElementById('root')
+    (document.getElementById('root'): any)
   );

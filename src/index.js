@@ -10,15 +10,18 @@ import {AvatarDemo} from './Avatar/demo'
 
 
 ReactDOM.render(
-   <React.Fragment>
+  
 
      <ThemeProvider theme={defaultTheme}>
+       <React.Fragment>
+
        <ButtonDemo/>
+
+
+       <AvatarDemo/>
+       </React.Fragment>
      </ThemeProvider>
 
-    <AvatarDemo/>
-
-  </React.Fragment>
 
 
   ,

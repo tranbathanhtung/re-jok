@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarGroup /> should render AvatarGroup 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-right: 0.8rem;
+  background: #bdbdbd;
+  color: #fafafa;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.c0 {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: .8rem;
+  margin-left: .8rem;
+  pointer-events: auto;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c1 {
+  margin-left: -.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  pointer-events: auto;
+  box-shadow: rgb(255,255,255) 0px 0px 0px 2px;
+  position: relative;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+    size="default"
+  >
+    <div
+      className="c2"
+      shape="circle"
+      size="default"
+    >
+      T
+    </div>
+  </li>
+</ul>
+`;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from 'styled-components';
 import Button from '../../Button/Button'
 import {SpinnerButton} from '../../Button/style'
 import {defaultTheme} from '../../theme'

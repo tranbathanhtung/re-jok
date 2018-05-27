@@ -1,10 +1,6 @@
 import React from 'react';
-import { css } from 'styled-components';
 import TextButton from '../../Button/TextButton'
-import {SpinnerButton} from '../../Button/style'
 import {defaultTheme} from '../../theme'
-import {Icon} from '../../Icon';
-import renderer from 'react-test-renderer'
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
 import 'jest-enzyme'
 import 'jest-styled-components'
@@ -33,9 +29,6 @@ describe('<TextButton />', () => {
    expect(tree).toHaveStyleRule('background-image', 'none');
    expect(tree).toHaveStyleRule('font-weight', '600');
    expect(tree).toHaveStyleRule('letter-spacing', '0.08rem');
-
-
-
 
  });
 

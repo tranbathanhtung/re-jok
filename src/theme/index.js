@@ -53,7 +53,7 @@ export const defaultTheme = {
 const changeTheme = (defaultTheme, theme)=>{
   let cloneTheme = defaultTheme;
 
-  
+
   Object.keys(theme).forEach(function (key) {
     if ( 'object' === typeof theme[key] && !Array.isArray(theme[key]) ) {
     	changeTheme(cloneTheme[key], theme[key])
@@ -65,7 +65,7 @@ const changeTheme = (defaultTheme, theme)=>{
   return cloneTheme;
 }
 
-export const setTheme = (theme) => {
+export const setTheme = (theme: Object) => {
 
    const newTheme = changeTheme(defaultTheme, theme);
    return newTheme;

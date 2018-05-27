@@ -1,8 +1,7 @@
 // @flow
 import * as React from 'react'
 import {Icon} from '../Icon';
-import {ThemeProvider} from 'styled-components';
-import {theme} from '../theme';
+
 
 import {TextBtn, Label, SpinnerButton} from './style';
 
@@ -31,10 +30,13 @@ type Props = {
   secondary?: boolean,
   /** move icon to left or right label. The default is left **/
   iconPosition: 'left' | 'right',
-  /** Make your button animated**/
-  animated?: string,
+
   /** Change tag name of button ... span, div, a v..v **/
   tag?: string,
+  /** color of text button**/
+  color?: string,
+  /** Change text color when hover button**/
+  colorWhenHover?: string,
 
   /**
    * Defines HTML button type attribute
@@ -75,7 +77,7 @@ class TextButton extends React.Component<Props> {
 
     const ElementType = !hrefString ? TextBtn.withComponent(tag) : TextBtn.withComponent('a')
 
-    return (<ThemeProvider theme={theme}>
+    return (
       <ElementType {...this.props}>
         {
           icon
@@ -93,7 +95,7 @@ class TextButton extends React.Component<Props> {
         }
 
       </ElementType>
-    </ThemeProvider>)
+  )
   }
 }
 

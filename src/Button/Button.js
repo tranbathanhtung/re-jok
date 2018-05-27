@@ -1,8 +1,7 @@
 // @flow
 import * as React from 'react'
 import {Icon} from '../Icon';
-import {ThemeProvider} from 'styled-components';
-import {theme} from '../theme';
+
 
 import {
   Btn,
@@ -47,13 +46,15 @@ type Props = {
   tag?: string,
   /** Change type of button**/
   variant: 'outline' | 'inverted' | 'raised' | 'icon',
+  /** create button with box shadow or not**/
+  hasBoxShadow: boolean,
 
   /**
    * Defines HTML button type attribute
    * @defaultValue 'button'
    */
   rule: 'button' | 'reset' | 'submit',
-  /****/
+  /**Children element can be string, number, HTML node anything you want**/
   children?: any,
 }
 
@@ -72,6 +73,7 @@ const defaultProps = {
   tag: "button",
   variant: 'raised',
   hrefString: "",
+  hasBoxShadow: false
 };
 
 class Button extends React.Component<Props> {
@@ -88,9 +90,10 @@ class Button extends React.Component<Props> {
       secondary,
       icon,
       iconPosition,
-      variant
+      variant,
 
     } = this.props;
+
    const ListButton = {
      raised: Btn,
      outline: OutlineBtn,
@@ -100,7 +103,7 @@ class Button extends React.Component<Props> {
 
     const ElementType = !hrefString ? ListButton[variant].withComponent(tag) : ListButton[variant].withComponent('a')
 
-    return (<ThemeProvider theme={theme}>
+    return (
       <ElementType {...this.props}>
         {
           icon
@@ -120,7 +123,7 @@ class Button extends React.Component<Props> {
         }
 
       </ElementType>
-    </ThemeProvider>)
+    )
   }
 }
 

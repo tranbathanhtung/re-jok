@@ -19,7 +19,6 @@ export const baseButton = css `
     margin-bottom: 1.2rem;
     font-size: ${props => props.theme.size[props.size].fontSize};
 
-
       div + span,
       span + span {
         margin: 0 .8rem;
@@ -53,28 +52,21 @@ const classicAnimated = css `
 
 const basicAnimated = css `
 &:hover{
-  background: ${props => props.backgroundColor
-  ? hexa(props.backgroundColor, 0.9)
-  : props.primary
-    ? hexa(props.theme.primary.color, 0.9)
-    : props.secondary
-      ? hexa(props.theme.secondary.color, 0.9)
-      : "#fff"};
   border-color:${props => props.backgroundColor
         ? hexa(props.backgroundColor, 0.9)
         : props.primary
-          ? hexa(props.theme.primary.color, 0.9)
+          ? hexa(props.theme.primary.main, 0.9)
           : props.secondary
-            ? hexa(props.theme.secondary.color, 0.9)
+            ? hexa(props.theme.secondary.main, 0.9)
             : "#fff"};
   box-shadow: ${props => props.backgroundColor
               ? (`0 14px 26px -12px ${hexa(props.backgroundColor, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.backgroundColor, 0.2)}`)
 
               : props.primary
-                ? (`0 14px 26px -12px ${hexa(props.theme.primary.color, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.theme.primary.color, 0.2)}`)
+                ? (`0 14px 26px -12px ${hexa(props.theme.primary.main, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.theme.primary.main, 0.2)}`)
 
                 : props.secondary
-                  ? (`0 14px 26px -12px ${hexa(props.theme.secondary.color, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.theme.secondary.color, 0.2)}`)
+                  ? (`0 14px 26px -12px ${hexa(props.theme.secondary.main, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.theme.secondary.main, 0.2)}`)
 
                   : (`0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)`)};
 
@@ -100,9 +92,9 @@ export const Btn = styled.button.attrs({
   background-color: ${props => props.backgroundColor
   ? props.backgroundColor
   : props.primary
-    ? props.theme.primary.color
+    ? props.theme.primary.main
     : props.secondary
-      ? props.theme.secondary.color
+      ? props.theme.secondary.main
       : "#fff"};
   color: ${props => (props.backgroundColor || props.primary || props.secondary)
         ? "#fff"
@@ -117,9 +109,9 @@ export const Btn = styled.button.attrs({
   border-color: ${props => props.backgroundColor
             ? props.backgroundColor
             : props.primary
-              ? props.theme.primary.color
+              ? props.theme.primary.main
               : props.secondary
-                ? props.theme.secondary.color
+                ? props.theme.secondary.main
                 : "#d9d9d9"};
 
 
@@ -143,7 +135,24 @@ props => !props.shape
         padding: ${props => props.theme.size[props.size].padding};
         line-height: ${props => props.theme.size[props.size].lineHeight};
     `}
+
      transition: ${Transition.base.on};
+${
+  props => props.variant === 'icon'
+  ? null
+  : css`
+  &:hover{
+    background: ${props => props.backgroundColor
+    ? hexa(props.backgroundColor, 0.9)
+    : props.primary
+      ? hexa(props.theme.primary.main, 0.9)
+      : props.secondary
+        ? hexa(props.theme.secondary.main, 0.9)
+        : "#fff"};
+
+  }
+  `
+}
 
 &::before {
 position: absolute;
@@ -163,9 +172,10 @@ display: ${props => props.disabled || props.loading
       ? "block"
       : 'none'};
 }
+
 ${props => props.variant === "raised"
         ? (
-          !props.animated
+          !props.animated && props.hasBoxShadow
           ? basicAnimated
           : props.animated === "classic"
             ? classicAnimated
@@ -180,16 +190,16 @@ export const OutlineBtn = Btn.extend `
   border-color: ${props => props.backgroundColor
   ? props.backgroundColor
   : props.primary
-    ? props.theme.primary.color
+    ? props.theme.primary.main
     : props.secondary
-      ? props.theme.secondary.color
+      ? props.theme.secondary.main
       : "rgba(0,0,0,.16)"};
   color: ${props => props.backgroundColor
         ? props.backgroundColor
         : props.primary
-          ? props.theme.primary.color
+          ? props.theme.primary.main
           : props.secondary
-            ? props.theme.secondary.color
+            ? props.theme.secondary.main
             : "#0000008a"};
 
   ${
@@ -199,17 +209,17 @@ props => props.variant === "outline"
             border-color: ${props => props.backgroundColor
     ? shadeColor(props.backgroundColor, -15)
     : props.primary
-      ? shadeColor(props.theme.primary.color, -15)
+      ? shadeColor(props.theme.primary.main, -15)
       : props.secondary
-        ? shadeColor(props.theme.secondary.color, -15)
+        ? shadeColor(props.theme.secondary.main, -15)
         : "rgba(0,0,0,.54)"};
 
             color: ${props => props.backgroundColor
           ? shadeColor(props.backgroundColor, -15)
           : props.primary
-            ? shadeColor(props.theme.primary.color, -15)
+            ? shadeColor(props.theme.primary.main, -15)
             : props.secondary
-              ? shadeColor(props.theme.secondary.color, -15)
+              ? shadeColor(props.theme.secondary.main, -15)
               : "rgba(0,0,0,.68)"};
        }
      `
@@ -220,17 +230,20 @@ props => props.variant === "outline"
            background-color: ${props => props.backgroundColor
       ? props.backgroundColor
       : props.primary
-        ? props.theme.primary.color
+        ? props.theme.primary.main
         : props.secondary
-          ? props.theme.secondary.color
+          ? props.theme.secondary.main
           : "rgba(0,0,0,.54)"};
             color: #fff;
          }
          `)
     : null}
-    ${basicAnimated}
 
-  }
+    ${ props => props.hasBoxShadow ?
+      basicAnimated : null
+    }
+
+
 
 `
 
@@ -240,9 +253,9 @@ export const IconBtn = Btn.extend `
    color: ${props => props.backgroundColor
   ? props.backgroundColor
   : props.primary
-    ? props.theme.primary.color
+    ? props.theme.primary.main
     : props.secondary
-      ? props.theme.secondary.color
+      ? props.theme.secondary.main
       : "#0000008a"};
    width: ${props => props.theme.size[props.size].width};
    height: ${props => props.theme.size[props.size].height};
@@ -253,53 +266,24 @@ export const IconBtn = Btn.extend `
         border-color: ${props => props.backgroundColor
         ? shadeColor(props.backgroundColor, -15)
         : props.primary
-          ? shadeColor(props.theme.primary.color, -15)
+          ? shadeColor(props.theme.primary.main, -15)
           : props.secondary
-            ? shadeColor(props.theme.secondary.color, -15)
+            ? shadeColor(props.theme.secondary.main, -15)
             : "rgba(0,0,0,.54)"};
 
         color: ${props => props.backgroundColor
               ? shadeColor(props.backgroundColor, -15)
               : props.primary
-                ? shadeColor(props.theme.primary.color, -15)
+                ? shadeColor(props.theme.primary.main, -15)
                 : props.secondary
-                  ? shadeColor(props.theme.secondary.color, -15)
+                  ? shadeColor(props.theme.secondary.main, -15)
                   : "rgba(0,0,0,.68)"};
    }
 
 `
 
 //==================== Text Button =======================
-const classicTextButton = css `
 
-
-  &:hover:before{
-    left: 0%;
-    right: 0%;
-  }
-  &::before{
-    border-top: 0.48rem solid;
-    border-bottom: 0.48rem solid;
-    border-color:${props => props.color
-  ? props.color
-  : props.primary
-    ? props.theme.primary.color
-    : props.secondary
-      ? props.theme.secondary.color
-      : "#000000a6"};
-
-    display: block;
-    position: absolute;
-    background: transparent;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    right: 100%;
-    transition: 0.28s all ease-in-out;
-  }
-
-`
 
 export const TextBtn = styled.button.attrs({
   href: props => props.hrefString
@@ -315,47 +299,45 @@ export const TextBtn = styled.button.attrs({
  background: transparent;
  background-image: none;
  font-weight: 600;
- transition: ${props => props.animated
-  ? "0.3s all ease-in-out"
-  : null};
+
  color: ${props => props.color
     ? props.color
     : props.primary
-      ? props.theme.primary.color
+      ? props.theme.primary.main
       : props.secondary
-        ? props.theme.secondary.color
+        ? props.theme.secondary.main
         : "#000000a6"};
 
  padding: ${props => props.theme.size[props.size].padding};
  &:hover{
-   color: ${props => props.color
+
+   color: ${props => props.colorWhenHover ?
+        hexa(props.colorWhenHover)
+        :
+         props.color
           ? hexa(props.color, 0.8)
           : props.primary
-            ? hexa(props.theme.primary.color, 0.8)
+            ? hexa(props.theme.primary.main, 0.8)
             : props.secondary
-              ? hexa(props.theme.secondary.color, 0.8)
+              ? hexa(props.theme.secondary.main, 0.8)
               : hexa("#000000a6", 0.8)};
-   // background-color: #f9f9f9;
+
     border-color: transparent;
-    letter-spacing: ${props => !props.animated
-                ? ""
-                : "0.32rem"};
+
  }
  &:active{
-   // background-color: #f2f2f2;
-   color: ${props => props.color
+   color: ${props => props.colorWhenHover ?
+        hexa(props.colorWhenHover)
+        : props.color
                   ? hexa(props.color, 0.8)
                   : props.primary
-                    ? hexa(props.theme.primary.color, 0.8)
+                    ? hexa(props.theme.primary.main, 0.8)
                     : props.secondary
-                      ? hexa(props.theme.secondary.color, 0.8)
+                      ? hexa(props.theme.secondary.main, 0.8)
                       : hexa("#000000a6", 0.8)};
 border-color: transparent;
  }
-${
-props => !props.animated
-  ? null
-  : classicTextButton}
+
 
 
 `

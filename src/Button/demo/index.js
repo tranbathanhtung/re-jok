@@ -3,6 +3,7 @@ import * as React from 'react'
 import Button from '../Button';
 import TextButton from '../TextButton'
 
+
 type State = {
   loading: boolean
 }
@@ -27,7 +28,6 @@ class MyButton extends React.Component<{}, State> {
        size="large"
        icon="rocket"
        iconPosition="right"
-       // animated="classic"
        secondary
        >Button</Button>
     )
@@ -49,12 +49,12 @@ class MyTextButton extends React.Component<{}, State>{
        rule="submit"
        onClick={this.toggleLoading}
        loading={this.state.loading}
+       colorWhenHover="#03a87c"
        // shape="circle"
        // disabled={false}
        size="large"
        icon="rocket"
 
-       animated="classic"
        primary
        >Button</TextButton>
     )
@@ -83,6 +83,7 @@ export const ButtonDemo = ()=>(
      // loading={true}
      // shape="circle"
      // disabled={false}
+
      icon="rocket"
      primary
      animated="classic"
@@ -102,6 +103,7 @@ export const ButtonDemo = ()=>(
    // loading={true}
    // shape="circle"
    // disabled={false}
+   hasBoxShadow
    tag="span"
    backgroundColor="#f44336"
    size="medium"
@@ -139,6 +141,7 @@ export const ButtonDemo = ()=>(
     // onClick={()=> console.log("clicked")}
     // loading={true}
     secondary
+    hasBoxShadow
     icon="rocket"
     shape="circle"
     // disabled={false}
@@ -188,6 +191,7 @@ shape="rounded"
    // onClick={()=> console.log("clicked")}
    // loading={true}
 shape="rounded"
+hasBoxShadow
    // disabled={false}
 
    >Button</Button>
@@ -215,7 +219,7 @@ rule="submit"
 // loading={true}
 shape="rounded"
 // disabled={false}
-
+hasBoxShadow
 icon="rocket"
 size="large"
 primary
@@ -224,7 +228,7 @@ primary
 
 <div style={{display: "flex"}}>
   <TextButton size="small">Button</TextButton>
-<TextButton color="#f44336" loading animated="classic">Button</TextButton>
+<TextButton color="#f44336" colorWhenHover="#03a87c" loading>Button</TextButton>
   <TextButton size="medium">Button</TextButton>
 <MyTextButton/>
 </div>
@@ -302,5 +306,5 @@ primary
 </div>
 
 
-  </div>
+</div>
 )

@@ -4,7 +4,8 @@
 // ${(props) => props.theme}
 // Or using import { withTheme } from 'styled-components';
 
-export const theme = {
+
+export const defaultTheme = {
   size: {
     small: {
       fontSize: '1.2rem',
@@ -41,11 +42,32 @@ export const theme = {
     }
   },
   primary: {
-    color: "#1c8ffb",
+    main: "#1c8ffb",
 
   },
   secondary: {
-    color: "#1b1c1d",
-
+    main: "#1b1c1d",
   }
 };
+
+const changeTheme = (defaultTheme, theme)=>{
+  let cloneTheme = defaultTheme;
+
+  
+  Object.keys(theme).forEach(function (key) {
+    if ( 'object' === typeof theme[key] && !Array.isArray(theme[key]) ) {
+    	changeTheme(cloneTheme[key], theme[key])
+    }
+    else if ( 'string' === typeof theme[key] || 'number' === typeof theme[key] ) {
+      cloneTheme[key] = theme[key]
+    }
+  })
+  return cloneTheme;
+}
+
+export const setTheme = (theme) => {
+
+   const newTheme = changeTheme(defaultTheme, theme);
+   return newTheme;
+
+}

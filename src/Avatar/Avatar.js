@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 
-import {Icon} from '../Icon';
+import Icon from '../Icon';
 import {StyledAvatar, StyledAvatarImage} from './style';
 
 type Props = {

@@ -7,7 +7,7 @@ type Props = {
   /** Children must be Avatar**/
   children: React.ChildrenArray < React.Element < typeof Avatar >>,
   /** size of avatar group must be like size of avatar**/
-  size?: string
+  size?: 'small' | 'default' | 'medium' | 'large'
 }
 
 const defaultProps = {

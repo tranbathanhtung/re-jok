@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '../../Avatar/Avatar'
 import {defaultTheme} from '../../theme'
-import {Icon} from '../../Icon';
+import Icon from '../../Icon';
 import renderer from 'react-test-renderer'
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
 import 'jest-enzyme'

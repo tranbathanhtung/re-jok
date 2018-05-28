@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../Button/Button'
 import {SpinnerButton} from '../../Button/style'
 import {defaultTheme} from '../../theme'
-import {Icon} from '../../Icon';
+import Icon from '../../Icon';
 import renderer from 'react-test-renderer'
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
 import 'jest-enzyme'
@@ -55,7 +55,7 @@ it('renders a button size small', () => {
   expect(tree).toHaveStyleRule('font-size', '1.2rem')
   expect(tree).toHaveStyleRule('padding', '0.5rem 0.9rem')
   expect(tree).toHaveStyleRule('line-height', '1')
-  expect(tree).toHaveStyleRule('border-radius', '.6rem')
+  expect(tree).toHaveStyleRule('border-radius', '.5rem')
 });
 
 it('renders a button size default', () => {
@@ -66,7 +66,7 @@ it('renders a button size default', () => {
   expect(tree).toHaveStyleRule('font-size', '1.6rem')
   expect(tree).toHaveStyleRule('padding', '0.8rem 1.2rem')
   expect(tree).toHaveStyleRule('line-height', '1.5')
-  expect(tree).toHaveStyleRule('border-radius', '1rem')
+  expect(tree).toHaveStyleRule('border-radius', '.8rem')
 });
 
 it('renders a button size medium', () => {
@@ -77,7 +77,7 @@ it('renders a button size medium', () => {
   expect(tree).toHaveStyleRule('font-size', '2rem')
   expect(tree).toHaveStyleRule('padding', '1.2rem 1.6rem')
   expect(tree).toHaveStyleRule('line-height', '1.5')
-  expect(tree).toHaveStyleRule('border-radius', '1.4rem')
+  expect(tree).toHaveStyleRule('border-radius', '.8rem')
 });
 
 it('renders a button size large', () => {
@@ -88,7 +88,7 @@ it('renders a button size large', () => {
   expect(tree).toHaveStyleRule('font-size', '2.4rem')
   expect(tree).toHaveStyleRule('padding', '1.4rem 1.8rem')
   expect(tree).toHaveStyleRule('line-height', '2')
-  expect(tree).toHaveStyleRule('border-radius', '1.8rem')
+  expect(tree).toHaveStyleRule('border-radius', '1rem')
 });
 
 it('renders a button loading true with spin component', () => {

@@ -11,23 +11,23 @@ export const defaultTheme = {
       fontSize: '1.2rem',
       padding: '0.5rem 0.9rem',
       "lineHeight": "1",
-      "borderRadius": ".6rem",
+      "borderRadius": ".5rem",
       width: "2.4rem",
       height: "2.4rem"
     },
     default: {
       fontSize: '1.6rem',
       padding: '0.8rem 1.2rem',
-      "lineHeight": "1.5",
-      "borderRadius": "1rem",
+      lineHeight: "1.5",
+      borderRadius: ".8rem",
       width: "3.2rem",
       height: "3.2rem"
     },
     medium: {
       fontSize: '2rem',
       padding: '1.2rem 1.6rem',
-      "lineHeight": "1.5",
-      "borderRadius": "1.4rem",
+      lineHeight: "1.5",
+      borderRadius: ".8rem",
       width: "4rem",
       height: "4rem"
 
@@ -35,8 +35,8 @@ export const defaultTheme = {
     large: {
       fontSize: '2.4rem',
       padding: '1.4rem 1.8rem',
-      "lineHeight": "2",
-      "borderRadius": "1.8rem",
+      lineHeight: "2",
+      borderRadius: "1rem",
       width: "4.8rem",
       height: "4.8rem"
     }

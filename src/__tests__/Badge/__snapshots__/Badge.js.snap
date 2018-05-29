@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> should render Badge 1`] = `
+.c0 {
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.c1 {
+  background: #1c8ffb;
+  position: absolute;
+  -webkit-transform: scale(1) translateX(-50%);
+  -ms-transform: scale(1) translateX(-50%);
+  transform: scale(1) translateX(-50%);
+  top: -1rem;
+  left: 0;
+  height: 2rem;
+  border-radius: 1rem;
+  min-width: 2rem;
+  color: #fff;
+  line-height: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 .6rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  z-index: 1;
+  white-space: nowrap;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  -webkit-animation: jlLOYG .3s 1 linear both;
+  animation: jlLOYG .3s 1 linear both;
+  -webkit-transform-origin: -10% center;
+  -ms-transform-origin: -10% center;
+  transform-origin: -10% center;
+}
+
+<span
+  className="c0"
+>
+  <sup
+    className="c1"
+    offset={
+      Array [
+        0,
+        0,
+      ]
+    }
+  >
+    0
+  </sup>
+</span>
+`;

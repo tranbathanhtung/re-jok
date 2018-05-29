@@ -25,18 +25,8 @@ export const baseAvatar = css `
 
 export const StyledAvatar = styled.div `
   ${baseAvatar}
-  ${
-props => props.shape === "circle"
-  ? css `
 
-
-      border-radius: 50%;
-
-    `
-  : css `
-        border-radius: .4rem;
-
-    `}
+  border-radius: ${props => props.shape === "circle" ? '50%' : '.4rem'};
 
 `
 export const StyledAvatarImage = styled.img.attrs({

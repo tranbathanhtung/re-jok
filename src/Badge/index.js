@@ -1,12 +1,7 @@
 // @flow
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  StyledBadge,
-  StyledSup
-} from './style'
-
-
+import {StyledBadge, StyledSup} from './style'
 
 type Props = {
   /** number will display in badge**/
@@ -15,6 +10,10 @@ type Props = {
   children: React$Element<any>,
   /** Max number to show**/
   maxCount: number,
+  /** set position of badge**/
+  offset: Array<number>,
+  /** Set background color of badge**/
+  backgroundColor?: string
 }
 
 type State = {
@@ -25,56 +24,50 @@ type State = {
 const defaultProps = {
   count: 0,
   maxCount: 99,
+  offset: [0, 0]
 }
 
 class Badge extends React.Component<Props, State> {
   static defaultProps = defaultProps;
 
-  constructor(props: Props){
+  constructor(props : Props) {
     super(props);
     this.state = {
-      widthChildren: 0,
+      widthChildren: 0
     }
 
   }
 
-  refChildren: {current: null | React$ElementRef<any>} = React.createRef();
+  refChildren: {
+    current: null | React$ElementRef<any>
+  } = React.createRef();
 
-  componentDidMount(){
+  componentDidMount() {
     const node = ReactDOM.findDOMNode(this.refChildren.current);
 
-
-    if(node && node instanceof HTMLElement){
-      this.setState({
-        widthChildren: node.offsetWidth
-      })
+    if (node && node instanceof HTMLElement) {
+      this.setState({widthChildren: node.offsetWidth})
     }
-
-
 
   }
 
-  render(){
-    const {
-      count,
-      children,
-      maxCount
-    } = this.props;
+  render() {
+    const {count, children, maxCount} = this.props;
 
-    const { widthChildren } = this.state;
+    const {widthChildren} = this.state;
 
-    const label = count > maxCount ? `${maxCount}+` : count;
+    const label = count > maxCount
+      ? `${maxCount}+`
+      : count;
 
-
-
-    return (
-      <StyledBadge>
-      {  React.Children.count(children) === 1
-        ? <children.type {...children.props} ref={this.refChildren} />
-        : console.log("failed")}
-        <StyledSup widthChildren={widthChildren} {...this.props}>{label}</StyledSup>
-      </StyledBadge>
-    )
+    return (<StyledBadge>
+      {
+        React.Children.count(children) === 1
+          ? <children.type {...children.props} ref={this.refChildren}/>
+          : null
+      }
+      <StyledSup widthChildren={widthChildren} {...this.props}>{label}</StyledSup>
+    </StyledBadge>)
   }
 }
 

@@ -10,10 +10,10 @@ export const BadgeDemo = () => (<React.Fragment>
       marginTop: 30
     }}>
     <Badge>
-      <Avatar shape="square" style={{
+    <Avatar shape = "square" style = {{
           color: '#f56a00',
           backgroundColor: '#fde3cf'
-        }}>T</Avatar>
+        }} > T</Avatar>
     </Badge>
 
     <Badge count={5}>
@@ -52,7 +52,7 @@ export const BadgeDemo = () => (<React.Fragment>
       display: "flex",
       marginTop: 30
     }}>
-    <Badge count={20}>
+    <Badge count={20} offset={[20,-15]}>
       <Icon name="bell" size="2x"/>
     </Badge>
   </div>

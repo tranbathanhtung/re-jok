@@ -3,7 +3,6 @@ import Button from '../../Button/Button'
 import {SpinnerButton} from '../../Button/style'
 import {defaultTheme} from '../../theme'
 import Icon from '../../Icon';
-import renderer from 'react-test-renderer'
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
 import 'jest-enzyme'
 import 'jest-styled-components'

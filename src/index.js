@@ -7,6 +7,7 @@ import {defaultTheme} from './theme';
 import {ButtonDemo} from './Button/demo'
 import {AvatarDemo} from './Avatar/demo'
 import {BadgeDemo} from './Badge/demo'
+import CardDemo from './Card/demo'
 
 
 
@@ -16,9 +17,10 @@ ReactDOM.render(
      <ThemeProvider theme={defaultTheme}>
        <React.Fragment>
 
-       <ButtonDemo/>
+       {/* <ButtonDemo/>
        <AvatarDemo/>
-       <BadgeDemo/>
+       <BadgeDemo/> */}
+       <CardDemo/>
        </React.Fragment>
      </ThemeProvider>
 

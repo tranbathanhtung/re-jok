@@ -14,7 +14,6 @@ export const baseAvatar = css `
   ? "transparent"
   : "#bdbdbd"} ;
    color: #fafafa;
-   margin-bottom: 1.2rem;
    font-size: ${props => props.theme.size[props.size].fontSize};
    line-height: ${props => props.theme.size[props.size].lineHeight};
    width: ${props => props.theme.size[props.size].width};

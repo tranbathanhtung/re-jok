@@ -10,25 +10,34 @@ import {
 } from './style';
 
 
-import Avatar from '../Avatar/Avatar'
+import Avatar from '../Avatar/Avatar';
+import AvatarGroup from '../Avatar/AvatarGroup';
 
 
 type Props = {
   /** Avatar **/
-  avatar?: React.Element <typeof Avatar>,
+  avatar?: React.Element <typeof Avatar> | React.Element <typeof AvatarGroup>,
   /** class of card header**/
   className?: string,
   /** primary text**/
-  title?: string,
+  title?: React.Node | string,
   /** secondary text**/
-  subheader?: string,
+  subheader?: React.Node | string,
   /** action **/
-   action?: any,
-   
+  action?: any,
+  /** Add more style to card**/
+  style?: Object,
+
+
 }
 
 
 class CardHeader extends React.Component<Props> {
+  static _meta = {
+    name: 'CardHeader',
+    parent: 'Card'
+  }
+
   render(){
     const {
       avatar,

@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
+
 
 
 // ================ Card =================
@@ -18,6 +19,37 @@ export const StyledCard = styled.div`
   transition: all .3s;
   box-sizing: border-box;
   list-style: none;
+
+  width: ${props => props.numberCard ? `calc(${100 / props.numberCard}% - 2.4rem)` : "330px"};
+
+  ${
+    props => props.hoverable
+     ? css`
+       &:hover{
+         box-shadow: 0 .2rem .8rem rgba(0,0,0,.09);
+         border-color: rgba(0,0,0,.09);
+       }
+     `
+     : null
+  }
+
+`
+// ================ Card Group ==============
+export const StyledCardGroup = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin: -1.4rem -.8rem;
+  ${
+    props => props.center
+     ? css`
+       justify-content: center;
+     `: null
+  }
+  > ${StyledCard}{
+      margin: 1.4rem 1.2rem;
+  }
 `
 
 
@@ -81,7 +113,6 @@ export const StyledCardMedia = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 0;
   padding-top: 56%;
   background-image: ${props => props.src ? `url("${props.src}")` : ""};
 `
@@ -110,4 +141,39 @@ export const StyledCardContentTitle = styled.div`
    letter-spacing: -.029rem;
    margin-bottom: .5rem;
    white-space: nowrap;
+`
+
+export const StyledCardContentSubTitle = styled.div`
+font-size: 1.5rem;
+color: rgba(0, 0, 0, 0.5);
+font-weight: 400;
+text-overflow: ellipsis;
+overflow: hidden;
+letter-spacing: -.029rem;
+margin-bottom: .2rem;
+white-space: nowrap;
+`
+
+//================ Card Action =============
+export const StyledCardAction = styled.div`
+   display: flex;
+   box-sizing: border-box;
+   align-items: center;
+   padding: .8rem 1rem;
+
+
+`
+
+export const StyledActionRight = styled.div`
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: flex-start;
+  align-items: center;
+`
+
+export const StyledActionLeft = styled.div`
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: flex-end;
+  align-items: center;
 `

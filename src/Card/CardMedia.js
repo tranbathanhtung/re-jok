@@ -12,13 +12,20 @@ type Props = {
   className?: string,
   /** url for your image**/
   src?: string,
+  /** add more style to card media**/
+  style?: Object,
+
 
 }
 
 
 class CardMedia extends React.Component<Props> {
-  render(){
+  static _meta = {
+    name: 'CardMedia',
+    parent: 'Card'
+  }
 
+  render(){
     return (
       <StyledCardMedia {...this.props} />
     )

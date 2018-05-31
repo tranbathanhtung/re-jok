@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import Button from '../Button';
-import TextButton from '../TextButton'
+import TextButton from '../TextButton';
 
 
 type State = {

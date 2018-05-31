@@ -52,7 +52,7 @@ export const StyledAvatarGroup = styled.ul `
   margin-right: .8rem;
   margin-left: .8rem;
   pointer-events: auto;
-  order: 1;
+  
 `
 
 export const StyledAvatarItem = styled.li `

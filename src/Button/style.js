@@ -15,8 +15,7 @@ export const baseButton = css `
     border: none;
     text-decoration: none;
     text-align: center;
-    margin-right: 0.8rem;
-    margin-bottom: 1.2rem;
+  
     font-size: ${props => props.theme.size[props.size].fontSize};
 
       div + span,

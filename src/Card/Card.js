@@ -9,6 +9,7 @@ import CardMedia from './CardMedia';
 import CardContent from './CardContent';
 import CardAction from './CardAction';
 import CardGroup from './CardGroup';
+import CardLoading  from './CardLoading';
 
 type Props = {
   /**Number of card in a row**/
@@ -56,8 +57,13 @@ class Card extends React.Component<Props> {
     } = this.props;
 
     return (
-      <StyledCard {...rest} onClick={this.handleClick}>
-        {children}
+      <StyledCard {...rest} loading={loading} onClick={this.handleClick}>
+        {
+          loading
+          ? <CardLoading/>
+        : children
+        }
+
       </StyledCard>
     )
   }

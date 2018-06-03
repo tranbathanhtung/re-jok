@@ -1,0 +1,1495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  background: #fff;
+  height: 100%;
+  padding: 0;
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  Card
+</div>
+`;
+
+exports[`<Card /> should render with Card Action 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  background: #fff;
+  height: 100%;
+  padding: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .8rem 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 1.2rem 1.6rem;
+  border-radius: .8rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: none;
+  color: #0000008a;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #fff;
+}
+
+.c3 div + span,
+.c3 span + span {
+  margin: 0 .8rem;
+}
+
+.c3::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+.c3:hover {
+  border-color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,.68);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 1.2rem 1.6rem;
+  border-radius: .8rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: none;
+  color: #0000008a;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #fff;
+}
+
+.c5 div + span,
+.c5 span + span {
+  margin: 0 .8rem;
+}
+
+.c5::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+.c5:hover {
+  border-color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,.68);
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 1.2rem 1.6rem;
+  border-radius: .8rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: none;
+  color: #0000008a;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #fff;
+}
+
+.c7 div + span,
+.c7 span + span {
+  margin: 0 .8rem;
+}
+
+.c7::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+.c7:hover {
+  border-color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,.68);
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <button
+        className="c3"
+        disabled={false}
+        href={null}
+        icon="thumbs-up"
+        size="medium"
+        type="button"
+      >
+        <div
+          className="c4"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-thumbs-up"
+            style={undefined}
+          />
+        </div>
+      </button>
+      <button
+        className="c5"
+        disabled={false}
+        href={null}
+        icon="comments"
+        size="medium"
+        type="button"
+      >
+        <div
+          className="c4"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-comments"
+            style={undefined}
+          />
+        </div>
+      </button>
+    </div>
+    <div
+      className="c6"
+    >
+      <button
+        className="c7"
+        disabled={false}
+        href={null}
+        icon="bookmark"
+        size="medium"
+        type="button"
+      >
+        <div
+          className="c4"
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-bookmark"
+            style={undefined}
+          />
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> should render with Card Content 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  background: #fff;
+  height: 100%;
+  padding: 0;
+}
+
+.c1 {
+  clear: both;
+  color: rgba(0,0,0,.68);
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.c2 {
+  font-size: 2rem;
+  color: rgba(0,0,0,0.85);
+  font-weight: 600;
+  line-height: 2.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-letter-spacing: -.029rem;
+  -moz-letter-spacing: -.029rem;
+  -ms-letter-spacing: -.029rem;
+  letter-spacing: -.029rem;
+  margin-bottom: .5rem;
+  white-space: nowrap;
+}
+
+.c3 {
+  font-size: 1.6rem;
+  color: rgba(0,0,0,0.48);
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-letter-spacing: -.029rem;
+  -moz-letter-spacing: -.029rem;
+  -ms-letter-spacing: -.029rem;
+  letter-spacing: -.029rem;
+  margin-bottom: .5rem;
+  white-space: nowrap;
+}
+
+@media (min-width:70rem) {
+  .c1 {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Awesome card
+    </div>
+    <div
+      className="c3"
+    >
+      subtitle
+    </div>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+  </div>
+</div>
+`;
+
+exports[`<Card /> should render with Card Header 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  background: #fff;
+  height: 100%;
+  padding: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 1.4rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+}
+
+.c8 {
+  -webkit-flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c8 > * {
+  margin-right: .6rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  color: rgba(0,0,0,0.85);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.c7 {
+  color: rgba(0,0,0,0.48);
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-right: 0.8rem;
+  background: transparent;
+  color: #fafafa;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.c4 {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.c10 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  line-height: inherit;
+  color: inherit;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: auto;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 0.5rem 0.9rem;
+  border-radius: .5rem;
+  line-height: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.c9 div + span,
+.c9 span + span {
+  margin: 0 .8rem;
+}
+
+.c9:hover {
+  background: #fff;
+}
+
+.c9::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+@media (min-width:70rem) {
+  .c1 {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        shape="circle"
+        size="default"
+      >
+        <img
+          alt=""
+          className="c4"
+          src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+        />
+      </div>
+      <div
+        className="c5"
+      >
+        <span
+          className="c6"
+        >
+          Trần Bá Thanh Tùng
+        </span>
+        <span
+          className="c7"
+        >
+          @tungtbt
+        </span>
+      </div>
+    </div>
+    <div
+      className="c8"
+    >
+      <button
+        className="c9"
+        disabled={false}
+        href={null}
+        size="small"
+        type="button"
+      >
+        
+        <span
+          className="c10"
+        >
+           Follow
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Card /> should render with Card Loading 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  padding: 1.4rem;
+  height: 40rem;
+  border-radius: .5rem;
+}
+
+.c1 {
+  width: 100%;
+  overflow: hidden;
+  height: 21.9rem;
+  background: #fafafa;
+  position: relative;
+}
+
+.c1:before {
+  content: "";
+  background-image: linear-gradient( to right, rgb(246,247,249) 0%, rgb(233,235,238) 20%, rgb(246,247,249) 40%, rgb(246,247,249) 100% );
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-animation: 1s hVChZl linear infinite;
+  animation: 1s hVChZl linear infinite;
+}
+
+.c1 div {
+  background: #fff;
+  position: absolute;
+  right: 0;
+}
+
+.c2 {
+  background: #fafafa !important;
+  width: 4rem;
+  height: 4rem;
+  border: .8rem solid #fafafa;
+  top: -.8rem;
+  left: -.8rem;
+}
+
+.c3 {
+  background: #fafafa !important;
+  width: 4rem;
+  height: 4rem;
+  border: .8rem solid #fafafa;
+  top: -.8rem;
+  left: -.8rem;
+  border-radius: 50%;
+}
+
+.c4 {
+  height: 0.8rem;
+  top: 0rem;
+  left: 4rem;
+}
+
+.c6 {
+  height: 1.2rem;
+  top: 1.4rem;
+  left: 4rem;
+}
+
+.c8 {
+  height: 1.6rem;
+  top: 3.2rem;
+  left: 4rem;
+}
+
+.c9 {
+  height: 2rem;
+  top: 4rem;
+  left: 0rem;
+}
+
+.c11 {
+  height: 1.3rem;
+  top: 6.6rem;
+  left: 0rem;
+}
+
+.c13 {
+  height: 1.3rem;
+  top: 8.5rem;
+  left: 0rem;
+}
+
+.c15 {
+  height: 1.3rem;
+  top: 10.5rem;
+  left: 0rem;
+}
+
+.c17 {
+  height: 1.3rem;
+  top: 12.4rem;
+  left: 0rem;
+}
+
+.c19 {
+  height: 1.3rem;
+  top: 14.3rem;
+  left: 0rem;
+}
+
+.c21 {
+  height: 1.3rem;
+  top: 16.2rem;
+  left: 0rem;
+}
+
+.c23 {
+  height: 1.3rem;
+  top: 18.1rem;
+  left: 0rem;
+}
+
+.c25 {
+  height: 1.3rem;
+  top: 20rem;
+  left: 0rem;
+}
+
+.c10 {
+  height: 0.6rem;
+  top: 6rem;
+  left: 17.8rem;
+}
+
+.c12 {
+  height: 0.6rem;
+  top: 7.9rem;
+  left: 34rem;
+}
+
+.c14 {
+  height: 0.6rem;
+  top: 9.8rem;
+  left: 44rem;
+}
+
+.c16 {
+  height: 0.6rem;
+  top: 11.8rem;
+  left: 26.4rem;
+}
+
+.c18 {
+  height: 0.6rem;
+  top: 13.7rem;
+  left: 37.8rem;
+}
+
+.c20 {
+  height: 0.6rem;
+  top: 15.6rem;
+  left: 8.7rem;
+}
+
+.c22 {
+  height: 0.6rem;
+  top: 17.5rem;
+  left: 15rem;
+}
+
+.c24 {
+  height: 0.6rem;
+  top: 19.4rem;
+  left: 42rem;
+}
+
+.c26 {
+  height: 0.6rem;
+  top: 21.3rem;
+  left: 26.7rem;
+}
+
+.c5 {
+  height: .6rem;
+  top: .8rem;
+  left: 13.6rem;
+}
+
+.c7 {
+  height: .6rem;
+  top: 2.6rem;
+  left: 10rem;
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    />
+    <div
+      className="c4"
+      height={8}
+    />
+    <div
+      className="c5"
+    />
+    <div
+      className="c6"
+      height={12}
+    />
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+      height={16}
+    />
+    <div
+      className="c9"
+      height={20}
+    />
+    <div
+      className="c10"
+      height={6}
+    />
+    <div
+      className="c11"
+      height={13}
+    />
+    <div
+      className="c12"
+      height={6}
+    />
+    <div
+      className="c13"
+      height={13}
+    />
+    <div
+      className="c14"
+      height={6}
+    />
+    <div
+      className="c15"
+      height={13}
+    />
+    <div
+      className="c16"
+      height={6}
+    />
+    <div
+      className="c17"
+      height={13}
+    />
+    <div
+      className="c18"
+      height={6}
+    />
+    <div
+      className="c19"
+      height={13}
+    />
+    <div
+      className="c20"
+      height={6}
+    />
+    <div
+      className="c21"
+      height={13}
+    />
+    <div
+      className="c22"
+      height={6}
+    />
+    <div
+      className="c23"
+      height={13}
+    />
+    <div
+      className="c24"
+      height={6}
+    />
+    <div
+      className="c25"
+      height={13}
+    />
+    <div
+      className="c26"
+      height={6}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Card /> should render with Card Media 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  background: #fff;
+  height: 100%;
+  padding: 0;
+}
+
+.c1 {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 56.25%;
+  background-image: url("https://i.imgur.com/9u0Wngc.jpg");
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+    src="https://i.imgur.com/9u0Wngc.jpg"
+  />
+</div>
+`;
+
+exports[`<Card /> should render with full card option 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: .1rem solid rgba(0,0,0,0.1);
+  border-radius: .5rem;
+  max-width: 100%;
+  position: relative;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.65);
+  margin: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-sizing: border-box;
+  list-style: none;
+  -webkit-animation: bcCCNc .5s;
+  animation: bcCCNc .5s;
+  width: 33rem;
+  padding: 1.4rem;
+  height: 40rem;
+  border-radius: .5rem;
+}
+
+.c0:hover {
+  box-shadow: 0 .2rem .8rem rgba(0,0,0,.09);
+  border-color: rgba(0,0,0,.09);
+}
+
+.c1 {
+  width: 100%;
+  overflow: hidden;
+  height: 21.9rem;
+  background: #fafafa;
+  position: relative;
+}
+
+.c1:before {
+  content: "";
+  background-image: linear-gradient( to right, rgb(246,247,249) 0%, rgb(233,235,238) 20%, rgb(246,247,249) 40%, rgb(246,247,249) 100% );
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-animation: 1s hVChZl linear infinite;
+  animation: 1s hVChZl linear infinite;
+}
+
+.c1 div {
+  background: #fff;
+  position: absolute;
+  right: 0;
+}
+
+.c2 {
+  background: #fafafa !important;
+  width: 4rem;
+  height: 4rem;
+  border: .8rem solid #fafafa;
+  top: -.8rem;
+  left: -.8rem;
+}
+
+.c3 {
+  background: #fafafa !important;
+  width: 4rem;
+  height: 4rem;
+  border: .8rem solid #fafafa;
+  top: -.8rem;
+  left: -.8rem;
+  border-radius: 50%;
+}
+
+.c4 {
+  height: 0.8rem;
+  top: 0rem;
+  left: 4rem;
+}
+
+.c6 {
+  height: 1.2rem;
+  top: 1.4rem;
+  left: 4rem;
+}
+
+.c8 {
+  height: 1.6rem;
+  top: 3.2rem;
+  left: 4rem;
+}
+
+.c9 {
+  height: 2rem;
+  top: 4rem;
+  left: 0rem;
+}
+
+.c11 {
+  height: 1.3rem;
+  top: 6.6rem;
+  left: 0rem;
+}
+
+.c13 {
+  height: 1.3rem;
+  top: 8.5rem;
+  left: 0rem;
+}
+
+.c15 {
+  height: 1.3rem;
+  top: 10.5rem;
+  left: 0rem;
+}
+
+.c17 {
+  height: 1.3rem;
+  top: 12.4rem;
+  left: 0rem;
+}
+
+.c19 {
+  height: 1.3rem;
+  top: 14.3rem;
+  left: 0rem;
+}
+
+.c21 {
+  height: 1.3rem;
+  top: 16.2rem;
+  left: 0rem;
+}
+
+.c23 {
+  height: 1.3rem;
+  top: 18.1rem;
+  left: 0rem;
+}
+
+.c25 {
+  height: 1.3rem;
+  top: 20rem;
+  left: 0rem;
+}
+
+.c10 {
+  height: 0.6rem;
+  top: 6rem;
+  left: 17.8rem;
+}
+
+.c12 {
+  height: 0.6rem;
+  top: 7.9rem;
+  left: 34rem;
+}
+
+.c14 {
+  height: 0.6rem;
+  top: 9.8rem;
+  left: 44rem;
+}
+
+.c16 {
+  height: 0.6rem;
+  top: 11.8rem;
+  left: 26.4rem;
+}
+
+.c18 {
+  height: 0.6rem;
+  top: 13.7rem;
+  left: 37.8rem;
+}
+
+.c20 {
+  height: 0.6rem;
+  top: 15.6rem;
+  left: 8.7rem;
+}
+
+.c22 {
+  height: 0.6rem;
+  top: 17.5rem;
+  left: 15rem;
+}
+
+.c24 {
+  height: 0.6rem;
+  top: 19.4rem;
+  left: 42rem;
+}
+
+.c26 {
+  height: 0.6rem;
+  top: 21.3rem;
+  left: 26.7rem;
+}
+
+.c5 {
+  height: .6rem;
+  top: .8rem;
+  left: 13.6rem;
+}
+
+.c7 {
+  height: .6rem;
+  top: 2.6rem;
+  left: 10rem;
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    />
+    <div
+      className="c3"
+    />
+    <div
+      className="c4"
+      height={8}
+    />
+    <div
+      className="c5"
+    />
+    <div
+      className="c6"
+      height={12}
+    />
+    <div
+      className="c7"
+    />
+    <div
+      className="c8"
+      height={16}
+    />
+    <div
+      className="c9"
+      height={20}
+    />
+    <div
+      className="c10"
+      height={6}
+    />
+    <div
+      className="c11"
+      height={13}
+    />
+    <div
+      className="c12"
+      height={6}
+    />
+    <div
+      className="c13"
+      height={13}
+    />
+    <div
+      className="c14"
+      height={6}
+    />
+    <div
+      className="c15"
+      height={13}
+    />
+    <div
+      className="c16"
+      height={6}
+    />
+    <div
+      className="c17"
+      height={13}
+    />
+    <div
+      className="c18"
+      height={6}
+    />
+    <div
+      className="c19"
+      height={13}
+    />
+    <div
+      className="c20"
+      height={6}
+    />
+    <div
+      className="c21"
+      height={13}
+    />
+    <div
+      className="c22"
+      height={6}
+    />
+    <div
+      className="c23"
+      height={13}
+    />
+    <div
+      className="c24"
+      height={6}
+    />
+    <div
+      className="c25"
+      height={13}
+    />
+    <div
+      className="c26"
+      height={6}
+    />
+  </div>
+</div>
+`;

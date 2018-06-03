@@ -41,6 +41,30 @@ export const defaultTheme = {
       height: "4.8rem"
     }
   },
+  text: {
+    primary: "rgba(0, 0, 0, 0.85)",
+    secondary: "rgba(0, 0, 0, 0.48)",
+    hint: "rgba(0, 0, 0, 0.38)"
+  },
+  background: {
+    paper: "#fff",
+    default: "#fafafa"
+  },
+  typography: {
+    title: {
+      fontSize: "2rem",
+      fontWeight: "600",
+      lineHeight: "2.8rem"
+
+    },
+    subtitle: {
+      fontSize: "1.6rem",
+      fontWeight: "400",
+      lineHeight: "2.4rem"
+
+
+    }
+  },
   primary: {
     main: "#1c8ffb",
 

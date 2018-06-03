@@ -26,7 +26,6 @@ exports[`<Avatar /> should render Avatar 1`] = `
   margin-right: 0.8rem;
   background: #bdbdbd;
   color: #fafafa;
-  margin-bottom: 1.2rem;
   font-size: 1.6rem;
   line-height: 1.5;
   width: 3.2rem;

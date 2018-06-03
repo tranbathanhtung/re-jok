@@ -26,7 +26,6 @@ exports[`<AvatarGroup /> should render AvatarGroup 1`] = `
   margin-right: 0.8rem;
   background: #bdbdbd;
   color: #fafafa;
-  margin-bottom: 1.2rem;
   font-size: 1.6rem;
   line-height: 1.5;
   width: 3.2rem;
@@ -44,9 +43,6 @@ exports[`<AvatarGroup /> should render AvatarGroup 1`] = `
   margin-right: .8rem;
   margin-left: .8rem;
   pointer-events: auto;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
 }
 
 .c1 {

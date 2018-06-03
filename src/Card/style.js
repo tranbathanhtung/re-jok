@@ -120,14 +120,14 @@ export const StyledCardHeaderText = styled.div `
 `
 
 export const PrimaryText = styled.span `
-  color: rgba(0, 0, 0, 0.8);
+  color: ${({theme}) => theme.text.primary};
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5rem;
 `
 
 export const SecondaryText = styled.span `
-  color: rgba(0, 0, 0, 0.4);
+  color:${({theme}) => theme.text.secondary};
   font-size: 1.4rem;
   font-weight: 200;
   line-height: 2.5rem;
@@ -140,7 +140,7 @@ export const StyledCardMedia = styled.div `
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 56%;
+  padding-top: 56.25%;
   background-image: ${props => props.src
   ? `url("${props.src}")`
   : ""};
@@ -161,26 +161,29 @@ export const StyledCardContent = styled.div `
    }
 `
 
-export const StyledCardContentTitle = styled.div `
-   font-size: 1.6rem;
-   color: rgba(0, 0, 0, 0.85);
-   font-weight: 600;
-   text-overflow: ellipsis;
-   overflow: hidden;
-   letter-spacing: -.029rem;
-   margin-bottom: .5rem;
-   white-space: nowrap;
-`
-
-export const StyledCardContentSubTitle = styled.div `
-font-size: 1.5rem;
-color: rgba(0, 0, 0, 0.5);
-font-weight: 400;
+const baseTitle = css`
 text-overflow: ellipsis;
 overflow: hidden;
 letter-spacing: -.029rem;
-margin-bottom: .2rem;
+margin-bottom: .5rem;
 white-space: nowrap;
+`
+
+export const StyledCardContentTitle = styled.div `
+   font-size: ${({theme}) => theme && theme.typography.title.fontSize};
+   color: ${({theme}) => theme && theme.text.primary};
+   font-weight: ${({theme}) => theme && theme.typography.title.fontWeight};
+   line-height: ${({theme}) => theme && theme.typography.title.lineHeight};
+   ${baseTitle}
+
+`
+
+export const StyledCardContentSubTitle = styled.div `
+font-size: ${({theme}) => theme && theme.typography.subtitle.fontSize};
+color:  ${({theme}) => theme && theme.text.secondary};
+font-weight: ${({theme}) => theme && theme.typography.subtitle.fontWeight};
+line-height: ${({theme}) => theme && theme.typography.subtitle.lineHeight};
+${baseTitle}
 `
 
 //================ Card Action =============
@@ -209,17 +212,17 @@ export const StyledActionLeft = styled.div `
 //============== CardLoading =================
 const placeHolderShimmer = keyframes `
   0% {
-    transform: translateX(-468px);
+    transform: translateX(-46.8rem);
   }
 
   100% {
-    transform: translateX(468px);
+    transform: translateX(46.8rem);
   }
   `
 export const PlaceHolder = styled.div `
   width: 100%;
   overflow: hidden;
-  height: 25.7rem;
+  height: 21.9rem;
   background:#fafafa;
   position: relative;
   &:before{
@@ -274,12 +277,12 @@ export const ContentLoading = styled.div `
 `
 
 export const NameCardLoading = styled.div `
-  height: 6px;
-  top: 8px;
-  left: 136px;
+  height: .6rem;
+  top: .8rem;
+  left: 13.6rem;
   `
 export const DateCardLoading = styled.div `
-  height: 6px;
-  top: 26px;
-  left: 100px;
+  height: .6rem;
+  top: 2.6rem;
+  left: 10rem;
   `

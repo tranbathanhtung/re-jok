@@ -41,8 +41,6 @@ exports[`<TextButton /> should render TextButton 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  margin-right: 0.8rem;
-  margin-bottom: 1.2rem;
   font-size: 1.6rem;
   -webkit-letter-spacing: 0.08rem;
   -moz-letter-spacing: 0.08rem;

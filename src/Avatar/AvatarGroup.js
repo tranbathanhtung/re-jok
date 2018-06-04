@@ -20,8 +20,12 @@ class AvatarGroup extends React.Component<Props> {
     const {size, children} = this.props;
     return (<StyledAvatarGroup>
       {
-        children && React.Children.count(children) > 0 && React.Children.map(children, (c, i) => (<StyledAvatarItem size={size} key={i}>
-          {c}
+        children && React.Children.count(children) > 0 && React.Children.map(children, (c, i) =>
+        (<StyledAvatarItem size={size} key={i}>
+          {React.cloneElement(c, {
+            key: i,
+            size
+          })}
         </StyledAvatarItem>))
       }
     </StyledAvatarGroup>)

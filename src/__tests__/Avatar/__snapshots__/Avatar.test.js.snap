@@ -9,9 +9,6 @@ exports[`<Avatar /> should render Avatar 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

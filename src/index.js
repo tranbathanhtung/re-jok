@@ -4,10 +4,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {ThemeProvider} from 'styled-components';
 import {defaultTheme, setTheme} from './theme';
-import {ButtonDemo} from './Button/demo'
-import {AvatarDemo} from './Avatar/demo'
-import {BadgeDemo} from './Badge/demo'
-import CardDemo from './Card/demo'
+import {ButtonDemo} from './Button/demo';
+import {AvatarDemo} from './Avatar/demo';
+import {BadgeDemo} from './Badge/demo';
+import CardDemo from './Card/demo';
+import ListDemo from './List/demo';
 
 
 ReactDOM.render(
@@ -19,7 +20,8 @@ ReactDOM.render(
        {/* <ButtonDemo/> */}
        {/* <AvatarDemo/> */}
        {/* <BadgeDemo/> */}
-       <CardDemo/>
+       {/* <CardDemo/> */}
+       <ListDemo/>
        </React.Fragment>
      </ThemeProvider>
 

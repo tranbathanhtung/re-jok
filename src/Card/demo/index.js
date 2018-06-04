@@ -1,9 +1,8 @@
 import React from 'react'
 import Card from '../Card'
-import Icon from '../../Icon'
+
 
 import Avatar from '../../Avatar/Avatar'
-import AvatarGroup from '../../Avatar/AvatarGroup'
 import Button from '../../Button/Button'
 
 class LoadingCard extends React.Component {

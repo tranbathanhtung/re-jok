@@ -1,5 +1,5 @@
 /* eslint no-eval: 0 */
-
+import styled from 'styled-components'
 
 export const hexa = (hex, alpha) => {
   var r = parseInt(hex.slice(1, 3), 16),
@@ -52,3 +52,18 @@ export const Transition = {
     off: 'all 0.35s ease-out',
   },
 };
+
+export const PrimaryText = styled.span `
+  color: ${({theme}) => theme.text.primary};
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+`
+
+export const SecondaryText = styled.span `
+  color:${({theme}) => theme.text.secondary};
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+
+`

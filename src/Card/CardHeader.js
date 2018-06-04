@@ -2,12 +2,15 @@
 import * as React from 'react';
 import {
   StyledCardHeader,
-  PrimaryText,
-  SecondaryText,
+
   StyledCardHeaderInfo,
   StyledCardHeaderText,
   StyledCardHeaderAction
 } from './style';
+import {
+  PrimaryText,
+  SecondaryText,
+} from '../globals';
 
 
 import Avatar from '../Avatar/Avatar';

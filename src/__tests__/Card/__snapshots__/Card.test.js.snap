@@ -153,7 +153,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
   padding: 1.2rem 1.6rem;
-  border-radius: .8rem;
+  border-radius: .6rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -228,7 +228,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
   padding: 1.2rem 1.6rem;
-  border-radius: .8rem;
+  border-radius: .6rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -303,7 +303,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
   padding: 1.2rem 1.6rem;
-  border-radius: .8rem;
+  border-radius: .6rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -613,7 +613,7 @@ exports[`<Card /> should render with Card Header 1`] = `
 
 .c7 {
   color: rgba(0,0,0,0.48);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 200;
   line-height: 2.5rem;
 }
@@ -626,9 +626,6 @@ exports[`<Card /> should render with Card Header 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -707,7 +704,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
   padding: 0.5rem 0.9rem;
-  border-radius: .5rem;
+  border-radius: .4rem;
   line-height: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;

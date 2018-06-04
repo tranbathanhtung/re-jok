@@ -54,7 +54,7 @@ it('renders a button size small', () => {
   expect(tree).toHaveStyleRule('font-size', '1.2rem')
   expect(tree).toHaveStyleRule('padding', '0.5rem 0.9rem')
   expect(tree).toHaveStyleRule('line-height', '1')
-  expect(tree).toHaveStyleRule('border-radius', '.5rem')
+  expect(tree).toHaveStyleRule('border-radius', '.4rem')
 });
 
 it('renders a button size default', () => {
@@ -65,7 +65,7 @@ it('renders a button size default', () => {
   expect(tree).toHaveStyleRule('font-size', '1.6rem')
   expect(tree).toHaveStyleRule('padding', '0.8rem 1.2rem')
   expect(tree).toHaveStyleRule('line-height', '1.5')
-  expect(tree).toHaveStyleRule('border-radius', '.8rem')
+  expect(tree).toHaveStyleRule('border-radius', '.4rem')
 });
 
 it('renders a button size medium', () => {
@@ -76,7 +76,7 @@ it('renders a button size medium', () => {
   expect(tree).toHaveStyleRule('font-size', '2rem')
   expect(tree).toHaveStyleRule('padding', '1.2rem 1.6rem')
   expect(tree).toHaveStyleRule('line-height', '1.5')
-  expect(tree).toHaveStyleRule('border-radius', '.8rem')
+  expect(tree).toHaveStyleRule('border-radius', '.6rem')
 });
 
 it('renders a button size large', () => {
@@ -87,7 +87,7 @@ it('renders a button size large', () => {
   expect(tree).toHaveStyleRule('font-size', '2.4rem')
   expect(tree).toHaveStyleRule('padding', '1.4rem 1.8rem')
   expect(tree).toHaveStyleRule('line-height', '2')
-  expect(tree).toHaveStyleRule('border-radius', '1rem')
+  expect(tree).toHaveStyleRule('border-radius', '.8rem')
 });
 
 it('renders a button loading true with spin component', () => {

@@ -3,7 +3,6 @@ import styled, {css} from 'styled-components';
 export const baseAvatar = css `
    display: flex;
    flex: none;
-   align-self: center;
    align-items: center;
    justify-content: center;
    list-style: none;
@@ -52,7 +51,7 @@ export const StyledAvatarGroup = styled.ul `
   margin-right: .8rem;
   margin-left: .8rem;
   pointer-events: auto;
-  
+
 `
 
 export const StyledAvatarItem = styled.li `

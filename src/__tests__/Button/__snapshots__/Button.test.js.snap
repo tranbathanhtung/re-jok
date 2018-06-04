@@ -48,7 +48,7 @@ exports[`<Button /> should render 1`] = `
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
   padding: 0.8rem 1.2rem;
-  border-radius: .8rem;
+  border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;

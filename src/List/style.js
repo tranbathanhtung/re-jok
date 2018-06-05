@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components';
 
 //=================== List ===================
 export const StyledList = styled.div`
+  display: ${props => props.collapsed ? "none" : "block"};
+
   font-size: 1.4rem;
   line-height: 1.5;
   list-style: none;
@@ -13,6 +15,7 @@ export const StyledList = styled.div`
   box-sizing: border-box;
 
 
+
   & * {
     outline: none;
 
@@ -21,14 +24,15 @@ export const StyledList = styled.div`
 `
 // ==================== List Item =================
 export const StyledListItem = styled.div`
-  display: flex;
+display: flex;
+
   align-items: center;
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: ${props => props.selection ? "pointer" : "default"};
 
   border-bottom: ${props => props.divided ? ".1rem solid #e8e8e8" : "none"};
-
+  background: ${props => props.active ? "rgba(0,0,0, .02)" : "#fff"};
   ${
     props =>
       props.selection

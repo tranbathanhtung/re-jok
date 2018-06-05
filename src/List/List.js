@@ -20,6 +20,7 @@ type Props = {
   dataSource?: Array<Object>,
   selection: boolean,
   tag: string,
+  collapsed?: boolean,
   children: React.ChildrenArray < React.Element < typeof ListItem >>
 
 }
@@ -29,6 +30,7 @@ const defaultProps = {
   layout: "vertical",
   loading: false,
   selection: false,
+  collapsed: false,
   tag: "div"
 }
 
@@ -42,10 +44,11 @@ class List extends React.Component<Props>{
     const {
       children,
       divided,
-      selection
+      selection,
+      ...rest
     } = this.props;
     return (
-      <StyledList>
+      <StyledList {...rest}>
         {
           React.Children.map(children, (ch, i)=>(
             React.cloneElement(ch, {

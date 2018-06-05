@@ -13,7 +13,8 @@ type Props = {
   onClick?: Function,
   tag: string,
   divided: boolean,
-  selection: boolean
+  selection: boolean,
+  
 
 }
 

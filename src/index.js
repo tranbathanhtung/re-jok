@@ -8,7 +8,8 @@ import {ButtonDemo} from './Button/demo';
 import {AvatarDemo} from './Avatar/demo';
 import {BadgeDemo} from './Badge/demo';
 import CardDemo from './Card/demo';
-import ListDemo from './List/demo';
+import ListDemo from './List/demo'; //not done
+import GridDemo from './Grid/demo';
 
 
 ReactDOM.render(
@@ -21,7 +22,8 @@ ReactDOM.render(
        {/* <AvatarDemo/> */}
        {/* <BadgeDemo/> */}
        {/* <CardDemo/> */}
-       <ListDemo/>
+       {/* <ListDemo/> */}
+       <GridDemo/>
        </React.Fragment>
      </ThemeProvider>
 

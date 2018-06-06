@@ -21,9 +21,9 @@ ReactDOM.render(
        {/* <ButtonDemo/> */}
        {/* <AvatarDemo/> */}
        {/* <BadgeDemo/> */}
-       {/* <CardDemo/> */}
+       <CardDemo/>
        {/* <ListDemo/> */}
-       <GridDemo/>
+       {/* <GridDemo/> */}
        </React.Fragment>
      </ThemeProvider>
 

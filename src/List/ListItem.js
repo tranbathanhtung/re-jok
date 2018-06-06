@@ -12,9 +12,9 @@ type Props = {
   disabled: boolean,
   onClick?: Function,
   tag: string,
-  divided: boolean,
-  selection: boolean,
-  
+  divided?: boolean,
+  selection?: boolean,
+
 
 }
 

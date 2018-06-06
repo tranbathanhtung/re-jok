@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+// @flow
+import * as React from 'react';
 
 import List from '../List';
 import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button'
 
-class ListDemo extends Component {
+class ListDemo extends React.Component<{}, {collapsed: boolean}> {
   state = {
     collapsed: true
   }

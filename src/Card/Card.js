@@ -13,7 +13,7 @@ import CardLoading  from './CardLoading';
 
 type Props = {
   /**Number of card in a row**/
-  numberCard?: number,
+  numberCard?: number | {|number: number, gutter?: number, xs?: number, sm?: number, md?: number, lg?: number, xl?: number|},
   /** Children of card**/
   children?: any,
   /** add hover affect **/

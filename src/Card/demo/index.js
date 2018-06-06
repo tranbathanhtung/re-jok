@@ -1,11 +1,13 @@
-import React from 'react'
+// @flow
+import * as React from 'react'
 import Card from '../Card'
 
 
 import Avatar from '../../Avatar/Avatar'
 import Button from '../../Button/Button'
 
-class LoadingCard extends React.Component {
+
+class LoadingCard extends React.Component<{}, {loading: boolean}> {
   state = {
     loading: true
   }
@@ -21,7 +23,7 @@ class LoadingCard extends React.Component {
   }
   render() {
 
-    return (<Card hoverable="hoverable" loading={this.state.loading} {...this.props}>
+    return (<Card hoverable loading={this.state.loading} {...this.props}>
       <Card.Media src="https://i.imgur.com/9u0Wngc.jpg"/>
       <Card.Header avatar={<Avatar imgSrc = "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852" />
 } title="Trần Bá Thanh Tùng" subheader="@tungtbt" action={<Button size = "small" > Follow</Button>
@@ -40,7 +42,7 @@ class LoadingCard extends React.Component {
   }
 }
 
-class CardDemo extends React.Component {
+class CardDemo extends React.Component<{}> {
   render() {
     return (
       <React.Fragment>
@@ -52,7 +54,7 @@ class CardDemo extends React.Component {
 
         </Card.Group>
         <Card.Group numberCard={2}>
-        <Card hoverable="hoverable" style={{
+        <Card hoverable style={{
         flexDirection: "row"
         }}>
         <Card.Media style={{
@@ -74,7 +76,7 @@ class CardDemo extends React.Component {
         </div>
 
         </Card>
-        <Card hoverable="hoverable" style={{
+        <Card hoverable style={{
         flexDirection: "row"
         }}>
         <Card.Media style={{

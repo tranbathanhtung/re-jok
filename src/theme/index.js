@@ -42,7 +42,7 @@ export const defaultTheme = {
     }
   },
   grid:{
-    xs: 0,
+    xs: 768,
     sm: 768,
     md: 992,
     lg: 1200,

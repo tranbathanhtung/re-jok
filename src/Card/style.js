@@ -30,9 +30,23 @@ export const StyledCard = styled.div `
   list-style: none;
   animation: ${opacityCard} .5s;
 
-  width: ${props => props.numberCard
-  ? `calc(${ 100 / props.numberCard}% - 2.4rem)`
-  : "33rem"};
+  
+
+  ${
+    props =>
+      {
+        if(typeof props.numberCard === "number"){
+          return css`
+            width: ${props => `calc(${ 100 / props.numberCard}% - 2.4rem)`};
+          `
+        } else if(typeof props.numberCard === "object"){
+
+        }
+        else return css`
+           width: 33rem;
+        `
+      }
+  }
   ${
 props => props.loading
   ? css `

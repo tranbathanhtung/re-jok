@@ -8,9 +8,9 @@ import Card from './Card';
 
 type Props = {
   /****/
-  children: React.ChildrenArray < React.Element < typeof Card >>,
+  children: any,
   /** Number of card in a row**/
-  numberCard: number,
+  numberCard: number | {|number: number, gutter?: number, xs?: number, sm?: number, md?: number, lg?: number, xl?: number|},
   /** make content card center**/
   center: boolean,
   /** Add more style to card**/

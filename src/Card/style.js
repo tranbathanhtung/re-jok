@@ -30,7 +30,7 @@ export const StyledCard = styled.div `
   list-style: none;
   animation: ${opacityCard} .5s;
 
-  
+
 
   ${
     props =>
@@ -40,7 +40,59 @@ export const StyledCard = styled.div `
             width: ${props => `calc(${ 100 / props.numberCard}% - 2.4rem)`};
           `
         } else if(typeof props.numberCard === "object"){
+          const vals = Object.keys(props.numberCard).map(key => {
+            switch (key) {
+              case "xs":
+               return css`
+                @media(max-width: ${props.theme.grid.sm}px){
+                  width: ${props => `calc(${ 100 / props.numberCard.xs}% - 2.4rem)`};
 
+                }
+                `
+
+                case "sm":
+                 return css`
+                  @media(min-width: ${props.theme.grid.sm}px){
+                    width: ${props => `calc(${ 100 / props.numberCard.sm}% - 2.4rem)`};
+
+                  }
+                  `
+
+                  case "md":
+                   return css`
+                    @media(min-width: ${props.theme.grid.md}px){
+                      width: ${props => `calc(${ 100 / props.numberCard.md}% - 2.4rem)`};
+
+                    }
+                    `
+              
+                    case "lg":
+                     return css`
+                      @media(min-width: ${props.theme.grid.lg}px){
+                        width: ${props => `calc(${ 100 / props.numberCard.lg}% - 2.4rem)`};
+
+                      }
+                      `
+
+                      case "xl":
+                       return css`
+                        @media(min-width: ${props.theme.grid.xl}px){
+                          width: ${props => `calc(${ 100 / props.numberCard.xl}% - 2.4rem)`};
+
+                        }
+                        `
+
+
+              default:
+              return css`
+              width: ${props => props.numberCard.number ? `calc(${ 100 / props.numberCard.number}% - 2.4rem)` : '33rem'};
+
+              `
+            }
+
+          })
+
+          return vals
         }
         else return css`
            width: 33rem;

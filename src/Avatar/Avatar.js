@@ -2,6 +2,7 @@
 import * as React from 'react'
 
 import Icon from '../Icon';
+import AvatarGroup from './AvatarGroup';
 import {StyledAvatar, StyledAvatarImage} from './style';
 
 type Props = {
@@ -30,6 +31,9 @@ const defaultProps = {
 
 class Avatar extends React.Component<Props> {
   static defaultProps = defaultProps;
+
+  static Group = AvatarGroup;
+
   render() {
     const {
       imgAlt,

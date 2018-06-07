@@ -8,6 +8,9 @@ import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers
 import 'jest-enzyme'
 import 'jest-styled-components'
 
+// This is just Snap shot test
+
+
 describe('<Card />', () => {
   it('should render', () => {
     const tree = renderWithTheme(

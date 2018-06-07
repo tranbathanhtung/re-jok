@@ -46,10 +46,12 @@ class CardDemo extends React.Component<{}> {
   render() {
     return (
       <React.Fragment>
-        <Card.Group numberCard={3}>
+        <Card.Group center numberCard={{xs: 1, sm: 2, md: 3, lg: 4}}>
         <LoadingCard/>
         <LoadingCard/>
         <LoadingCard/>
+        <LoadingCard/>
+
 
 
         </Card.Group>

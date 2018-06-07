@@ -1,0 +1,754 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> basic render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 0 0 25%;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    Col-6
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    Col-6
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    Col-6
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    Col-6
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with align 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 16.666666666666664%;
+  -ms-flex: 0 0 16.666666666666664%;
+  flex: 0 0 16.666666666666664%;
+  max-width: 0 0 16.666666666666664%;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with gutter number 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 0 0 25%;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    <div
+      className="gutter"
+    >
+      Col-6 Gutter-32
+    </div>
+  </div>
+  <div
+    className="col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    <div
+      className="gutter"
+    >
+      Col-6 Gutter-32
+    </div>
+  </div>
+  <div
+    className="col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    <div
+      className="gutter"
+    >
+      Col-6 Gutter-32
+    </div>
+  </div>
+  <div
+    className="col c1"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    <div
+      className="gutter"
+    >
+      Col-6 Gutter-32
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with gutter object 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 0 8.333333333333332%;
+  -ms-flex: 0 0 8.333333333333332%;
+  flex: 0 0 8.333333333333332%;
+  max-width: 8.333333333333332%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 0 83.33333333333334%;
+  -ms-flex: 0 0 83.33333333333334%;
+  flex: 0 0 83.33333333333334%;
+  max-width: 83.33333333333334%;
+}
+
+@media (max-width:768px) {
+  .c1 {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+@media (min-width:1200px) {
+  .c1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex: 0 0 16.666666666666664%;
+    -ms-flex: 0 0 16.666666666666664%;
+    flex: 0 0 16.666666666666664%;
+    max-width: 16.666666666666664%;
+  }
+}
+
+@media (min-width:992px) {
+  .c1 {
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width:1200px) {
+  .c1 {
+    -webkit-flex: 0 0 41.66666666666667%;
+    -ms-flex: 0 0 41.66666666666667%;
+    flex: 0 0 41.66666666666667%;
+    max-width: 41.66666666666667%;
+  }
+}
+
+@media (max-width:768px) {
+  .c2 {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+@media (min-width:1200px) {
+  .c2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    -webkit-flex: 0 0 66.66666666666666%;
+    -ms-flex: 0 0 66.66666666666666%;
+    flex: 0 0 66.66666666666666%;
+    max-width: 66.66666666666666%;
+  }
+}
+
+@media (min-width:992px) {
+  .c2 {
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width:1200px) {
+  .c2 {
+    -webkit-flex: 0 0 16.666666666666664%;
+    -ms-flex: 0 0 16.666666666666664%;
+    flex: 0 0 16.666666666666664%;
+    max-width: 16.666666666666664%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col c1"
+    offset={0}
+    order={0}
+  >
+    <div
+      className="gutter"
+    >
+      Gutter with Respon
+    </div>
+  </div>
+  <div
+    className="col c2"
+    offset={0}
+    order={0}
+  >
+    <div
+      className="gutter"
+    >
+      Gutter with Respon
+    </div>
+  </div>
+  <div
+    className="col c1"
+    offset={0}
+    order={0}
+  >
+    <div
+      className="gutter"
+    >
+      Gutter with Respon
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with justify 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 16.666666666666664%;
+  -ms-flex: 0 0 16.666666666666664%;
+  flex: 0 0 16.666666666666664%;
+  max-width: 0 0 16.666666666666664%;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={4}
+  >
+    Col-4
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with offset, pull, push 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 0 0 25%;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  margin-left: 25%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col-demo col c1"
+    offset={6}
+    order={0}
+    span={6}
+  >
+    Col-6 Offset-6
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={6}
+    order={0}
+    span={6}
+  >
+    Col-6 Offset-6
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with offset, pull, push 2`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 0 0 75%;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  left: 25%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: relative;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 0 0 25%;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  right: 75%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+    span={18}
+  >
+    Col-18 Col-push-6
+  </div>
+  <div
+    className="col-demo col c2"
+    offset={0}
+    order={0}
+    span={6}
+  >
+    Col-6 Col-pull-18
+  </div>
+</div>
+`;
+
+exports[`<Grid /> should render with responsive 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  box-sizing: border-box;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.8rem;
+  margin-right: -8.rem;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 0 20.833333333333336%;
+  -ms-flex: 0 0 20.833333333333336%;
+  flex: 0 0 20.833333333333336%;
+  max-width: 20.833333333333336%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  left: NaN%;
+  right: NaN%;
+  margin-left: 4.166666666666666%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 0 45.83333333333333%;
+  -ms-flex: 0 0 45.83333333333333%;
+  flex: 0 0 45.83333333333333%;
+  max-width: 45.83333333333333%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  left: NaN%;
+  right: NaN%;
+  margin-left: 4.166666666666666%;
+}
+
+@media (min-width:992px) {
+  .c1 {
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    left: NaN%;
+    right: NaN%;
+    margin-left: 8.333333333333332%;
+  }
+}
+
+@media (min-width:992px) {
+  .c2 {
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    left: NaN%;
+    right: NaN%;
+    margin-left: 8.333333333333332%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+  >
+    Col
+  </div>
+  <div
+    className="col-demo col c2"
+    offset={0}
+    order={0}
+  >
+    Col
+  </div>
+  <div
+    className="col-demo col c1"
+    offset={0}
+    order={0}
+  >
+    Col
+  </div>
+</div>
+`;

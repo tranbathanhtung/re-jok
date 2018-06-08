@@ -1,9 +1,59 @@
 import styled, {css} from 'styled-components';
 
 
+
+// ==================== List Item =================
+export const StyledListItem = styled.div.attrs({
+  href: props => props.hrefString
+    ? props.hrefString
+    : null
+  })`
+  display: flex;
+
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: ${props => props.selection || props.hrefString ? "pointer" : "default"};
+
+  ${
+    props =>
+     props.horizontal
+     ? null
+     : css`
+     border-bottom: ${props => props.divided ? ".1rem solid #e8e8e8" : "none"};
+
+     `
+  }
+
+  background: ${props => props.active ? "rgba(0,0,0, .02)" : "#fff"};
+  ${
+    props =>
+      props.selection
+      ? css`
+         &:hover{
+           background: rgba(0,0,0,.02);
+         }
+      `
+      : null
+  }
+`
 //=================== List ===================
+
 export const StyledList = styled.div`
-  display: ${props => props.collapsed ? "none" : "block"};
+  display: ${props => props.collapsed ? "none" : props.horizontal ? "inline-flex" : "block"};
+
+  ${
+    props =>
+     props.horizontal
+      ?  css`
+        // width: 100%;
+        > ${StyledListItem} {
+          display: inline-flex;
+        }
+      `
+      : null
+  }
+
 
   font-size: 1.4rem;
   line-height: 1.5;
@@ -22,28 +72,6 @@ export const StyledList = styled.div`
   }
 
 `
-// ==================== List Item =================
-export const StyledListItem = styled.div`
-display: flex;
-
-  align-items: center;
-  padding: 1rem 1rem;
-  line-height: 1.8rem;
-  cursor: ${props => props.selection ? "pointer" : "default"};
-
-  border-bottom: ${props => props.divided ? ".1rem solid #e8e8e8" : "none"};
-  background: ${props => props.active ? "rgba(0,0,0, .02)" : "#fff"};
-  ${
-    props =>
-      props.selection
-      ? css`
-         &:hover{
-           background: rgba(0,0,0,.02);
-         }
-      `
-      : null
-  }
-`
 // =================== List Content ==================
 export const StyledListContent = styled.div`
   display: flex;
@@ -52,10 +80,7 @@ export const StyledListContent = styled.div`
   flex: 1 1 60%;
 
 `
-export const StyledListContentContainer = styled.div`
-  // flex: 1;
-  // align-items: flex-start;
-`
+
 
 export const StyledListContentHeader = styled.div`
   display: flex;

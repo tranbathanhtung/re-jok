@@ -78,6 +78,7 @@ const defaultProps = {
 
 class Button extends React.Component<Props> {
   static defaultProps = defaultProps;
+
   render() {
     const {
       tag,

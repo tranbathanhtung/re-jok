@@ -3,7 +3,6 @@ import * as React from 'react';
 import {
   StyledCardGroup
 } from './style';
-import Card from './Card';
 
 
 type Props = {

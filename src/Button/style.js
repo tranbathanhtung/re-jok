@@ -15,7 +15,7 @@ export const baseButton = css `
     border: none;
     text-decoration: none;
     text-align: center;
-  
+
     font-size: ${props => props.theme.size[props.size].fontSize};
 
       div + span,
@@ -340,6 +340,7 @@ border-color: transparent;
 
 
 `
+
 
 // =================== Sub Component for Button ========================
 

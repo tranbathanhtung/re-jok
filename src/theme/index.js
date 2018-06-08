@@ -78,6 +78,17 @@ export const defaultTheme = {
   },
   secondary: {
     main: "#1b1c1d",
+  },
+  zIndex: {
+    base: 1,
+    background: 0,
+    hidden: -1,
+    card: 2,
+    loading: 3,
+    avatar: 3,
+    form: 3,
+    search: 3,
+    modal: 1500,
   }
 };
 

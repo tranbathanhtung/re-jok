@@ -10,6 +10,7 @@ import {BadgeDemo} from './Badge/demo';
 import CardDemo from './Card/demo';
 import ListDemo from './List/demo'; //not done
 import GridDemo from './Grid/demo';
+import ModalDemo from './Modal/demo';
 
 
 ReactDOM.render(
@@ -21,9 +22,10 @@ ReactDOM.render(
        {/* <ButtonDemo/> */}
        {/* <AvatarDemo/> */}
        {/* <BadgeDemo/> */}
-       <CardDemo/>
+       {/* <CardDemo/> */}
        {/* <ListDemo/> */}
        {/* <GridDemo/> */}
+       <ModalDemo/>
        </React.Fragment>
      </ThemeProvider>
 

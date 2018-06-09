@@ -79,6 +79,18 @@ export const defaultTheme = {
   secondary: {
     main: "#1b1c1d",
   },
+  info: {
+    main: "#1890ff"
+  },
+  error: {
+    main: "#f5222d"
+  },
+  success: {
+    main: "#52c41a"
+  },
+  warning: {
+    main: "#faad14"
+  },
   zIndex: {
     base: 1,
     background: 0,

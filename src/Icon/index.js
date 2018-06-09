@@ -5,7 +5,8 @@ import FontAwesome from 'react-fontawesome';
 import styled from 'styled-components'
 
 const IconContainer = styled.div`
-order: ${props => props.iconPosition === "left" ? 0 : 1}
+order: ${props => props.iconPosition === "left" ? 0 : 1};
+color:  ${props => props.color ? props.theme[props.color].main : null};
 
 `
 
@@ -19,16 +20,18 @@ class Icon extends Component {
       size,
       style,
       className,
-      spin
+      spin,
+      color,
     } = this.props;
     return (
-      <IconContainer iconPosition={iconPosition}>
+      <IconContainer color={color} iconPosition={iconPosition}>
       <FontAwesome
        name={name}
        size={size}
        style={style}
        className={className}
        spin={spin}
+
       />
       </IconContainer>
     )
@@ -41,10 +44,12 @@ Icon.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   spin: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 Icon.defaultProps = {
-  spin: false
+  spin: false,
+  iconPosition: "left"
 }
 
 export default Icon;

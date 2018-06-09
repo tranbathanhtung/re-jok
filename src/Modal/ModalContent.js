@@ -3,13 +3,18 @@ import * as React from 'react'
 import {
   StyledModalContent,
 
-} from './style'
+} from './style';
+
+type Props = {
+  fullscreen?: boolean,
+  children?: any
+}
 
 
-class ModalContent extends React.Component<{}>{
+class ModalContent extends React.Component<Props>{
   render(){
     return (
-      <StyledModalContent>
+      <StyledModalContent {...this.props}>
        {this.props.children}
       </StyledModalContent>
     )

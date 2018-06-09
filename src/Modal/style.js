@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import Button from '../Button/Button';
 
 
 const baseModal = css`
@@ -14,18 +15,20 @@ const baseModal = css`
 
 export const StyledModalWrapper = styled.div`
    ${baseModal};
-   display: ${props => props.openModal ? "flex" : "none"};
+   display: flex;
+   visibility: ${props => props.openModal ? "visibility" : "hidden" };
    align-items: center;
    justify-content: center;
+   // transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   max-width: calc(100% - 0.01px) !important;
+
 
 `
 
 export const StyledModalBackGround = styled.div`
   ${baseModal};
-  transform: ${props => props.openModal? `translateX(120px)`: "translateX(0)"};
-
-  transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition: opacity 0.5s;
+  opacity: ${props => props.openModal ? "1" : "0"};
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   background-color: rgba(0,0,0,.65);
 
 `
@@ -34,43 +37,98 @@ export const StyledModal = styled.div`
   position: relative;
   opacity: ${props=> props.openModal ? "1" : "0"};
 
-  transform: ${props => props.openModal? `translateX(120px)`: "translateX(0)"};
+  transform: ${props=>
+     props.openModal
+     ?
+     "translateX(0)"
+     : props.slide === "top"
+      ? `translateY(-50%)`
+      : props.slide === "bottom"
+      ? `translateY(50%)`
+      : props.slide === "right"
+       ? `translateX(50%)`
+       : props.slide === "left"
+        ? `translateX(-50%)`
+        : "none"
+   };
 
-  transition: all 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   z-index: ${({theme}) => theme.zIndex.modal+1};
 
   box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
   border-radius: .2rem;
   background-color: #fff;
   flex: 0 1 auto;
-  margin: 32px;
-  width: 40%;
+  margin: ${props => props.fullscreen ? "0" : "3.rem"};
+  width: ${props => props.fullscreen ? "100%": "40%"};
   display: flex;
   outline: none;
-  max-height: 90vh;
+  height: ${props => props.fullscreen ? "100%": "auto"};
+  max-height: ${props => props.fullscreen ? null : "90vh"};
   flex-direction: column;
 `
 //================== Modal Header ==================
 export const StyledModalHeader = styled.div`
-padding: 16px 24px;
-border-radius: 4px 4px 0 0;
+padding: 1.5rem 3rem;
+border-radius: .4rem .4rem 0 0;
 background: #fff;
 color: rgba(0,0,0,.65);
-border-bottom: 1px solid #e8e8e8;
+border-bottom: .1rem solid #e5e5e5;
 `
 
 export const StyledModalHeaderTitle = styled.div`
 margin: 0;
-font-size: 16px;
-line-height: 22px;
+font-size: 2rem;
+line-height: 1.3;
 font-weight: 500;
 color: rgba(0,0,0,.85);
 `
 
 // ================== Modal Content ==================
 export const StyledModalContent = styled.div`
-padding: 24px;
-font-size: 14px;
+padding: 3rem 3rem;
+font-size: 1.6rem;
 line-height: 1.5;
 word-wrap: break-word;
+max-height: ${props => props.fullscreen ? null : "35rem"};
+overflow: auto;
+`
+
+export const StyledAlert = styled.div`
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+`
+
+export const StyledAlertTitle = styled.span`
+    color: rgba(0,0,0,.85);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-left: 1rem;
+    text-transform: uppercase;
+`
+
+export const StyledAlertDescription = styled.div`
+    margin-top: 1.6rem;
+    display: flex;
+    color: ${props => props.alert !== "none" ? props.theme[props.alert].main : null}
+    justify-content: center;
+
+`
+//============= Modal Footer ==============
+export const StyledModalAction = styled.div`
+  padding: 1.5rem 3rem;
+  border-top: .1rem solid #e5e5e5;
+  background: #fff;
+  border-radius: 0 0 .4rem .4rem;
+
+`
+//=========== Helper Modal=================
+export const CloseButton = styled(Button)`
+ position: absolute !important;
+ top: 1rem;
+ right: 1rem;
 `

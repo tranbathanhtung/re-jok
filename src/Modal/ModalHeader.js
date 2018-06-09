@@ -6,7 +6,13 @@ import {
 } from './style'
 
 
-class ModalHeader extends React.Component<{}>{
+type Props = {
+  children?: any
+}
+
+
+
+class ModalHeader extends React.Component<Props>{
   render(){
     return (
       <StyledModalHeader>

@@ -19,7 +19,7 @@ export const StyledModalWrapper = styled.div`
    visibility: ${props => props.openModal ? "visibility" : "hidden" };
    align-items: center;
    justify-content: center;
-   // transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
    max-width: calc(100% - 0.01px) !important;
 
 
@@ -56,11 +56,11 @@ export const StyledModal = styled.div`
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   z-index: ${({theme}) => theme.zIndex.modal+1};
 
-  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0, 0, 0, 0.2), 0 2.4rem 3.8rem .3rem rgba(0, 0, 0, 0.14), 0 .9rem 4.6rem .8rem rgba(0, 0, 0, 0.12);
   border-radius: .2rem;
   background-color: #fff;
   flex: 0 1 auto;
-  margin: ${props => props.fullscreen ? "0" : "3.rem"};
+  margin: ${props => props.fullscreen ? "0" : "3.2rem"};
   width: ${props => props.fullscreen ? "100%": "40%"};
   display: flex;
   outline: none;
@@ -123,7 +123,12 @@ export const StyledModalAction = styled.div`
   padding: 1.5rem 3rem;
   border-top: .1rem solid #e5e5e5;
   background: #fff;
+  display: inline-flex;
+  justify-content: flex-end;
   border-radius: 0 0 .4rem .4rem;
+  & > * {
+    margin-left: 10px;
+  }
 
 `
 //=========== Helper Modal=================

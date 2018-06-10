@@ -18,16 +18,43 @@ import ModalContent from './ModalContent';
 import ModalAction from './ModalAction';
 
 type Props = {
+  /** Set modal open or not**/
   open: boolean,
+  /** Children of modal.It should be wrap by modal content**/
   children: any,
+  /** Function to close modal**/
   onClose: Function,
-  title?: string | React.Node,
+  /** Title of modal**/
+  title?: any,
+  /** Slide animated modal**/
   slide?: 'top' | 'right' | 'bottom' | 'left',
+  /** Set modal like alert**/
   alert: 'none' | 'info' | 'success' | 'error' | 'warning',
+  /** Alert title**/
   alertTitle?: string,
-  action?: Array<any>,
+  /** action of modal**/
+  action?: Array<React.Node>,
+  /** set modal close button**/
   closable: boolean,
+  /** set modal fullscreen or not**/
   fullscreen: boolean,
+  /** Override style of modal**/
+  style?: Object,
+  /** Add more class to modal**/
+  className?: string,
+  /** Override style of modal header**/
+  styleHeader?: Object,
+  /** Add more class to modal**/
+  classNameHeader?: string,
+  /** Override style of modal content**/
+  styleContent?: Object,
+  /** Add more class to modal content**/
+  classNameContent?: string,
+  /** Override style of modal action**/
+  styleAction?: Object,
+  /** Add more class to modal action**/
+  classNameAction?: string
+
 
 }
 
@@ -52,6 +79,12 @@ class Modal extends React.Component<Props>{
       fullscreen,
       children,
       closable,
+      styleHeader,
+      classNameHeader,
+      styleContent,
+      classNameContent,
+      styleAction,
+      classNameAction,
       ...rest
     } = this.props;
 
@@ -72,12 +105,12 @@ class Modal extends React.Component<Props>{
         {
           title && alert === "none"
           ? (
-            <ModalHeader>
+            <ModalHeader style={styleHeader} className={classNameHeader}>
               {title}
             </ModalHeader>
           ) : null
         }
-        <ModalContent fullscreen={fullscreen}>
+        <ModalContent fullscreen={fullscreen} style={styleContent} className={classNameContent}>
           {
             alert  !== "none"
              ? (
@@ -99,7 +132,7 @@ class Modal extends React.Component<Props>{
 
         </ModalContent>
         {
-          action && <ModalAction>{action}</ModalAction>
+          action && <ModalAction style={styleAction} className={classNameAction} action={action}/>
         }
 
 

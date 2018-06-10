@@ -58,12 +58,16 @@ class ModalDemo extends React.Component<{}, State>{
   render(){
     return (
       <React.Fragment>
-        <Button onClick={this.handleOpen} hasBoxShadow primary>Open Modal</Button>
-      <Button onClick={this.handleOpenAlertModal} hasBoxShadow secondary>Open Alert Modal</Button>
-    <Button onClick={this.handleOpenFullscreenModal} variant="outline" hasBoxShadow>Open Alert Modal</Button>
+        <Button style={{marginBottom: 20}} onClick={this.handleOpen} hasBoxShadow primary>Open Modal</Button>
+      <Button style={{marginBottom: 20}} onClick={this.handleOpenAlertModal} hasBoxShadow secondary>Open Alert Modal</Button>
+    <Button style={{marginBottom: 20}} onClick={this.handleOpenFullscreenModal} variant="outline" hasBoxShadow>Open Alert Modal</Button>
 
       <Modal
         slide="left"
+        action={[
+          <Button variant="outline" primary>Cancel</Button>,
+          <Button primary>Oke</Button>
+        ]}
         open={this.state.open}
         title="Welcome Basic Modal"
         onClose={this.handleClose}>
@@ -94,7 +98,6 @@ class ModalDemo extends React.Component<{}, State>{
           open={this.state.openAlertModal}
           alert="error"
           alertTitle="Delete Box"
-          action={["hi"]}
           onClose={this.handleCloseAlertModal}>
 
             <p>Are you sure to delete this?</p>
@@ -105,7 +108,10 @@ class ModalDemo extends React.Component<{}, State>{
           <Modal
             closable
             fullscreen
-            // slide="bottom"
+            action={[
+              <Button variant="outline" primary>Cancel</Button>,
+              <Button primary>Oke</Button>
+            ]}
             open={this.state.openFullscreenModal}
             title="Welcome Basic Modal"
             onClose={this.handleCloseFullscreenModal}>

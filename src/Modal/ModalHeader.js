@@ -7,6 +7,11 @@ import {
 
 
 type Props = {
+  /** Override style of modal header**/
+  style?: Object,
+  /** Add more class to modal**/
+  className?: string,
+  /** title of modal**/
   children?: any
 }
 
@@ -14,10 +19,14 @@ type Props = {
 
 class ModalHeader extends React.Component<Props>{
   render(){
+    const {
+      children,
+      ...rest
+    } = this.props;
     return (
-      <StyledModalHeader>
+      <StyledModalHeader {...rest}>
         <StyledModalHeaderTitle>
-          {this.props.children}
+          {children}
         </StyledModalHeaderTitle>
 
       </StyledModalHeader>

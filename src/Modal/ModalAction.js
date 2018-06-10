@@ -6,14 +6,30 @@ import {
 
 
 type Props = {
-  children?: any
+  /** Override style of modal action**/
+  style?: Object,
+  /** Add more class to modal action**/
+  className?: string,
+  /** Children of modal action**/
+  action?: Array<React.Node>,
 }
 
 class ModalAction extends React.Component<Props>{
   render(){
+    const {
+      action,
+      ...rest
+    } = this.props;
+
     return (
-      <StyledModalAction>
-          {this.props.children}
+      <StyledModalAction {...rest}>
+        {
+          React.Children.map(action, (at, i)=>(
+            React.cloneElement(at, {
+              key: i
+            })
+          ))
+        }
       </StyledModalAction>
     )
   }

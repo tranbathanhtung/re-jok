@@ -95,6 +95,7 @@ export const Btn = styled.button.attrs({
     : props.secondary
       ? props.theme.secondary.main
       : "#fff"};
+
   color: ${props => (props.backgroundColor || props.primary || props.secondary)
         ? "#fff"
         : "#000000a6"};
@@ -139,18 +140,22 @@ props => !props.shape
 ${
   props => props.variant === 'icon'
   ? null
-  : css`
-  &:hover{
-    background: ${props => props.backgroundColor
-    ? hexa(props.backgroundColor, 0.9)
-    : props.primary
-      ? hexa(props.theme.primary.main, 0.9)
-      : props.secondary
-        ? hexa(props.theme.secondary.main, 0.9)
-        : "#fff"};
+  : props.variant === "outline"
+  ? null
+  : (
+    css`
+    &:hover{
+      background-color: ${props => props.backgroundColor
+      ? hexa(props.backgroundColor, 0.9)
+      : props.primary
+        ? hexa(props.theme.primary.main, 0.9)
+        : props.secondary
+          ? hexa(props.theme.secondary.main, 0.9)
+          : "#fff"};
 
-  }
-  `
+    }
+    `
+    )
 }
 
 &::before {

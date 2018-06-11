@@ -48,6 +48,7 @@ class Card extends React.Component<Props> {
     if (onClick) onClick(e, this.props)
   }
 
+
   render(){
     const{
       children,
@@ -57,7 +58,7 @@ class Card extends React.Component<Props> {
     } = this.props;
 
     return (
-      <StyledCard {...rest} loading={loading} onClick={this.handleClick}>
+      <StyledCard {...rest} loading={loading} onClick={(e)=>this.handleClick(e)}>
         {
           loading
           ? <CardLoading/>

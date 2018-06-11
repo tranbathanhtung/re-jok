@@ -17,11 +17,13 @@ exports[`<Badge /> should render Badge 1`] = `
   flex-direction: column;
   line-height: 1;
   vertical-align: middle;
+  z-index: 100;
 }
 
 .c1 {
   background: #1c8ffb;
   position: absolute;
+  z-index: 100;
   -webkit-transform: scale(1) translateX(-50%);
   -ms-transform: scale(1) translateX(-50%);
   transform: scale(1) translateX(-50%);
@@ -50,7 +52,6 @@ exports[`<Badge /> should render Badge 1`] = `
   padding: 0 .6rem;
   font-size: 1.2rem;
   font-weight: 400;
-  z-index: 1;
   white-space: nowrap;
   margin-top: 0rem;
   margin-left: 0rem;

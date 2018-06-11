@@ -28,6 +28,7 @@ exports[`<AvatarGroup /> should render AvatarGroup 1`] = `
   width: 3.2rem;
   height: 3.2rem;
   padding: 0;
+  z-index: 3;
   border-radius: 50%;
 }
 

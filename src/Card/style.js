@@ -23,6 +23,7 @@ export const StyledCard = styled.div `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: ${({theme}) => theme.zIndex.card};
 
 
   transition: all .3s;
@@ -65,7 +66,7 @@ export const StyledCard = styled.div `
 
                     }
                     `
-              
+
                     case "lg":
                      return css`
                       @media(min-width: ${props.theme.grid.lg}px){

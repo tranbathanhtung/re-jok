@@ -16,6 +16,7 @@ exports[`<Card /> should render 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
@@ -52,6 +53,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
@@ -436,6 +438,7 @@ exports[`<Card /> should render with Card Content 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
@@ -532,6 +535,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
@@ -648,6 +652,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   width: 3.2rem;
   height: 3.2rem;
   padding: 0;
+  z-index: 3;
   border-radius: 50%;
 }
 
@@ -821,6 +826,7 @@ exports[`<Card /> should render with Card Loading 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
@@ -1139,6 +1145,7 @@ exports[`<Card /> should render with Card Media 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;
@@ -1187,6 +1194,7 @@ exports[`<Card /> should render with full card option 1`] = `
   font-size: 1.4rem;
   color: rgba(0,0,0,.65);
   margin: 0;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s;
   box-sizing: border-box;

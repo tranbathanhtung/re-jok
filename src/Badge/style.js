@@ -30,6 +30,8 @@ export const StyledBadge = styled.span `
     flex-direction: column;
     line-height: 1;
     vertical-align: middle;
+    z-index: ${({theme}) => theme.zIndex.badge};
+
 
 
 `
@@ -39,6 +41,8 @@ export const StyledSup = styled.sup `
   ? props.backgroundColor
   : props.theme.primary.main};
   position: absolute;
+  z-index: ${({theme}) => theme.zIndex.badge};
+
   transform: scale(1) translateX(-50%);
   top: -1rem;
   left: ${props => props.widthChildren
@@ -58,7 +62,6 @@ export const StyledSup = styled.sup `
       : '0 .8rem'};
   font-size: 1.2rem;
   font-weight: 400;
-  z-index: 1;
   white-space: nowrap;
   margin-top: ${props => `${props.offset[0] / 10}rem`};
   margin-left:  ${props => `${props.offset[1] / 10}rem`};

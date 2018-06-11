@@ -23,6 +23,8 @@ export const baseAvatar = css `
 
 export const StyledAvatar = styled.div `
   ${baseAvatar}
+  z-index: ${({theme}) => theme.zIndex.avatar};
+
 
   border-radius: ${props => props.shape === "circle" ? '50%' : '.4rem'};
 

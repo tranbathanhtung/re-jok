@@ -288,6 +288,21 @@ export const IconBtn = Btn.extend `
 
 //==================== Text Button =======================
 
+const animationTextButton = css`
+  &:before{
+    content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+right: 100%;
+border-bottom: 1px solid #222;
+transition: right .3s ease-out;
+  }
+  &:hover:before{
+    right: 0;
+  }
+`
+
 
 export const TextBtn = styled.button.attrs({
   href: props => props.hrefString
@@ -341,6 +356,11 @@ export const TextBtn = styled.button.attrs({
                       : hexa("#000000a6", 0.8)};
 border-color: transparent;
  }
+
+${
+  props =>
+   props.hoverable && animationTextButton
+}
 
 
 

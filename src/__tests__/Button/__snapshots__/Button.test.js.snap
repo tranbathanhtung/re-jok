@@ -47,7 +47,7 @@ exports[`<Button /> should render 1`] = `
   width: unset;
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
-  padding: 0.8rem 1.2rem;
+  padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
@@ -60,7 +60,7 @@ exports[`<Button /> should render 1`] = `
 }
 
 .c0:hover {
-  background: #fff;
+  background-color: #fff;
 }
 
 .c0::before {

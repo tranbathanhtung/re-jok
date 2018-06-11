@@ -37,7 +37,8 @@ type Props = {
   color?: string,
   /** Change text color when hover button**/
   colorWhenHover?: string,
-
+  /** animated when hover button**/
+  hoverable: boolean,
   /**
    * Defines HTML button type attribute
    * @defaultValue 'button'
@@ -58,6 +59,7 @@ const defaultProps = {
   iconPosition: 'left',
   tag: "button",
   color: "",
+  hoverable: false,
 };
 
 class TextButton extends React.Component<Props> {

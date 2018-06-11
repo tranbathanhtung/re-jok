@@ -146,13 +146,13 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: #fff;
   color: #000000a6;
   width: unset;
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
-  padding: 1.2rem 1.6rem;
+  padding: 1.4rem 2.7rem;
   border-radius: .6rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
@@ -221,13 +221,13 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: #fff;
   color: #000000a6;
   width: unset;
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
-  padding: 1.2rem 1.6rem;
+  padding: 1.4rem 2.7rem;
   border-radius: .6rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
@@ -296,13 +296,13 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: #fff;
   color: #000000a6;
   width: unset;
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
-  padding: 1.2rem 1.6rem;
+  padding: 1.4rem 2.7rem;
   border-radius: .6rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
@@ -364,6 +364,7 @@ exports[`<Card /> should render with Card Action 1`] = `
       >
         <div
           className="c4"
+          color={undefined}
         >
           <span
             aria-hidden={true}
@@ -382,6 +383,7 @@ exports[`<Card /> should render with Card Action 1`] = `
       >
         <div
           className="c4"
+          color={undefined}
         >
           <span
             aria-hidden={true}
@@ -404,6 +406,7 @@ exports[`<Card /> should render with Card Action 1`] = `
       >
         <div
           className="c4"
+          color={undefined}
         >
           <span
             aria-hidden={true}
@@ -704,7 +707,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   border: .1rem solid rgba(0,0,0,.15);
   border-color: #d9d9d9;
   padding: 0.5rem 0.9rem;
-  border-radius: .4rem;
+  border-radius: .2rem;
   line-height: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -716,7 +719,7 @@ exports[`<Card /> should render with Card Header 1`] = `
 }
 
 .c9:hover {
-  background: #fff;
+  background-color: #fff;
 }
 
 .c9::before {

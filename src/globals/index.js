@@ -15,6 +15,7 @@ export const hexa = (hex, alpha) => {
 };
 
 export const shadeColor = (color, percent) => {
+  if(color.charAt(0) !== "#") return color;
   var R = parseInt(color.slice(1, 3), 16),
     G = parseInt(color.slice(3, 5), 16),
     B = parseInt(color.slice(5, 7), 16);

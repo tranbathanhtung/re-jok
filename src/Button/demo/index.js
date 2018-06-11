@@ -54,6 +54,7 @@ class MyTextButton extends React.Component<{}, State>{
        // disabled={false}
        size="large"
        icon="rocket"
+       hoverable
 
        primary
        >Button</TextButton>
@@ -228,7 +229,7 @@ primary
 
 <div style={{display: "flex"}}>
   <TextButton size="small">Button</TextButton>
-<TextButton color="#f44336" colorWhenHover="#03a87c" loading>Button</TextButton>
+<TextButton color="#f44336" hoverable colorWhenHover="#03a87c" loading>Button</TextButton>
   <TextButton size="medium">Button</TextButton>
 <MyTextButton/>
 </div>

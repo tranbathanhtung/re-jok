@@ -1,0 +1,1503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> basic render 1`] = `
+.c0 {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: rgba(0,0,0,.65);
+  box-sizing: border-box;
+}
+
+.c0 * {
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Home
+  </div>
+  <div
+    className="c2"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Button
+  </div>
+  <div
+    className="c3"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Card
+  </div>
+  <div
+    className="c4"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Avatar
+  </div>
+  <div
+    className="c5"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Grid
+  </div>
+  <div
+    className="c6"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    List
+  </div>
+  <div
+    className="c7"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Icon
+  </div>
+</div>
+`;
+
+exports[`<List /> should render full control list 1`] = `
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8 {
+  color: rgba(0,0,0,.68);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+  flex: 1 1 30%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c6 {
+  color: rgba(0,0,0,0.85);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.c7 {
+  color: rgba(0,0,0,0.48);
+  font-size: 1.2rem;
+  font-weight: 200;
+  line-height: 2.5rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-right: 0.8rem;
+  background: transparent;
+  color: #fafafa;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.c4 {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.c25 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  line-height: inherit;
+  color: inherit;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: auto;
+}
+
+.c0 {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: rgba(0,0,0,.65);
+  box-sizing: border-box;
+}
+
+.c0 * {
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: .1rem solid #e8e8e8;
+  background: #fff;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c9 {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: rgba(0,0,0,.65);
+  box-sizing: border-box;
+}
+
+.c9 * {
+  outline: none;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c15 {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: rgba(0,0,0,.65);
+  box-sizing: border-box;
+}
+
+.c15 * {
+  outline: none;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: none;
+  background: #fff;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 0.9rem 1.8rem;
+  border-radius: .4rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,.16);
+  color: #0000008a;
+}
+
+.c24 div + span,
+.c24 span + span {
+  margin: 0 .8rem;
+}
+
+.c24::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+.c24:hover {
+  border-color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,.68);
+}
+
+.c24:hover {
+  border-color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(0,0,0,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.c24:active {
+  box-shadow: -.1rem .1rem .4rem rgba(0,0,0,0.4);
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: .1rem solid #e8e8e8;
+  background: #fff;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 0.9rem 1.8rem;
+  border-radius: .4rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,.16);
+  color: #0000008a;
+}
+
+.c28 div + span,
+.c28 span + span {
+  margin: 0 .8rem;
+}
+
+.c28::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+.c28:hover {
+  border-color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,.68);
+}
+
+.c28:hover {
+  border-color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(0,0,0,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.c28:active {
+  box-shadow: -.1rem .1rem .4rem rgba(0,0,0,0.4);
+}
+
+.c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  border-bottom: .1rem solid #e8e8e8;
+  background: #fff;
+}
+
+.c30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: #000000a6;
+  width: unset;
+  border: .1rem solid rgba(0,0,0,.15);
+  border-color: #d9d9d9;
+  padding: 0.9rem 1.8rem;
+  border-radius: .4rem;
+  line-height: 1.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,.16);
+  color: #0000008a;
+}
+
+.c31 div + span,
+.c31 span + span {
+  margin: 0 .8rem;
+}
+
+.c31::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+.c31:hover {
+  border-color: rgba(0,0,0,.54);
+  color: rgba(0,0,0,.68);
+}
+
+.c31:hover {
+  border-color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(0,0,0,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.c31:active {
+  box-shadow: -.1rem .1rem .4rem rgba(0,0,0,0.4);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        shape="circle"
+        size="default"
+      >
+        <img
+          alt=""
+          className="c4"
+          src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+        />
+      </div>
+      <div
+        className="c5"
+      >
+        <span
+          className="c6"
+        >
+          Tung Tran Ba Thanh
+        </span>
+        <span
+          className="c7"
+        >
+          Lorem Ipsum
+        </span>
+        <div
+          className="c8"
+        >
+          <div
+            className="c9"
+          >
+            <div
+              className="c10"
+              disabled={false}
+              href={null}
+              onClick={[Function]}
+            >
+              <div
+                className="c11"
+              >
+                <div
+                  className="c3"
+                  shape="circle"
+                  size="default"
+                >
+                  <img
+                    alt=""
+                    className="c4"
+                    src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+                  />
+                </div>
+                <div
+                  className="c5"
+                >
+                  <span
+                    className="c6"
+                  >
+                    Tung Tran Ba Thanh
+                  </span>
+                  <span
+                    className="c7"
+                  >
+                    Lorem Ipsum
+                  </span>
+                  <div
+                    className="c8"
+                  >
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </div>
+                </div>
+                <div
+                  className="c12"
+                />
+              </div>
+            </div>
+            <div
+              className="c13"
+              disabled={false}
+              href={null}
+              onClick={[Function]}
+            >
+              <div
+                className="c14"
+              >
+                <div
+                  className="c3"
+                  shape="circle"
+                  size="default"
+                >
+                  <img
+                    alt=""
+                    className="c4"
+                    src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+                  />
+                </div>
+                <div
+                  className="c5"
+                >
+                  <span
+                    className="c6"
+                  >
+                    Tung Tran Ba Thanh
+                  </span>
+                  <span
+                    className="c7"
+                  >
+                    Lorem Ipsum
+                  </span>
+                  <div
+                    className="c8"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      <div
+                        className="c16"
+                        disabled={false}
+                        href={null}
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c17"
+                        >
+                          <div
+                            className="c3"
+                            shape="circle"
+                            size="default"
+                          >
+                            <img
+                              alt=""
+                              className="c4"
+                              src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+                            />
+                          </div>
+                          <div
+                            className="c5"
+                          >
+                            <span
+                              className="c6"
+                            >
+                              Tung Tran Ba Thanh
+                            </span>
+                            <span
+                              className="c7"
+                            >
+                              Lorem Ipsum
+                            </span>
+                            <div
+                              className="c8"
+                            >
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </div>
+                          </div>
+                          <div
+                            className="c12"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="c18"
+                        disabled={false}
+                        href={null}
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c19"
+                        >
+                          <div
+                            className="c3"
+                            shape="circle"
+                            size="default"
+                          >
+                            <img
+                              alt=""
+                              className="c4"
+                              src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+                            />
+                          </div>
+                          <div
+                            className="c5"
+                          >
+                            <span
+                              className="c6"
+                            >
+                              Tung Tran Ba Thanh
+                            </span>
+                            <span
+                              className="c7"
+                            >
+                              Lorem Ipsum
+                            </span>
+                            <div
+                              className="c8"
+                            >
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </div>
+                          </div>
+                          <div
+                            className="c12"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        className="c20"
+                        disabled={false}
+                        href={null}
+                        onClick={[Function]}
+                      >
+                        <div
+                          className="c21"
+                        >
+                          <div
+                            className="c3"
+                            shape="circle"
+                            size="default"
+                          >
+                            <img
+                              alt=""
+                              className="c4"
+                              src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+                            />
+                          </div>
+                          <div
+                            className="c5"
+                          >
+                            <span
+                              className="c6"
+                            >
+                              Tung Tran Ba Thanh
+                            </span>
+                            <span
+                              className="c7"
+                            >
+                              Lorem Ipsum
+                            </span>
+                            <div
+                              className="c8"
+                            >
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </div>
+                          </div>
+                          <div
+                            className="c12"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c12"
+                />
+              </div>
+            </div>
+            <div
+              className="c22"
+              disabled={false}
+              href={null}
+              onClick={[Function]}
+            >
+              <div
+                className="c23"
+              >
+                <div
+                  className="c3"
+                  shape="circle"
+                  size="default"
+                >
+                  <img
+                    alt=""
+                    className="c4"
+                    src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+                  />
+                </div>
+                <div
+                  className="c5"
+                >
+                  <span
+                    className="c6"
+                  >
+                    Tung Tran Ba Thanh
+                  </span>
+                  <span
+                    className="c7"
+                  >
+                    Lorem Ipsum
+                  </span>
+                  <div
+                    className="c8"
+                  >
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </div>
+                </div>
+                <div
+                  className="c12"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c12"
+      >
+        <button
+          className="c24"
+          disabled={false}
+          href={null}
+          size="default"
+          type="button"
+        >
+          
+          <span
+            className="c25"
+          >
+            Add
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c26"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    <div
+      className="c27"
+    >
+      <div
+        className="c3"
+        shape="circle"
+        size="default"
+      >
+        <img
+          alt=""
+          className="c4"
+          src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+        />
+      </div>
+      <div
+        className="c5"
+      >
+        <span
+          className="c6"
+        >
+          Tung Tran Ba Thanh
+        </span>
+        <span
+          className="c7"
+        >
+          Lorem Ipsum
+        </span>
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c12"
+      >
+        <button
+          className="c28"
+          disabled={false}
+          href={null}
+          size="default"
+          type="button"
+        >
+          
+          <span
+            className="c25"
+          >
+            Add
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c29"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    <div
+      className="c30"
+    >
+      <div
+        className="c3"
+        shape="circle"
+        size="default"
+      >
+        <img
+          alt=""
+          className="c4"
+          src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+        />
+      </div>
+      <div
+        className="c5"
+      >
+        <span
+          className="c6"
+        >
+          Tung Tran Ba Thanh
+        </span>
+        <span
+          className="c7"
+        >
+          Lorem Ipsum
+        </span>
+        <div
+          className="c8"
+        />
+      </div>
+      <div
+        className="c12"
+      >
+        <button
+          className="c31"
+          disabled={false}
+          href={null}
+          size="default"
+          type="button"
+        >
+          
+          <span
+            className="c25"
+          >
+            Add
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<List /> should render with horizontal layout 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: rgba(0,0,0,.65);
+  box-sizing: border-box;
+}
+
+.c0 > .sc-bdVaJa {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c0 * {
+  outline: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  line-height: 1.8rem;
+  cursor: default;
+  background: #fff;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Home
+  </div>
+  <div
+    className="c2"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Button
+  </div>
+  <div
+    className="c3"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Card
+  </div>
+  <div
+    className="c4"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Avatar
+  </div>
+  <div
+    className="c5"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Grid
+  </div>
+  <div
+    className="c6"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    List
+  </div>
+  <div
+    className="c7"
+    disabled={false}
+    href={null}
+    onClick={[Function]}
+  >
+    Icon
+  </div>
+</div>
+`;

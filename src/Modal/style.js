@@ -61,12 +61,26 @@ export const StyledModal = styled.div`
   background-color: #fff;
   flex: 0 1 auto;
   margin: ${props => props.fullscreen ? "0" : "3.2rem"};
-  width: ${props => props.fullscreen ? "100%": "40%"};
+  width: ${props => props.fullscreen ? "100%": "550px"};
   display: flex;
   outline: none;
   height: ${props => props.fullscreen ? "100%": "auto"};
   max-height: ${props => props.fullscreen ? null : "90vh"};
   flex-direction: column;
+
+
+
+  ${
+    ({theme, fullscreen}) => !fullscreen && css`
+    @media (max-width: ${theme.grid.xs}px) {
+      width: auto !important;
+      margin: 1rem;
+    }
+
+    `
+  }
+
+
 `
 //================== Modal Header ==================
 export const StyledModalHeader = styled.div`
@@ -127,7 +141,7 @@ export const StyledModalAction = styled.div`
   justify-content: flex-end;
   border-radius: 0 0 .4rem .4rem;
   & > * {
-    margin-left: 10px;
+    margin-left: 1rem;
   }
 
 `

@@ -40,6 +40,13 @@ const defaultProps = {
 
 class ListItem extends React.Component<Props>{
   static defaultProps= defaultProps;
+
+  handleClick = (e: SyntheticEvent<HTMLElement>) => {
+    const { onClick } = this.props
+
+    if (onClick) onClick(e, this.props)
+  }
+
   render(){
     const {
       children,
@@ -48,12 +55,11 @@ class ListItem extends React.Component<Props>{
       ...rest
     } = this.props;
 
-    console.log(rest.horizontal)
 
     const ElementType = !hrefString ?StyledListItem.withComponent(tag) : StyledListItem.withComponent('a')
 
     return (
-      <ElementType hrefString={hrefString} {...rest}>
+      <ElementType onClick={ e => this.handleClick(e)} hrefString={hrefString} {...rest}>
         {children}
       </ElementType>
     )

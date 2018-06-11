@@ -67,6 +67,12 @@ const defaultProps = {
 class Modal extends React.Component<Props>{
   static defaultProps = defaultProps;
 
+  handleClose = (e: SyntheticEvent<HTMLElement>) => {
+    const { onClose } = this.props
+
+    if (onClose) onClose(e, this.props)
+  }
+
 
 
   render(){
@@ -96,10 +102,10 @@ class Modal extends React.Component<Props>{
 
     }
     return (
-      <StyledModalWrapper openModal={open} onClick={()=> this.props.onClose()}>
+      <StyledModalWrapper openModal={open} onClick={(e)=> this.handleClose(e)}>
         <StyledModalBackGround openModal={open}/>
       <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={(e) => e.stopPropagation()}>
-        { closable && <CloseButton onClick={() => this.props.onClose()} variant="icon" icon="times"/> }
+        { closable && <CloseButton onClick={(e) => this.handleClose(e)} variant="icon" icon="times"/> }
 
 
         {
@@ -112,7 +118,7 @@ class Modal extends React.Component<Props>{
         }
         <ModalContent fullscreen={fullscreen} style={styleContent} className={classNameContent}>
           {
-            alert  !== "none"
+            alert !== "none"
              ? (
                <React.Fragment>
                  <StyledAlert>

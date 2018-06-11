@@ -1,5 +1,5 @@
-import React,{Component} from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 
 import FontAwesome from 'react-fontawesome';
 import styled from 'styled-components'
@@ -10,9 +10,32 @@ color:  ${props => props.color ? props.theme[props.color].main : null};
 
 `
 
+type Props = {
+  /**name of icon**/
+  name: string,
+  /** Size of icon shuold be string like lg, 2x, 3x v..v if you don't want use size you can custom with style**/
+  size?: string,
+  /**Override style of icon**/
+  style?: Object,
+  /**Add more class to icon**/
+  className?: string,
+  /** Set icon spin or not**/
+  spin: boolean,
+  /** Set color to icon but it just set color like error, warning,success.. i recomment you set in style or class**/
+  color?: string,
+  /** set postion of icon right or left**/
+  iconPosition: 'left' | 'right',
+}
+
+const defaultProps = {
+  spin: false,
+  iconPosition: "left"
+}
 
 
-class Icon extends Component {
+class Icon extends React.Component<Props> {
+  static defaultProps = defaultProps;
+
   render(){
     const {
       iconPosition,
@@ -38,18 +61,6 @@ class Icon extends Component {
   }
 }
 
-Icon.propTypes = {
-  name: PropTypes.string.isRequired,
-  size: PropTypes.string,
-  style: PropTypes.object,
-  className: PropTypes.string,
-  spin: PropTypes.bool,
-  color: PropTypes.string,
-};
 
-Icon.defaultProps = {
-  spin: false,
-  iconPosition: "left"
-}
 
 export default Icon;

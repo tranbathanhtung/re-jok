@@ -68,8 +68,6 @@ export const defaultTheme = {
       fontSize: "1.6rem",
       fontWeight: "400",
       lineHeight: "2.4rem"
-
-
     }
   },
   primary: {
@@ -100,13 +98,14 @@ export const defaultTheme = {
     avatar: 3,
     form: 3,
     search: 3,
+    badge: 100,
     modal: 1500,
   }
 };
 
 const changeTheme = (defaultTheme, theme)=>{
-  let cloneTheme = defaultTheme;
-
+  let cloneTheme = {...defaultTheme};
+  
 
   Object.keys(theme).forEach(function (key) {
     if ( 'object' === typeof theme[key] && !Array.isArray(theme[key]) ) {
@@ -122,6 +121,7 @@ const changeTheme = (defaultTheme, theme)=>{
 export const setTheme = (theme: Object) => {
 
    const newTheme = changeTheme(defaultTheme, theme);
+
    return newTheme;
 
 }

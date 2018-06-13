@@ -4,27 +4,44 @@ import {
   StyledMenu
 } from './style';
 
+
 import MenuList from './MenuList';
 import MenuItem from './MenuItem';
 import SubMenu from './SubMenu';
 import {MenuContext} from './MenuContext';
 
 type Props = {
+  /** Override style of Menu**/
   style?: Object,
+  /** Add more class to Menu**/
   className?:string,
+  /** Children of Menu could be anything.. but i recommand API of Menu**/
   children?: any,
+  /** Controll Menu.. set background of Menu**/
   backgroundColor?: string,
+  /** Controll Menu.. set text color of Menu**/
   textColor?: string,
+  /** Controll Menu.. set text color when active of Menu**/
   activeColor?: string,
+  /** Controll Menu.. set active color is background or text **/
+  activeNormal?: boolean,
+  /** Callback function when select menu item**/
   onSelect?: Function,
+  /** Callback function when deselect menu item**/
   onDeselect?: Function,
-  onClick?: Function,
+  /****/
   activeKey?: string,
+  /** Allow Menu is select or not**/
   selectable?: boolean,
+  /****/
   selectedKeys?: Array<string>,
+  /** Default menu item is selected **/
   defaultSelectedKeys?: Array<string>,
+  /** Allow multiple select or not **/
   multiple?: boolean,
+  /** Default submenu open or not **/
   defaultOpenKeys?: Array<string>,
+  /****/
   openKeys: Array<string>
 }
 
@@ -32,7 +49,8 @@ const defaultProps = {
   selectable: true,
   defaultSelectedKeys: [],
   defaultOpenKeys: [],
-  multiple: false
+  multiple: false,
+  activeNormal: true
 }
 
 class Menu extends React.Component<Props>{
@@ -94,7 +112,7 @@ class Menu extends React.Component<Props>{
   }
 
   onOpenChange = (event) => {
-    const props = this.props;
+
     const {openKeys} = this.state;
     let changed = false;
     const processSingle = (e) => {
@@ -156,6 +174,8 @@ class Menu extends React.Component<Props>{
     const {
       children,
       multiple,
+      activeColor,
+      activeNormal,
       ...rest
     } = this.props;
 
@@ -167,7 +187,9 @@ class Menu extends React.Component<Props>{
           onSelect: this.onSelect,
           onDeselect: this.onDeselect,
           onOpenChange:  this.onOpenChange,
-          multiple: multiple
+          multiple: multiple,
+          activeColor: activeColor,
+          activeNormal: activeNormal,
         }}>
         <StyledMenu {...rest}>
           {children}

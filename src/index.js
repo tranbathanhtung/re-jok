@@ -14,6 +14,7 @@ import ListDemo from './List/demo';
 import GridDemo from './Grid/demo';
 import ModalDemo from './Modal/demo';
 import MenuDemo from './Menu/demo';
+import DividerDemo from './Divider/demo';
 
 
 
@@ -67,6 +68,7 @@ class App extends React.Component {
          {/* <GridDemo/> */}
          {/* <ModalDemo/> */}
          <MenuDemo/>
+         {/* <DividerDemo/> */}
        </Body>
      </JokTheme>
 

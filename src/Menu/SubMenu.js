@@ -1,19 +1,25 @@
 // @flow
 import * as React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
+import Icon from '../Icon';
 import {
   StyledSubMenuWrapper,
   StyledSubMenuTitle,
-  StyledSubMenu
+  StyledSubMenu,
+  StyledSubMenuArrow
 } from './style';
 
 import {connectMenu} from './MenuContext';
 
 type Props = {
+  /** Children of SubMenu could be anything but it should be MenuList or MenuItem**/
   children?: any,
+  /** title of SubMenu**/
   title?: string | React.Node,
+  /** openKey must required **/
   openKey?: string,
+  /** level of SubMenu ... default level 1**/
   level?: number
 }
 
@@ -29,8 +35,14 @@ class SubMenu extends React.Component<Props>{
   state = { childHeight: 0 };
 
   componentDidMount(){
+      this.setHeightRaw();
+  }
 
+  refSubMenu: {
+    current: null | React$ElementRef<any>
+  } = React.createRef();
 
+  setHeightRaw = () => {
     const node = ReactDOM.findDOMNode(this.refSubMenu.current);
 
     if (node && node instanceof HTMLElement) {
@@ -39,19 +51,21 @@ class SubMenu extends React.Component<Props>{
       const childHeight = `${childHeightRaw / 10}rem`;
       this.setState({childHeight})
     }
-
-
   }
-
-  refSubMenu: {
-    current: null | React$ElementRef<any>
-  } = React.createRef();
 
   handleClick = (open) => {
 
     const {openKey, ...rest} = this.props;
     const {onOpenChange} = rest.context;
 
+    // console.log(this.state.childHeight)
+    // if(this.state.childHeight === null && open){
+    //   this.setState({
+    //     childHeight: 0,
+    //   })
+    // }
+
+    this.setHeightRaw();
 
     const openChange = () => {
       onOpenChange({
@@ -61,10 +75,20 @@ class SubMenu extends React.Component<Props>{
       });
     };
 
+
+
+
+
     openChange();
 
 
 
+  }
+
+  onTransitionEnd = (e)=> {
+    this.setState({
+      childHeight: null
+    })
   }
   render(){
     const {
@@ -75,8 +99,6 @@ class SubMenu extends React.Component<Props>{
       ...rest
     } = this.props;
 
-    console.log(level)
-
     let style = {};
 
     style.paddingLeft = level * 24;
@@ -86,19 +108,19 @@ class SubMenu extends React.Component<Props>{
 
     return (
       <StyledSubMenuWrapper>
-        {
-          title
-          ? (
+
             <StyledSubMenuTitle style={style} onClick={()=> this.handleClick(isOpen)}>
                {title}
+               <StyledSubMenuArrow open={isOpen}>
+                 <Icon name="angle-down"/>
+               </StyledSubMenuArrow>
             </StyledSubMenuTitle>
-          ): null
-        }
 
-        <StyledSubMenu style={{
-            maxHeight: !isOpen ? this.state.childHeight : 0,
 
-          }} open={isOpen}>
+        <StyledSubMenu open={isOpen}
+          childHeight={this.state.childHeight}
+          onTransitionEnd={this.onTransitionEnd}
+          >
           <div ref={this.refSubMenu}>
             {
               React.Children.map(children, (ch, i)=>(

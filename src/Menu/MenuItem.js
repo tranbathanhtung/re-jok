@@ -1,25 +1,45 @@
 // @flow
 import * as React from 'react';
 import {
-  StyledMenuItem
+  StyledMenuItem,
+  StyledMenuItemText,
+  StyledMenuLeftIcon
 } from './style';
 
 import {connectMenu} from './MenuContext';
 
 type Props = {
+  /** Override style of Menu Item**/
   style?: Object,
+  /** Add more class to Menu Item**/
   className?: string,
+  /** Children of MenuItem could be anything **/
   children?: any,
+  /** from parent Menu with <3**/
   backgroundColor?: string,
+  /** from parent Menu with <3**/
   textColor?: string,
+  /** from parent Menu with <3**/
   activeColor?: string,
+  /** keyActive must require... should be string**/
   keyActive: string,
+  /** Event click of menu item**/
   onClick?: Function,
+  /** from parent SubMenu with <3*/
   level?: number,
+  /** controll padding of title menu list default is 24px**/
+  paddingLeft: number,
+  /** primary text**/
+  primaryText?: string,
+  /** left icon**/
+  leftIcon?: React.Node,
+  /** disable menu item**/
+  disable?: boolean,
 }
 
 const defaultProps = {
-
+  paddingLeft: 24,
+  disable: false
 }
 
 
@@ -55,26 +75,45 @@ class MenuItem extends React.Component<Props>{
       children,
       keyActive,
       level,
+      paddingLeft,
+      primaryText,
+      leftIcon,
+      disable,
       ...rest
     } = this.props;
 
 
     let style = {};
 
-    style.paddingLeft = level ? level * 24 : 24;
+    style.paddingLeft = level ? level * paddingLeft : paddingLeft;
 
 
 
-    const {selectedKeys} = rest.context;
+    const {selectedKeys, activeColor, activeNormal} = rest.context;
 
 
     let active = selectedKeys.includes(keyActive);
     return (
-      <StyledMenuItem style={style} {...rest} active={active} onClick={e => this.handleClick(e)}>
-        {children}
+      <StyledMenuItem
+        level={level}
+        disable={disable}
+        activeColor={activeColor}
+        activeNormal={activeNormal}
+        style={style}
+        {...rest}
+        active={active}
+        onClick={e => !disable && this.handleClick(e)}>
+         {
+           leftIcon && <StyledMenuLeftIcon>{leftIcon}</StyledMenuLeftIcon>
+         }
+         {
+           primaryText && <StyledMenuItemText>{primaryText}</StyledMenuItemText>
+         }
+         {children}
       </StyledMenuItem>
     )
   }
 }
+
 
 export default connectMenu(MenuItem);

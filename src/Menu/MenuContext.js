@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 
+// init data of text menu
 
 export const MenuContext = React.createContext({
   selectedKeys: [],
@@ -8,16 +9,17 @@ export const MenuContext = React.createContext({
   onSelect: () => {},
   onDeselect: ()=> {},
   onOpenChange: ()=> {},
-  multiple: false
+  multiple: false,
+  activeColor: "",
+  activeNormal: true,
 })
 
+// This function to connect context of Menu to another children of Menu
 
-// This function takes a component...
 export function connectMenu(Component) {
-  // ...and returns another component...
+
   return function MenuComponent(props) {
-    // ... and renders the wrapped component with the context data!
-    // Notice that we pass through any additional props as well
+
     return (
       <MenuContext.Consumer>
         {context => <Component {...props} context={context} />}

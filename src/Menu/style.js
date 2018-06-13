@@ -1,5 +1,7 @@
 import styled, {css} from 'styled-components';
 
+import { hexa} from '../globals'
+
 
 const baseMenuItem = css`
 cursor: pointer;
@@ -21,8 +23,11 @@ export const StyledMenu = styled.ul`
   outline: none;
   list-style: none;
   background: ${props => props.backgroundColor ? props.backgroundColor : "#fff"};
+  color: ${props => props.textColor ? props.textColor : "rgba(0,0,0,.65)"};
+
   font-size: 1.4rem;
   transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
 
 
   &::before{
@@ -39,15 +44,61 @@ export const StyledMenu = styled.ul`
 
 //=============== Menu Item ==============
 export const StyledMenuItem = styled.li`
-  ${baseMenuItem};
-  color: ${props => props.active ? props.theme.primary.main : "rgba(0,0,0,.65)"};
 
-  &:hover{
-    color: ${({theme, activeColor}) => activeColor ? activeColor : theme.primary.main };
+  ${baseMenuItem};
+  ${
+    props => props.activeNormal
+    ? (
+      css`
+      color: ${props => props.active ? props.activeColor ? props.activeColor : "#00acc1" : null};
+      `
+      )
+      : css`
+      background-color: ${props => props.active ? props.activeColor ? props.activeColor : "#00acc1" : null};
+      box-shadow: ${props => props.active ?
+        props.activeColor
+        ? (`0 1.2rem 2rem -1rem ${hexa(props.activeColor, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,0.12), 0 .7rem .8rem -.5rem ${hexa(props.activeColor, 0.2)}`)
+        : "0 1.2rem 2rem -1rem rgba(0,188,212,.28), 0 .4rem 2rem 0 rgba(0,0,0,.12), 0 .7rem .8rem -.5rem rgba(0,188,212,.2)"
+         : null};
+         color: ${props => props.active && "#fff"};
+      `
   }
 
 
 
+  transition: all .2s;
+
+  ${
+    props => props.disable ? css`
+       opacity: .25;
+       cursor: not-allowed;
+
+    `: !props.active
+      ? css`
+      &:hover{
+
+        background-color: rgba(200, 200, 200, 0.2);
+        outline: none;
+        box-shadow: none;
+      }
+      `
+      : null
+  }
+
+
+
+
+
+
+`
+
+export const StyledMenuLeftIcon = styled.div`
+min-width: 1.4rem;
+display: inline-block;
+margin-right: 1rem;
+`
+
+export const StyledMenuItemText = styled.span`
 
 `
 // ============== Menu List ===============
@@ -62,6 +113,10 @@ font-weight: ${({theme}) => theme.typography.subtitle.fontWeight};
 line-height: 1.5;
 padding: .8rem 1.6rem;
 transition: all .3s;
+
+ &:first-child{
+   display: inline-flex;
+ }
 `
 
 export const StyledMenuList = styled.ul`
@@ -78,16 +133,25 @@ export const StyledSubMenuWrapper = styled.li`
 export const StyledSubMenuTitle = styled.div`
   ${baseMenuItem};
 `
+
+export const StyledSubMenuArrow = styled.div`
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  transition: transform .3s;
+  transform: ${props => props.open ? "rotate(0deg)" : "rotate(180deg)"};
+`
 export const StyledSubMenu = styled.ul`
 padding: 0;
 border: 0;
 list-style: none;
 margin: 0;
-max-height: 0;
+height: auto;
 overflow: hidden;
-transition: max-height .25s ease-out;
-box-shadow: none;
+max-height: ${props => !props.open ? props.childHeight : 0 };
+transition: all .25s ease-out;
+
 border-radius: 0;
-background: ${props => props.backgroundColor ? props.backgroundColor : "#fff"};
+
 
 `

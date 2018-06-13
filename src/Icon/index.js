@@ -7,6 +7,8 @@ import styled from 'styled-components'
 const IconContainer = styled.div`
 order: ${props => props.iconPosition === "left" ? 0 : 1};
 color:  ${props => props.color ? props.theme[props.color].main : null};
+display: inline-block;
+
 
 `
 

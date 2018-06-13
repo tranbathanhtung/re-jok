@@ -40,7 +40,7 @@ export const StyledListItem = styled.div.attrs({
 //=================== List ===================
 
 export const StyledList = styled.div`
-  display: ${props => props.collapsed ? "none" : props.horizontal ? "inline-flex" : "block"};
+  display: ${props => props.horizontal ? "inline-flex" : "block"};
 
   ${
     props =>

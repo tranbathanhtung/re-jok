@@ -20,15 +20,21 @@ type Props = {
   /** openKey must required **/
   openKey?: string,
   /** level of SubMenu ... default level 1**/
-  level?: number
+  level: number,
+  /** data from menu parent**/
+  context: Object,
 }
 
 const defaultProps = {
   level: 1
 }
 
+type State = {
+  childHeight: number | string | null
+}
 
-class SubMenu extends React.Component<Props>{
+
+class SubMenu extends React.Component<Props, State>{
 
   static defaultProps = defaultProps;
 

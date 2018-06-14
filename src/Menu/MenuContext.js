@@ -1,7 +1,20 @@
-// @flow
-import * as React from 'react';
 
-// init data of text menu
+import React from 'react';
+
+// init data of menu
+
+// type Context = {
+//   selectedKeys: Array<string>,
+//   openKeys: Array<string>,
+//   onSelect:Function,
+//   onDeselect: Function,
+//   onOpenChange: Function,
+//   multiple: boolean,
+//   activeColor?: string,
+//   activeNormal: boolean
+// }
+
+
 
 export const MenuContext = React.createContext({
   selectedKeys: [],

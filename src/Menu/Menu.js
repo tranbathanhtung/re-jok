@@ -24,7 +24,7 @@ type Props = {
   /** Controll Menu.. set text color when active of Menu**/
   activeColor?: string,
   /** Controll Menu.. set active color is background or text **/
-  activeNormal?: boolean,
+  activeNormal: boolean,
   /** Callback function when select menu item**/
   onSelect?: Function,
   /** Callback function when deselect menu item**/
@@ -38,11 +38,11 @@ type Props = {
   /** Default menu item is selected **/
   defaultSelectedKeys?: Array<string>,
   /** Allow multiple select or not **/
-  multiple?: boolean,
+  multiple: boolean,
   /** Default submenu open or not **/
   defaultOpenKeys?: Array<string>,
   /****/
-  openKeys: Array<string>
+  openKeys?: Array<string>
 }
 
 const defaultProps = {
@@ -53,7 +53,14 @@ const defaultProps = {
   activeNormal: true
 }
 
-class Menu extends React.Component<Props>{
+type State = {
+  selectedKeys: Array<string>,
+  openKeys: Array<string>,
+  multiple: boolean
+
+}
+
+class Menu extends React.Component<Props, State>{
 
   static defaultProps = defaultProps;
 
@@ -61,10 +68,9 @@ class Menu extends React.Component<Props>{
   static Item = MenuItem;
   static Sub = SubMenu;
 
-  constructor(props){
+  constructor(props: Object){
     super(props);
 
-    this.rootMenu = true;
 
     let selectedKeys = props.defaultSelectedKeys;
     let openKeys = props.defaultOpenKeys;
@@ -85,7 +91,7 @@ class Menu extends React.Component<Props>{
 
   }
 
-  onSelect = (itemInfo) => {
+  onSelect = (itemInfo: Object) => {
     const { selectable, onSelect, multiple } = this.props;
 
     if (selectable) {
@@ -111,7 +117,7 @@ class Menu extends React.Component<Props>{
     }
   }
 
-  onOpenChange = (event) => {
+  onOpenChange = (event: Object) => {
 
     const {openKeys} = this.state;
     let changed = false;
@@ -148,7 +154,7 @@ class Menu extends React.Component<Props>{
     }
   }
 
-  onDeselect = (itemInfo) => {
+  onDeselect = (itemInfo: Object) => {
     const { selectable, onDeselect } = this.props;
 
     if (selectable) {

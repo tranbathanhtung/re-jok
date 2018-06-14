@@ -35,6 +35,10 @@ type Props = {
   leftIcon?: React.Node,
   /** disable menu item**/
   disable?: boolean,
+  /** data from menu parent**/
+  context: Object,
+  /** from SubMenu with <3**/
+  level?: number,
 }
 
 const defaultProps = {
@@ -46,7 +50,7 @@ const defaultProps = {
 class MenuItem extends React.Component<Props>{
   static defaultProps = defaultProps;
 
-  handleClick = (e) => {
+  handleClick = (e: SyntheticEvent<HTMLElement>) => {
     const { keyActive, onClick, ...rest } = this.props;
 
     const { multiple, onSelect, selectedKeys, onDeselect } = rest.context;

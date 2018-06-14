@@ -3,14 +3,15 @@ import * as React from 'react';
 
 import List from '../List';
 import Avatar from '../../Avatar/Avatar';
-import Button from '../../Button/Button'
+import Button from '../../Button/Button';
+// import Divider from '../../Divider';
 
 class ListDemo extends React.Component<{}> {
 
   render(){
     return (
       <React.Fragment>
-        <List divided>
+        <List divided style={{marginBottom: 40}}>
           <List.Item>
             <List.Content
               primaryHeader="Tung Tran Ba Thanh"
@@ -125,13 +126,34 @@ class ListDemo extends React.Component<{}> {
         </List>
 
         <List horizontal>
-          <List.Item hrefString="https://github.com/tranbathanhtung">Home</List.Item>
-          <List.Item>Button</List.Item>
-          <List.Item>Card</List.Item>
-          <List.Item>Avatar</List.Item>
-          <List.Item>Grid</List.Item>
-          <List.Item>List</List.Item>
-          <List.Item>Icon</List.Item>
+          <List.Item hrefString="https://github.com/tranbathanhtung">
+          Home
+        </List.Item>
+
+          <List.Item>
+            Button
+          </List.Item>
+          <List.Item>
+            Card
+          </List.Item>
+
+          <List.Item>
+            Avatar
+          </List.Item>
+
+          <List.Item>
+            Grid
+          </List.Item>
+
+          <List.Item>
+            List
+          </List.Item>
+
+          <List.Item>
+            Icon
+          </List.Item>
+
+
 
         </List>
       </React.Fragment>

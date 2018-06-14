@@ -190,7 +190,7 @@ ${props => props.variant === "raised"
 
 //==================== Outline Button ====================
 export const OutlineBtn = Btn.extend `
-  background-color: rgba(0,0,0,0);
+  background-color: #fff;
   border-color: ${props => props.backgroundColor
   ? props.backgroundColor
   : props.primary
@@ -265,7 +265,7 @@ export const IconBtn = Btn.extend `
    height: ${props => props.theme.size[props.size].height};
    border-radius: 50%;
    padding: 0;
-   background-color: #fff;
+   background-color: transparent;
    &:hover{
         border-color: ${props => props.backgroundColor
         ? shadeColor(props.backgroundColor, -15)
@@ -317,7 +317,6 @@ export const TextBtn = styled.button.attrs({
  letter-spacing: 0.08rem;
  background: transparent;
  background-image: none;
- font-weight: 600;
 
  color: ${props => props.color
     ? props.color

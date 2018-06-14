@@ -16,7 +16,7 @@ export const defaultTheme = {
       height: "2.4rem"
     },
     default: {
-      fontSize: '1.6rem',
+      fontSize: '1.4rem',
       padding: '0.9rem 1.8rem',
       lineHeight: "1.5",
       borderRadius: ".4rem",
@@ -33,7 +33,7 @@ export const defaultTheme = {
 
     },
     large: {
-      fontSize: '2.4rem',
+      fontSize: '2rem',
       padding: '1.8rem 3.6rem',
       lineHeight: "2",
       borderRadius: ".6rem",
@@ -105,7 +105,7 @@ export const defaultTheme = {
 
 const changeTheme = (defaultTheme, theme)=>{
   let cloneTheme = {...defaultTheme};
-  
+
 
   Object.keys(theme).forEach(function (key) {
     if ( 'object' === typeof theme[key] && !Array.isArray(theme[key]) ) {

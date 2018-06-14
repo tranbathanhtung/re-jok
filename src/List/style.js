@@ -25,7 +25,7 @@ export const StyledListItem = styled.div.attrs({
      `
   }
 
-  background: ${props => props.active ? "rgba(0,0,0, .02)" : "#fff"};
+  background: ${props => props.active ? "rgba(0,0,0, .02)" : "transparent"};
   ${
     props =>
       props.selection

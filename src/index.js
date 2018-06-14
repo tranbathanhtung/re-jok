@@ -14,6 +14,7 @@ import ListDemo from './List/demo';
 import GridDemo from './Grid/demo';
 import ModalDemo from './Modal/demo';
 import MenuDemo from './Menu/demo';
+import NavDemo from './Nav/demo';
 import DividerDemo from './Divider/demo';
 
 
@@ -38,8 +39,11 @@ const Body = styled.div`
   height: 100%;
 `
 
+type State = {
+  theme: Object
+}
 
-class App extends React.Component {
+class App extends React.Component<{}, State> {
   state = {
     theme: {}
   }
@@ -67,8 +71,9 @@ class App extends React.Component {
          {/* <ListDemo/> */}
          {/* <GridDemo/> */}
          {/* <ModalDemo/> */}
-         <MenuDemo/>
+         {/* <MenuDemo/> */}
          {/* <DividerDemo/> */}
+         <NavDemo/>
        </Body>
      </JokTheme>
 

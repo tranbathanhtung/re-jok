@@ -25,7 +25,7 @@ class MenuDemo extends React.Component<{}, State>{
           <div style={{ width: 256 }}>
             <Menu style={{marginBottom: 20}}>
               <Menu.List title="Header">
-                <Menu.Item keyActive="1" primaryText="Item 1" />
+                <Menu.Item onClick={(e)=> console.log(e)} keyActive="1" primaryText="Item 1" />
                 <Menu.Item keyActive="2" primaryText="Item 2"/>
                 <Menu.Item keyActive="3" primaryText="Item 3"/>
               </Menu.List>

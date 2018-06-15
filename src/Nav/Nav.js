@@ -10,6 +10,10 @@ import {
 
 
 type Props = {
+  /**Override style of nav bar**/
+  style?: Object,
+  /** Add more class to nav bar**/
+  className?: string,
   /** Children of Navbar ... This is element left content**/
   children?: any,
   /** This is element right content**/

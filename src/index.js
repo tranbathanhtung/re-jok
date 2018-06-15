@@ -16,6 +16,7 @@ import ModalDemo from './Modal/demo';
 import MenuDemo from './Menu/demo';
 import NavDemo from './Nav/demo';
 import DividerDemo from './Divider/demo';
+import DropdownDemo from './Dropdown/demo'
 
 
 
@@ -74,6 +75,7 @@ class App extends React.Component<{}, State> {
          {/* <MenuDemo/> */}
          {/* <DividerDemo/> */}
          <NavDemo/>
+         <DropdownDemo/>
        </Body>
      </JokTheme>
 

@@ -17,6 +17,7 @@ export const StyledDropdownWrapper = styled.div`
 `
 
 export const StyledDropdown = styled.div`
+      max-width: 256px;
     position: absolute;
     display: ${props =>props.open ? "block" : "none"};
     ${
@@ -29,6 +30,7 @@ export const StyledDropdown = styled.div`
     // top: 40px;
     left: ${props => `${props.left}px`};
     z-index: 10;
+    // margin-top: -10px;
     padding: 10px 0;
     background-color: #fff;
     border: 1px solid #ebeef5;

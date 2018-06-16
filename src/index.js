@@ -74,7 +74,7 @@ class App extends React.Component<{}, State> {
          {/* <ModalDemo/> */}
          {/* <MenuDemo/> */}
          {/* <DividerDemo/> */}
-         <NavDemo/>
+         {/* <NavDemo/> */}
          <DropdownDemo/>
        </Body>
      </JokTheme>

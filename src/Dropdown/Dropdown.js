@@ -58,13 +58,14 @@ class Dropdown extends React.Component<Props, State>{
   componentDidMount(){
     const {trigger} = this.props;
 
-    // wrapper.addEventListener('mouseleave', this.resetDropdown, 500);
 
-    // trigger === 'hover'
-    //  ? document.addEventListener('mouseenter', this.handleEvent)
-    //  : trigger === "click"
-    //  ? document.addEventListener('mousedown', this.handleEvent)
-    //  : null
+
+
+    trigger === 'hover'
+     ? null
+     : trigger === "click"
+     ? document.addEventListener('mousedown', this.handleEvent)
+     : null
 
 
   }
@@ -75,11 +76,11 @@ class Dropdown extends React.Component<Props, State>{
 
 
 
-    // trigger === 'hover'
-    //  ? document.removeEventListener('mouseenter', this.handleEvent)
-    //  : trigger === "click"
-    //  ? document.removeEventListener('mousedown', this.handleEvent)
-    //  : null
+    trigger === 'hover'
+     ? null
+     : trigger === "click"
+     ? document.removeEventListener('mousedown', this.handleEvent)
+     : null
 
 
 
@@ -96,12 +97,15 @@ class Dropdown extends React.Component<Props, State>{
 
   handleEvent = (e: Event)=> {
 
-    const wrapper = ReactDOM.findDOMNode(this.refParent.current)
+    const {trigger} = this.props;
+
+
+    const wrapper = ReactDOM.findDOMNode(this.refParent.current);
     const node = ReactDOM.findDOMNode(this.refChildren.current);
     const dropdown = ReactDOM.findDOMNode(this.refDropdown.current);
     const {open} = this.state;
 
-    console.log(e.target)
+
     if (node && node instanceof HTMLElement) {
       if (node.contains(e.target) || dropdown.contains(e.target) || wrapper.contains(e.target)) {
         const rectChild = this.getPositionElement(node);
@@ -111,10 +115,10 @@ class Dropdown extends React.Component<Props, State>{
         const {top, left } = this.getRealPosition({rectChild, rectParent, width, height});
 
         if(open) {
-          console.log("close hehe")
-          // setTimeout(()=>{
-          //   this.resetDropdown()
-          // }, 150)
+          if(trigger === 'hover') return;
+          setTimeout(()=>{
+            this.resetDropdown()
+          }, 150)
         }
         else {
           this.setState({
@@ -126,9 +130,8 @@ class Dropdown extends React.Component<Props, State>{
           })
         }
       } else {
-        console.log("close hehe")
-
-        // this.resetDropdown();
+        if(trigger === 'hover') return;
+        this.resetDropdown();
       }
 
 
@@ -212,68 +215,23 @@ class Dropdown extends React.Component<Props, State>{
   }
 
   onMouseEnter = (e) => {
+
+    const wrapper = ReactDOM.findDOMNode(this.refParent.current);
+
+    wrapper.contains(e.target) && this.timer && clearTimeout(this.timer);
+
     this.handleEvent(e);
   }
 
   onMouseLeave = (e) => {
-   console.log("Da roi")
-    setTimeout(()=>{
+
+    this.timer = setTimeout(()=>{
+
 
         this.resetDropdown()
 
-    }, 0)
+    }, 300)
   }
-
-  onMouseLeaveChild = (e) => {
-    console.log(e.target)
-
-        setTimeout(()=>{
-          const node = ReactDOM.findDOMNode(this.refChildren.current);
-
-          // if(node.isEqualNode(e.target)){
-          //   return
-          // }
-            // this.resetDropdown()
-          //
-          // console.log(e.target)
-          // if (node && node instanceof HTMLElement) {
-          //   if (node.contains(e.target) || dropdown.contains(e.target) || wrapper.contains(e.target)) {
-          //     const rectChild = this.getPositionElement(node);
-          //     const rectParent = this.getPositionElement(wrapper);
-          //     const { width, height } = this.realElement(dropdown);
-          //
-          //     const {top, left } = this.getRealPosition({rectChild, rectParent, width, height});
-          //
-          //     if(open) {
-          //       console.log("close hehe")
-          //       // setTimeout(()=>{
-          //       //   this.resetDropdown()
-          //       // }, 150)
-          //
-          //       this.resetDropdown();
-          //     }
-          //     else {
-          //       this.setState({
-          //         top,
-          //         left,
-          //         // width,
-          //         // height,
-          //         open: true
-          //       })
-          //     }
-          //   } else {
-          //     // console.log("close hehe")
-          //     this.resetDropdown();
-          //
-          //
-          //   }
-          //
-          //
-          // }
-
-        }, 0)
-  }
-
 
 
 
@@ -282,14 +240,20 @@ class Dropdown extends React.Component<Props, State>{
     const {
       children,
       content,
+      trigger,
       ...rest
     } = this.props;
+
+    const mouseEvent = {
+      onMouseLeave: trigger === 'click' ? null : this.onMouseLeave,
+      onMouseEnter: trigger === 'click' ? null : this.onMouseEnter,
+    }
+
     return (
       <StyledDropdownWrapper
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        ref={this.refParent} style={{display: "flex"}}>
-        <div style={{marginBottom: 20}}>
+        {...mouseEvent}
+        ref={this.refParent} style={{display: "flex", justifyContent: "center"}}>
+        <div>
           {
             React.Children.count(children) === 1
               ? <children.type

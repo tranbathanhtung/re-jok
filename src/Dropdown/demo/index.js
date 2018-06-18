@@ -34,7 +34,7 @@ class DropdownDemo extends React.Component<{}>{
           trigger="click"
           content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
           position="bottomCenter">
-            <p style={{marginTop: 20,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</p>
+            <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
         </Dropdown>
       </React.Fragment>
 

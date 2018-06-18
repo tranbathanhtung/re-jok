@@ -9,11 +9,17 @@ import ReactDOM from 'react-dom'
 
 
 type Props = {
+  /** Override style of Dropdown**/
   style?: Object,
+  /** Add more class to dropdown**/
   className?: string,
-  children?: any,
+  /** Children of dropdown**/
+  children: React$Element<any>,
+  /** Dropdown content could be anything**/
   content?: any,
+  /** Dropdown could be 6 position. Default value is bottom left**/
   position: 'bottomLeft' | 'bottomCenter' | 'bottomRight' | 'topLeft' | 'topCenter' | 'topRight',
+  /** set trigger dropdown is hover or click**/
   trigger: 'hover' | 'click',
 }
 
@@ -22,6 +28,7 @@ type State = {
   left: number,
   open: boolean
 }
+
 
 const defaultProps = {
   position: 'bottomLeft',
@@ -53,20 +60,15 @@ class Dropdown extends React.Component<Props, State>{
     current: null | React$ElementRef<any>
   } = React.createRef();
 
+  timer: TimeoutID;
+
 
 
   componentDidMount(){
     const {trigger} = this.props;
 
 
-
-
-    trigger === 'hover'
-     ? null
-     : trigger === "click"
-     ? document.addEventListener('mousedown', this.handleEvent)
-     : null
-
+    trigger === "click" && document.addEventListener('mousedown', this.handleEvent);
 
   }
 
@@ -74,14 +76,7 @@ class Dropdown extends React.Component<Props, State>{
 
     const {trigger} = this.props;
 
-
-
-    trigger === 'hover'
-     ? null
-     : trigger === "click"
-     ? document.removeEventListener('mousedown', this.handleEvent)
-     : null
-
+    trigger === "click" && document.removeEventListener('mousedown', this.handleEvent);
 
 
   }
@@ -106,13 +101,13 @@ class Dropdown extends React.Component<Props, State>{
     const {open} = this.state;
 
 
-    if (node && node instanceof HTMLElement) {
-      if (node.contains(e.target) || dropdown.contains(e.target) || wrapper.contains(e.target)) {
+    if (node && node instanceof HTMLElement && dropdown && dropdown instanceof HTMLElement && wrapper && wrapper instanceof HTMLElement) {
+      if (node.contains((e.target: any)) || dropdown.contains((e.target: any)) || wrapper.contains((e.target: any))) {
         const rectChild = this.getPositionElement(node);
         const rectParent = this.getPositionElement(wrapper);
         const { width, height } = this.realElement(dropdown);
 
-        const {top, left } = this.getRealPosition({rectChild, rectParent, width, height});
+        const {top, left } = this.getRealPosition(rectChild, rectParent, width, height);
 
         if(open) {
           if(trigger === 'hover') return;
@@ -144,7 +139,9 @@ class Dropdown extends React.Component<Props, State>{
     clone.style.display = "block";
     clone.style.top = "-9999px";
     clone.style.left = "-9999px";
-    document.body.appendChild(clone);
+    if (!document.body) throw new Error("Unexpectedly missing <body>.");
+    const body: HTMLElement = document.body;
+    body.appendChild(clone);
     const height = clone.offsetHeight;
     const width = clone.offsetWidth;
 
@@ -169,9 +166,10 @@ class Dropdown extends React.Component<Props, State>{
     }
   }
 
-  getRealPosition = ({rectChild, rectParent, width, height}) => {
+  getRealPosition = (rectChild: Object, rectParent: Object, width: number, height: number) => {
 
     const {position} = this.props;
+
 
     let top = 0;
     let left = 0;
@@ -214,19 +212,18 @@ class Dropdown extends React.Component<Props, State>{
     }
   }
 
-  onMouseEnter = (e) => {
+  onMouseEnter = (e: Event) => {
 
     const wrapper = ReactDOM.findDOMNode(this.refParent.current);
-
-    wrapper.contains(e.target) && this.timer && clearTimeout(this.timer);
+    if (wrapper && wrapper instanceof HTMLElement)
+    wrapper.contains((e.target: any)) && this.timer && clearTimeout(this.timer);
 
     this.handleEvent(e);
   }
 
-  onMouseLeave = (e) => {
+  onMouseLeave = () => {
 
     this.timer = setTimeout(()=>{
-
 
         this.resetDropdown()
 
@@ -252,8 +249,8 @@ class Dropdown extends React.Component<Props, State>{
     return (
       <StyledDropdownWrapper
         {...mouseEvent}
-        ref={this.refParent} style={{display: "flex", justifyContent: "center"}}>
-        <div>
+        ref={this.refParent}>
+
           {
             React.Children.count(children) === 1
               ? <children.type
@@ -262,9 +259,8 @@ class Dropdown extends React.Component<Props, State>{
                 ref={this.refChildren}/>
               : null
           }
-        </div>
 
-       <StyledDropdown ref={this.refDropdown} {...this.state}>
+       <StyledDropdown {...rest} ref={this.refDropdown} {...this.state}>
          {content}
        </StyledDropdown>
      </StyledDropdownWrapper>

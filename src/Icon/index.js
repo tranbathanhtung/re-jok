@@ -50,14 +50,14 @@ class Icon extends React.Component<Props> {
     } = this.props;
     return (
       <IconContainer color={color} iconPosition={iconPosition}>
-      <FontAwesome
-       name={name}
-       size={size}
-       style={style}
-       className={className}
-       spin={spin}
+        <FontAwesome
+         name={name}
+         size={size}
+         style={style}
+         className={className}
+         spin={spin}
 
-      />
+        />
       </IconContainer>
     )
   }

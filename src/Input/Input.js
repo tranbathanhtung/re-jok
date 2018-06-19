@@ -1,8 +1,16 @@
 // @flow
 import * as React from 'react';
 import {
+  StyledInputWrapper,
   StyledInput,
+  StyledIconInput,
+  StyledInputHelper
 } from './style';
+
+import Icon from '../Icon';
+
+import { withTheme } from 'styled-components';
+
 
 
 type Props = {
@@ -10,19 +18,24 @@ type Props = {
   className?: string,
   children?: any,
   onChange?: Function,
-  placeholder?: string,
   size: 'small' | 'default' | 'medium' | 'large',
   underline: boolean,
   value?: string,
   defaultValue?: string,
-  type?: string,
-  focus: boolean
+  focus: boolean,
+  addonBefore?: string | React.Node,
+  addonAfetr?: string | React.Node,
+  icon?: string,
+  iconPosition: 'left' | 'right',
+  validateStatus?: 'success' | 'warning' | 'error',
+  helper?: string,
 }
 
 const defaultProps = {
   size: 'default',
   underline: false,
-  focus: false
+  focus: false,
+  iconPosition: 'left'
 }
 
 
@@ -30,7 +43,14 @@ class Input extends React.Component<Props> {
 
   static defaultProps = defaultProps;
 
-  constructor(props) {
+  refInput: React$ElementRef<any>
+
+  setTextInputRef: ?Function
+
+  focusTextInput: ?Function
+
+
+  constructor(props: Props) {
     super(props);
 
     this.refInput = null;
@@ -54,9 +74,15 @@ class Input extends React.Component<Props> {
 
 
 
-  focusTextInput() {
+  focusTextInput = () => {
 
-    this.refInput.current.focus();
+    (this.refInput.current: React$ElementRef<any>).focus();
+  }
+
+  handleChange = (e: SyntheticEvent<HTMLInputElement>) => {
+    const {onChange} = this.props;
+
+    if(onChange) onChange(e, {...this.props});
   }
 
 
@@ -68,21 +94,42 @@ class Input extends React.Component<Props> {
     const {
       children,
       value,
+      onChange,
+      icon,
+      iconPosition,
+      helper,
       ...rest
     } = this.props;
 
+  
+
+
     return (
-      <StyledInput
-        {...rest}
-        innerRef={this.setTextInputRef}
+      <StyledInputWrapper>
+        <div style={{position: "relative"}}>
+          {
+            icon && <StyledIconInput iconPosition={iconPosition}>
+                      <Icon style={{fontSize: (rest.theme: Object).size[rest.size].fontSize}} name={icon} />
+                    </StyledIconInput>
+          }
+          <StyledInput
+            {...rest}
+            icon={icon}
+            iconPosition={iconPosition}
+            onChange={this.handleChange}
+            innerRef={this.setTextInputRef}
+          />
+        </div>
 
+      {
+        helper && <StyledInputHelper validateStatus={rest.validateStatus}>{helper}</StyledInputHelper>
+      }
 
-         >
-        {children}
-      </StyledInput>
+      </StyledInputWrapper>
+
     )
   }
 }
 
 
-export default Input
+export default withTheme(Input)

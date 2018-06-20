@@ -4,38 +4,69 @@ import {
   StyledInputWrapper,
   StyledInput,
   StyledIconInput,
-  StyledInputHelper
+  StyledAddonBefore,
+  StyledAddonAfter
 } from './style';
 
 import Icon from '../Icon';
-
 import { withTheme } from 'styled-components';
 
 
 
+
 type Props = {
+  /**Override style of Input**/
   style?: Object,
+  /** Add more class to Input**/
   className?: string,
+  /****/
   children?: any,
+  /** onChange callback function... params is (e: Event, props: Object)**/
   onChange?: Function,
+  /** onKeyDown callback function ... params is (e: Event, props: Object)**/
+  onKeyDown?:  Function,
+  /** set size of input component.. default value is default**/
   size: 'small' | 'default' | 'medium' | 'large',
+  /** Set Input component mode underline**/
   underline: boolean,
+  /** Set value of Input**/
   value?: string,
+  /** Set default value of Input Component**/
   defaultValue?: string,
+  /** Set component focus when mount or not**/
   focus: boolean,
+  /** Adddon before input**/
   addonBefore?: string | React.Node,
-  addonAfetr?: string | React.Node,
+  /** Adddon after input**/
+  addonAfter?: string | React.Node,
+  /** Icon of input component**/
   icon?: string,
+  /** Set icon position left or right... default value is left**/
   iconPosition: 'left' | 'right',
+  /** from form item with <3 **/
   validateStatus?: 'success' | 'warning' | 'error',
-  helper?: string,
+  /** Set name of input component**/
+  name?: string,
+  /** Set width of Input full**/
+  fullWidth: boolean,
+  /** Change input tag to textarea tag.. you can set more props like rows and cols**/
+  textarea: boolean,
+  /** Set autosize of textarea **/
+  autosize: boolean,
+  /** Set input component blank mode**/
+  blank: boolean,
 }
 
 const defaultProps = {
   size: 'default',
   underline: false,
   focus: false,
-  iconPosition: 'left'
+  iconPosition: 'left',
+  fullWidth: false,
+  textarea: false,
+  autosize: false,
+  blank: false,
+
 }
 
 
@@ -85,6 +116,22 @@ class Input extends React.Component<Props> {
     if(onChange) onChange(e, {...this.props});
   }
 
+  onKeyDown = (e: SyntheticEvent<HTMLInputElement>) => {
+    const el: Object = e.target;
+    
+    const {onKeyDown, autosize} = this.props;
+
+    if(autosize) {
+      setTimeout(() =>{
+        el.style.cssText = 'height:auto; padding:0';
+        el.style.cssText = 'height:' + el.scrollHeight + 'px';
+      },0);
+    }
+
+
+    onKeyDown && onKeyDown(e, {...this.props});
+  }
+
 
 
 
@@ -93,36 +140,44 @@ class Input extends React.Component<Props> {
   render(){
     const {
       children,
-      value,
       onChange,
       icon,
       iconPosition,
-      helper,
+      addonAfter,
+      textarea,
+      addonBefore,
       ...rest
     } = this.props;
 
-  
+    const props : Object = rest;
+
+    const ElementType = textarea ? StyledInput.withComponent("textarea") : StyledInput;
 
 
     return (
-      <StyledInputWrapper>
-        <div style={{position: "relative"}}>
+      <StyledInputWrapper fullWidth={props.fullWidth}>
+        {
+          props.addonBefore && !textarea && <StyledAddonBefore validateStatus={rest.validateStatus}>{props.addonBefore}</StyledAddonBefore>
+        }
+
           {
-            icon && <StyledIconInput iconPosition={iconPosition}>
-                      <Icon style={{fontSize: (rest.theme: Object).size[rest.size].fontSize}} name={icon} />
+            icon && !textarea && <StyledIconInput iconPosition={iconPosition}>
+                      <Icon style={{fontSize: (props.theme: Object).size[props.size].fontSize}} name={icon} />
                     </StyledIconInput>
           }
-          <StyledInput
+          <ElementType
             {...rest}
             icon={icon}
+            onKeyDown={this.onKeyDown}
+            textarea={textarea}
             iconPosition={iconPosition}
             onChange={this.handleChange}
             innerRef={this.setTextInputRef}
           />
-        </div>
+
 
       {
-        helper && <StyledInputHelper validateStatus={rest.validateStatus}>{helper}</StyledInputHelper>
+        props.addonAfter && !textarea && <StyledAddonAfter validateStatus={rest.validateStatus}>{props.addonAfter}</StyledAddonAfter>
       }
 
       </StyledInputWrapper>

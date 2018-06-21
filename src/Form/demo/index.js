@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Form from '../Form';
 import Input from '../../Input/Input';
+import Radio from '../../Radio/Radio';
 
 type State = {
   value: string
@@ -11,6 +12,7 @@ class FormDemo extends React.Component<{}, State>{
   state = {
     value: ""
   }
+
   handleChange = (e: Event, data: Object) =>{
     this.setState({
       value: (e.target: window.HTMLInputElement).value
@@ -20,7 +22,7 @@ class FormDemo extends React.Component<{}, State>{
     return (
       <Form>
         {/* Basic Input */}
-        <Form.Item
+        {/* <Form.Item
           label="Username"
           required
 
@@ -100,11 +102,11 @@ class FormDemo extends React.Component<{}, State>{
            addonBefore="Https://"
            addonAfter=".com"
            placeholder="Hello World"/>
-       </Form.Item>
+       </Form.Item> */}
 
        {/* Text Area */}
 
-       <Form.Item
+       {/* <Form.Item
          layout="vertical"
          label="Email"
 
@@ -115,20 +117,38 @@ class FormDemo extends React.Component<{}, State>{
            textarea
            rows="4"
            placeholder="Hello World"/>
-       </Form.Item>
+       </Form.Item> */}
 
       {/* Input Blank */}
-       <Form.Item>
+       {/* <Form.Item>
          <Input
            blank
            icon="search"
            placeholder="Search something"/>
+       </Form.Item> */}
+       <Form.Item>
+
+           <Radio id="hihi" name="haha" value="on"/>
+
+     </Form.Item>
+
+       <Form.Item>
+         <Radio.Group>
+           <Radio id="hehe" name="huhu" value="on"/>
+         <Radio id="hoho" name="huhu" value="off"/>
+       </Radio.Group>
+
+
+
        </Form.Item>
+
+
 
 
       </Form>
     )
   }
 }
+
 
 export default FormDemo

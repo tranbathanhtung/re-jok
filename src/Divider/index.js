@@ -5,6 +5,10 @@ import {
   StyledDividerContent,
 } from './style';
 
+import {
+  isChild
+} from '../helpers/typeUtils';
+
 type Props = {
   /** Override style of divider**/
   style?: Object,
@@ -36,7 +40,7 @@ class Divider extends React.Component<Props> {
       ...rest
     } = this.props;
 
-    const hasChild = !(children === null || children === undefined || (Array.isArray(children) && children.length === 0));
+    const hasChild = !isChild(children);
 
     return (
       <StyledDivider hasChild={hasChild} type={type} {...rest}>

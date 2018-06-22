@@ -10,7 +10,8 @@ import {
 import { withTheme } from 'styled-components';
 
 import RadioGroup from './RadioGroup';
-import { isUndef } from '../helpers/typeUtils';
+import { isUndef, isChild } from '../helpers/typeUtils';
+import { generalId } from '../helpers';
 
 
 type Props = {
@@ -23,29 +24,35 @@ type Props = {
   /** onChange callback function... params is (e: Event, props: Object)**/
   onChange?: Function,
   /** Set value of Radio**/
-  value?: string,
-  /** Set component focus when mount or not**/
-  focus: boolean,
-  /** from form item with <3 **/
-  validateStatus?: 'success' | 'warning' | 'error',
-  /** Set name of input component**/
+  value?: string | number,
+  /** Set name of radio component**/
   name: string,
-
-  id: string,
-
-  checked: ?boolean,
-  defaultChecked: boolean
+  /** Set radio component disabled or not**/
+  disabled: boolean,
+  /** Set checked radio property**/
+  checked: boolean,
+  /** Set radio default checked or not**/
+  defaultChecked: boolean,
+  /** Label of radio**/
+  label?: string,
+  /** Set color of radio**/
+  color?: string,
 
 }
 
 const defaultProps = {
   checked: void 0,
-  defaultChecked: false
+  defaultChecked: false,
+  disabled: false
+}
+
+type State = {
+  checked: boolean
 }
 
 
 
-class Radio extends React.Component<Props> {
+class Radio extends React.Component<Props, State> {
 
   static defaultProps = defaultProps;
 
@@ -55,7 +62,9 @@ class Radio extends React.Component<Props> {
     super(props);
 
     this.state = {
-      checked: isUndef(props.checked) ? props.defaultChecked : props.checked,
+      checked: isUndef(props.checked)
+      ? props.defaultChecked
+      : props.checked,
     }
   }
 
@@ -64,13 +73,7 @@ class Radio extends React.Component<Props> {
   handleChange = (e: SyntheticEvent<HTMLInputElement>) => {
     const {onChange} = this.props;
 
-    const checked = e.target.checked;
-
-    console.log(e.target.value)
-
-
-
-
+    const checked = (e.target: window.HTMLInputElement).checked;
 
     if(onChange) onChange(e, {...this.props});
 
@@ -79,19 +82,26 @@ class Radio extends React.Component<Props> {
 
 
 
+
+
   render(){
     const {
       children,
       onChange,
       name,
-      id,
+      disabled,
+      label,
+      color,
       ...rest
     } = this.props;
 
-    const checked = isUndef(rest.checked) ? this.state.checked : rest.checked;
+    const hasChild = !isChild(children);
 
-    console.log(this.props)
 
+
+    const checked = isUndef(this.props.checked) ? this.state.checked : this.props.checked;
+
+    const id = generalId();
 
     return (
       <StyledRadioWrapper>
@@ -101,15 +111,22 @@ class Radio extends React.Component<Props> {
           checked={checked}
           name={name}
           id={id}
+          disabled={disabled}
           value={rest.value}
         />
       <StyledRadioLabel
-        id={id}>
+        id={id}
+        color={color}
+        disabled={disabled}
+        >
         <StyledRadioButton
           checked={checked}
+          disabled={disabled}
+          color={color}
 
         />
-        {/* Label A */}
+
+      {label ? label : hasChild && children}
       </StyledRadioLabel>
       </StyledRadioWrapper>
     )

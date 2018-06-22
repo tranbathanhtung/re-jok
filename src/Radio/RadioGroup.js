@@ -17,31 +17,38 @@ type Props = {
   /** Add more class to Radio**/
   className?: string,
   /****/
-  children?: React.ChildrenArray < React.Element < typeof Radio >>,
+  children: React.ChildrenArray < React.Element < typeof Radio >>,
   /** onChange callback function... params is (e: Event, props: Object)**/
   onChange?: Function,
-  /** Set component focus when mount or not**/
-  focus: boolean,
-  /** from form item with <3 **/
-  validateStatus?: 'success' | 'warning' | 'error',
   /** Set name of input component**/
   name: string,
-
-  defaultValue?: string
+  /** Set default value**/
+  value: string | number,
+  /** Set default value**/
+  defaultValue: string,
+  /** Set color of all radio**/
+  color?: string,
+  /** Set layout of radio button**/
+  layout?: 'horizontal' | 'vertical'
 
 }
 
 const defaultProps = {
   defaultValue: void 0,
   value: void 0,
+
+}
+
+type State = {
+  value: string | number
 }
 
 
 
 
-class RadioGroup extends React.Component<Props> {
+class RadioGroup extends React.Component<Props, State> {
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -49,7 +56,7 @@ class RadioGroup extends React.Component<Props> {
      };
    }
 
-   componentWillReceiveProps(nextProps) {
+   componentWillReceiveProps(nextProps: Props) {
     if (nextProps.value !== this.props.value && isUndef(nextProps.value)) {
       this.setState({
         value: this.props.value,
@@ -58,19 +65,17 @@ class RadioGroup extends React.Component<Props> {
   }
 
   getValue = () => {
-    const props = this.props;
-    const state = this.state;
 
-    return isUndef(props.value) ? state.value : props.value;
+    return isUndef(this.props.value) ? this.state.value : this.props.value;
   }
 
 
-  handleChange = (e: SyntheticEvent<HTMLInputElement>, propsRadio) => {
+  handleChange = (e: SyntheticEvent<HTMLInputElement>, propsRadio: Object) => {
     const {onChange} = this.props;
 
 
     const currentValue = this.getValue();
-
+    
     if(currentValue === propsRadio.value) return;
 
     if (isUndef(this.props.value)) {
@@ -79,7 +84,7 @@ class RadioGroup extends React.Component<Props> {
         });
     }
 
-    if(onChange) onChange(e, {...this.props});
+    if(onChange) onChange(e, {...propsRadio});
 
 
   }
@@ -91,28 +96,30 @@ class RadioGroup extends React.Component<Props> {
   render(){
     const {
       children,
-      onChange,
       name,
+      color,
+      onChange,
       ...rest
     } = this.props;
+
 
     const hasChild = !isChild(children);
     const value = this.getValue();
 
-    console.log()
 
+
+    const radios = hasChild && React.Children.map(children, radio =>
+      React.cloneElement(radio, {
+        checked: value === radio.props.value,
+        name: name,
+        color: color,
+        onChange: this.handleChange
+      })
+    );
 
     return (
-       <StyledRadioGroup>
-         {hasChild && React.Children.map(children, (c, i) =>
-           React.cloneElement(c, {
-             key: i,
-             valueSelect: value,
-             onChange: this.handleChange
-           })
-         )}
-
-
+       <StyledRadioGroup {...rest}>
+         {radios}
        </StyledRadioGroup>
     )
   }

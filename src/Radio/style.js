@@ -16,6 +16,8 @@ cursor: pointer;
 
 export const StyledRadioGroup = styled.div`
   ${baseRadio};
+  display: flex;
+  flex-direction: ${props => props.layout === "horizontal" ? "row" : "column"};
 `
 
 export const StyledRadioWrapper = styled.div`
@@ -24,39 +26,47 @@ export const StyledRadioWrapper = styled.div`
 
 
 
-export const StyledRadioLabel = styled.label.attrs({
-  htmlFor: props=> props.id
-})`
-  font-size: 1.6rem;
-  cursor: pointer;
-  position: relative;
-  padding-left: 4.5rem;
-`
 
 export const StyledRadioButton = styled.span`
-height: 3rem;
-  width: 3rem;
-  border: 5px solid #55c57a;
+  height: 1.6rem;
+  width: 1.6rem;
+
+  border:  ${props => props.checked ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : "1px solid #e8e8e8"};
   border-radius: 50%;
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -.4rem;
+  top: 0;
+  ${
+    props => props.disabled && css`
+    border-color: #d9d9d9!important;
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    `
+  }
+
   &::after{
     content: "";
     display: block;
-    height: 1.3rem;
-    width: 1.3rem;
-border-radius: 50%;
-position: absolute;
-top: 50%;
-left: 50%;
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-background-color: #55c57a;
-opacity: ${props => props.checked ? "1" : "0"};
--webkit-transition: opacity .2s;
-transition: opacity .2s;
+    height: .8rem;
+    width: .8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(.875);
+    background-color: ${({color, theme}) => color ? `${color}` : `${theme.primary.main}`};
+    opacity: ${props => props.checked ? "1" : "0"};
+
+    transition: all .3s cubic-bezier(.78,.14,.15,.86);
+
+    ${
+      props => props.disabled && css`
+
+      background-color: #ccc;
+      `
+    }
   }
 `
 
@@ -75,4 +85,27 @@ width: 0;
 height: 0;
 
 
+`
+
+
+export const StyledRadioLabel = styled.label.attrs({
+  htmlFor: props=> props.id
+})`
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: ${props => props.disabled && "rgba(0,0,0,.25)"};
+  cursor: ${props => props.disabled && "not-allowed"};
+
+  &:hover ${StyledRadioButton}{
+    ${
+      props => !props.disabled && css`
+      border: ${({color, theme}) => color ? `1px solid ${color}` : `1px solid ${theme.primary.main}`};
+
+      `
+    }
+
+  }
 `

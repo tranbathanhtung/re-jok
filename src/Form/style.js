@@ -38,13 +38,14 @@ export const StyledInputHelper = styled.p`
 `
 
 export const Div = styled.div`
-
+${'' /* line-height: 3.2rem; */}
 `
 
 export const StyledLabelForm = styled.div`
 text-align: ${props => props.layout === "horizontal" ? "right" : "left"};
+margin-bottom: ${props => props.layout === "vertical" && ".5rem"};
 vertical-align: middle;
-line-height: 31.9999px;
+${'' /* line-height: 31.9999px; */}
 display: inline-block;
 overflow: hidden;
 float: ${props => props.layout === "horizontal" && "left"};

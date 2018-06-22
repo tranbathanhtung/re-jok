@@ -5,19 +5,48 @@ import Input from '../../Input/Input';
 import Radio from '../../Radio/Radio';
 
 type State = {
-  value: string
+  value: number,
+  value1: string,
+  value2: string,
+  value3: string,
 }
 
 class FormDemo extends React.Component<{}, State>{
   state = {
-    value: ""
+    value: 1,
+    value1: 'Apple',
+    value2: 'Apple',
+    value3: 'Apple',
   }
 
   handleChange = (e: Event, data: Object) =>{
+
+
+
     this.setState({
-      value: (e.target: window.HTMLInputElement).value
+      value: data.value
     })
   }
+
+   onChange1 = (e: Event) => {
+
+    this.setState({
+      value1: (e.target: window.HTMLInputElement).value
+    });
+   }
+   onChange2 = (e: Event) => {
+
+    this.setState({
+      value2: (e.target: window.HTMLInputElement).value
+    });
+   }
+   onChange3 = (e: Event) => {
+
+    this.setState({
+       value3: (e.target: window.HTMLInputElement).value
+     });
+   }
+
   render(){
     return (
       <Form>
@@ -25,17 +54,15 @@ class FormDemo extends React.Component<{}, State>{
         {/* <Form.Item
           label="Username"
           required
-
           >
           <Input
             underline
             focus
             value={this.state.value}
             onChange={this.handleChange}
-            defaultValue="Re-Jok"
             placeholder="Hello World"/>
-        </Form.Item>
-       <Form.Item
+        </Form.Item> */}
+       {/* <Form.Item
          label="Password"
 
          >
@@ -50,7 +77,7 @@ class FormDemo extends React.Component<{}, State>{
          <Input
            icon="rocket"
            iconPosition="right"
-
+            disabled
            placeholder="Hello World"/>
        </Form.Item>
 
@@ -127,20 +154,48 @@ class FormDemo extends React.Component<{}, State>{
            placeholder="Search something"/>
        </Form.Item> */}
        <Form.Item>
+           <Radio disabled name="haha" label="aaaa" value="on"/>
+       </Form.Item>
 
-           <Radio id="hihi" name="haha" value="on"/>
-
-     </Form.Item>
-
-       <Form.Item>
-         <Radio.Group>
-           <Radio id="hehe" name="huhu" value="on"/>
-         <Radio id="hoho" name="huhu" value="off"/>
+       <Form.Item label="Question 1">
+         <Radio.Group color="#52c41a" name="q1" onChange={this.handleChange} value={this.state.value}>
+           <Radio value={1}>A</Radio>
+           <Radio value={2}>B</Radio>
+           <Radio value={3}>C</Radio>
+           <Radio value={4}>D</Radio>
        </Radio.Group>
 
 
 
        </Form.Item>
+
+       {/* <Form.Item label="Question 2" >
+         <Radio.Group color="#faad14" name="q2" onChange={this.onChange1} value={this.state.value1}>
+           <Radio value="Apple">Apple</Radio>
+           <Radio value="Pear">Pear</Radio>
+           <Radio value="Orange">Orange</Radio>
+
+       </Radio.Group>
+
+       </Form.Item>
+
+       <Form.Item label="Question 3">
+         <Radio.Group color="#f5222d" name="q3" onChange={this.onChange2} value={this.state.value2}>
+           <Radio value="Apple">Apple</Radio>
+           <Radio value="Pear">Pear</Radio>
+          <Radio value="Orange">Orange</Radio>
+
+       </Radio.Group>
+       </Form.Item>
+
+       <Form.Item layout="vertical">
+         <Radio.Group name="q4" onChange={this.onChange3} value={this.state.value3}>
+           <Radio id="8" value="Apple">Apple</Radio>
+         <Radio id="9" value="Pear">Pear</Radio>
+       <Radio id="10" value="Orange">Orange</Radio>
+
+       </Radio.Group>
+       </Form.Item> */}
 
 
 

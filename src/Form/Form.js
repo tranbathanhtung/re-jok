@@ -41,21 +41,25 @@ type FormItemProps = {
   layout: 'horizontal' | 'vertical'
 }
 
-const FormItem = (props: FormItemProps) => (
-  <StyledFormItem {...props}>
+const FormItem = (props: FormItemProps) => {
+  const {children, ...rest} = props;
+  return (
+    <StyledFormItem {...rest}>
 
-    {
-      props.label && <StyledLabelForm layout={props.layout}>
-        <StyledLabel required={props.required}>{props.label}</StyledLabel>
-      </StyledLabelForm>
-    }
-    <Div>
-      {<props.children.type {...props.children.props} {...props}/>}
-      {props.helper && <StyledInputHelper validateStatus={props.validateStatus}>{props.helper}</StyledInputHelper>}
-    </Div>
+      {
+        rest.label && <StyledLabelForm layout={rest.layout}>
+          <StyledLabel required={rest.required}>{rest.label}</StyledLabel>
+        </StyledLabelForm>
+      }
+      <Div>
+        {<children.type {...children.props} {...rest} />}
+        {rest.helper && <StyledInputHelper validateStatus={rest.validateStatus}>{rest.helper}</StyledInputHelper>}
+      </Div>
 
-  </StyledFormItem>
-)
+    </StyledFormItem>
+  )
+
+}
 
 FormItem.defaultProps = {
   required: false,

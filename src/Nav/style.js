@@ -9,6 +9,7 @@ export const StyledNavBar = styled.nav`
   font-size: 1.4rem;
   margin-bottom: 2rem;
   padding: 1rem 0;
+  z-index: ${({theme}) => theme.zIndex.nav};
 
 
 

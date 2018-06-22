@@ -10,6 +10,7 @@ import List from '../../List/List';
 import Dropdown from '../../Dropdown/Dropdown';
 import Menu from '../../Menu/Menu';
 import Divider from '../../Divider';
+import Input from '../../Input/Input';
 
 const MenuDemo = ()=> (
   <div style={{ width: 256 }}>
@@ -25,6 +26,22 @@ const MenuDemo = ()=> (
 
     </Menu>
   </div>
+)
+
+const ActionRight = () => (
+  <List horizontal>
+    <List.Item>
+      <Input
+        style={{
+          borderRadius: 20
+        }}
+        colorFocus="#e8e8e8"
+        icon="search"
+        placeholder="Search something"/>
+    </List.Item>
+
+
+  </List>
 )
 
 const ActionRight1 = () => (
@@ -95,7 +112,7 @@ class NavDemo extends React.Component<{}>{
   render(){
     return (
       <React.Fragment>
-        <Nav elementRight={<span>Right Element</span>}>
+        <Nav elementRight={<ActionRight/>}>
           Left Element
         </Nav>
 

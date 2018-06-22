@@ -98,7 +98,9 @@ export const defaultTheme = {
     avatar: 3,
     form: 3,
     search: 3,
-    badge: 100,
+    nav: 400,
+    badge: 450,
+    dropDown: 500,
     modal: 1500,
   }
 };

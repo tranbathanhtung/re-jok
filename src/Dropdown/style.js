@@ -30,7 +30,7 @@ export const StyledDropdown = styled.div`
     }
     top: ${props => `${props.top}px`};
     left: ${props => `${props.left}px`};
-    z-index: 10;
+    z-index: ${({theme}) => theme.zIndex.dropDown};
     padding: 1rem 0;
     background-color: #fff;
     border: .1rem solid #ebeef5;

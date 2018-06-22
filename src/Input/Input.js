@@ -30,9 +30,7 @@ type Props = {
   /** Set Input component mode underline**/
   underline: boolean,
   /** Set value of Input**/
-  value?: string,
-  /** Set default value of Input Component**/
-  defaultValue?: string,
+  value: string,
   /** Set component focus when mount or not**/
   focus: boolean,
   /** Adddon before input**/
@@ -55,6 +53,10 @@ type Props = {
   autosize: boolean,
   /** Set input component blank mode**/
   blank: boolean,
+  /**Change color when focus input component**/
+  colorFocus?: string,
+  /**Disabled input component**/
+  disabled: boolean,
 }
 
 const defaultProps = {
@@ -66,7 +68,7 @@ const defaultProps = {
   textarea: false,
   autosize: false,
   blank: false,
-
+  disabled: false,
 }
 
 
@@ -118,7 +120,7 @@ class Input extends React.Component<Props> {
 
   onKeyDown = (e: SyntheticEvent<HTMLInputElement>) => {
     const el: Object = e.target;
-    
+
     const {onKeyDown, autosize} = this.props;
 
     if(autosize) {

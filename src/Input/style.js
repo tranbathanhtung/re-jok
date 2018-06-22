@@ -62,7 +62,7 @@ ${
           props =>
              props.underline ? css`
 
-                 border-bottom: ${({theme, validateStatus}) => `.2rem solid ${validateStatus ? theme[validateStatus].main : theme.primary.main}`};
+                 border-bottom: ${({theme, validateStatus,colorFocus}) => `.2rem solid ${validateStatus ? theme[validateStatus].main : colorFocus ? colorFocus : theme.primary.main}`};
                  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
 
              `: css`
@@ -74,7 +74,7 @@ ${
 
                   `
                   : css`
-                  border-color: ${({theme}) => theme.primary.main};
+                  border-color: ${({theme, colorFocus}) => colorFocus ? colorFocus : theme.primary.main};
 
                   `
                }
@@ -105,6 +105,14 @@ ${
  `
 }
 
+${
+  props =>
+    props.disabled && css`
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+    `
+}
 
 
 

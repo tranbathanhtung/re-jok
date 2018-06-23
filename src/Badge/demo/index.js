@@ -13,7 +13,7 @@ export const BadgeDemo = () => (<React.Fragment>
     <Avatar shape = "square" style = {{
           color: '#f56a00',
           backgroundColor: '#fde3cf'
-        }} > T</Avatar>
+        }}>T</Avatar>
     </Badge>
 
     <Badge count={5}>

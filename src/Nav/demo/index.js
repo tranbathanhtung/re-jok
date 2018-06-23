@@ -5,7 +5,6 @@ import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
 import TextButton from '../../Button/TextButton';
 import Badge from '../../Badge';
-import Icon from '../../Icon';
 import List from '../../List/List';
 import Dropdown from '../../Dropdown/Dropdown';
 import Menu from '../../Menu/Menu';

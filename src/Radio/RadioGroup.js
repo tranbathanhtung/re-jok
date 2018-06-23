@@ -25,7 +25,7 @@ type Props = {
   /** Set default value**/
   value: string | number,
   /** Set default value**/
-  defaultValue: string,
+  defaultValue: string | number,
   /** Set color of all radio**/
   color?: string,
   /** Set layout of radio button**/
@@ -47,6 +47,8 @@ type State = {
 
 
 class RadioGroup extends React.Component<Props, State> {
+
+  static defaultProps = defaultProps;
 
   constructor(props: Props) {
     super(props);
@@ -75,7 +77,7 @@ class RadioGroup extends React.Component<Props, State> {
 
 
     const currentValue = this.getValue();
-    
+
     if(currentValue === propsRadio.value) return;
 
     if (isUndef(this.props.value)) {

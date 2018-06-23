@@ -9,6 +9,8 @@ import {
   StyledLabel,
 } from './style';
 
+import {isUndef, isChild} from '../helpers/typeUtils';
+
 
 type Props = {
   /**Override style of Form**/
@@ -52,7 +54,7 @@ const FormItem = (props: FormItemProps) => {
         </StyledLabelForm>
       }
       <Div>
-        {<children.type {...children.props} {...rest} />}
+        {!isChild(children) &&  <children.type {...children.props} {...rest} />}
         {rest.helper && <StyledInputHelper validateStatus={rest.validateStatus}>{rest.helper}</StyledInputHelper>}
       </Div>
 

@@ -1,6 +1,5 @@
 import styled, {css} from 'styled-components';
 
-import Icon from '../Icon';
 
 
 export const StyledInputWrapper = styled.div`

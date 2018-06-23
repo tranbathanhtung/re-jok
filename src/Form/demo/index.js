@@ -3,20 +3,60 @@ import * as React from 'react';
 import Form from '../Form';
 import Input from '../../Input/Input';
 import Radio from '../../Radio/Radio';
+import Checkbox from '../../Checkbox/Checkbox';
+import Button from '../../Button/Button';
 
 type State = {
   value: number,
   value1: string,
   value2: string,
   value3: string,
+  checkedList: Array<string>,
+  checkAll: boolean,
+  indeterminate: boolean,
+
 }
+
+const plainOptions = ['Apple', 'Pear', 'Orange'];
+const defaultCheckedList = ['Apple', 'Orange'];
 
 class FormDemo extends React.Component<{}, State>{
   state = {
+    //Radio
     value: 1,
     value1: 'Apple',
     value2: 'Apple',
     value3: 'Apple',
+
+    //Checkbox
+    checkedList: defaultCheckedList,
+    indeterminate: true,
+    checkAll: false,
+
+  }
+
+  //Checkbox
+  onChange = (checkedList: Array<string>) => {
+    this.setState({
+      checkedList,
+      indeterminate: !!checkedList.length && (checkedList.length < plainOptions.length),
+      checkAll: checkedList.length === plainOptions.length,
+    });
+  }
+  onCheckAllChange = (e: Event) => {
+
+    this.setState({
+      checkedList: (e.target: window.HTMLInputElement).checked ? plainOptions : [],
+      indeterminate: false,
+      checkAll: (e.target: window.HTMLInputElement).checked,
+    });
+  }
+
+  onCheckbox = (values: Array<mixed>) => {
+    // this.setState({
+    //   checked: e.target.checked
+    // })
+    console.log(values)
   }
 
   handleChange = (e: Event, data: Object) =>{
@@ -47,9 +87,14 @@ class FormDemo extends React.Component<{}, State>{
      });
    }
 
+   onSubmit = (e: Event) => {
+     e.preventDefault();
+     alert("hehe");
+   }
+
   render(){
     return (
-      <Form>
+      <Form onSubmit={this.onSubmit}>
         {/* Basic Input */}
         {/* <Form.Item
           label="Username"
@@ -153,7 +198,7 @@ class FormDemo extends React.Component<{}, State>{
            icon="search"
            placeholder="Search something"/>
        </Form.Item> */}
-       <Form.Item>
+       {/* <Form.Item>
            <Radio disabled name="haha" label="aaaa" value="on"/>
        </Form.Item>
 
@@ -169,7 +214,7 @@ class FormDemo extends React.Component<{}, State>{
 
        </Form.Item>
 
-       {/* <Form.Item label="Question 2" >
+       <Form.Item label="Question 2" >
          <Radio.Group color="#faad14" name="q2" onChange={this.onChange1} value={this.state.value1}>
            <Radio value="Apple">Apple</Radio>
            <Radio value="Pear">Pear</Radio>
@@ -196,6 +241,41 @@ class FormDemo extends React.Component<{}, State>{
 
        </Radio.Group>
        </Form.Item> */}
+
+       <Form.Item>
+         <Checkbox disabled checked value="Apple"/>
+       </Form.Item>
+
+        <Form.Item helper="hix" label="Question 2" >
+         <Checkbox.Group color="#faad14" name="q2">
+           <Checkbox value="Apple">Apple</Checkbox>
+           <Checkbox value="Pear">Pear</Checkbox>
+           <Checkbox value="Orange">Orange</Checkbox>
+
+       </Checkbox.Group>
+
+       </Form.Item>
+
+       <Form.Item>
+         <Checkbox indeterminate={this.state.indeterminate}
+            onChange={this.onCheckAllChange}
+            label="Select All"
+            checked={this.state.checkAll}/>
+       </Form.Item>
+
+       <Form.Item label="Question 3">
+         <Checkbox.Group values={this.state.checkedList} onChange={this.onChange} color="#f5222d">
+           <Checkbox value="Apple">Apple</Checkbox>
+           <Checkbox value="Pear">Pear</Checkbox>
+           <Checkbox value="Orange">Orange</Checkbox>
+        </Checkbox.Group>
+       </Form.Item>
+
+       <Form.Item>
+         <Button type="submit">Submit</Button>
+       </Form.Item>
+
+
 
 
 

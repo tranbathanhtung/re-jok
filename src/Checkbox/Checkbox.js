@@ -35,13 +35,16 @@ type Props = {
   disabled: boolean,
   /** Set checked checkbox property**/
   checked: boolean,
+  /** Set checkbox to indeterminate mode.. not work with toggle mode**/
   indeterminate: boolean,
   /** Label of checkbox**/
   label?: string,
-  /** Set color of checkbox**/
+  /** Set color of active checkbox and active toggle**/
   color?: string,
-
+  /** Change checkbox to toggle mode**/
   toggle: boolean,
+  /**Only work with toggle mode**/
+  inactiveColor: string
 
 
 }
@@ -106,6 +109,8 @@ class Checkbox extends React.Component<Props, State>{
       indeterminate,
       label,
       color,
+      inactiveColor,
+      toggle,
       ...rest
     } = this.props;
 
@@ -126,15 +131,18 @@ class Checkbox extends React.Component<Props, State>{
          />
       <StyledCheckboxLabel
         id={this.inputId}
+        toggle={toggle}
         color={color}
         disabled={disabled}
         indeterminate={indeterminate}
 
         >
         <StyledCheckboxButton
+          toggle={toggle}
           checked={checked}
           indeterminate={indeterminate}
           disabled={disabled}
+          inactiveColor={inactiveColor}
           color={color}
         />
         {label ? label : hasChild && children}

@@ -9,7 +9,7 @@ import {
   StyledLabel,
 } from './style';
 
-import {isUndef, isChild} from '../helpers/typeUtils';
+import {isChild} from '../helpers/typeUtils';
 
 
 type Props = {

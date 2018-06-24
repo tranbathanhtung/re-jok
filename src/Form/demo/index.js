@@ -242,6 +242,7 @@ class FormDemo extends React.Component<{}, State>{
        </Radio.Group>
        </Form.Item> */}
 
+      {/* Checkbox */}
        <Form.Item>
          <Checkbox disabled checked value="Apple"/>
        </Form.Item>
@@ -273,6 +274,21 @@ class FormDemo extends React.Component<{}, State>{
 
        <Form.Item>
          <Button type="submit">Submit</Button>
+       </Form.Item>
+
+       {/* Toggle */}
+       <Form.Item>
+         <Checkbox checked disabled toggle label="Toggle"/>
+       </Form.Item>
+
+       <Form.Item>
+         <Checkbox.Group onChange={(values)=> console.log(values)} toggle color="#faad14" name="q2">
+           <Checkbox value="Apple">Apple</Checkbox>
+           <Checkbox value="Pear">Pear</Checkbox>
+           <Checkbox value="Orange">Orange</Checkbox>
+
+       </Checkbox.Group>
+
        </Form.Item>
 
 

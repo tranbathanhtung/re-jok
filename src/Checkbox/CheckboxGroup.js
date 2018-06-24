@@ -27,12 +27,15 @@ type Props = {
   /** Set color of all radio**/
   color?: string,
   /** Set layout of radio button**/
-  layout?: 'horizontal' | 'vertical'
+  layout?: 'horizontal' | 'vertical',
+  /**Set all toggle mode to Checkbox**/
+  toggle?: boolean,
 
 }
 
 const defaultProps = {
   values: [],
+  toggle: false
 
 }
 
@@ -56,7 +59,7 @@ class CheckboxGroup extends React.Component<Props, State> {
    }
 
    componentWillReceiveProps(nextProps: Props) {
-     
+
     if (nextProps.values !== this.props.values && !isUndef(nextProps.values)) {
       this.setState({
         values: nextProps.values,
@@ -100,6 +103,7 @@ class CheckboxGroup extends React.Component<Props, State> {
       children,
       name,
       color,
+      toggle,
       onChange,
       ...rest
     } = this.props;
@@ -115,7 +119,8 @@ class CheckboxGroup extends React.Component<Props, State> {
       React.cloneElement(checkbox, {
         checked: values.includes(checkbox.props.value),
         color: color,
-        onChange: this.handleChange
+        onChange: this.handleChange,
+        toggle: toggle,
       })
     );
 

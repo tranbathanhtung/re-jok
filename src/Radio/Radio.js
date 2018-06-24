@@ -58,8 +58,12 @@ class Radio extends React.Component<Props, State> {
 
   static Group = RadioGroup;
 
+  inputId: string;
+
   constructor(props: Props){
     super(props);
+
+    this.inputId = generalId();
 
     this.state = {
       checked: isUndef(props.checked)
@@ -101,7 +105,6 @@ class Radio extends React.Component<Props, State> {
 
     const checked = isUndef(this.props.checked) ? this.state.checked : this.props.checked;
 
-    const id = generalId();
 
     return (
       <StyledRadioWrapper>
@@ -110,12 +113,12 @@ class Radio extends React.Component<Props, State> {
           onChange={this.handleChange}
           checked={checked}
           name={name}
-          id={id}
+          id={this.inputId}
           disabled={disabled}
           value={rest.value}
         />
       <StyledRadioLabel
-        id={id}
+        id={this.inputId}
         color={color}
         disabled={disabled}
         >

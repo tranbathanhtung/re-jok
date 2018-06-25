@@ -121,6 +121,7 @@ class Radio extends React.Component<Props, State> {
         id={this.inputId}
         color={color}
         disabled={disabled}
+        {...rest}
         >
         <StyledRadioButton
           checked={checked}

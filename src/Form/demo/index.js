@@ -5,6 +5,7 @@ import Input from '../../Input/Input';
 import Radio from '../../Radio/Radio';
 import Checkbox from '../../Checkbox/Checkbox';
 import Button from '../../Button/Button';
+import Select from '../../Select/Select';
 
 type State = {
   value: number,
@@ -96,7 +97,7 @@ class FormDemo extends React.Component<{}, State>{
     return (
       <Form onSubmit={this.onSubmit}>
         {/* Basic Input */}
-        {/* <Form.Item
+        <Form.Item
           label="Username"
           required
           >
@@ -106,8 +107,8 @@ class FormDemo extends React.Component<{}, State>{
             value={this.state.value}
             onChange={this.handleChange}
             placeholder="Hello World"/>
-        </Form.Item> */}
-       {/* <Form.Item
+        </Form.Item>
+       <Form.Item
          label="Password"
 
          >
@@ -174,11 +175,11 @@ class FormDemo extends React.Component<{}, State>{
            addonBefore="Https://"
            addonAfter=".com"
            placeholder="Hello World"/>
-       </Form.Item> */}
+       </Form.Item>
 
        {/* Text Area */}
 
-       {/* <Form.Item
+       <Form.Item
          layout="vertical"
          label="Email"
 
@@ -189,16 +190,16 @@ class FormDemo extends React.Component<{}, State>{
            textarea
            rows="4"
            placeholder="Hello World"/>
-       </Form.Item> */}
+       </Form.Item>
 
       {/* Input Blank */}
-       {/* <Form.Item>
+       <Form.Item>
          <Input
            blank
            icon="search"
            placeholder="Search something"/>
-       </Form.Item> */}
-       {/* <Form.Item>
+       </Form.Item>
+       <Form.Item>
            <Radio disabled name="haha" label="aaaa" value="on"/>
        </Form.Item>
 
@@ -235,12 +236,12 @@ class FormDemo extends React.Component<{}, State>{
 
        <Form.Item layout="vertical">
          <Radio.Group name="q4" onChange={this.onChange3} value={this.state.value3}>
-           <Radio id="8" value="Apple">Apple</Radio>
-         <Radio id="9" value="Pear">Pear</Radio>
-       <Radio id="10" value="Orange">Orange</Radio>
+           <Radio value="Apple">Apple</Radio>
+           <Radio value="Pear">Pear</Radio>
+           <Radio value="Orange">Orange</Radio>
 
        </Radio.Group>
-       </Form.Item> */}
+       </Form.Item>
 
       {/* Checkbox */}
        <Form.Item>
@@ -289,6 +290,15 @@ class FormDemo extends React.Component<{}, State>{
 
        </Checkbox.Group>
 
+       </Form.Item>
+
+       <Form.Item validateStatus="error" label="Choose option" helper="This field is required">
+         <Select placeholder="Choose option">
+           <Select.Option value={1}>Option 1</Select.Option>
+           <Select.Option value={2} disabled>Option 2</Select.Option>
+           <Select.Option value={3}>Option 3</Select.Option>
+
+         </Select>
        </Form.Item>
 
 

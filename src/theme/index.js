@@ -50,8 +50,10 @@ export const defaultTheme = {
   },
   text: {
     primary: "rgba(0, 0, 0, 0.85)",
+    regular: "rgba(0, 0, 0, .64)",
     secondary: "rgba(0, 0, 0, 0.48)",
-    hint: "rgba(0, 0, 0, 0.38)"
+    hint: "rgba(0, 0, 0, 0.38)",
+    default: "#fff",
   },
   background: {
     paper: "#fff",
@@ -96,12 +98,14 @@ export const defaultTheme = {
     card: 2,
     loading: 3,
     avatar: 3,
+    badge: 100,
     form: 3,
     search: 3,
     nav: 400,
-    badge: 450,
     dropDown: 500,
+    sidebar: 1300,
     modal: 1500,
+    tooltip: 3000,
   }
 };
 

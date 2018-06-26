@@ -61,7 +61,7 @@ export const StyledList = styled.div`
   margin: 0;
   padding: 0;
   position: relative;
-  color: rgba(0,0,0,.65);
+  color: ${({theme}) => theme.text.regular};
   box-sizing: border-box;
 
 
@@ -89,7 +89,7 @@ export const StyledListContentHeader = styled.div`
 `
 export const StyledListContentDescription = styled.div`
 
-color: rgba(0,0,0,.68);
+color: ${({theme}) => theme.text.regular};
 font-size: 1.4rem;
 line-height: 2rem;
 font-weight: 400;

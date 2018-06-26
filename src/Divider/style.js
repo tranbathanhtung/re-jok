@@ -29,7 +29,7 @@ props => !props.hasChild || props.type === "vertical"
   ? css `
     font-size: 14px;
     line-height: 1.5;
-    color: rgba(0,0,0,.65);
+    color: ${({theme}) => theme.text.regular};
     box-sizing: border-box;
 
     list-style: none;
@@ -45,7 +45,7 @@ props => props.dashed && css `
     text-align: center;
     background: transparent;
     font-weight: 500;
-    color: rgba(0,0,0,.85);
+    color: ${({theme}) => theme.text.primary};
     font-size: 1.6rem;
     margin: 1.6rem 0;
     padding: 0;

@@ -107,7 +107,6 @@ class Modal extends React.Component<Props>{
       <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={(e) => e.stopPropagation()}>
         { closable && <CloseButton onClick={(e) => this.handleClose(e)} variant="icon" icon="times"/> }
 
-
         {
           title && alert === "none"
           ? (

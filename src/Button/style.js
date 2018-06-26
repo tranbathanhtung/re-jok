@@ -96,9 +96,9 @@ export const Btn = styled.button.attrs({
       ? props.theme.secondary.main
       : "#fff"};
 
-  color: ${props => (props.backgroundColor || props.primary || props.secondary)
-        ? "#fff"
-        : "#000000a6"};
+  color: ${({theme, ...props}) => (props.backgroundColor || props.primary || props.secondary)
+        ? theme.text.default
+        : theme.text.regular};
 
     width: ${props => props.fullWidth && props.shape !== "circle"
           ? "100%"
@@ -198,13 +198,13 @@ export const OutlineBtn = Btn.extend `
     : props.secondary
       ? props.theme.secondary.main
       : "rgba(0,0,0,.16)"};
-  color: ${props => props.backgroundColor
+  color: ${({theme, ...props}) => props.backgroundColor
         ? props.backgroundColor
         : props.primary
-          ? props.theme.primary.main
+          ? theme.primary.main
           : props.secondary
-            ? props.theme.secondary.main
-            : "#0000008a"};
+            ? theme.secondary.main
+            : theme.text.regular};
 
   ${
 props => props.variant === "outline"
@@ -224,7 +224,7 @@ props => props.variant === "outline"
             ? shadeColor(props.theme.primary.main, -15)
             : props.secondary
               ? shadeColor(props.theme.secondary.main, -15)
-              : "rgba(0,0,0,.68)"};
+              : props.theme.text.regular};
        }
      `
   : props.variant === "inverted"
@@ -238,7 +238,7 @@ props => props.variant === "outline"
         : props.secondary
           ? props.theme.secondary.main
           : "rgba(0,0,0,.54)"};
-            color: #fff;
+            color: ${({theme}) => theme.text.default};
          }
          `)
     : null}
@@ -260,7 +260,7 @@ export const IconBtn = Btn.extend `
     ? props.theme.primary.main
     : props.secondary
       ? props.theme.secondary.main
-      : "#0000008a"};
+      : props.theme.text.regular};
    width: ${props => props.theme.size[props.size].width};
    height: ${props => props.theme.size[props.size].height};
    border-radius: 50%;
@@ -281,7 +281,7 @@ export const IconBtn = Btn.extend `
                 ? shadeColor(props.theme.primary.main, -15)
                 : props.secondary
                   ? shadeColor(props.theme.secondary.main, -15)
-                  : "rgba(0,0,0,.68)"};
+                  : props.theme.text.regular};
    }
 
 `
@@ -324,7 +324,7 @@ export const TextBtn = styled.button.attrs({
       ? props.theme.primary.main
       : props.secondary
         ? props.theme.secondary.main
-        : "#000000a6"};
+        : props.theme.text.regular};
 
  padding: ${props => props.theme.size[props.size].padding};
  &:hover{
@@ -338,7 +338,7 @@ export const TextBtn = styled.button.attrs({
             ? hexa(props.theme.primary.main, 0.8)
             : props.secondary
               ? hexa(props.theme.secondary.main, 0.8)
-              : hexa("#000000a6", 0.8)};
+              : props.theme.text.primary};
 
     border-color: transparent;
 
@@ -352,7 +352,7 @@ export const TextBtn = styled.button.attrs({
                     ? hexa(props.theme.primary.main, 0.8)
                     : props.secondary
                       ? hexa(props.theme.secondary.main, 0.8)
-                      : hexa("#000000a6", 0.8)};
+                      : props.theme.text.primary};
 border-color: transparent;
  }
 

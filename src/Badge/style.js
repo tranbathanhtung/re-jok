@@ -51,7 +51,7 @@ export const StyledSup = styled.sup `
   height: 2rem;
   border-radius: 1rem;
   min-width: 2rem;
-  color: #fff;
+  color: ${({theme}) => theme.text.default};
   line-height: 2rem;
   display: flex;
   justify-content: center;

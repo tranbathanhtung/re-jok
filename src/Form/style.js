@@ -5,7 +5,7 @@ const baseForm = css`
 font-size: 1.4rem;
 position: relative;
 max-width: 100%;
-color: rgba(0,0,0,.65);
+color: ${({theme}) => theme.text.regular};
 line-height: 1.5;
 box-sizing: border-box;
 margin: 0;
@@ -27,7 +27,7 @@ export const StyledFormItem = styled.div`
 `
 
 export const StyledInputHelper = styled.p`
-  color: ${({theme, validateStatus}) => validateStatus ? theme[validateStatus].main : "rgba(0,0,0,.54)"};
+  color: ${({theme, validateStatus}) => validateStatus ? theme[validateStatus].main : theme.text.regular};
   margin: 0;
   font-size: 1.2rem;
   text-align: left;
@@ -56,7 +56,7 @@ white-space: nowrap;
 
 export const StyledLabel = styled.label`
   font-size: 1.4rem;
-  color: rgba(0, 0, 0, 0.85);
+  color: ${({theme}) => theme.text.primary};
 
   &::after{
     content: ":";

@@ -21,7 +21,7 @@ export const StyledCard = styled.div `
 
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: ${({theme}) => theme.text.regular};
   margin: 0;
   z-index: ${({theme}) => theme.zIndex.card};
 
@@ -51,36 +51,36 @@ export const StyledCard = styled.div `
                 }
                 `
 
-                case "sm":
-                 return css`
-                  @media(min-width: ${props.theme.grid.sm}px){
-                    width: ${props => `calc(${ 100 / props.numberCard.sm}% - 2.4rem)`};
+              case "sm":
+               return css`
+                @media(min-width: ${props.theme.grid.sm}px){
+                  width: ${props => `calc(${ 100 / props.numberCard.sm}% - 2.4rem)`};
 
                   }
                   `
 
-                  case "md":
-                   return css`
-                    @media(min-width: ${props.theme.grid.md}px){
-                      width: ${props => `calc(${ 100 / props.numberCard.md}% - 2.4rem)`};
+              case "md":
+                return css`
+                 @media(min-width: ${props.theme.grid.md}px){
+                   width: ${props => `calc(${ 100 / props.numberCard.md}% - 2.4rem)`};
 
                     }
                     `
 
-                    case "lg":
-                     return css`
-                      @media(min-width: ${props.theme.grid.lg}px){
-                        width: ${props => `calc(${ 100 / props.numberCard.lg}% - 2.4rem)`};
+              case "lg":
+                return css`
+                  @media(min-width: ${props.theme.grid.lg}px){
+                    width: ${props => `calc(${ 100 / props.numberCard.lg}% - 2.4rem)`};
 
-                      }
+                    }
                       `
 
-                      case "xl":
-                       return css`
-                        @media(min-width: ${props.theme.grid.xl}px){
-                          width: ${props => `calc(${ 100 / props.numberCard.xl}% - 2.4rem)`};
+              case "xl":
+                 return css`
+                    @media(min-width: ${props.theme.grid.xl}px){
+                     width: ${props => `calc(${ 100 / props.numberCard.xl}% - 2.4rem)`};
 
-                        }
+                    }
                         `
 
 
@@ -203,7 +203,7 @@ export const StyledCardMedia = styled.div `
 //================ Card Content =============
 export const StyledCardContent = styled.div `
    clear: both;
-   color: rgba(0,0,0,.68);
+   color: ${({theme}) => theme.text.regular};
    padding: 1.4rem;
    font-size: 1.4rem;
    line-height: 2rem;

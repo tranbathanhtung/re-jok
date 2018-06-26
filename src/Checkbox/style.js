@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 const baseCheckbox = css`
 font-size: 14px;
 line-height: 1.5;
-color: rgba(0,0,0,.65);
+color: ${({theme}) => theme.text.regular};
 box-sizing: border-box;
 padding: 0;
 list-style: none;

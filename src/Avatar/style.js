@@ -8,7 +8,7 @@ export const baseAvatar = css `
    list-style: none;
    text-transform: uppercase;
    box-sizing: border-box;
-   margin-right: 0.8rem;
+   
    background: ${props => props.imgSrc
   ? "transparent"
   : "#bdbdbd"} ;

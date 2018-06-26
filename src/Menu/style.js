@@ -23,7 +23,7 @@ export const StyledMenu = styled.ul`
   outline: none;
   list-style: none;
   background: ${props => props.backgroundColor ? props.backgroundColor : "#fff"};
-  color: ${props => props.textColor ? props.textColor : "rgba(0,0,0,.65)"};
+  color: ${props => props.textColor ? props.textColor : props.theme.text.regular};
 
   font-size: 1.4rem;
   transition: background .3s,width .2s;
@@ -60,7 +60,7 @@ export const StyledMenuItem = styled.li`
         ? (`0 1.2rem 2rem -1rem ${hexa(props.activeColor, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,0.12), 0 .7rem .8rem -.5rem ${hexa(props.activeColor, 0.2)}`)
         : "0 1.2rem 2rem -1rem rgba(0,188,212,.28), 0 .4rem 2rem 0 rgba(0,0,0,.12), 0 .7rem .8rem -.5rem rgba(0,188,212,.2)"
          : null};
-         color: ${props => props.active && "#fff"};
+         color: ${props => props.active && props.theme.text.default};
       `
   }
 

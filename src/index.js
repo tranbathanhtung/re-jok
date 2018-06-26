@@ -19,6 +19,8 @@ import DividerDemo from './Divider/demo';
 import DropdownDemo from './Dropdown/demo';
 import FormDemo from './Form/demo';
 import SidebarDemo from './Sidebar/demo';
+import TooltipDemo from './Tooltip/demo';
+
 
 
 
@@ -79,7 +81,8 @@ class App extends React.Component<{}, State> {
          {/* <NavDemo/> */}
          {/* <DropdownDemo/> */}
          {/* <FormDemo/> */}
-         <SidebarDemo/>
+         {/* <SidebarDemo/> */}
+         <TooltipDemo/>
        </Body>
      </JokTheme>
 

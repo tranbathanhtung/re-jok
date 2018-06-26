@@ -23,7 +23,7 @@ height: ${props => props.theme.size[props.size].height};
 padding: ${props => props.theme.size[props.size].padding};
 font-size: ${props => props.theme.size[props.size].fontSize};
 
-color: rgba(0,0,0,.65);
+color: ${({theme}) => theme.text.regular};
 
 background-image: none;
 
@@ -128,7 +128,7 @@ export const StyledIconInput = styled.div`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: rgba(0, 0, 0, 0.3);
+    color: ${({theme}) => theme.text.hint};
     pointer-events: none;
 `
 
@@ -139,7 +139,7 @@ const baseAddon = css`
   font-size: 1.4rem;
   font-weight: normal;
   line-height: 1;
-  color: rgba(0, 0, 0, 0.65);
+  color: ${({theme}) => theme.text.regular};
   text-align: center;
   background-color: #fafafa;
   border: .1rem solid #d9d9d9;

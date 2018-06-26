@@ -87,7 +87,7 @@ export const StyledModalHeader = styled.div`
 padding: 1.5rem 3rem;
 border-radius: .4rem .4rem 0 0;
 background: #fff;
-color: rgba(0,0,0,.65);
+color: ${({theme}) => theme.text.regular};
 border-bottom: .1rem solid #e5e5e5;
 `
 
@@ -96,7 +96,7 @@ margin: 0;
 font-size: 2rem;
 line-height: 1.3;
 font-weight: 500;
-color: rgba(0,0,0,.85);
+color: ${({theme}) => theme.text.primary};
 `
 
 // ================== Modal Content ==================
@@ -117,7 +117,7 @@ export const StyledAlert = styled.div`
 `
 
 export const StyledAlertTitle = styled.span`
-    color: rgba(0,0,0,.85);
+    color: ${({theme}) => theme.text.primary};
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.3;

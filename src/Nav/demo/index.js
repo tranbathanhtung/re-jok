@@ -10,6 +10,7 @@ import Dropdown from '../../Dropdown/Dropdown';
 import Menu from '../../Menu/Menu';
 import Divider from '../../Divider';
 import Input from '../../Input/Input';
+import Sidebar from '../../Sidebar/Sidebar';
 
 const MenuDemo = ()=> (
   <div style={{ width: 256 }}>
@@ -105,9 +106,21 @@ const ActionRight3 = () => (
   </React.Fragment>
 )
 
+type State ={
+  open: boolean,
+}
 
 
-class NavDemo extends React.Component<{}>{
+
+class NavDemo extends React.Component<{}, State>{
+  state = {
+    open: false,
+  }
+  toggleSidebar = () => {
+    this.setState({
+      open: !this.state.open
+    })
+  }
   render(){
     return (
       <React.Fragment>
@@ -115,9 +128,20 @@ class NavDemo extends React.Component<{}>{
           Left Element
         </Nav>
 
-        <Nav backgroundColor="#9c27b0" elementCenter={<a>Center Element</a>} elementRight={<ActionRight2/>}>
+        <Nav
+          backgroundColor="#9c27b0"
+          elementResponsive={<Button style={{color: "#fff"}} onClick={() => this.toggleSidebar()} icon="bars" variant="icon"/>}
+          elementCenter={<a>Center Element</a>}
+          elementRight={<ActionRight2/>}>
           Left Element
         </Nav>
+        <Sidebar
+          opacity
+
+          onToggle={this.toggleSidebar}
+          open={this.state.open}>
+
+        </Sidebar>
 
         <Nav backgroundColor="#212121" elementCenter={<a>Center Element</a>} elementRight={<ActionRight1/>}>
           Left Element

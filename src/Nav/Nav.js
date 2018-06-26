@@ -5,6 +5,7 @@ import {
   StyledNavBarContainer,
   StyledNavBarLeft,
   StyledNavBarRight,
+  StyledNavBarRes,
   StyledNavBarCenter
 } from './style';
 
@@ -24,10 +25,15 @@ type Props = {
   transparent: boolean,
   /** Set background color of navbar**/
   backgroundColor?: string,
+  /** Set display none right or left element**/
+  responsive: number,
+  /** Element display when responsive work**/
+  elementResponsive?: any,
 }
 
 const defaultProps = {
-  transparent: false
+  transparent: false,
+  responsive: 1000,
 }
 
 
@@ -40,14 +46,24 @@ class Nav extends React.Component<Props> {
       children,
       elementRight,
       elementCenter,
+      elementResponsive,
       ...rest
     } = this.props;
+
     return (
       <StyledNavBar {...rest}>
         <StyledNavBarContainer>
           <StyledNavBarLeft>
             {children}
           </StyledNavBarLeft>
+
+          {
+            elementResponsive
+            && <StyledNavBarRes>
+              {elementResponsive}
+            </StyledNavBarRes>
+          }
+
           {elementCenter && <StyledNavBarCenter>{elementCenter}</StyledNavBarCenter>}
           {elementRight && <StyledNavBarRight>{elementRight}</StyledNavBarRight>}
         </StyledNavBarContainer>

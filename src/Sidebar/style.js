@@ -18,7 +18,7 @@ export const StyledSidebarBackground = styled.div`
     height: ${props => props.openSidebar && props.opacityMode ? "100%" : "0"};
 
     position: fixed;
-    z-index: 3;
+    z-index: ${({theme}) => theme.zIndex.sidebar};
     top: 0;
     left: 0;
     background-color: rgba(0,0,0, 0.9);
@@ -37,15 +37,25 @@ export const StyledSidebar = styled.div`
 
   left: ${props => props.direction === "left" && "0"};
   right: ${props => props.direction === "right" && "0"};
-  width: ${props => props.direction === "left" || props.direction === "right" ? props.fullScreen ? "100%" : "256px" : "100%" };
+  width: ${props =>
+    props.direction === "left" || props.direction === "right" ?
+    props.fullScreen ? "100%"
+    : `${props.width /10}rem`
+    : "100%" };
+
+  height: ${props =>
+    props.direction === "top" || props.direction === "bottom" ?
+    props.fullScreen ? "100%"
+    : `${props.height / 10}rem`
+    : "100%" };
+
   backface-visibility: hidden;
 
   will-change: transform;
-  z-index: 1300;
+  z-index: ${({theme}) => theme.zIndex.sidebar};
 
 
-  height: ${props => props.direction === "top" || props.direction === "bottom" ? props.fullScreen ? "100%" : "60px" : "100%" };
-  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 .7rem .8rem -.4rem rgba(0, 0, 0, 0.18), 0 1.4rem 2rem .2rem rgba(0, 0, 0, 0.14), 0 .4rem 2.4rem .4rem rgba(0, 0, 0, 0.12);
   max-height: 100%;
   border-radius: 0;
   margin: 0;
@@ -58,7 +68,7 @@ export const StyledSidebar = styled.div`
     props.openSidebar
      ? "translate3d(0,0,0)"
      : `translate3d(${props.direction === "left" ? "-110%" : props.direction === "right" ? "110%" : "0"},
-     ${props.direction === "top" ? "-110%" : props.direction === "bottom" ? "110%" : "0"},
+     ${props.direction === "top" ? "-140%" : props.direction === "bottom" ? "110%" : "0"},
      0)`};
   transition: transform .4s ease;
 
@@ -68,19 +78,19 @@ const returnAnimated = (props) => {
     switch (props.direction) {
       case 'left':
         return css`
-          margin-left: 256px;
+          margin-left: ${props.width / 10}rem;
         `;
       case 'right':
         return css`
-          margin-right: -256px;
+          margin-right: ${props.width / 10}rem;
         `
       case 'top':
         return css`
-          margin-top: 60px;
+          margin-top: ${props.height / 10}rem;
         `;
       case 'bottom':
         return css`
-          margin-bottom: -60px;
+          margin-bottom: ${props.height / 10}rem;
         `
       default:
         return css``

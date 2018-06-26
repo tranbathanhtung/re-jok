@@ -7,11 +7,20 @@ import {
 } from './style';
 
 type Props = {
+  /** Set mode of sidebar to push**/
   mode?: 'push',
+  /** Override style of sidebar content**/
   style?: Object,
-  children?: React.Node,
+  /** Children of sidebar content**/
+  children?: any,
+  /** Add more class to side bar**/
   className?: string,
-  direction: 'left' | 'right' | 'top' | 'bottom'
+  /** direction of sidebar content should be like direction of sidebar**/
+  direction: 'left' | 'right' | 'top' | 'bottom',
+  /** Set margin of sidebar content**/
+  width: number,
+  /** Set margin of sidebar content**/
+  height: number
 }
 
 const SidebarContent = (props: Props) => {
@@ -25,6 +34,8 @@ const SidebarContent = (props: Props) => {
 
 SidebarContent.defaultProps = {
   direction: 'left',
+  width: 256,
+  height: 60
 }
 
 

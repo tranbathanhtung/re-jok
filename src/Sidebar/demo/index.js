@@ -31,12 +31,14 @@ class SidebarDemo extends React.Component<{}, State>{
 
         </div>
         <Sidebar
-
+          direction="left"
           onToggle={this.toggleSidebar}
           open={open}>
             <MenuDemo/>
         </Sidebar>
         <Sidebar.Content
+          direction="left"
+
           open={open}
           mode="push"
           >

@@ -20,6 +20,7 @@ import DropdownDemo from './Dropdown/demo';
 import FormDemo from './Form/demo';
 import SidebarDemo from './Sidebar/demo';
 import TooltipDemo from './Tooltip/demo';
+import TabDemo from './Tab/demo';
 
 
 
@@ -82,7 +83,8 @@ class App extends React.Component<{}, State> {
          {/* <DropdownDemo/> */}
          {/* <FormDemo/> */}
          {/* <SidebarDemo/> */}
-         <TooltipDemo/>
+         {/* <TooltipDemo/> */}
+         <TabDemo/>
        </Body>
      </JokTheme>
 

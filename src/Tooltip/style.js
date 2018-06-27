@@ -1,7 +1,5 @@
 import styled, {css} from 'styled-components'
 
-
-
 const returnTooltip = props => {
   switch (props.position) {
     case 'bottom':
@@ -18,9 +16,8 @@ const returnTooltip = props => {
           top: calc(100% - 5px);
           left: 50%;
           transform: translateX(-50%);
-
           border-top-width: 0px;
-          border-bottom-color: rgba(0,0,0,.75);
+          border-bottom-color: ${props.tooltipColor};
         }
         &:hover:after,
         &:hover:before {
@@ -45,7 +42,7 @@ const returnTooltip = props => {
           left: 50%;
 
           border-bottom-width: 0px;
-          border-top-color: rgba(0,0,0,.75);
+          border-top-color: ${props.tooltipColor};
         }
         &:hover:after,
         &:hover:before {
@@ -71,7 +68,7 @@ const returnTooltip = props => {
 
 
          border-right-width: 0px;
-         border-left-color: rgba(0,0,0,.75);
+         border-left-color: ${props.tooltipColor};
         }
        &:hover:after,
        &:hover:before {
@@ -97,7 +94,7 @@ const returnTooltip = props => {
 
 
          border-left-width: 0px;
-         border-right-color: rgba(0,0,0,.75);
+         border-right-color: ${props.tooltipColor};
         }
        &:hover:after,
        &:hover:before {
@@ -105,6 +102,101 @@ const returnTooltip = props => {
          transform: translateX(5px) translateY(-50%);
         }
        `
+    case 'bottomLeft':
+      return `
+           &::after{
+             top: 100%;
+             transform: translateX(-50%);
+             left: 25%;
+
+           }
+
+           &::before{
+             bottom: 100%;
+             top: calc(100% - 5px);
+             left: 25%;
+             transform: translateX(-50%);
+
+             border-top-width: 0px;
+             border-bottom-color: ${props.tooltipColor};
+           }
+           &:hover:after,
+           &:hover:before {
+             opacity: 1;
+             transform: translateX(-50%) translateY(5px);
+           }
+         `
+    case 'bottomRight':
+      return `
+           &::after{
+              top: 100%;
+              transform: translateX(-50%);
+              left: 75%;
+             }
+
+           &::before{
+             bottom: 100%;
+              top: calc(100% - 5px);
+              left: 75%;
+              transform: translateX(-50%);
+
+             border-top-width: 0px;
+             border-bottom-color: ${props.tooltipColor};
+             }
+            &:hover:after,
+            &:hover:before {
+             opacity: 1;
+             transform: translateX(-50%) translateY(5px);
+           }
+         `
+    case 'topLeft':
+      return `
+             &::after{
+                 bottom: 100%;
+                 transform: translateX(-50%);
+                 left: 25%;
+
+             }
+
+             &::before{
+
+               bottom: calc(100% - 5px);
+               transform: translateX(-50%);
+               left: 25%;
+
+               border-bottom-width: 0px;
+               border-top-color: ${props.tooltipColor};
+             }
+             &:hover:after,
+             &:hover:before {
+               opacity: 1;
+               transform: translateX(-50%) translateY(-5px);
+             }
+             `
+    case 'topRight':
+      return `
+                 &::after{
+                     bottom: 100%;
+                     transform: translateX(-50%);
+                     left: 75%;
+
+                 }
+
+                 &::before{
+
+                   bottom: calc(100% - 5px);
+                   transform: translateX(-50%);
+                   left: 75%;
+
+                   border-bottom-width: 0px;
+                   border-top-color: ${props.tooltipColor};
+                 }
+                 &:hover:after,
+                 &:hover:before {
+                   opacity: 1;
+                   transform: translateX(-50%) translateY(-5px);
+                 }
+                 `
 
     default:
       return `
@@ -122,7 +214,7 @@ const returnTooltip = props => {
         transform: translateX(-50%);
 
         border-top-width: 0px;
-        border-bottom-color: rgba(0,0,0,.75);
+        border-bottom-color: ${props.tooltipColor};
       }
       &:hover:after,
       &:hover:before {
@@ -134,8 +226,7 @@ const returnTooltip = props => {
   }
 }
 
-
-const baseTooltip = css`
+const baseTooltip = css `
   position: absolute;
   opacity: 0;
   text-transform: none;
@@ -144,17 +235,15 @@ const baseTooltip = css`
 
 `
 
-
-export const StyledTooltip = styled.div`
+export const StyledTooltip = styled.div `
    position: relative;
    font-size: 1.4rem;
    line-height: 1.5;
-   color: rgba(0,0,0,.65);
+   color: ${ ({theme}) => theme.text.regular};
    box-sizing: border-box;
    margin: 0;
    padding: 0;
    list-style: none;
-   z-index: 1060;
    display: block;
    visibility: visible;
 
@@ -163,19 +252,20 @@ export const StyledTooltip = styled.div`
      max-width: 25rem;
      min-width: 4rem;
      padding: .6rem .8rem;
-     color: #fff;
+     color: ${ ({theme}) => theme.text.default};
      text-align: left;
+     z-index: ${ ({theme}) => theme.zIndex.tooltip};
 
 
 
      text-decoration: none;
-     background-color: rgba(0,0,0,.75);
+     background-color: ${props => props.tooltipColor};
      border-radius: .4rem;
      box-shadow: 0 .2rem .8rem rgba(0,0,0,.15);
      min-height: 3.2rem;
      content: ${props => props.label
-       ? `'${CSS.escape(props.label)}'`
-       : "''"};;
+      ? `'${CSS.escape(props.label)}'`
+      : "''"};;
 
 
 
@@ -185,13 +275,13 @@ export const StyledTooltip = styled.div`
    &::before{
      ${baseTooltip};
      content: "";
-     z-index: 6002;
      border-width: .5rem;
      border-image: initial;
      width: 0;
      height: 0;
      border-color: transparent;
      border-style: solid;
+     z-index: ${ ({theme}) => theme.zIndex.tooltip};
 
 
 

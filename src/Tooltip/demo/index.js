@@ -48,6 +48,70 @@ class TooltipDemo extends React.Component<{}>{
 
       </div>
 
+      <div style={{
+          marginRight: 20,
+          display: "inline-block"
+        }}>
+        <Tooltip position="bottomLeft">
+          <Button>Button</Button>
+
+        </Tooltip>
+
+      </div>
+
+      <div style={{
+          marginRight: 20,
+          display: "inline-block"
+        }}>
+        <Tooltip position="bottomRight">
+          <Button>Button</Button>
+
+        </Tooltip>
+
+      </div>
+
+      <div style={{
+          marginRight: 20,
+          display: "inline-block"
+        }}>
+        <Tooltip position="topLeft">
+          <Button>Button</Button>
+
+        </Tooltip>
+
+      </div>
+
+      <div style={{
+          marginRight: 20,
+          display: "inline-block"
+        }}>
+        <Tooltip position="topRight">
+          <Button>Button</Button>
+
+        </Tooltip>
+
+      </div>
+
+      <div style={{
+          marginRight: 20,
+          display: "inline-block"
+        }}>
+        <Avatar.Group>
+          <Tooltip position="top">
+            <Avatar>T</Avatar>
+          </Tooltip>
+          <Tooltip position="top">
+            <Avatar>T</Avatar>
+          </Tooltip>
+          <Tooltip position="top">
+            <Avatar>T</Avatar>
+          </Tooltip>
+        </Avatar.Group>
+
+
+      </div>
+
+
     </React.Fragment>
 
     )

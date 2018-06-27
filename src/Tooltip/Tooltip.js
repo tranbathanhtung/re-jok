@@ -6,13 +6,19 @@ import {
 } from './style';
 
 type Props = {
+  /** Children of tooltip could be anything**/
   children?: any,
-  position: 'top' | 'left' | 'right' | 'bottom',
-  label?: string
+  /** Set position of tooltip box.. default is bottom**/
+  position: 'top' | 'left' | 'right' | 'bottom' | 'topRight' | 'topLeft' | 'bottomRight' | 'bottomLeft',
+  /** Label of tooltip**/
+  label?: string,
+  /** Set color of tooltip box**/
+  tooltipColor: string,
 }
 
 const defaultProps = {
-  position: 'bottom'
+  position: 'bottom',
+  tooltipColor: 'rgba(0, 0, 0, .75)'
 }
 
 class Tooltip extends React.Component<Props>{

@@ -55,7 +55,7 @@ class CardDemo extends React.Component<{}> {
 
 
         </Card.Group>
-        <Card.Group numberCard={2}>
+        <Card.Group   numberCard={{xs: 1, sm: 1, md: 2, lg: 2}}>
         <Card hoverable style={{
         flexDirection: "row"
         }}>
@@ -80,7 +80,9 @@ class CardDemo extends React.Component<{}> {
         </Card>
         <Card hoverable style={{
         flexDirection: "row"
-        }}>
+        }}
+
+        >
         <Card.Media style={{
           flex: "0 0 45%"
         }} src="https://i.imgur.com/9u0Wngc.jpg"/>

@@ -12,32 +12,55 @@ import { isChild } from '../helpers/typeUtils';
 
 
 type Props = {
+  /** Add style to Tab component**/
   style?: Object,
+  /** Add class to Tab component**/
   className?: string,
   /** Children of tooltip could be anything**/
-  children?: React.ChildrenArray < React.Element < typeof TabItem >>,
+  children: any,
+  /** Set default active key of Tab**/
   keyActive?: string,
-  onChange?: Function,
+  /** Callback function when tabitem change... onSelect(data: Object)**/
   onSelect?: Function,
+  /** Set position of Tab.. default value is left**/
+  position?: 'top' | 'right' | 'left' | 'bottom',
+  /** set color active of Tab **/
+  color?: string
 
+}
+
+type State = {
+  keyActive: string,
 }
 
 const defaultProps = {
-
+  keyActive: "",
+  position: 'top'
 }
 
-class Tab extends React.Component<Props>{
+
+
+class Tab extends React.Component<Props, State>{
 
   static defaultProps = defaultProps;
 
   static Item = TabItem;
 
-  constructor(props: Object){
+  constructor(props: Props){
     super(props);
 
+     // const nestedChild?
+
     this.state = {
-      keyActive: props.keyActive || ""
+      keyActive: !props.keyActive
+        ? props.children
+        ? props.children.length
+        ? props.children[0].props.tabKey
+        : props.children.props.tabKey
+        : ""
+        : props.keyActive
     }
+
 
   }
 
@@ -58,18 +81,25 @@ class Tab extends React.Component<Props>{
 
   }
 
-  recursiveCloneChildren = (children) => {
+  renderContentTabItem = (children: any) => {
 
-     return React.Children.map(children, child => {
+     if(!children) return;
+
+
+
+     if(!children.length) return children.props.children;
+
+
+     return children.map(child => {
 
 
       if(child.props.tabKey === this.state.keyActive){
 
-       // return React.Children.map(child.props.children, c => React.cloneElement(c, {}))
        return child.props.children
 
+     }
 
-      }
+     return undefined
 
 
     })
@@ -88,7 +118,9 @@ class Tab extends React.Component<Props>{
     const hasChild = !isChild(children);
 
     return (
-      <StyledTabWrapper>
+      <StyledTabWrapper
+        position={rest.position}
+        >
         <StyledTab {...rest}>
           {
             hasChild && React.Children.map(children, (c, i) =>
@@ -96,13 +128,17 @@ class Tab extends React.Component<Props>{
               React.cloneElement(c, {
                 key: i,
                 onSelect: this.onSelect,
+                position: rest.position,
+                color: rest.color,
                 keyActive
               })
             ))
           }
         </StyledTab>
         <StyledTabContent>
-          {this.recursiveCloneChildren(children)[0]}
+          {/* {hasChild && console.log(this.renderContentTabItem(children))} */}
+          {hasChild && this.renderContentTabItem(children)}
+
         </StyledTabContent>
       </StyledTabWrapper>
 

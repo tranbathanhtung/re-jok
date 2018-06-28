@@ -1,5 +1,84 @@
 import styled, {css} from 'styled-components';
 
+
+const returnPostionTabWrapper = props => {
+  switch (props.position) {
+    case 'top':
+      return `
+        flex-direction: column;
+
+      `
+    case 'bottom':
+       return `
+         flex-direction: column;
+       `
+    case 'left':
+      return `
+        flex-direction: row;
+        `
+    case 'right':
+        return `
+         flex-direction: row;
+       `
+
+    default:
+
+  }
+}
+
+const returnPostionTab = props => {
+  switch (props.position) {
+    case 'top':
+      return `
+        order: 0;
+        border-bottom: .1rem solid #e5e5e5;
+        margin: 0 0 1.6rem 0;
+        flex-grow: 1;
+        flex-direction: row;
+
+
+
+
+      `
+    case 'bottom':
+      return `
+        order: 1;
+        border-top: .1rem solid #e5e5e5;
+        margin: 1.6rem 0 0 0;
+        flex-grow: 1;
+        flex-direction: row;
+
+
+      `
+   case 'left':
+        return `
+          order: 0;
+          border-right: .1rem solid #e5e5e5;
+          margin: 0 1.6rem 0 0;
+          flex-grow: 0;
+          flex-direction: column;
+
+
+        `
+
+    case 'right':
+       return `
+         order: 1;
+         border-left: .1rem solid #e5e5e5;
+         margin: 0 0 0 1.6rem;
+         flex-grow: 0;
+         flex-direction: column;
+
+
+         `
+
+
+    default:
+
+  }
+}
+
+
 export const StyledTabWrapper = styled.div`
   position: relative;
 
@@ -7,6 +86,9 @@ export const StyledTabWrapper = styled.div`
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
+  display: flex;
+
+  ${props => returnPostionTabWrapper(props)};
 `
 
 
@@ -18,10 +100,11 @@ export const StyledTab = styled.ul`
    list-style: none;
 
    display: flex;
-   flex-grow: 1;
+
    flex-shrink: 0;
    justify-content: flex-start;
-   margin: 0 0 16px;
+   ${props => returnPostionTab(props)};
+
 
    &::before{
      content: "";
@@ -29,7 +112,6 @@ export const StyledTab = styled.ul`
      bottom: 0;
      left: 0;
      right: 0;
-     border-bottom: 1px solid #e5e5e5;
    }
 
 
@@ -41,26 +123,63 @@ export const StyledTabItem = styled.li`
   position: relative;
 `
 
+const returnPostionTabItemInner = props => {
+  switch (props.position) {
+    case 'top':
+      return `
+       border-bottom: .2rem solid transparent;
+
+
+
+      `
+    case 'bottom':
+      return `
+       border-top: .2rem solid transparent;
+
+
+
+      `
+    case 'left':
+      return `
+        border-right: .2rem solid transparent;
+
+        `
+    case 'right':
+      return `
+        border-left: .2rem solid transparent;
+        `
+
+    default:
+
+  }
+}
 export const StyledTabItemInner = styled.div`
    display: block;
    text-align: center;
-   padding: 9px 20px;
-   color: rgba(0, 0, 0,.48);
-   border-bottom: 2px solid transparent;
-   font-size: 12px;
+   padding: .9rem 2rem;
+   color: ${props => props.disabled ? props.theme.text.hint : props.theme.text.secondary};
+
+   font-size: 1.2rem;
    cursor: pointer;
    text-decoration: none;
    transition: color .1s ease-in-out;
-   line-height: 20px;
+   line-height: 2rem;
 
-   &:hover{
-     color: rgba(0, 0, 0,.65);
+   ${
+     props => !props.disabled && css`
+     &:hover{
+       color: ${ ({theme})=> theme.text.regular };
+     }
+     `
    }
+
+   ${props => returnPostionTabItemInner(props)};
+
 
    ${
      props => props.active && css`
-       border-color: #1e87f0;
-       color: rgba(0, 0, 0,.65);
+       border-color: ${ ({theme, color}) => color ? color : theme.primary.main};
+       color: ${ ({theme})=> theme.text.regular };
      `
    }
 
@@ -68,5 +187,5 @@ export const StyledTabItemInner = styled.div`
 
 
 export const StyledTabContent = styled.div`
-
+    flex: 1;
 `

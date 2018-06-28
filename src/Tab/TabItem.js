@@ -7,19 +7,33 @@ import {
 } from './style';
 
 type Props = {
+  /** Add style to Tab Item component**/
   style?: Object,
+  /** Add class to Tab Item component**/
   className?: string,
-  /** Children of tooltip could be anything**/
+  /** Children of Tab Item could be anything**/
   children?: any,
+  /** from Tab component**/
   keyActive?: string,
+  /** key of Tab Item component... it required**/
   tabKey: string,
+  /** from Tab component**/
   onSelect?: Function,
-  label?: string,
+  /** Title of Tab Item**/
+  label?: string | React.Node,
+  /** Set Tab Item disabled or not**/
+  disabled: boolean,
+  /** from Tab with <3**/
+  position?: 'top' | 'right' | 'left' | 'bottom',
+  /** from Tab with <3 **/
+  color?: string
+
+
 
 }
 
 const defaultProps = {
-
+  disabled: false,
 }
 
 class TabItem extends React.Component<Props>{
@@ -27,7 +41,7 @@ class TabItem extends React.Component<Props>{
   static defaultProps = defaultProps;
 
   handleClick = (e: SyntheticEvent<HTMLElement>) => {
-    const { keyActive, tabKey, onSelect, ...rest } = this.props;
+    const { tabKey, onSelect, disabled } = this.props;
 
     const info = {
       key: tabKey,
@@ -35,7 +49,7 @@ class TabItem extends React.Component<Props>{
       domEvent: e,
     };
 
-    onSelect && onSelect(info);
+    !disabled && onSelect && onSelect(info);
 
 
 
@@ -48,6 +62,7 @@ class TabItem extends React.Component<Props>{
       children,
       tabKey,
       label,
+
       keyActive,
       ...rest
     } = this.props;
@@ -58,9 +73,10 @@ class TabItem extends React.Component<Props>{
       <StyledTabItem
         active={active}
         onClick={this.handleClick}
-        {...rest}
+
         >
         <StyledTabItemInner
+          {...rest}
           active={active}
           >
           {label}

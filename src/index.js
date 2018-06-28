@@ -21,6 +21,7 @@ import FormDemo from './Form/demo';
 import SidebarDemo from './Sidebar/demo';
 import TooltipDemo from './Tooltip/demo';
 import TabDemo from './Tab/demo';
+import CollapseDemo from './Collapse/demo';
 
 
 
@@ -84,7 +85,8 @@ class App extends React.Component<{}, State> {
          {/* <FormDemo/> */}
          {/* <SidebarDemo/> */}
          {/* <TooltipDemo/> */}
-         <TabDemo/>
+         {/* <TabDemo/> */}
+         <CollapseDemo/>
        </Body>
      </JokTheme>
 

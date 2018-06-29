@@ -136,7 +136,7 @@ class Tab extends React.Component<Props, State>{
           }
         </StyledTab>
         <StyledTabContent>
-          {/* {hasChild && console.log(this.renderContentTabItem(children))} */}
+          
           {hasChild && this.renderContentTabItem(children)}
 
         </StyledTabContent>

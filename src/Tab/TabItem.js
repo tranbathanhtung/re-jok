@@ -62,7 +62,6 @@ class TabItem extends React.Component<Props>{
       children,
       tabKey,
       label,
-
       keyActive,
       ...rest
     } = this.props;

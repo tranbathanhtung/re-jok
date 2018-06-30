@@ -16,11 +16,15 @@ type Props = {
   accordion: boolean,
 }
 
+type State = {
+  activeKeys: Array<string>
+}
+
 const defaultProps = {
   accordion: false
 }
 
-class Collapse extends React.Component<Props> {
+class Collapse extends React.Component<Props, State> {
 
   static defaultProps = defaultProps;
 
@@ -41,7 +45,7 @@ class Collapse extends React.Component<Props> {
 
     let {activeKeys} = this.state;
     const { accordion, onOpen } = this.props;
-    if (this.props.accordion) {
+    if (accordion) {
       activeKeys = activeKeys[0] === event.key ? [] : [event.key];
     } else {
       activeKeys = [...activeKeys];
@@ -65,6 +69,7 @@ class Collapse extends React.Component<Props> {
   render(){
     const {
       children,
+      accordion,
       ...rest
     } = this.props;
 
@@ -81,6 +86,7 @@ class Collapse extends React.Component<Props> {
               key: i,
               activeKeys,
               onOpenChange: this.onOpenChange,
+              accordion
             })
           ))
         }

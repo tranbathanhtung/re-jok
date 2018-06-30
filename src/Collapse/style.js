@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 
 
 
@@ -20,56 +20,37 @@ export const StyledCollapseItem = styled.li`
 
 `
 export const StyledCollapseItemTitle = styled.div`
-      height: 48px;
-      line-height: 48px;
+      height: 4.8rem;
+      line-height: 4.8rem;
       background-color: #fff;
-      color: #303133;
+      color: ${ ({theme}) => theme.text.regular};
       cursor: pointer;
-      ${'' /* border-bottom: 1px solid #ebeef5; */}
-      font-size: 16px;
+      border-bottom: .1rem solid #ebeef5;
+      font-size: 1.4rem;
       font-weight: 500;
       transition: border-bottom-color .3s;
       outline: none;
+      position: relative;
 
 `
 
-const returnCollapse = props => {
-  switch (props.isTransitionEnd) {
-    case 'IDLING':
-      return `
-
-        max-height: 0;
-      `
-    case 'RESIZING':
-      return `
-        display: none;
-      `
-    case 'WAITING':
-      return `
-        max-height: ${props.childHeight};
-      `
-    case 'DONE':
-      return `
-        display: block;
-      `
-    default:
-      return `
-        display: none;
-      `
-  }
-}
-
 export const StyledCollapseItemContent = styled.div`
-  will-change: height;
-  background-color: #fff;
+    will-change: height;
+    background-color: #fff;
 
-  box-sizing: border-box;
-  ${'' /* border-bottom: 1px solid #ebeef5;
-  padding-bottom: 25px; */}
-  ${props => returnCollapse(props)};
-  transition: all .15s ease-out;
-  overflow: hidden;
-    font-size: 13px;
-    color: #303133;
+    box-sizing: border-box;
+    height: ${props => !props.open && 0};
+    transition: all .25s ease-out;
+    overflow: hidden;
+    font-size: 1.4rem;
+    color: ${ ({theme}) => theme.text.regular};
 
+`
+
+export const StyledArrow = styled.div`
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  transition: transform .3s;
+  transform: ${props => props.open ? "rotate(0deg)" : "rotate(-90deg)"};
 `

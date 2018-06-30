@@ -2,87 +2,127 @@
 import * as React from 'react';
 
 import ReactDOM from 'react-dom';
-
+import Icon from '../Icon';
 
 import {
   StyledCollapseItem,
   StyledCollapseItemTitle,
   StyledCollapseItemContent,
+  StyledArrow
 } from './style';
 
 type Props = {
   children?: any,
   label?: string | React.Node,
   collKey: string,
-  activeKeys?: Array<string>,
-  onOpenChange?: Function
+  activeKeys: Array<string>,
+  onOpenChange?: Function,
+  accordion?: boolean,
+  iconArrow: boolean
 }
 
-const WAITING = 'WAITING';
-const RESIZING = 'RESIZING';
-const DONE = 'DONE';
-const IDLING = 'IDLING';
+const defaultProps = {
+  activeKeys: [],
+  iconArrow: true
+}
 
 type State = {
-  childHeight: number | string | null
+  childHeight: string
 }
 
-class CollapseItem extends React.Component<Props> {
+class CollapseItem extends React.Component<Props, State> {
 
-  state = { childHeight: 0, isTransitionEnd: IDLING }; //max-height: 0
+  static defaultProps = defaultProps;
 
-  componentDidMount(){
-      this.setHeightRaw();
-      this.setState({
+  state = { childHeight: "0" };
 
-        isTransitionEnd: RESIZING,  //display: none
-      })
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // if(prevState.isTransitionEnd !== this.state.isTransitionEnd){
-    //   // console.log(this.state.isTransitionEnd)
-    //   this.setState({
-    //     isTransitionEnd: false
-    //   })
-    //
-    // }
-  }
 
   refContent: {
     current: null | React$ElementRef<any>
   } = React.createRef();
 
-  setHeightRaw = () => {
-    const node = ReactDOM.findDOMNode(this.refContent.current);
+  refWrapper: {
+    current: null | React$ElementRef<any>
+  } = React.createRef();
 
-    if (node && node instanceof HTMLElement) {
-      const childHeightRaw = node.clientHeight;
+  returnWrapper = () => {
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+    if(wrapper && wrapper instanceof HTMLElement){
+      return wrapper
+    }
+  }
+
+
+  componentDidUpdate(prevProps: Props){
+
+    // This set transition when close collapse in accordion mode
+    const { accordion, collKey } = this.props;
+    const {childHeight} = this.state;
+    if(accordion && prevProps.activeKeys.includes(collKey)){
+      const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+      const open = prevProps.activeKeys.includes(collKey);
+
+      if(wrapper && wrapper instanceof HTMLElement){
+        wrapper.style.height = childHeight;
+
+        this.setHeightRaw(open)
+      }
+
+    }
+
+  }
+
+  setHeightRaw = (open: boolean) => {
+    const node = ReactDOM.findDOMNode(this.refContent.current);
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+
+    if (node && node instanceof HTMLElement && wrapper && wrapper instanceof HTMLElement) {
+      const childHeightRaw = node.offsetHeight || node.clientHeight;
 
 
       const childHeight = `${childHeightRaw / 10}rem`;
       this.setState({
         childHeight,
-
       })
+
+       wrapper.style.height = `${!open ? childHeight : "0"}`;
+
 
     }
   }
 
-  handleClick = (open) => {
+  handleCloseCollapse = (open: boolean) => {
+    const {childHeight} = this.state;
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
 
-    const {activeKeys, onOpenChange, collKey, ...rest} = this.props;
+    if(wrapper && wrapper instanceof HTMLElement){
+      wrapper.style.height = childHeight;
 
+      this.setHeightRaw(open);
+     }
 
-      // this.setHeightRaw();
+   }
 
-        this.setState({
+  handleOpenCollapse = (open: boolean) => {
+    this.setHeightRaw(open);
 
-          isTransitionEnd: WAITING, //max-height = xxxrem
-        })
+  }
 
+  handleClick = (open: boolean) => {
 
+    const { onOpenChange, collKey } = this.props;
 
+      if(!open){
+
+         this.handleOpenCollapse(open);
+
+      } else {
+
+        this.handleCloseCollapse(open);
+
+      }
 
 
     onOpenChange && onOpenChange({
@@ -96,18 +136,12 @@ class CollapseItem extends React.Component<Props> {
 
   }
 
-  onTransitionEnd = (e, isOpen)=> {
-    console.log(isOpen)
-    if(isOpen){
-      this.setState({
-        // childHeight: "",
-        isTransitionEnd: DONE // display: block, removoe maxHeigh
-      })
-    } else {
-      this.setState({
-        // childHeight: "",
-        isTransitionEnd: IDLING // display: none
-      })
+  onTransitionEnd = (e: SyntheticEvent<HTMLInputElement>, isOpen: boolean)=> {
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+    if(wrapper && wrapper instanceof HTMLElement){
+      wrapper.style.height = '';
+
     }
 
   }
@@ -117,6 +151,7 @@ class CollapseItem extends React.Component<Props> {
       label,
       activeKeys,
       collKey,
+      iconArrow,
       ...rest
     } = this.props;
 
@@ -129,12 +164,16 @@ class CollapseItem extends React.Component<Props> {
       <StyledCollapseItem {...rest}>
         <StyledCollapseItemTitle onClick={()=> this.handleClick(isOpen)}>
           {label}
+         {iconArrow && <StyledArrow open={isOpen}>
+            <Icon name="angle-down"/>
+        </StyledArrow> }
         </StyledCollapseItemTitle>
         <StyledCollapseItemContent
           open={isOpen}
-          onTransitionEnd={(e) =>this.onTransitionEnd(e, isOpen)}
+          innerRef={this.refWrapper}
+          onTransitionEnd={(e) => this.onTransitionEnd(e, isOpen)}
           childHeight={this.state.childHeight}
-          isTransitionEnd={this.state.isTransitionEnd}
+
 
           >
             <div ref={this.refContent}>

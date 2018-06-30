@@ -10,9 +10,17 @@ import { isChild } from '../helpers/typeUtils';
 
 
 type Props = {
+  /** Set style of Collapse component**/
+  style?: Object,
+  /** Add more class to Collapse component**/
+  className?: string,
+  /** Children of Collapse should be Collapse Item **/
   children?: any,
+  /** Set default ket active **/
   activeKeys?: Array<string>,
+  /** Callback function when collapse item opened ... params onOpen(data: Props)**/
   onOpen?: Function,
+  /** Set collapse to accordion mode **/
   accordion: boolean,
 }
 
@@ -52,7 +60,7 @@ class Collapse extends React.Component<Props, State> {
       const index = activeKeys.indexOf(event.key);
       const isActive = index > -1;
       if (isActive) {
-        // remove active state
+
         activeKeys.splice(index, 1);
       } else {
         activeKeys.push(event.key);

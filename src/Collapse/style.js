@@ -16,6 +16,8 @@ export const StyledCollapse = styled.ul`
 
 
 export const StyledCollapseItem = styled.li`
+   color: ${ ({theme}) => theme.text.hint};
+   cursor: :
 
 
 `
@@ -23,8 +25,8 @@ export const StyledCollapseItemTitle = styled.div`
       height: 4.8rem;
       line-height: 4.8rem;
       background-color: #fff;
-      color: ${ ({theme}) => theme.text.regular};
-      cursor: pointer;
+      color: ${ ({theme, disabled}) => disabled ? theme.text.hint : theme.text.regular};
+      cursor: ${ ({disabled}) => disabled ? 'not-allowed' : 'pointer'};
       border-bottom: .1rem solid #ebeef5;
       font-size: 1.4rem;
       font-weight: 500;

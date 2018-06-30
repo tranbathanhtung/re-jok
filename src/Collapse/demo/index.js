@@ -12,7 +12,7 @@ class CollapseDemo extends React.Component<{}>{
   render(){
     return (
       <Collapse onOpen={this.handleOpen} accordion>
-        <Collapse.Item collKey="1" label="Item 1">
+        <Collapse.Item iconArrow={false} collKey="1" label="Item 1">
           <Collapse onOpen={this.handleOpen}>
             <Collapse.Item collKey="3" label="Item 3">
               Demo Collapse
@@ -25,7 +25,7 @@ class CollapseDemo extends React.Component<{}>{
           </Collapse>
         </Collapse.Item>
 
-        <Collapse.Item collKey="2" label="Item 2">
+        <Collapse.Item disabled collKey="2" label="Item 2">
           Demo Collapse
         </Collapse.Item>
       </Collapse>

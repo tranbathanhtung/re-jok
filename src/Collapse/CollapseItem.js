@@ -12,18 +12,32 @@ import {
 } from './style';
 
 type Props = {
+  /** Set style of CollapseItem**/
+  style?: Object,
+  /** Add more class to Collapse Item**/
+  className?: string,
+  /** Children of Collapse Item could be anything**/
   children?: any,
+  /** Label of collapse item**/
   label?: string | React.Node,
+  /** collKey is required**/
   collKey: string,
+  /** from Collapse with <3**/
   activeKeys: Array<string>,
+  /** from Collapse with <3**/
   onOpenChange?: Function,
+  /** from Collapse with <3**/
   accordion?: boolean,
-  iconArrow: boolean
+  /** Set icon arrow **/
+  iconArrow: boolean,
+  /** Set collapse item disable or not**/
+  disabled: boolean,
 }
 
 const defaultProps = {
   activeKeys: [],
-  iconArrow: true
+  iconArrow: true,
+  disabled: false
 }
 
 type State = {
@@ -112,24 +126,27 @@ class CollapseItem extends React.Component<Props, State> {
 
   handleClick = (open: boolean) => {
 
-    const { onOpenChange, collKey } = this.props;
+    const { onOpenChange, collKey, disabled } = this.props;
 
-      if(!open){
+      if(!disabled){
+        if(!open){
 
-         this.handleOpenCollapse(open);
+           this.handleOpenCollapse(open);
 
-      } else {
+        } else {
 
-        this.handleCloseCollapse(open);
+          this.handleCloseCollapse(open);
 
+        }
+
+
+       onOpenChange && onOpenChange({
+        key: collKey,
+        item: this,
+        open,
+        });
       }
 
-
-    onOpenChange && onOpenChange({
-      key: collKey,
-      item: this,
-      open,
-    });
 
 
 
@@ -161,8 +178,8 @@ class CollapseItem extends React.Component<Props, State> {
 
 
     return (
-      <StyledCollapseItem {...rest}>
-        <StyledCollapseItemTitle onClick={()=> this.handleClick(isOpen)}>
+      <StyledCollapseItem>
+        <StyledCollapseItemTitle {...rest} onClick={()=> this.handleClick(isOpen)}>
           {label}
          {iconArrow && <StyledArrow open={isOpen}>
             <Icon name="angle-down"/>

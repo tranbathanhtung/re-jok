@@ -71,7 +71,7 @@ class SubMenu extends React.Component<Props, State>{
 
 
     }
-    return "0";
+    return "0"
   }
 
   setHeightRaw = (open: boolean) => {

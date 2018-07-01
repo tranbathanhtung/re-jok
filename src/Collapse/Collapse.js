@@ -22,6 +22,7 @@ type Props = {
   onOpen?: Function,
   /** Set collapse to accordion mode **/
   accordion: boolean,
+
 }
 
 type State = {
@@ -29,7 +30,7 @@ type State = {
 }
 
 const defaultProps = {
-  accordion: false
+  accordion: false,
 }
 
 class Collapse extends React.Component<Props, State> {

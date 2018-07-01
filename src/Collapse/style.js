@@ -8,8 +8,8 @@ export const StyledCollapse = styled.ul`
     list-style: none;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    color: rgba(0,0,0,.64);
+    padding: 0 0 0 1.6rem;
+    color: ${ ({theme}) => theme.text.regular};
 
 
 `
@@ -17,7 +17,7 @@ export const StyledCollapse = styled.ul`
 
 export const StyledCollapseItem = styled.li`
    color: ${ ({theme}) => theme.text.hint};
-   cursor: :
+
 
 
 `
@@ -47,6 +47,10 @@ export const StyledCollapseItemContent = styled.div`
     font-size: 1.4rem;
     color: ${ ({theme}) => theme.text.regular};
 
+`
+
+export const Div = styled.div`
+  padding-top: 2rem;
 `
 
 export const StyledArrow = styled.div`

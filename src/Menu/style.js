@@ -134,24 +134,26 @@ export const StyledSubMenuTitle = styled.div`
   ${baseMenuItem};
 `
 
+
 export const StyledSubMenuArrow = styled.div`
   position: absolute;
   top: 0;
   right: 1.6rem;
   transition: transform .3s;
-  transform: ${props => props.open ? "rotate(0deg)" : "rotate(180deg)"};
+  transform: ${props => !props.open ? "rotate(0deg)" : "rotate(180deg)"};
 `
 export const StyledSubMenu = styled.ul`
-padding: 0;
-border: 0;
-list-style: none;
-margin: 0;
-height: auto;
-overflow: hidden;
-max-height: ${props => !props.open ? props.childHeight : 0 };
-transition: all .25s ease-out;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin: 0;
 
-border-radius: 0;
+  overflow: hidden;
+  height: ${props => !props.open && 0};
+
+  transition: all .25s ease-out;
+
+  border-radius: 0;
 
 
 `

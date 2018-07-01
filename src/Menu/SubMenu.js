@@ -30,7 +30,7 @@ const defaultProps = {
 }
 
 type State = {
-  childHeight: number | string | null
+  childHeight: string
 }
 
 
@@ -38,63 +38,114 @@ class SubMenu extends React.Component<Props, State>{
 
   static defaultProps = defaultProps;
 
-  state = { childHeight: 0 };
+  state = { childHeight: "0" };
 
-  componentDidMount(){
-      this.setHeightRaw();
-  }
+
+
+
+  refWrapper: {
+    current: null | React$ElementRef<any>
+  } = React.createRef();
 
   refSubMenu: {
     current: null | React$ElementRef<any>
   } = React.createRef();
 
-  setHeightRaw = () => {
-    const node = ReactDOM.findDOMNode(this.refSubMenu.current);
-
-    if (node && node instanceof HTMLElement) {
-      const childHeightRaw = node.clientHeight;
-
-      const childHeight = `${childHeightRaw / 10}rem`;
-      this.setState({childHeight})
-    }
+  componentDidMount(){
+    const childHeight = this.getHeightRaw();
+    this.setState({ childHeight });
   }
 
-  handleClick = (open) => {
+  getHeightRaw = (): string => {
+    const node = ReactDOM.findDOMNode(this.refSubMenu.current);
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+    if (node && node instanceof HTMLElement && wrapper && wrapper instanceof HTMLElement) {
+      const childHeightRaw = node.offsetHeight || node.clientHeight;
+
+
+      const childHeight = `${childHeightRaw / 10}rem`;
+
+
+      return childHeight;
+
+
+    }
+    return "0";
+  }
+
+  setHeightRaw = (open: boolean) => {
+       const childHeight = this.getHeightRaw();
+       const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+
+       if (wrapper && wrapper instanceof HTMLElement) {
+
+         wrapper.style.height = `${!open ? childHeight : "0"}`;
+
+       }
+  }
+
+  handleCloseCollapse = (open: boolean) => {
+    let { childHeight } = this.state;
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+
+    if(wrapper && wrapper instanceof HTMLElement){
+
+
+      wrapper.style.height = childHeight;
+
+      this.setHeightRaw(open);
+     }
+
+   }
+
+  handleOpenCollapse = (open: boolean) => {
+    this.setHeightRaw(open);
+
+  }
+
+  handleClick = (open: boolean) => {
 
     const {openKey, ...rest} = this.props;
     const {onOpenChange} = rest.context;
 
-    // console.log(this.state.childHeight)
-    // if(this.state.childHeight === null && open){
-    //   this.setState({
-    //     childHeight: 0,
-    //   })
-    // }
 
-    this.setHeightRaw();
+        if(open){
 
-    const openChange = () => {
-      onOpenChange({
+           this.handleOpenCollapse(!open);
+
+        } else {
+
+          this.handleCloseCollapse(!open);
+
+        }
+
+
+       onOpenChange && onOpenChange({
         key: openKey,
         item: this,
         open,
-      });
-    };
+        });
 
 
 
-
-
-    openChange();
 
 
 
   }
 
-  onTransitionEnd = (e)=> {
-    this.setState({
-      childHeight: null
-    })
+  onTransitionEnd = (e: SyntheticEvent<HTMLInputElement>, isOpen: boolean)=> {
+    const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
+
+    if(wrapper && wrapper instanceof HTMLElement){
+
+
+      wrapper.style.height = '';
+
+    }
+
   }
   render(){
     const {
@@ -110,12 +161,13 @@ class SubMenu extends React.Component<Props, State>{
     style.paddingLeft = level * 24;
     const {openKeys} = rest.context;
 
-    let isOpen = !openKeys.includes(this.props.openKey);
+    let isOpen = openKeys.includes(this.props.openKey);
+
 
     return (
       <StyledSubMenuWrapper>
 
-            <StyledSubMenuTitle style={style} onClick={()=> this.handleClick(isOpen)}>
+            <StyledSubMenuTitle style={style} onClick={()=> this.handleClick(!isOpen)}>
                {title}
                <StyledSubMenuArrow open={isOpen}>
                  <Icon name="angle-down"/>
@@ -125,7 +177,9 @@ class SubMenu extends React.Component<Props, State>{
 
         <StyledSubMenu open={isOpen}
           childHeight={this.state.childHeight}
-          onTransitionEnd={this.onTransitionEnd}
+          innerRef={this.refWrapper}
+          onTransitionEnd={(e) => this.onTransitionEnd(e, isOpen)}
+
           >
           <div ref={this.refSubMenu}>
             {

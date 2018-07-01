@@ -4,6 +4,8 @@ import {
   StyledMenu
 } from './style';
 
+import { isArray } from '../helpers/typeUtils';
+
 
 import MenuList from './MenuList';
 import MenuItem from './MenuItem';
@@ -119,31 +121,29 @@ class Menu extends React.Component<Props, State>{
 
   onOpenChange = (event: Object) => {
 
-    const {openKeys} = this.state;
+    let {openKeys} = this.state;
     let changed = false;
     const processSingle = (e) => {
       let oneChanged = false;
       if (e.open) {
         oneChanged = openKeys.indexOf(e.key) === -1;
         if (oneChanged) {
-          openKeys.push(e.key);
+
+          openKeys = [...openKeys, e.key];
         }
       } else {
         const index = openKeys.indexOf(e.key);
         oneChanged = index !== -1;
         if (oneChanged) {
-          openKeys.splice(index, 1);
+
+          openKeys = openKeys.filter(key => key !== e.key);
         }
       }
       changed = changed || oneChanged;
     };
-    if (Array.isArray(event)) {
-      // batch change call
-      event.forEach(processSingle);
-    } else {
 
-      processSingle(event);
-    }
+
+    isArray(event) ? event.forEach(processSingle) : processSingle(event)
 
     if (changed) {
       if (!('openKeys' in this.props)) {

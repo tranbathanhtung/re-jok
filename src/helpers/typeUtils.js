@@ -13,3 +13,6 @@ export const isFunction = value => typeof value === 'function';
 /** Check Object or not**/
 export const isObject = value =>
       typeof value === 'object' && value !== null && !Array.isArray(value);
+
+/** Check Array or not**/
+export const isArray = value => Array.isArray(value);

@@ -46,9 +46,9 @@ export const StyledNavBarRes = styled.div`
 export const StyledNavBar = styled.nav`
   display: flex;
   position: relative;
-  min-height: 70px;
+  min-height: 7rem;
   font-size: 1.4rem;
-  margin-bottom: 2rem;
+  ${'' /* margin-bottom: 2rem; */}
   padding: 1rem 0;
   z-index: ${({theme}) => theme.zIndex.nav};
 

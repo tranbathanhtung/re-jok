@@ -15,11 +15,11 @@ const HeaderDemo = styled(Header)`
 `;
 
 const SideDemo = styled(Side)`
-background-color: #48acda;
-color: #fff;
-text-align: center;
-width: 200px;
-line-height: 160px;
+   background-color: #48acda;
+   color: #fff;
+   text-align: center;
+   width: 200px;
+   line-height: 160px;
 `
 
 const FooterDemo =  styled(Footer)`

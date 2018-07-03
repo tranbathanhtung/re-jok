@@ -8,7 +8,7 @@ export const isChild = children => children === null
 export const isUndef = value => typeof value === 'undefined';
 /** Check function or not**/
 
-export const isFunction = value => typeof value === 'function';
+export const isFunction = value => !isUndef(value) && typeof value === 'function';
 
 /** Check Object or not**/
 export const isObject = value =>
@@ -16,3 +16,6 @@ export const isObject = value =>
 
 /** Check Array or not**/
 export const isArray = value => Array.isArray(value);
+
+/** Check Number or not**/
+export const isNumber = value => Number.isInteger(value) && typeof value === "number"

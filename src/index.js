@@ -23,6 +23,7 @@ import TooltipDemo from './Tooltip/demo';
 import TabDemo from './Tab/demo';
 import CollapseDemo from './Collapse/demo';
 import LayoutDemo from './Layout/demo';
+import PaginationDemo from './Pagination/demo';
 
 
 
@@ -88,7 +89,8 @@ class App extends React.Component<{}, State> {
          {/* <TooltipDemo/> */}
          {/* <TabDemo/> */}
          {/* <CollapseDemo/> */}
-         <LayoutDemo/>
+         {/* <LayoutDemo/> */}
+         <PaginationDemo/>
        </Body>
      </JokTheme>
 

@@ -5,6 +5,10 @@ import {
   StyledOption
 } from './style';
 
+import { isFunction } from '../helpers/typeUtils';
+
+import { noop } from '../helpers';
+
 type PropsSelect = {
   /**Value of option**/
   value?: string | number,
@@ -37,8 +41,8 @@ type Props = {
   placeholder?: string,
   /** Children of select must be option**/
   children: React.ChildrenArray < React.Element < typeof Option >>,
-  /** Event change of select ... params onChange(e: Event)**/
-  onChange?: Function,
+  /** Event change of select ... params onChange(e: Event, props)**/
+  onChange: Function,
   /** from Form Item with <3**/
   validateStatus?: 'success' | 'warning' | 'error',
   /** name of select**/
@@ -46,16 +50,22 @@ type Props = {
 
 }
 
+const defaultProps = {
+  onChange: noop
+}
+
 
 
 class Select extends React.Component<Props>{
+
+  static defaultProps = defaultProps;
 
   static Option = Option;
 
   handleChange = (e: SyntheticEvent<HTMLSelectElement>) => {
      const {onChange} = this.props;
 
-     onChange && onChange(e);
+     isFunction(onChange) && onChange(e);
   }
 
   render(){

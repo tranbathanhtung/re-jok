@@ -4,9 +4,11 @@ import Page from './Page';
 
 import {
   StyledPagination,
-  StyledPaginationItem,
-  StyledPaginationContent
 } from './style';
+
+import { noop } from '../helpers';
+import { isFunction } from '../helpers/typeUtils';
+
 
 type Props = {
   /** Style of Pagination Component**/
@@ -22,7 +24,7 @@ type Props = {
   /** Set total page**/
   pages: number,
   /** Callback function when page change**/
-  onPageChange?: Function,
+  onPageChange: Function,
   /** Type of Pagination**/
   type: 'default' | 'effect',
   /** Set color when active pagination**/
@@ -34,7 +36,8 @@ type State = {
 }
 
 const defaultProps = {
-  type: 'default'
+  type: 'default',
+  onPageChange: noop
 }
 
 
@@ -68,7 +71,7 @@ class Pagination extends React.Component<Props, State> {
       currentPage: page
      });
 
-    onPageChange && onPageChange(page, {...this.props});
+    isFunction(onPageChange) && onPageChange(page, {...this.props});
   }
 
   handleNextPage = () => {
@@ -80,7 +83,7 @@ class Pagination extends React.Component<Props, State> {
      this.setState({
        currentPage: currentPage + 1
      }, ()=>{
-       onPageChange && onPageChange(this.state.currentPage, {...this.props});
+        isFunction(onPageChange) && onPageChange(this.state.currentPage, {...this.props});
      })
 
 
@@ -99,7 +102,7 @@ class Pagination extends React.Component<Props, State> {
     this.setState({
       currentPage:currentPage - 1
     }, ()=>{
-      onPageChange && onPageChange(this.state.currentPage, {...this.props});
+      isFunction(onPageChange) && onPageChange(this.state.currentPage, {...this.props});
     })
 
   }

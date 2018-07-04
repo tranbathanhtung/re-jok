@@ -51,7 +51,9 @@ class MenuItem extends React.Component<Props>{
   static defaultProps = defaultProps;
 
   handleClick = (e: SyntheticEvent<HTMLElement>) => {
-    const { keyActive, onClick, ...rest } = this.props;
+    const { keyActive, onClick, disable, ...rest } = this.props;
+
+    if(disable) return;
 
     const { multiple, onSelect, selectedKeys, onDeselect } = rest.context;
 
@@ -106,7 +108,7 @@ class MenuItem extends React.Component<Props>{
         style={style}
         {...rest}
         active={active}
-        onClick={e => !disable && this.handleClick(e)}>
+        onClick={this.handleClick}>
          {
            leftIcon && <StyledMenuLeftIcon>{leftIcon}</StyledMenuLeftIcon>
          }

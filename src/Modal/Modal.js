@@ -73,6 +73,10 @@ class Modal extends React.Component<Props>{
     if (onClose) onClose(e, this.props)
   }
 
+  handleStopEvent = (e: SyntheticEvent<HTMLElement>) => {
+    e.stopPropagation();
+  }
+
 
 
   render(){
@@ -102,10 +106,10 @@ class Modal extends React.Component<Props>{
 
     }
     return (
-      <StyledModalWrapper openModal={open} onClick={(e)=> this.handleClose(e)}>
+      <StyledModalWrapper openModal={open} onClick={this.handleClose}>
         <StyledModalBackGround openModal={open}/>
-      <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={(e) => e.stopPropagation()}>
-        { closable && <CloseButton onClick={(e) => this.handleClose(e)} variant="icon" icon="times"/> }
+      <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={this.handleStopEvent}>
+        { closable && <CloseButton onClick={this.handleClose} variant="icon" icon="times"/> }
 
         {
           title && alert === "none"

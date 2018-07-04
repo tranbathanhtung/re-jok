@@ -24,7 +24,7 @@ import TabDemo from './Tab/demo';
 import CollapseDemo from './Collapse/demo';
 import LayoutDemo from './Layout/demo';
 import PaginationDemo from './Pagination/demo';
-
+import TagDemo from './Tag/demo';
 
 
 
@@ -90,7 +90,8 @@ class App extends React.Component<{}, State> {
          {/* <TabDemo/> */}
          {/* <CollapseDemo/> */}
          {/* <LayoutDemo/> */}
-         <PaginationDemo/>
+         {/* <PaginationDemo/> */}
+         <TagDemo />
        </Body>
      </JokTheme>
 

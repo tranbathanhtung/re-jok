@@ -59,7 +59,7 @@ class ListItem extends React.Component<Props>{
     const ElementType = !hrefString ?StyledListItem.withComponent(tag) : StyledListItem.withComponent('a')
 
     return (
-      <ElementType onClick={ e => this.handleClick(e)} hrefString={hrefString} {...rest}>
+      <ElementType onClick={this.handleClick} hrefString={hrefString} {...rest}>
         {children}
       </ElementType>
     )

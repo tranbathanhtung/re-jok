@@ -10,8 +10,8 @@ import {
 import { withTheme } from 'styled-components';
 
 import RadioGroup from './RadioGroup';
-import { isUndef, isChild } from '../helpers/typeUtils';
-import { generalId } from '../helpers';
+import { isUndef, isChild, isFunction } from '../helpers/typeUtils';
+import { generalId, noop } from '../helpers';
 
 
 type Props = {
@@ -22,7 +22,7 @@ type Props = {
   /****/
   children?: any,
   /** onChange callback function... params is (e: Event, props: Object)**/
-  onChange?: Function,
+  onChange: Function,
   /** Set value of Radio**/
   value?: string | number,
   /** Set name of radio component**/
@@ -43,7 +43,8 @@ type Props = {
 const defaultProps = {
   checked: void 0,
   defaultChecked: false,
-  disabled: false
+  disabled: false,
+  onChange: noop,
 }
 
 type State = {
@@ -79,7 +80,7 @@ class Radio extends React.Component<Props, State> {
 
     const checked = (e.target: window.HTMLInputElement).checked;
 
-    if(onChange) onChange(e, {...this.props});
+    isFunction(onChange) && onChange(e, {...this.props});
 
     isUndef(this.props.checked) && this.setState({ checked });
   }

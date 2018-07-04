@@ -27,6 +27,7 @@ type Props = {
   color?: string,
   /** set postion of icon right or left**/
   iconPosition: 'left' | 'right',
+  onClick?: Function,
 }
 
 const defaultProps = {
@@ -47,14 +48,20 @@ class Icon extends React.Component<Props> {
       className,
       spin,
       color,
+      ...rest
     } = this.props;
     return (
-      <IconContainer color={color} iconPosition={iconPosition}>
+      <IconContainer
+        style={style}
+        className={className}
+        color={color}
+        iconPosition={iconPosition}
+        {...rest}
+        >
         <FontAwesome
          name={name}
          size={size}
-         style={style}
-         className={className}
+
          spin={spin}
 
         />

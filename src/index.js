@@ -25,6 +25,7 @@ import CollapseDemo from './Collapse/demo';
 import LayoutDemo from './Layout/demo';
 import PaginationDemo from './Pagination/demo';
 import TagDemo from './Tag/demo';
+import AlertDemo from './Alert/demo';
 
 
 
@@ -91,7 +92,8 @@ class App extends React.Component<{}, State> {
          {/* <CollapseDemo/> */}
          {/* <LayoutDemo/> */}
          {/* <PaginationDemo/> */}
-         <TagDemo />
+         {/* <TagDemo /> */}
+         <AlertDemo/>
        </Body>
      </JokTheme>
 

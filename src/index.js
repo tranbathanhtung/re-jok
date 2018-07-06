@@ -26,6 +26,7 @@ import LayoutDemo from './Layout/demo';
 import PaginationDemo from './Pagination/demo';
 import TagDemo from './Tag/demo';
 import AlertDemo from './Alert/demo';
+import NotificationDemo from './Notification/demo';
 
 
 
@@ -93,7 +94,8 @@ class App extends React.Component<{}, State> {
          {/* <LayoutDemo/> */}
          {/* <PaginationDemo/> */}
          {/* <TagDemo /> */}
-         <AlertDemo/>
+         {/* <AlertDemo/> */}
+         <NotificationDemo/>
        </Body>
      </JokTheme>
 

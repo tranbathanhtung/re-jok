@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import Icon from '../Icon';
 import { hexa } from '../globals';
 
@@ -38,32 +38,43 @@ const returnType = props => {
         `
       case 'success':
         return`
-          color: ${props.theme.success.main};
-          background: ${hexa(props.theme.success.main, .28)};
+
+          color: ${props.theme.text.default};
+
+          background: ${props.theme.success.main};
 
         `
       case 'info':
         return`
-          color: ${props.theme.info.main};
-          background: ${hexa(props.theme.info.main, .28)};
+
+          color: ${props.theme.text.default};
+
+          background: ${props.theme.info.main};
+
 
         `
       case 'warning':
         return`
-          color: ${props.theme.warning.main};
-          background: ${hexa(props.theme.warning.main, .28)};
+        color: ${props.theme.text.default};
+
+
+          background: ${props.theme.warning.main};
+
 
         `
       case 'error':
         return`
-          color: ${props.theme.error.main};
-          background: ${hexa(props.theme.error.main, .28)};
+        color: ${props.theme.text.default};
+
+          background: ${props.theme.error.main};
+
 
         `
       default:
         return `
           color: ${props.theme.text.regular};
           background: ${ ({theme}) => theme.background.default};
+
 
          `
 
@@ -85,6 +96,11 @@ export const StyledAlert = styled.div`
   align-items: center;
   padding: 1.5rem 3rem 1.5rem 1.5rem;
   margin-bottom: 20px;
+  ${
+    props => props.hasBoxshadow && css`
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    `
+  }
   ${props => returnType(props)};
 `
 

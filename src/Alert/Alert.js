@@ -33,12 +33,14 @@ type Props = {
   onClose: Function,
   type: 'none' | 'success' | 'info' | 'warning' | 'error',
   icon?: string,
+  hasBoxshadow: boolean,
 }
 
 const defaultProps = {
   closable: false,
   onClose: noop,
-  type: 'none'
+  type: 'none',
+  hasBoxshadow: false
 }
 
 

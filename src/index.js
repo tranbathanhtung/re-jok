@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
+import './globals/rejok.css.js';
 import styled from 'styled-components';
 
 import {setTheme} from './theme';
@@ -27,7 +28,10 @@ import PaginationDemo from './Pagination/demo';
 import TagDemo from './Tag/demo';
 import AlertDemo from './Alert/demo';
 import NotificationDemo from './Notification/demo';
-
+import TypographyDemo from './Typography/demo';
+import ImageDemo from './Image/demo';
+import SpinnerDemo from './Spinner/demo';
+import ProgressDemo from './Progress/demo';
 
 
 
@@ -95,7 +99,11 @@ class App extends React.Component<{}, State> {
          {/* <PaginationDemo/> */}
          {/* <TagDemo /> */}
          {/* <AlertDemo/> */}
-         <NotificationDemo/>
+         {/* <NotificationDemo/> */}
+         {/* <TypographyDemo/> */}
+         {/* <ImageDemo/> */}
+         {/* <SpinnerDemo/> */}
+         <ProgressDemo/>
        </Body>
      </JokTheme>
 

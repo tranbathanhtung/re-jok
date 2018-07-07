@@ -1,4 +1,4 @@
-*,
+/* *,
 *::after,
 *::before {
   margin: 0;
@@ -17,7 +17,7 @@ body {
   padding: 3rem;
   line-height: 1.7;
   color: #777;
-   }
+   } */
 
 
 .col-demo {

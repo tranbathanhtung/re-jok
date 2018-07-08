@@ -2,6 +2,11 @@
 import * as React from 'react';
 import NotificationContent from './NotificationContent';
 
+import {
+  StyledNotificationWrapper
+} from './style';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+
 import Icon from '../Icon';
 
 import { isFunction } from '../helpers/typeUtils';
@@ -35,6 +40,10 @@ type Props = {
   hasBoxshadow: boolean,
 }
 
+type State = {
+  queue: Array<any>
+}
+
 const defaultProps = {
   closable: false,
   onClose: noop,
@@ -57,9 +66,11 @@ const insertNotif = (options) => {
 }
 
 
-class Notification extends React.Component<Props>{
+class Notification extends React.Component<Props, State>{
 
   static defaultProps = defaultProps;
+
+  unSubStore: Function;
 
 
   constructor(props: Props){
@@ -71,35 +82,35 @@ class Notification extends React.Component<Props>{
     }
 
 
-    static open(options = {}){
+    static open(options: Object = {}){
        return insertNotif({
          ...options,
          type: 'none'
        });
     }
 
-    static info(options = {}){
+    static info(options: Object = {}){
       return insertNotif({
         ...options,
         type: 'info'
       });
     }
 
-    static success(options = {}){
+    static success(options: Object = {}){
       return insertNotif({
         ...options,
         type: 'success'
       });
     }
 
-    static warning(options = {}){
+    static warning(options: Object = {}){
       return insertNotif({
         ...options,
         type: 'warning'
       });
     }
 
-    static error(options = {}){
+    static error(options: Object = {}){
       return insertNotif({
         ...options,
         type: 'error'
@@ -161,9 +172,12 @@ class Notification extends React.Component<Props>{
 
     return (
 
-        <div>
+        <StyledNotificationWrapper>
+          <CSSTransitionGroup transitionName="example">
          {this.renderNotification()}
-        </div>
+       </CSSTransitionGroup>
+
+       </StyledNotificationWrapper>
 
 
 

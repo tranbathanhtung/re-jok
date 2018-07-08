@@ -31,10 +31,13 @@ type Props = {
   /** Set tag is closable or not**/
   closable: boolean,
   /** Callback function when close Tag... it must be work with closable**/
-  onClose: Function,
+  onClose?: Function,
   type: 'none' | 'success' | 'info' | 'warning' | 'error',
   icon?: string,
   hasBoxshadow: boolean,
+  id: string,
+  timeout: number,
+  notif: Object
 }
 
 const defaultProps = {
@@ -50,25 +53,33 @@ class NotificationContent extends React.Component<Props>{
 
   static defaultProps = defaultProps;
 
+  refNotif: {
+    current: null | React$ElementRef<any>
+  } = React.createRef();
+
  animationClose = () => {
    const { id, timeout, notif } = this.props;
 
-   const currentAlertElem = ReactDOM.findDOMNode(this);
+   const notification = ReactDOM.findDOMNode(this.refNotif.current);
 
-    currentAlertElem.style.display = 'none';
+
+    notification.style.display = 'none';
     dispatch({type: 'REMOVE', payload: {id}});
     this.clearTimeout(this.closingTimeout);
   }
 
   handleClose = () => {
     const { id, timeout, notif } = this.props;
-    const currentAlertElem = ReactDOM.findDOMNode(this);
+
+    const notification = ReactDOM.findDOMNode(this.refNotif.current);
+
 
     dispatch({type: 'REMOVE', payload: {id}});
 
     this.closingTimeout = setTimeout(function () {
-        currentAlertElem.classList.add('s-alert-hide');
+        notification.classList.add('s-alert-hide');
     }, timeout);
+
 
 
   }
@@ -106,7 +117,7 @@ class NotificationContent extends React.Component<Props>{
     return (
 
       <StyledNotification onAnimationEnd={this.onAnimationEnd} innerRef={this.refNotif}>
-        {notif.message}
+        {/* {notif.message} */}
       </StyledNotification>
     )
   }

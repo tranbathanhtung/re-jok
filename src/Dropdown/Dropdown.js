@@ -241,6 +241,7 @@ class Dropdown extends React.Component<Props, State>{
       ...rest
     } = this.props;
 
+
     const mouseEvent = {
       onMouseLeave: trigger === 'click' ? null : this.onMouseLeave,
       onMouseEnter: trigger === 'click' ? null : this.onMouseEnter,
@@ -249,7 +250,7 @@ class Dropdown extends React.Component<Props, State>{
     return (
       <StyledDropdownWrapper
         {...mouseEvent}
-        ref={this.refParent}>
+        innerRef={this.refParent}>
 
           {
             React.Children.count(children) === 1
@@ -260,7 +261,7 @@ class Dropdown extends React.Component<Props, State>{
               : null
           }
 
-       <StyledDropdown {...rest} ref={this.refDropdown} {...this.state}>
+       <StyledDropdown {...rest} innerRef={this.refDropdown} {...this.state}>
          {content}
        </StyledDropdown>
      </StyledDropdownWrapper>

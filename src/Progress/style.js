@@ -35,6 +35,32 @@ const baseProgress = css`
   bottom: 0;
   will-change: left, right;
 `
+const returnSize = props => {
+  switch (props.size) {
+    case 'small':
+      return `
+        height: .5rem;
+      `
+    case 'default':
+      return `
+        height: 1rem;
+      `
+    case 'medium':
+      return `
+        height: 1.4rem;
+      `
+    case 'large':
+      return `
+        height: 1.8rem;
+        `
+
+    default:
+      return `
+        height: .5rem;
+      `
+
+  }
+}
 
 const returnIndeterminate = css`
 &::after, &::before{
@@ -53,37 +79,41 @@ const returnIndeterminate = css`
 `
 
 const returnDeterminate = css`
-${'' /* position: absolute; */}
-top: 0;
-width: 70%;
-bottom: 0;
-transition: width .3s linear;
+  top: 0;
+  width: ${ ({percent}) => `${percent}%`};
+  bottom: 0;
+  transition: width .3s linear;
 `
 
 export const StyledProgressWrapper = styled.div`
   font-size: 1.4rem;
-  background-color: #fafafa;
+  background-color: #ebeef5;
   line-height: 1.4;
-  height: .5rem;
+  ${props => returnSize(props)};
   border-radius: 10rem;
   vertical-align: middle;
   position: relative;
   width: 100%;
   display: flex;
   overflow: hidden;
+  z-index: ${ ({theme}) => theme.zIndex.progress};
+  ${
+    props => props.fixed && css`
+         position: fixed;
+         top: 0;
+    `
+  }
 
 `
 
 export const StyledProgress = styled.div`
-   ${'' /* display: flex;
    border: none;
-   outline: none; */}
+   outline: none;
 
-   background: red;
-   ${'' /* transition: width .6s ease; */}
+   background: ${ ({color, theme}) => color ? color : theme.primary.main};
+   border-radius: 10rem;
    color: #fff;
-   ${'' /* height: 100%; */}
-   ${'' /* width: 20%; */}
+
 
    ${props => props.indeterminate ? returnIndeterminate : returnDeterminate};
 

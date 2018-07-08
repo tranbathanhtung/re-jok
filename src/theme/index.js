@@ -103,6 +103,7 @@ export const defaultTheme = {
     search: 3,
     nav: 400,
     dropDown: 500,
+    progress: 1000,
     sidebar: 1300,
     modal: 1500,
     tooltip: 3000,

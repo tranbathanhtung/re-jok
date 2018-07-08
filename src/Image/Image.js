@@ -27,6 +27,8 @@ const defaultProps = {
 
 class Image extends React.Component<Props>{
 
+  static defaultProps = defaultProps;
+
   render(){
 
     return (

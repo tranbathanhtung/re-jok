@@ -4,24 +4,13 @@ import Image from '../Image';
 import Row from '../../Grid/Row';
 import Col from '../../Grid/Col';
 
-type Props = {
-  /** Children of tooltip could be anything**/
-  children?: any,
-}
 
-const defaultProps = {
-
-}
-
-class ImageDemo extends React.Component<Props>{
+class ImageDemo extends React.Component<{}>{
 
 
 
   render(){
-    const {
-      children,
-      ...rest
-    } = this.props;
+  ;
     return (
       <React.Fragment>
         <Row>

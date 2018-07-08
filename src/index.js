@@ -99,11 +99,11 @@ class App extends React.Component<{}, State> {
          {/* <PaginationDemo/> */}
          {/* <TagDemo /> */}
          {/* <AlertDemo/> */}
-         {/* <NotificationDemo/> */}
+         <NotificationDemo/>
          {/* <TypographyDemo/> */}
          {/* <ImageDemo/> */}
          {/* <SpinnerDemo/> */}
-         <ProgressDemo/>
+         {/* <ProgressDemo/> */}
        </Body>
      </JokTheme>
 

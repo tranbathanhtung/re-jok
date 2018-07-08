@@ -11,7 +11,7 @@ type Props = {
   /** Set position of tooltip box.. default is bottom**/
   position: 'top' | 'left' | 'right' | 'bottom' | 'topRight' | 'topLeft' | 'bottomRight' | 'bottomLeft',
   /** Label of tooltip**/
-  label?: string,
+  label?: any,
   /** Set color of tooltip box**/
   tooltipColor: string,
 }

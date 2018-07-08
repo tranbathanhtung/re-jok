@@ -24,7 +24,7 @@ class TypographyDemo extends React.Component<{}>{
       <H6>Heading Primary</H6>
       <P>Heading Primary</P>
       <Span>Heading Primary</Span>
-    
+
 
     </React.Fragment>)
   }

@@ -35,7 +35,9 @@ export const StyledNavBarRight = styled.div`
 
 export const StyledNavBarCenter = styled.div`
   position: absolute;
-  right: 50%;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
 
 `
 

@@ -143,7 +143,7 @@ class NavDemo extends React.Component<{}, State>{
 
         </Sidebar>
 
-        <Nav backgroundColor="#212121" elementCenter={<a>Center Element</a>} elementRight={<ActionRight1/>}>
+        <Nav backgroundColor="#212121" elementCenter={<ActionRight/>} elementRight={<ActionRight1/>}>
           Left Element
         </Nav>
         <div style={{

@@ -15,6 +15,8 @@ export const StyledIconClose = styled(Icon)`
 
 
 
+
+
  transition: all .2s;
 
 `
@@ -104,9 +106,10 @@ export const StyledAlert = styled.div`
   ${props => returnType(props)};
 `
 
-export const StyledAlertTitle = styled.span`
-  font-size: 1.6rem;
-  color: ${ ({theme}) => theme.text.primary};
+export const StyledAlertTitle = styled.strong`
+  font-size: 1.4rem;
+  color: ${ ({theme,hasColor}) =>hasColor? theme.text.default : theme.text.primary};
+  margin-right: .5rem;
 `
 
 export const StyledAlertContent =  styled.div`

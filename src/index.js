@@ -98,8 +98,8 @@ class App extends React.Component<{}, State> {
          {/* <LayoutDemo/> */}
          {/* <PaginationDemo/> */}
          {/* <TagDemo /> */}
-         {/* <AlertDemo/> */}
-         <NotificationDemo/>
+         <AlertDemo/>
+         {/* <NotificationDemo/> */}
          {/* <TypographyDemo/> */}
          {/* <ImageDemo/> */}
          {/* <SpinnerDemo/> */}

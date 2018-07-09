@@ -64,6 +64,8 @@ class Alert extends React.Component<Props>{
       ...rest
     } =  this.props;
 
+    const hasColor = rest.color || type !== "none";
+
     const listIcon = {
       info: <StyledAlertIcon color="info" name="info-circle" size="lg"/>,
       success: <StyledAlertIcon color="success" name="check-circle" size="lg"/>,
@@ -76,13 +78,12 @@ class Alert extends React.Component<Props>{
       <StyledAlert closable={closable} {...rest} type={type}>
         {type !== "none" && !icon && !rest.color && listIcon[type]}
 
-        <div>
-          {title && <StyledAlertTitle>{title}</StyledAlertTitle>}
+
+          {title && <StyledAlertTitle hasColor={hasColor}>{title}!</StyledAlertTitle>}
           <StyledAlertContent>
             {children}
           </StyledAlertContent>
 
-        </div>
 
         { closable && <StyledIconClose onClick={this.handleClose} name="times"/> }
 

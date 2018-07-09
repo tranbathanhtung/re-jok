@@ -2,6 +2,7 @@
 import * as React from 'react';
 
 import styled, { keyframes } from 'styled-components';
+import type { Props } from './index';
 
 //Bounce Spinner
 //This size  is different size another component
@@ -107,7 +108,7 @@ color: inherit;
 `
 
 
-export const SpinBounce = props => (
+export const SpinBounce = (props: Props) => (
   <React.Fragment>
     <StyledSpinnerContainer {...props}>
       <StyledSpinnerBounce1 />
@@ -117,7 +118,7 @@ export const SpinBounce = props => (
   </React.Fragment>
 )
 
-export const SpinDefault = props => (
+export const SpinDefault = (props: Props) => (
   <React.Fragment>
     <StypedSpinnerDefault {...props} />
   </React.Fragment>

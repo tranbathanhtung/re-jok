@@ -6,7 +6,7 @@ import {
 } from './style';
 
 
-type Props = {
+export type Props = {
   /** Set size of spinner component... default value is default**/
   size: 'small' | 'default' | 'medium' | 'large',
   /** Set type of spinner component... default value is default**/

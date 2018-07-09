@@ -3,10 +3,14 @@ import * as React from 'react';
 import Progress from '../Progress';
 import Tooltip from '../../Tooltip/Tooltip';
 
+type State = {
+  completed: number
+}
 
 
-class ProgressDemo extends React.Component<{}>{
-  timer = null;
+
+class ProgressDemo extends React.Component<{}, State>{
+  timer: IntervalID;
 
   state = {
     completed: 0

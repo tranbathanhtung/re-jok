@@ -1,10 +1,17 @@
 // @flow
 import * as React from 'react';
 import {
-  StyledNotification
+  StyledNotification,
+  StyledNotificationContent,
+  StyledNotificationTitle,
+  StyledNotificationMessage,
+  StyledNotificationClose,
+  StyledNotificationMedia
 } from './style';
 
-import ReactDOM from 'react-dom';
+import {
+  StyledIconClose
+} from '../Alert/style';
 
 
 
@@ -13,83 +20,78 @@ import store from './store';
 
 const {
   dispatch,
-  getState,
-  subscribe
 } = store;
 
 
 type Props = {
-  /** Style of Tag Component**/
-  style?: Object,
-  /** Class of Tag Component**/
-  className?: string,
-  /** Children of Tag Component could be anything**/
-  children?: any,
-  title?: string,
-  /** Set color of Tag **/
-  color?: string,
-  /** Set tag is closable or not**/
-  closable: boolean,
-  /** Callback function when close Tag... it must be work with closable**/
-  onClose?: Function,
-  type: 'none' | 'success' | 'info' | 'warning' | 'error',
-  icon?: string,
-  hasBoxshadow: boolean,
+  /** Id of Notification must required**/
   id: string,
+  /** Set timeout of Notification... default is 4s**/
   timeout: number,
-  notif: Object
+  /** Infomation of Notification... mIt must required**/
+  notif: {
+    /** Callback function when close Notification ...**/
+    onClose?: Function,
+    /** Callback function when open Notification ...**/
+    onShow?: Function,
+    /** Set timeout of Notification... default is 4s**/
+    timeout?: number | string,
+    /** Id of Notification must required**/
+    id: string,
+    /**Set Title of Notification**/
+    title?: string,
+    /** Set Messsage of Notification**/
+    message?: string,
+    /** Style of Notification Component**/
+    style?: Object,
+    /** Class of Notification Component**/
+    className?: string,
+    /** Set Media of Notification Component**/
+    media?: React.Node,
+    /** Custom Content of Notification Component... **/
+    customContent?: any,
+    /** Custome Close element Component**/
+    customClose?: React.Node,
+    /** Set color of Notification**/
+    color?: string,
+    /** Set Notification has close Icon or not**/
+    closable?: boolean
+
+  },
+  /** Config Global Notification component**/
+  config: Object
 }
 
-const defaultProps = {
-  closable: false,
-  // onClose: noop,
-  type: 'none',
-  hasBoxshadow: false
-}
+
 
 
 
 class NotificationContent extends React.Component<Props>{
 
-  static defaultProps = defaultProps;
-
-  refNotif: {
-    current: null | React$ElementRef<any>
-  } = React.createRef();
-
- animationClose = () => {
-   const { id, timeout, notif } = this.props;
-
-   const notification = ReactDOM.findDOMNode(this.refNotif.current);
+  closeTimer: TimeoutID;
 
 
-    notification.style.display = 'none';
-    dispatch({type: 'REMOVE', payload: {id}});
-    this.clearTimeout(this.closingTimeout);
-  }
+
 
   handleClose = () => {
-    const { id, timeout, notif } = this.props;
-
-    const notification = ReactDOM.findDOMNode(this.refNotif.current);
-
+    const { id } = this.props;
 
     dispatch({type: 'REMOVE', payload: {id}});
-
-    this.closingTimeout = setTimeout(function () {
-        notification.classList.add('s-alert-hide');
-    }, timeout);
-
-
 
   }
 
   componentDidMount() {
-    if (typeof this.props.timeout === 'number') {
+    const { timeout, notif} = this.props;
+
+    const { onShow } = notif;
+
+    if (typeof timeout === 'number') {
         this.closeTimer = setTimeout(() => {
             this.handleClose()
-        }, this.props.timeout);
+        }, timeout);
     }
+
+    onShow && onShow({...this.props})
   }
 
   componentWillUnmount() {
@@ -97,27 +99,69 @@ class NotificationContent extends React.Component<Props>{
           clearTimeout(this.closeTimer);
       }
 
+    this.props.notif && this.props.notif.onClose && this.props.notif.onClose({...this.props});
+
   }
 
-  onAnimationEnd = () =>{
-    this.animationClose()
-  }
+
 
   render(){
 
 
     const {
       notif,
-
-      ...rest
+      config
     } =  this.props;
+
+    const {
+      closable,
+      message,
+      title,
+      customClose,
+      customContent,
+      media,
+      color,
+      ...rest
+
+    } = notif;
 
 
 
     return (
 
-      <StyledNotification onAnimationEnd={this.onAnimationEnd} innerRef={this.refNotif}>
-        {/* {notif.message} */}
+      <StyledNotification color={color} config={config} {...rest}>
+       {
+         customContent
+         ? customContent
+         : (
+           <React.Fragment>
+           {/* Close icon */}
+           { closable && <StyledIconClose color={color} onClick={this.handleClose} name="times" />}
+
+           {media && <StyledNotificationMedia>{media}</StyledNotificationMedia>}
+
+           <StyledNotificationContent hasMedia={media}>
+             {/* Title */}
+             {
+               title && <StyledNotificationTitle color={color}>
+                 {title}
+               </StyledNotificationTitle>
+             }
+             {/* Message */}
+             {message && <StyledNotificationMessage color={color}>
+               {message}
+             </StyledNotificationMessage>}
+
+           </StyledNotificationContent>
+
+           {/* Custom Close Button */}
+           <StyledNotificationClose>
+             {customClose}
+           </StyledNotificationClose>
+
+         </React.Fragment>
+         )
+       }
       </StyledNotification>
     )
   }

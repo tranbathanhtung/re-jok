@@ -2,14 +2,14 @@
 import * as React from 'react';
 import NotificationContent from './NotificationContent';
 
+
 import {
-  StyledNotificationWrapper
+  StyledNotificationWrapper,
+  notifTransition
 } from './style';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
-import Icon from '../Icon';
 
-import { isFunction } from '../helpers/typeUtils';
 import { noop, generalId } from '../helpers';
 
 import store from './store';
@@ -17,6 +17,7 @@ import store from './store';
 const {
   dispatch,
   getState,
+  getConfig,
   subscribe
 } = store;
 
@@ -26,33 +27,23 @@ type Props = {
   style?: Object,
   /** Class of Tag Component**/
   className?: string,
-  /** Children of Tag Component could be anything**/
-  children?: any,
-  title?: string,
-  /** Set color of Tag **/
-  color?: string,
-  /** Set tag is closable or not**/
-  closable: boolean,
-  /** Callback function when close Tag... it must be work with closable**/
-  onClose: Function,
-  type: 'none' | 'success' | 'info' | 'warning' | 'error',
-  icon?: string,
-  hasBoxshadow: boolean,
+  /** Set position of Notification**/
+  position?: 'topRight' | 'topLeft' | 'topCenter' | 'bottomRight' | 'bottomLeft' | 'bottomCenter',
+  /** Set limit of Notification**/
+  stack?: number,
+  /** Set key of Notification**/
+  key?: string | number
 }
 
 type State = {
-  queue: Array<any>
+  queue: Array<any>,
+  config: Object
 }
 
-const defaultProps = {
-  closable: false,
-  onClose: noop,
-  type: 'none',
-  hasBoxshadow: false
-}
 
 const insertNotif = (options) => {
-  const id = generalId();
+  //If not set key notif... it will general random id
+  const id = options.key || generalId();
 
   dispatch({
     type: 'INSERT',
@@ -66,9 +57,26 @@ const insertNotif = (options) => {
 }
 
 
+const removeNotif = (key) => {
+  dispatch({
+    type: 'REMOVE',
+    payload: {
+      id: key
+    }
+  })
+}
+
+const configNotif = options => {
+  dispatch({
+    type: 'CONFIG',
+    payload: {
+      ...options
+    }
+  })
+}
+
 class Notification extends React.Component<Props, State>{
 
-  static defaultProps = defaultProps;
 
   unSubStore: Function;
 
@@ -78,59 +86,58 @@ class Notification extends React.Component<Props, State>{
 
       this.state = {
         queue: [],
+        config: {},
       }
     }
 
 
-    static open(options: Object = {}){
+    static open(options: Props = {}){
        return insertNotif({
          ...options,
-         type: 'none'
        });
     }
 
-    static info(options: Object = {}){
-      return insertNotif({
-        ...options,
-        type: 'info'
-      });
+    //it only work when notification has key
+    static close(key?: string | number){
+      return removeNotif(key)
     }
 
-    static success(options: Object = {}){
-      return insertNotif({
-        ...options,
-        type: 'success'
-      });
-    }
 
-    static warning(options: Object = {}){
-      return insertNotif({
-        ...options,
-        type: 'warning'
-      });
-    }
-
-    static error(options: Object = {}){
-      return insertNotif({
-        ...options,
-        type: 'error'
-      });
+    static config(options: Props = {}){
+      return configNotif({
+        ...options
+      })
     }
 
   componentDidMount() {
 
     let queue;
-
+    let config;
+    const { stack } = this.props;
     const addToStore = () => {
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-            let length;
+      requestAnimationFrame(() => {
+          let length;
+          queue = getState() || [];
+          config = getConfig() || {};
+
+          length = queue.length;
+
+          if(stack && length && length > stack){
+            const id = queue[0].id;
+            dispatch({
+              type: 'REMOVE',
+              payload: {
+                id,
+              }
+            })
             queue = getState() || [];
-            let currentState = getState();
 
-            length = queue.length;
+          }
 
-            this.setState({queue});
-        }));
+
+
+          this.setState({queue, config});
+      })
     };
     this.unSubStore = subscribe(addToStore);
 
@@ -143,39 +150,39 @@ class Notification extends React.Component<Props, State>{
   }
 
   renderNotification = () => {
-    const { queue } = this.state;
+    const { queue, config } = this.state;
+
 
     return queue.map((notif, i) => {
       const id = notif.id;
-      const timeout = notif.timeout || 4500;
+      const timeout = notif.timeout || 4000;
 
       return <NotificationContent
-             key={id}
-             id={id}
-             notif={notif}
-             timeout={timeout}
+              key={id}
+              id={id}
+              notif={notif}
+              timeout={timeout}
+              config={config}
        />
     })
   }
 
   render(){
 
-    const { queue } = this.state;
-    console.log(queue);
-    const {
-      children,
-
-      ...rest
-    } =  this.props;
+    const { config } = this.state;
 
 
 
     return (
 
-        <StyledNotificationWrapper>
-          <CSSTransitionGroup transitionName="example">
-         {this.renderNotification()}
-       </CSSTransitionGroup>
+        <StyledNotificationWrapper {...this.props} config={config}>
+          <CSSTransitionGroup
+            transitionName={notifTransition}
+            transitionEnterTimeout={250}
+            transitionLeaveTimeout={250}
+            >
+             {this.renderNotification()}
+          </CSSTransitionGroup>
 
        </StyledNotificationWrapper>
 

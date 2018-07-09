@@ -106,6 +106,7 @@ export const defaultTheme = {
     progress: 1000,
     sidebar: 1300,
     modal: 1500,
+    notification: 2000,
     tooltip: 3000,
   }
 };

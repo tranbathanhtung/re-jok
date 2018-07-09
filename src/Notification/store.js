@@ -1,14 +1,21 @@
-// create mini store build from s-alert
+// @flow
+// create mini store like redux build from s-alert
 
-const createStore = (reducer) => {
+const createStore = (reducer: Function): Object => {
     let state;
     let listeners = [];
+    let config;
     const getState = () => state;
-    const dispatch = (action) => {
-        state = reducer(state, action);
+    const getConfig = () => config;
+    const dispatch = (action: {
+      type: string,
+      payload: any
+    } | Object) => {
+        state = reducer(config,state, action).state;
+        config = reducer(config,state, action).config;
         listeners.forEach(listener => listener());
     };
-    const subscribe = (listener) => {
+    const subscribe = (listener: Function) => {
         listeners.push(listener);
         return () => {
             listeners = listeners.filter(l => l !== listener);
@@ -16,39 +23,47 @@ const createStore = (reducer) => {
     };
     dispatch({});
     return {
-        getState, dispatch, subscribe
+        getState, getConfig, dispatch, subscribe
     };
 };
 
-const insert = (state, action) => {
+const insert = (state: Array<any>, action: Object): Array<any> => {
     return [...state, action.payload];
 };
 
-const remove = (state, action) => {
-    let elemToRemoveArray = state.slice().filter(item => item.id === action.payload.id);
-    if (Array.isArray(elemToRemoveArray)) {
-        let elemToRemoveIndex = state.indexOf(elemToRemoveArray[0]);
-        return [
-            ...state.slice(0, elemToRemoveIndex),
-            ...state.slice(elemToRemoveIndex + 1)
-        ];
-    }
-    return state;
+const remove = (state: Array<any>, action: Object): Array<any> => {
+  
+    const newState = state.filter(item => item.id !== action.payload.id);
+    return newState;
 };
 
-const notifReducer = (state = [], action) => {
+const notifReducer = (config = {}, state = [], action) => {
     switch (action.type) {
     case 'INSERT':
-        return insert(state, action);
+        return {
+          config,
+          state: insert(state, action),
+        }
     case 'REMOVE':
-        return remove(state, action);
+         return {
+          config,
+          state: remove(state, action),
+        }
+    case 'CONFIG':
+        return {
+          config: action.payload,
+          state
+       }
 
     default:
-        return state;
+        return {
+          state,
+          config
+        };
     }
 };
 
 const store = createStore(notifReducer);
-console.log(store)
+
 
 export default store;

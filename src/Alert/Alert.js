@@ -8,11 +8,10 @@ import {
   StyledAlertContent
 } from './style';
 
-import Icon from '../Icon';
 
 
 
-import { isFunction } from '../helpers/typeUtils';
+import { isFunction, isChild } from '../helpers/typeUtils';
 import { noop } from '../helpers';
 
 
@@ -24,6 +23,7 @@ type Props = {
   className?: string,
   /** Children of Tag Component could be anything**/
   children?: any,
+  /** Set title of Alert**/
   title?: string,
   /** Set color of Tag **/
   color?: string,
@@ -31,9 +31,16 @@ type Props = {
   closable: boolean,
   /** Callback function when close Tag... it must be work with closable**/
   onClose: Function,
+  /** Set type of Alert Component **/
   type: 'none' | 'success' | 'info' | 'warning' | 'error',
+  /** Set icon of Alert**/
   icon?: string,
+  /** Set Alert has box shadow or not**/
   hasBoxshadow: boolean,
+}
+
+type State = {
+  show: boolean
 }
 
 const defaultProps = {
@@ -44,12 +51,20 @@ const defaultProps = {
 }
 
 
-class Alert extends React.Component<Props>{
+class Alert extends React.Component<Props, State>{
+
+  state = {
+    show: true
+  }
 
   static defaultProps = defaultProps;
 
   handleClose = (e: SyntheticEvent<HTMLElement>) => {
     const { onClose } = this.props;
+
+    this.setState({
+      show: false
+    })
 
    isFunction(onClose) && onClose(e, {...this.props});
   }
@@ -64,30 +79,36 @@ class Alert extends React.Component<Props>{
       ...rest
     } =  this.props;
 
+    const { show } = this.state;
+
+
     const hasColor = rest.color || type !== "none";
+    const hasChild = !isChild(children);
 
     const listIcon = {
-      info: <StyledAlertIcon color="info" name="info-circle" size="lg"/>,
-      success: <StyledAlertIcon color="success" name="check-circle" size="lg"/>,
-      error: <StyledAlertIcon color="error" name="times-circle" size="lg"/>,
-      warning: <StyledAlertIcon color="warning" name="exclamation-circle" size="lg"/>,
+      info: <StyledAlertIcon style={{color: "#fff"}} name="info-circle" size="lg"/>,
+      success: <StyledAlertIcon style={{color: "#fff"}} name="check-circle" size="lg"/>,
+      error: <StyledAlertIcon style={{color: "#fff"}} name="times-circle" size="lg"/>,
+      warning: <StyledAlertIcon style={{color: "#fff"}} name="exclamation-circle" size="lg"/>,
 
     }
 
     return (
-      <StyledAlert closable={closable} {...rest} type={type}>
-        {type !== "none" && !icon && !rest.color && listIcon[type]}
+      show ? (
+
+        <StyledAlert closable={closable} {...rest} type={type}>
+          {type !== "none" && !icon && !rest.color && listIcon[type]}
+
+            {title && <StyledAlertTitle hasColor={hasColor}>{title}!</StyledAlertTitle>}
+            <StyledAlertContent>
+              {hasChild && children}
+            </StyledAlertContent>
 
 
-          {title && <StyledAlertTitle hasColor={hasColor}>{title}!</StyledAlertTitle>}
-          <StyledAlertContent>
-            {children}
-          </StyledAlertContent>
+          { closable && <StyledIconClose onClick={this.handleClose} name="times"/> }
 
-
-        { closable && <StyledIconClose onClick={this.handleClose} name="times"/> }
-
-      </StyledAlert>
+        </StyledAlert>
+      ) : null
     )
   }
 }

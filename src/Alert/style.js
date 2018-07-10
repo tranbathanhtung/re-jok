@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 import Icon from '../Icon';
-import { hexa } from '../globals';
+import { shadeColor } from '../globals';
 
 export const StyledIconClose = styled(Icon)`
  text-align: center;
@@ -35,7 +35,7 @@ const returnType = props => {
       case 'none':
         return `
           color: ${props.theme.text.regular};
-          background: ${ ({theme}) => theme.background.default};
+          background: ${shadeColor(props.theme.background.default, -5)};
 
         `
       case 'success':

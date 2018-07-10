@@ -109,7 +109,7 @@ props => props.loading
     border-radius: .5rem;
     `
   : css `
-      background: #fff;
+      background: ${({theme}) => theme.background.default};
       height: 100%;
       padding: 0;
     `}
@@ -296,7 +296,8 @@ export const PlaceHolder = styled.div `
     animation: 1s ${placeHolderShimmer} linear infinite;
   }
   & div {
-    background: #fff;
+    
+    background: ${({theme}) => theme.background.default};
     position: absolute;
     right: 0;
   }

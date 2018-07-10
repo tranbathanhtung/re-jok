@@ -58,7 +58,7 @@ export const StyledModal = styled.div`
 
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0, 0, 0, 0.2), 0 2.4rem 3.8rem .3rem rgba(0, 0, 0, 0.14), 0 .9rem 4.6rem .8rem rgba(0, 0, 0, 0.12);
   border-radius: .2rem;
-  background-color: #fff;
+  background-color: ${({theme}) => theme.background.default};
   flex: 0 1 auto;
   margin: ${props => props.fullscreen ? "0" : "3.2rem"};
   width: ${props => props.fullscreen ? "100%": "550px"};
@@ -86,7 +86,7 @@ export const StyledModal = styled.div`
 export const StyledModalHeader = styled.div`
 padding: 1.5rem 3rem;
 border-radius: .4rem .4rem 0 0;
-background: #fff;
+background: ${({theme}) => theme.background.default};
 color: ${({theme}) => theme.text.regular};
 border-bottom: .1rem solid #e5e5e5;
 `
@@ -136,7 +136,7 @@ export const StyledAlertDescription = styled.div`
 export const StyledModalAction = styled.div`
   padding: 1.5rem 3rem;
   border-top: .1rem solid #e5e5e5;
-  background: #fff;
+  background: ${({theme}) => theme.background.default};
   display: inline-flex;
   justify-content: flex-end;
   border-radius: 0 0 .4rem .4rem;
@@ -148,6 +148,7 @@ export const StyledModalAction = styled.div`
 //=========== Helper Modal=================
 export const CloseButton = styled(Button)`
  position: absolute !important;
+ color: ${({theme}) => theme.text.primary} !important;
  top: 1rem;
  right: 1rem;
 `

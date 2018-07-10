@@ -22,7 +22,7 @@ export const StyledMenu = styled.ul`
   padding: 0;
   outline: none;
   list-style: none;
-  background: ${props => props.backgroundColor ? props.backgroundColor : "#fff"};
+  background: ${props => props.backgroundColor ? props.backgroundColor : props.theme.background.default};
   color: ${props => props.textColor ? props.textColor : props.theme.text.regular};
 
   font-size: 1.4rem;
@@ -50,15 +50,15 @@ export const StyledMenuItem = styled.li`
     props => props.activeNormal
     ? (
       css`
-      color: ${props => props.active ? props.activeColor ? props.activeColor : "#00acc1" : null};
+      color: ${props => props.active ? props.activeColor ? props.activeColor : props.theme.primary.main : null};
       `
       )
       : css`
-      background-color: ${props => props.active ? props.activeColor ? props.activeColor : "#00acc1" : null};
+      background-color: ${props => props.active ? props.activeColor ? props.activeColor :  props.theme.primary.main : null};
       box-shadow: ${props => props.active ?
         props.activeColor
         ? (`0 1.2rem 2rem -1rem ${hexa(props.activeColor, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,0.12), 0 .7rem .8rem -.5rem ${hexa(props.activeColor, 0.2)}`)
-        : "0 1.2rem 2rem -1rem rgba(0,188,212,.28), 0 .4rem 2rem 0 rgba(0,0,0,.12), 0 .7rem .8rem -.5rem rgba(0,188,212,.2)"
+        : `0 1.2rem 2rem -1rem ${hexa(props.theme.primary.main, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,.12), 0 .7rem .8rem -.5rem ${hexa(props.theme.primary.main, 0.2)}`
          : null};
          color: ${props => props.active && props.theme.text.default};
       `

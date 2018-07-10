@@ -22,7 +22,7 @@ injectGlobal`
  body {
    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
    font-weight: 400;
-   padding: 3rem;
+   
    line-height: 1.7;
    color: #777;
     }

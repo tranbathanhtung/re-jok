@@ -51,7 +51,7 @@ export const StyledPaginationContent = styled.a`
        };
 
        color: ${ ({theme, active}) => active ? "#fff" : theme.text.primary};
-       background-color: ${ ({active, theme,color}) => active ? color ? color : theme.primary.main : "#fff"};
+       background-color: ${ ({active, theme,color}) => active ? color ? color : theme.primary.main : theme.background.default};
        border: 0;
        border-radius: 3rem;
        padding: 0 1.1rem;

@@ -292,6 +292,16 @@ class FormDemo extends React.Component<{}, State>{
 
        </Form.Item>
 
+       <Form.Item>
+         <Checkbox.Group onChange={(values)=> console.log(values)} toggle name="q2">
+           <Checkbox value="Apple">Apple</Checkbox>
+           <Checkbox value="Pear">Pear</Checkbox>
+           <Checkbox value="Orange">Orange</Checkbox>
+
+       </Checkbox.Group>
+
+       </Form.Item>
+
        <Form.Item validateStatus="error" label="Choose option" helper="This field is required">
          <Select placeholder="Choose option">
            <Select.Option value={1}>Option 1</Select.Option>

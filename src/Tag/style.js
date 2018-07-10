@@ -1,4 +1,5 @@
 import styled,{css} from 'styled-components';
+import { shadeColor } from '../globals';
 import Icon from '../Icon';
 
 
@@ -19,6 +20,7 @@ export const StyledIconClose = styled(Icon)`
 
 `
 
+
 export const StyledTag = styled.span`
   display: inline-flex;
   height: ${props => props.theme.size[props.size].height};
@@ -30,8 +32,8 @@ export const StyledTag = styled.span`
   padding: 0 1.1rem;
   margin-right: .8rem;
   margin-bottom: .8rem;
-  background-color: ${ ({theme, color}) => color ? color : theme.background.default};
-  border: .1rem solid #f0f0f0;
+  background-color: ${ ({theme, color}) => color ? color : shadeColor(theme.background.default, -5)};
+  border: .1rem solid transparent;
   border-radius: .2rem;
   color: ${ ({theme, color}) => color ? theme.text.default : theme.text.secondary};
   cursor: pointer;

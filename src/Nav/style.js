@@ -50,7 +50,7 @@ export const StyledNavBar = styled.nav`
   position: relative;
   min-height: 7rem;
   font-size: 1.4rem;
-  ${'' /* margin-bottom: 2rem; */}
+  
   padding: 1rem 0;
   z-index: ${({theme}) => theme.zIndex.nav};
 
@@ -63,7 +63,7 @@ export const StyledNavBar = styled.nav`
        color: ${({theme}) => theme.text.regular};
     `
     : css`
-    background-color: ${props => props.backgroundColor ? props.backgroundColor : "#fff"};
+    background-color: ${props => props.backgroundColor ? props.backgroundColor : props.theme.background.default};
     color: ${props => props.backgroundColor ? props.theme.text.default : props.theme.text.regular};
     box-shadow: ${props => props.backgroundColor ? `0 4px 20px 0 rgba(0,0,0,0.14), 0 7px 12px -5px ${hexa(props.backgroundColor, 0.46)}` : "0 4px 18px 0 rgba(0,0,0,0.12), 0 7px 10px -5px rgba(0,0,0,0.15)"};
 

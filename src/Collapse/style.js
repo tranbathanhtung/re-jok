@@ -24,7 +24,7 @@ export const StyledCollapseItem = styled.li`
 export const StyledCollapseItemTitle = styled.div`
       height: 4.8rem;
       line-height: 4.8rem;
-      background-color: #fff;
+      background-color: ${({theme}) => theme.background.default};
       color: ${ ({theme, disabled}) => disabled ? theme.text.hint : theme.text.regular};
       cursor: ${ ({disabled}) => disabled ? 'not-allowed' : 'pointer'};
       border-bottom: .1rem solid #ebeef5;
@@ -38,7 +38,7 @@ export const StyledCollapseItemTitle = styled.div`
 
 export const StyledCollapseItemContent = styled.div`
     will-change: height;
-    background-color: #fff;
+    background-color: ${({theme}) => theme.background.default};
 
     box-sizing: border-box;
     height: ${props => !props.open && 0};

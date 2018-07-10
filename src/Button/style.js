@@ -1,6 +1,8 @@
 import styled, {css, keyframes} from 'styled-components';
 
-import {Transition, hexa, shadeColor} from '../globals'
+import {Transition, hexa, shadeColor} from '../globals';
+
+
 
 export const baseButton = css `
     display: flex;
@@ -98,14 +100,14 @@ export const Btn = styled.button.attrs({
 
   color: ${({theme, ...props}) => (props.backgroundColor || props.primary || props.secondary)
         ? theme.text.default
-        : theme.text.regular};
+        : "rgba(0, 0, 0, .68)"};
 
     width: ${props => props.fullWidth && props.shape !== "circle"
           ? "100%"
           : "unset"};
 
 
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: ${props => props.backgroundColor
             ? props.backgroundColor
             : props.primary
@@ -204,7 +206,7 @@ export const OutlineBtn = Btn.extend `
           ? theme.primary.main
           : props.secondary
             ? theme.secondary.main
-            : theme.text.regular};
+            : "rgba(0, 0, 0, .68)"};
 
   ${
 props => props.variant === "outline"
@@ -224,7 +226,7 @@ props => props.variant === "outline"
             ? shadeColor(props.theme.primary.main, -15)
             : props.secondary
               ? shadeColor(props.theme.secondary.main, -15)
-              : props.theme.text.regular};
+              : "rgba(0, 0, 0, .68)"};
        }
      `
   : props.variant === "inverted"
@@ -260,7 +262,7 @@ export const IconBtn = Btn.extend `
     ? props.theme.primary.main
     : props.secondary
       ? props.theme.secondary.main
-      : props.theme.text.regular};
+      : "rgba(0, 0, 0, .68)"};
    width: ${props => props.theme.size[props.size].width};
    height: ${props => props.theme.size[props.size].height};
    border-radius: 50%;
@@ -281,7 +283,7 @@ export const IconBtn = Btn.extend `
                 ? shadeColor(props.theme.primary.main, -15)
                 : props.secondary
                   ? shadeColor(props.theme.secondary.main, -15)
-                  : props.theme.text.regular};
+                  : "rgba(0, 0, 0, .68)"};
    }
 
 `
@@ -324,7 +326,7 @@ export const TextBtn = styled.button.attrs({
       ? props.theme.primary.main
       : props.secondary
         ? props.theme.secondary.main
-        : props.theme.text.regular};
+        : "rgba(0, 0, 0, .68)"};
 
  padding: ${props => props.theme.size[props.size].padding};
  &:hover{
@@ -338,7 +340,7 @@ export const TextBtn = styled.button.attrs({
             ? hexa(props.theme.primary.main, 0.8)
             : props.secondary
               ? hexa(props.theme.secondary.main, 0.8)
-              : props.theme.text.primary};
+              : "rgba(0, 0, 0, .85)"};
 
     border-color: transparent;
 
@@ -352,7 +354,7 @@ export const TextBtn = styled.button.attrs({
                     ? hexa(props.theme.primary.main, 0.8)
                     : props.secondary
                       ? hexa(props.theme.secondary.main, 0.8)
-                      : props.theme.text.primary};
+                      : "rgba(0, 0, 0, .85)"};
 border-color: transparent;
  }
 

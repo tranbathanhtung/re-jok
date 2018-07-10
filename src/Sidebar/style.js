@@ -62,7 +62,7 @@ export const StyledSidebar = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
 
-  background: #fff;
+  background: ${({theme}) => theme.background.default};
   outline: 0;
   transform: ${props =>
     props.openSidebar

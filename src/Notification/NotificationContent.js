@@ -59,7 +59,10 @@ type Props = {
 
   },
   /** Config Global Notification component**/
-  config: Object
+  config: {
+    position?: 'topRight' | 'topLeft' | 'topCenter' | 'bottomRight' | 'bottomLeft' | 'bottomCenter',
+    effect?: 'scale' | 'default'
+  }
 }
 
 

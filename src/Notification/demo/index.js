@@ -44,7 +44,7 @@ class NotificationDemo extends React.Component<{}>{
       key,
       color: "#9c27b0",
       timeout: 'none',
-      customClose: <Button onClick={() => Notification.close(key)} size="small" variant="inverted" primary>Confirm</Button>,
+      customClose: <Button onClick={() => Notification.close(key)} size="small" primary>Confirm</Button>,
       // onClose: ()=> alert("Closed"),
       // onShow: () => alert("Showed")
 

@@ -10,7 +10,7 @@ import {
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 
-import { noop, generalId } from '../helpers';
+import { generalId } from '../helpers';
 
 import store from './store';
 

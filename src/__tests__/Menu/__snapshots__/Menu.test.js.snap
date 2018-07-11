@@ -1,0 +1,1659 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> should render Menu 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
+}
+
+.c0::before {
+  content: "";
+  display: table;
+}
+
+.c0::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c3 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c3:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c1 {
+  color: rgba(0,0,0,0.48);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: .8rem 1.6rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c1:first-child {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c4 {
+  display: block;
+  height: .1rem;
+  width: 100%;
+  margin: 1.6rem 0;
+  clear: both;
+  vertical-align: middle;
+  position: relative;
+  top: -.06em;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0,0,0,.64);
+  box-sizing: border-box;
+  list-style: none;
+  background: #e8e8e8;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className=""
+  >
+    <div
+      className="c1"
+      style={
+        Object {
+          "paddingLeft": 16,
+        }
+      }
+    >
+      Header
+    </div>
+    <ul
+      className="c2"
+    >
+      <li
+        className="c3"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingLeft": 24,
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          Item 1
+        </span>
+      </li>
+      <li
+        className="c3"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingLeft": 24,
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          Item 2
+        </span>
+      </li>
+      <li
+        className="c3"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingLeft": 24,
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          Item 3
+        </span>
+      </li>
+    </ul>
+  </li>
+  <div
+    className="c4"
+    type="horizontal"
+  />
+  <li
+    className="c3"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Item 4
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<Menu /> should render Menu controlled background, active color 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #545c64;
+  color: #fff;
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
+}
+
+.c0::before {
+  content: "";
+  display: table;
+}
+
+.c0::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c5 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c5:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  background-color: #ffd04b;
+  box-shadow: 0 1.2rem 2rem -1rem rgba(255,208,75,0.28),0 .4rem 2rem 0 rgba(0,0,0,0.12),0 .7rem .8rem -.5rem rgba(255,208,75,0.2);
+  color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c4 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  opacity: .25;
+  cursor: not-allowed;
+}
+
+.c2 {
+  min-width: 1.4rem;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.c6 {
+  padding-bottom: 0.01px;
+  -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
+  transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.c7 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  -webkit-transition: -webkit-transform .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  -webkit-transition: -webkit-transform .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c11 {
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  border-radius: 0;
+}
+
+.c9 {
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  border-radius: 0;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-pied-piper-pp"
+        />
+      </div>
+    </div>
+    <span
+      className=""
+    >
+      Option 1
+    </span>
+  </li>
+  <li
+    className="c4"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-pied-piper"
+        />
+      </div>
+    </div>
+    <span
+      className=""
+    >
+      Option 2
+    </span>
+  </li>
+  <li
+    className="c5"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-pied-piper-alt"
+        />
+      </div>
+    </div>
+    <span
+      className=""
+    >
+      Option 2
+    </span>
+  </li>
+  <li
+    className="c6"
+  >
+    <div
+      className="c7"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingLeft": 24,
+        }
+      }
+    >
+      <span>
+        <div
+          className="c3"
+          color={undefined}
+          style={
+            Object {
+              "marginRight": 10,
+            }
+          }
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-envelope"
+          />
+        </div>
+        <span>
+          Option 1
+        </span>
+      </span>
+      <div
+        className="c8"
+        open={true}
+      >
+        <div
+          className="c3"
+          color={undefined}
+          style={undefined}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-angle-down"
+          />
+        </div>
+      </div>
+    </div>
+    <ul
+      className="c9"
+      onTransitionEnd={[Function]}
+      open={true}
+    >
+      <div>
+        <li
+          className="c5"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 48,
+            }
+          }
+        >
+          Option 5
+        </li>
+        <li
+          className="c5"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 48,
+            }
+          }
+        >
+          Option 6
+        </li>
+        <li
+          className="c5"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 48,
+            }
+          }
+        >
+          Option 7
+        </li>
+        <li
+          className="c5"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 48,
+            }
+          }
+        >
+          Option 8
+        </li>
+      </div>
+    </ul>
+  </li>
+  <li
+    className="c6"
+  >
+    <div
+      className="c7"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingLeft": 24,
+        }
+      }
+    >
+      <span>
+        <div
+          className="c3"
+          color={undefined}
+          style={
+            Object {
+              "marginRight": 10,
+            }
+          }
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-apple"
+          />
+        </div>
+        <span>
+          Option 2
+        </span>
+      </span>
+      <div
+        className="c10"
+        open={false}
+      >
+        <div
+          className="c3"
+          color={undefined}
+          style={undefined}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-angle-down"
+          />
+        </div>
+      </div>
+    </div>
+    <ul
+      className="c11"
+      onTransitionEnd={[Function]}
+      open={false}
+    >
+      <div>
+        <li
+          className="c5"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 48,
+            }
+          }
+        >
+          Option 9
+        </li>
+        <li
+          className="c5"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 48,
+            }
+          }
+        >
+          Option 10
+        </li>
+        <li
+          className="c6"
+        >
+          <div
+            className="c7"
+            onClick={[Function]}
+            style={
+              Object {
+                "paddingLeft": 48,
+              }
+            }
+          >
+            Submenu
+            <div
+              className="c10"
+              open={false}
+            >
+              <div
+                className="c3"
+                color={undefined}
+                style={undefined}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-angle-down"
+                />
+              </div>
+            </div>
+          </div>
+          <ul
+            className="c11"
+            onTransitionEnd={[Function]}
+            open={false}
+          >
+            <div>
+              <li
+                className="c5"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "paddingLeft": 72,
+                  }
+                }
+              >
+                Option 11
+              </li>
+              <li
+                className="c5"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "paddingLeft": 72,
+                  }
+                }
+              >
+                Option 12
+              </li>
+            </div>
+          </ul>
+        </li>
+      </div>
+    </ul>
+  </li>
+</ul>
+`;
+
+exports[`<Menu /> should render Menu has active background item 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
+}
+
+.c0::before {
+  content: "";
+  display: table;
+}
+
+.c0::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c2 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  background-color: #1c8ffb;
+  box-shadow: 0 1.2rem 2rem -1rem rgba(28,143,251,0.28),0 .4rem 2rem 0 rgba(0,0,0,.12),0 .7rem .8rem -.5rem rgba(28,143,251,0.2);
+  color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 1
+    </span>
+  </li>
+  <li
+    className="c2"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<Menu /> should render Menu has active default item 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
+}
+
+.c0::before {
+  content: "";
+  display: table;
+}
+
+.c0::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c2 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  color: #1c8ffb;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 1
+    </span>
+  </li>
+  <li
+    className="c2"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 2
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
+}
+
+.c0::before {
+  content: "";
+  display: table;
+}
+
+.c0::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c2 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  background-color: #1c8ffb;
+  box-shadow: 0 1.2rem 2rem -1rem rgba(28,143,251,0.28),0 .4rem 2rem 0 rgba(0,0,0,.12),0 .7rem .8rem -.5rem rgba(28,143,251,0.2);
+  color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c8 {
+  color: rgba(0,0,0,0.48);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: .8rem 1.6rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c8:first-child {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c9 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c3 {
+  padding-bottom: 0.01px;
+  -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
+  transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.c4 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  -webkit-transition: -webkit-transform .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  -webkit-transition: -webkit-transform .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c11 {
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  border-radius: 0;
+}
+
+.c7 {
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  border-radius: 0;
+}
+
+.c6 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 1
+    </span>
+  </li>
+  <li
+    className="c2"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 2
+    </span>
+  </li>
+  <li
+    className="c3"
+  >
+    <div
+      className="c4"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingLeft": 24,
+        }
+      }
+    >
+      <span>
+        Option 1
+      </span>
+      <div
+        className="c5"
+        open={true}
+      >
+        <div
+          className="c6"
+          color={undefined}
+          style={undefined}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-angle-down"
+          />
+        </div>
+      </div>
+    </div>
+    <ul
+      className="c7"
+      onTransitionEnd={[Function]}
+      open={true}
+    >
+      <div>
+        <li
+          className=""
+        >
+          <div
+            className="c8"
+            style={
+              Object {
+                "paddingLeft": 32,
+              }
+            }
+          >
+            Item 2
+          </div>
+          <ul
+            className="c9"
+          >
+            <li
+              className="c1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 48,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Option 5
+              </span>
+            </li>
+            <li
+              className="c1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 48,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Option 6
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li
+          className="c3"
+        >
+          <div
+            className="c4"
+            onClick={[Function]}
+            style={
+              Object {
+                "paddingLeft": 48,
+              }
+            }
+          >
+            <span>
+              Option 1 Inner
+            </span>
+            <div
+              className="c10"
+              open={false}
+            >
+              <div
+                className="c6"
+                color={undefined}
+                style={undefined}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-angle-down"
+                />
+              </div>
+            </div>
+          </div>
+          <ul
+            className="c11"
+            onTransitionEnd={[Function]}
+            open={false}
+          >
+            <div>
+              <li
+                className="c1"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "paddingLeft": 72,
+                  }
+                }
+              >
+                <span
+                  className=""
+                >
+                  Option 7
+                </span>
+              </li>
+              <li
+                className="c1"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "paddingLeft": 72,
+                  }
+                }
+              >
+                <span
+                  className=""
+                >
+                  Option 8
+                </span>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </div>
+    </ul>
+  </li>
+</ul>
+`;
+
+exports[`<Menu /> should render Menu has sub menu 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: 0.1rem solid #e6e6e6;
+}
+
+.c0::before {
+  content: "";
+  display: table;
+}
+
+.c0::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c2 {
+  color: rgba(0,0,0,0.48);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: .8rem 1.6rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c2:first-child {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c3 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c4 {
+  padding-bottom: 0.01px;
+  -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
+  transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.c5 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+}
+
+.c6 {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  -webkit-transition: -webkit-transform .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.c8 {
+  padding: 0;
+  border: 0;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  border-radius: 0;
+}
+
+.c7 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 1
+    </span>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+    style={
+      Object {
+        "paddingLeft": 24,
+      }
+    }
+  >
+    <span
+      className=""
+    >
+      Option 2
+    </span>
+  </li>
+  <li
+    className=""
+  >
+    <div
+      className="c2"
+      style={
+        Object {
+          "paddingLeft": 16,
+        }
+      }
+    >
+      Item 1
+    </div>
+    <ul
+      className="c3"
+    >
+      <li
+        className="c1"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingLeft": 24,
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          Option 3
+        </span>
+      </li>
+      <li
+        className="c1"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingLeft": 24,
+          }
+        }
+      >
+        <span
+          className=""
+        >
+          Option 4
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li
+    className="c4"
+  >
+    <div
+      className="c5"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingLeft": 24,
+        }
+      }
+    >
+      <span>
+        Option 1
+      </span>
+      <div
+        className="c6"
+        open={false}
+      >
+        <div
+          className="c7"
+          color={undefined}
+          style={undefined}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-angle-down"
+          />
+        </div>
+      </div>
+    </div>
+    <ul
+      className="c8"
+      onTransitionEnd={[Function]}
+      open={false}
+    >
+      <div>
+        <li
+          className=""
+        >
+          <div
+            className="c2"
+            style={
+              Object {
+                "paddingLeft": 32,
+              }
+            }
+          >
+            Item 2
+          </div>
+          <ul
+            className="c3"
+          >
+            <li
+              className="c1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 48,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Option 5
+              </span>
+            </li>
+            <li
+              className="c1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 48,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Option 6
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li
+          className="c4"
+        >
+          <div
+            className="c5"
+            onClick={[Function]}
+            style={
+              Object {
+                "paddingLeft": 48,
+              }
+            }
+          >
+            <span>
+              Option 1 Inner
+            </span>
+            <div
+              className="c6"
+              open={false}
+            >
+              <div
+                className="c7"
+                color={undefined}
+                style={undefined}
+              >
+                <span
+                  aria-hidden={true}
+                  className="fa fa-angle-down"
+                />
+              </div>
+            </div>
+          </div>
+          <ul
+            className="c8"
+            onTransitionEnd={[Function]}
+            open={false}
+          >
+            <div>
+              <li
+                className="c1"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "paddingLeft": 72,
+                  }
+                }
+              >
+                <span
+                  className=""
+                >
+                  Option 7
+                </span>
+              </li>
+              <li
+                className="c1"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "paddingLeft": 72,
+                  }
+                }
+              >
+                <span
+                  className=""
+                >
+                  Option 8
+                </span>
+              </li>
+            </div>
+          </ul>
+        </li>
+      </div>
+    </ul>
+  </li>
+  <li
+    className="c4"
+  >
+    <div
+      className="c5"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingLeft": 24,
+        }
+      }
+    >
+      <span>
+        Option 2
+      </span>
+      <div
+        className="c6"
+        open={false}
+      >
+        <div
+          className="c7"
+          color={undefined}
+          style={undefined}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-angle-down"
+          />
+        </div>
+      </div>
+    </div>
+    <ul
+      className="c8"
+      onTransitionEnd={[Function]}
+      open={false}
+    >
+      <div>
+        <li
+          className=""
+        >
+          <div
+            className="c2"
+            style={
+              Object {
+                "paddingLeft": 32,
+              }
+            }
+          >
+            Item 3
+          </div>
+          <ul
+            className="c3"
+          >
+            <li
+              className="c1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 48,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Option 9
+              </span>
+            </li>
+            <li
+              className="c1"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 48,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Option 10
+              </span>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </ul>
+  </li>
+</ul>
+`;

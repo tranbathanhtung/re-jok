@@ -15,7 +15,7 @@ export const StyledCard = styled.div `
 
   display: flex;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: ${({theme}) => `.1rem solid ${theme.border.primary}`};
   border-radius: .5rem;
   max-width: 100%;
 
@@ -122,7 +122,7 @@ props => props.hoverable
   ? css `
        &:hover{
          box-shadow: 0 .2rem .8rem rgba(0,0,0,.09);
-         border-color: rgba(0,0,0,.09);
+         border-color: ${({theme}) => theme.border.primary};
        }
      `
   : null}
@@ -296,7 +296,7 @@ export const PlaceHolder = styled.div `
     animation: 1s ${placeHolderShimmer} linear infinite;
   }
   & div {
-    
+
     background: ${({theme}) => theme.background.default};
     position: absolute;
     right: 0;

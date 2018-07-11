@@ -15,11 +15,11 @@ import { generalId, noop } from '../helpers';
 
 
 type Props = {
-  /**Override style of Radio**/
+  /**Add style of Radio**/
   style?: Object,
   /** Add more class to Radio**/
   className?: string,
-  /****/
+  /**Children could be anything**/
   children?: any,
   /** onChange callback function... params is (e: Event, props: Object)**/
   onChange: Function,

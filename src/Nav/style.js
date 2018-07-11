@@ -24,7 +24,7 @@ const baseNavBar = css`
 `
 
 export const StyledNavBarLeft = styled.div`
-  #{baseNavBar};
+  ${baseNavBar};
 
 `
 
@@ -50,7 +50,7 @@ export const StyledNavBar = styled.nav`
   position: relative;
   min-height: 7rem;
   font-size: 1.4rem;
-  
+
   padding: 1rem 0;
   z-index: ${({theme}) => theme.zIndex.nav};
 
@@ -63,9 +63,24 @@ export const StyledNavBar = styled.nav`
        color: ${({theme}) => theme.text.regular};
     `
     : css`
-    background-color: ${props => props.backgroundColor ? props.backgroundColor : props.theme.background.default};
-    color: ${props => props.backgroundColor ? props.theme.text.default : props.theme.text.regular};
-    box-shadow: ${props => props.backgroundColor ? `0 4px 20px 0 rgba(0,0,0,0.14), 0 7px 12px -5px ${hexa(props.backgroundColor, 0.46)}` : "0 4px 18px 0 rgba(0,0,0,0.12), 0 7px 10px -5px rgba(0,0,0,0.15)"};
+
+    background-color: ${props =>
+      props.primary
+      ? props.theme.primary.main
+      : props.secondary
+      ? props.theme.secondary.main
+      : props.backgroundColor
+      ? props.backgroundColor
+      : props.theme.background.default};
+    color: ${props => props.backgroundColor || props.primary || props.secondary ? props.theme.text.default : props.theme.text.regular};
+    box-shadow: ${props =>
+      props.primary
+      ? `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(props.theme.primary.main, 0.46)}`
+      : props.secondary
+      ? `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(props.theme.secondary.main, 0.46)}` 
+      : props.backgroundColor
+      ? `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(props.backgroundColor, 0.46)}`
+      : "0 .4rem 1.8rem 0 rgba(0,0,0,0.12), 0 .7rem 1rem -.5rem rgba(0,0,0,0.15)"};
 
     `
   }

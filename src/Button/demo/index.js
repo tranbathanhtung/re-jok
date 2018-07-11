@@ -227,7 +227,7 @@ primary
 >Button</Button>
 </div>
 
-<div style={{display: "flex"}}>
+<div style={{display: "flex", marginBottom: 10}}>
   <TextButton size="small">Button</TextButton>
 <TextButton color="#f44336" hoverable colorWhenHover="#03a87c" loading>Button</TextButton>
   <TextButton size="medium">Button</TextButton>

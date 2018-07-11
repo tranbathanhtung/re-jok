@@ -29,10 +29,12 @@ export const StyledRadioWrapper = styled.div`
 
 export const StyledRadioButton = styled.span`
   height: 1.6rem;
+
   width: 1.6rem;
 
-  border:  ${props => props.checked ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : "1px solid #e8e8e8"};
+  border:  ${props => props.checked ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : `1px solid ${props.theme.border.primary}`};
   border-radius: 50%;
+  background: #fff;
   display: inline-block;
   position: absolute;
   left: 0;

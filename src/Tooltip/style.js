@@ -264,7 +264,7 @@ export const StyledTooltip = styled.div `
      box-shadow: 0 .2rem .8rem rgba(0,0,0,.15);
      min-height: 3.2rem;
      content: ${props => props.label
-      ? `'${CSS.escape(props.label)}'`
+      ? `'${props.label}'`
       : "''"};;
 
 

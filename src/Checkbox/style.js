@@ -18,7 +18,7 @@ cursor: pointer;
 const baseCheckboxButton = css`
 height: 1.6rem;
 width: 1.6rem;
-border:  ${props => props.checked || props.indeterminate ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : "1px solid #e8e8e8"};
+border:  ${props => props.checked || props.indeterminate ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : `1px solid ${props.theme.border.primary}`};
 display: inline-block;
 position: absolute;
 left: 0;

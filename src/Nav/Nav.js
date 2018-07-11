@@ -23,6 +23,10 @@ type Props = {
   elementCenter?: any,
   /** Set navbar transparent or not**/
   transparent: boolean,
+  /** Set backgroundColor primary or not**/
+  primary: boolean,
+  /** Set backgroundColor secondary or not**/
+  secondary: boolean,
   /** Set background color of navbar**/
   backgroundColor?: string,
   /** Set display none right or left element**/
@@ -34,6 +38,8 @@ type Props = {
 const defaultProps = {
   transparent: false,
   responsive: 1000,
+  primary: false,
+  secondary: false
 }
 
 

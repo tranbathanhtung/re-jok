@@ -97,7 +97,7 @@ class FormDemo extends React.Component<{}, State>{
     return (
       <Form onSubmit={this.onSubmit}>
         {/* Basic Input */}
-        <Form.Item
+        {/* <Form.Item
           label="Username"
           required
           >
@@ -124,6 +124,15 @@ class FormDemo extends React.Component<{}, State>{
            icon="rocket"
            iconPosition="right"
             disabled
+           placeholder="Hello World"/>
+       </Form.Item> */}
+
+       <Form.Item
+         >
+         <Input
+           addonBefore="Http://"
+           addonAfter=".com"
+
            placeholder="Hello World"/>
        </Form.Item>
 

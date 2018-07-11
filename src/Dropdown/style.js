@@ -33,7 +33,7 @@ export const StyledDropdown = styled.div`
     z-index: ${({theme}) => theme.zIndex.dropDown};
     padding: 1rem 0;
     background-color: ${({theme}) => theme.background.default};
-    border: .1rem solid #ebeef5;
+    border: ${({theme}) => theme.border.primary};
     font-size: 1.4rem;
     border-radius: .4rem;
     box-shadow: 0 .5rem 1.2rem rgba(0,0,0,0.15);

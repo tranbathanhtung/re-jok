@@ -31,7 +31,7 @@ const returnPostionTab = props => {
     case 'top':
       return `
         order: 0;
-        border-bottom: .1rem solid #e5e5e5;
+        border-bottom: .1rem solid ${props.theme.border.primary};
         margin: 0 0 1.6rem 0;
         flex-grow: 1;
         flex-direction: row;
@@ -43,7 +43,7 @@ const returnPostionTab = props => {
     case 'bottom':
       return `
         order: 1;
-        border-top: .1rem solid #e5e5e5;
+        border-top: .1rem solid ${props.theme.border.primary};
         margin: 1.6rem 0 0 0;
         flex-grow: 1;
         flex-direction: row;
@@ -53,7 +53,7 @@ const returnPostionTab = props => {
    case 'left':
         return `
           order: 0;
-          border-right: .1rem solid #e5e5e5;
+          border-right: .1rem solid ${props.theme.border.primary};
           margin: 0 1.6rem 0 0;
           flex-grow: 0;
           flex-direction: column;
@@ -64,7 +64,7 @@ const returnPostionTab = props => {
     case 'right':
        return `
          order: 1;
-         border-left: .1rem solid #e5e5e5;
+         border-left: .1rem solid ${props.theme.border.primary};
          margin: 0 0 0 1.6rem;
          flex-grow: 0;
          flex-direction: column;
@@ -188,4 +188,5 @@ export const StyledTabItemInner = styled.div`
 
 export const StyledTabContent = styled.div`
     flex: 1;
+    color: ${ ({theme})=> theme.text.regular };
 `

@@ -88,7 +88,7 @@ padding: 1.5rem 3rem;
 border-radius: .4rem .4rem 0 0;
 background: ${({theme}) => theme.background.default};
 color: ${({theme}) => theme.text.regular};
-border-bottom: .1rem solid #e5e5e5;
+border-bottom: ${({theme}) => `.1rem solid ${theme.border.primary}`};
 `
 
 export const StyledModalHeaderTitle = styled.div`
@@ -135,7 +135,7 @@ export const StyledAlertDescription = styled.div`
 //============= Modal Footer ==============
 export const StyledModalAction = styled.div`
   padding: 1.5rem 3rem;
-  border-top: .1rem solid #e5e5e5;
+  border-top: ${({theme}) => `.1rem solid ${theme.border.primary}`};
   background: ${({theme}) => theme.background.default};
   display: inline-flex;
   justify-content: flex-end;

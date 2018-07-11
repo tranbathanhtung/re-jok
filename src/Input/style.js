@@ -1,7 +1,5 @@
 import styled, {css} from 'styled-components';
 
-
-
 export const StyledInputWrapper = styled.div`
    box-sizing: border-box;
    margin: 0;
@@ -24,7 +22,7 @@ padding: ${props => props.theme.size[props.size].padding};
 font-size: ${props => props.theme.size[props.size].fontSize};
 
 color: ${({theme}) => theme.text.regular};
-
+${'' /* color: rgba(0,0,0,.64); */}
 background-image: none;
 
 
@@ -41,7 +39,7 @@ ${
     }
     `
     : css`
-    border: .1rem solid #e5e5e5;
+    border: ${({theme}) => `.1rem solid ${theme.border.primary}`};
     background: #fff;
     border-radius: ${props => props.addonAfter || props.addonBefore ? "" : ".4rem"};
     border-color: ${({theme, validateStatus, underline}) => validateStatus && !underline && theme[validateStatus].main};
@@ -49,7 +47,7 @@ ${
 
     &:hover{
 
-       border-color: ${({theme, validateStatus, underline}) =>validateStatus && !underline ? theme[validateStatus].main : "#c0c4cc"};
+       border-color: ${({theme, validateStatus, underline}) =>validateStatus && !underline ? theme[validateStatus].main : `#c0c4cc`};
        border-bottom: ${({theme, validateStatus, underline}) => validateStatus && underline && `.2rem solid ${theme[validateStatus].main}`};
 
 
@@ -128,7 +126,7 @@ export const StyledIconInput = styled.div`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: ${({theme}) => theme.text.hint};
+    color: ${({theme}) => theme.text.regular};
     pointer-events: none;
 `
 
@@ -141,8 +139,8 @@ const baseAddon = css`
   line-height: 1;
   color: ${({theme}) => theme.text.regular};
   text-align: center;
-  background-color: #fafafa;
-  border: .1rem solid #d9d9d9;
+  background-color: ${({theme}) => theme.background.primary};
+  border: ${({theme}) => `.1rem solid ${theme.border.primary}`};
   position: relative;
   transition: all .3s;
   display: table-cell;

@@ -27,7 +27,7 @@ export const StyledCollapseItemTitle = styled.div`
       background-color: ${({theme}) => theme.background.default};
       color: ${ ({theme, disabled}) => disabled ? theme.text.hint : theme.text.regular};
       cursor: ${ ({disabled}) => disabled ? 'not-allowed' : 'pointer'};
-      border-bottom: .1rem solid #ebeef5;
+      border-bottom: ${props => `.1rem solid ${props.theme.border.primary}`};
       font-size: 1.4rem;
       font-weight: 500;
       transition: border-bottom-color .3s;

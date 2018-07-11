@@ -27,7 +27,7 @@ export const StyledMenu = styled.ul`
 
   font-size: 1.4rem;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: ${({theme}) => `.1rem solid ${theme.border.primary}`};
 
 
   &::before{

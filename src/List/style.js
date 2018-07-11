@@ -20,7 +20,7 @@ export const StyledListItem = styled.div.attrs({
      props.horizontal
      ? null
      : css`
-     border-bottom: ${props => props.divided ? ".1rem solid #e8e8e8" : "none"};
+     border-bottom: ${props => props.divided ? `.1rem solid ${props.theme.border.primary}` : "none"};
 
      `
   }

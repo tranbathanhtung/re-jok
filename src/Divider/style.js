@@ -33,11 +33,11 @@ props => !props.hasChild || props.type === "vertical"
     box-sizing: border-box;
 
     list-style: none;
-    background: #e8e8e8;
+    background: ${props => props.theme.border.primary};
     ${
 props => props.dashed && css `
       background: none;
-      border-top: .1rem dashed #e8e8e8;
+      border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
       `}
     ` : css `
     display: table;
@@ -58,7 +58,7 @@ props => props.dashed && css `
               position: relative;
               top: 50%;
               width: 50%;
-              border-top: 1px solid #e8e8e8;
+              border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
               transform: translateY(50%);
              ${
                 props => props.textPosition === "left"
@@ -79,7 +79,7 @@ display: table-cell;
 position: relative;
 top: 50%;
 width: 50%;
-border-top: 1px solid #e8e8e8;
+border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
 transform: translateY(50%);
 ${
 props => props.textPosition === "left"

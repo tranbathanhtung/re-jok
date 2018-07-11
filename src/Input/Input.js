@@ -145,11 +145,10 @@ class Input extends React.Component<Props> {
       onChange,
       icon,
       iconPosition,
-      addonAfter,
       textarea,
-      addonBefore,
       ...rest
     } = this.props;
+
 
     const props : Object = rest;
 

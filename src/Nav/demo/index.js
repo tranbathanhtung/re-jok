@@ -128,6 +128,14 @@ class NavDemo extends React.Component<{}, State>{
           Left Element
         </Nav>
 
+        <Nav primary elementRight={<ActionRight/>}>
+          Left Element
+        </Nav>
+
+        <Nav secondary elementRight={<ActionRight/>}>
+          Left Element
+        </Nav>
+
         <Nav
           backgroundColor="#9c27b0"
           elementResponsive={<Button style={{color: "#fff"}} onClick={() => this.toggleSidebar()} icon="bars" variant="icon"/>}

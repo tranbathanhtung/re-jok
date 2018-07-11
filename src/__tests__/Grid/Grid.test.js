@@ -1,7 +1,7 @@
 import React from 'react';
 import Row from '../../Grid/Row';
 import Col from '../../Grid/Col';
-import '../../index.css';
+
 
 import {defaultTheme} from '../../theme';
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';

@@ -14,7 +14,7 @@ exports[`<Card /> should render 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -24,7 +24,7 @@ exports[`<Card /> should render 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: 33rem;
-  background: #fff;
+  background: #fafafa;
   height: 100%;
   padding: 0;
 }
@@ -51,7 +51,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -61,7 +61,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: 33rem;
-  background: #fff;
+  background: #fafafa;
   height: 100%;
   padding: 0;
 }
@@ -119,6 +119,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  display: inline-block;
 }
 
 .c3 {
@@ -150,9 +151,9 @@ exports[`<Card /> should render with Card Action 1`] = `
   text-align: center;
   font-size: 1.8rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 1.4rem 2.7rem;
   border-radius: .6rem;
@@ -160,12 +161,12 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   padding: 0;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .c3 div + span,
@@ -225,9 +226,9 @@ exports[`<Card /> should render with Card Action 1`] = `
   text-align: center;
   font-size: 1.8rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 1.4rem 2.7rem;
   border-radius: .6rem;
@@ -235,12 +236,12 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   padding: 0;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .c5 div + span,
@@ -300,9 +301,9 @@ exports[`<Card /> should render with Card Action 1`] = `
   text-align: center;
   font-size: 1.8rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 1.4rem 2.7rem;
   border-radius: .6rem;
@@ -310,12 +311,12 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   padding: 0;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .c7 div + span,
@@ -367,11 +368,11 @@ exports[`<Card /> should render with Card Action 1`] = `
         <div
           className="c4"
           color={undefined}
+          style={undefined}
         >
           <span
             aria-hidden={true}
             className="fa fa-thumbs-up"
-            style={undefined}
           />
         </div>
       </button>
@@ -386,11 +387,11 @@ exports[`<Card /> should render with Card Action 1`] = `
         <div
           className="c4"
           color={undefined}
+          style={undefined}
         >
           <span
             aria-hidden={true}
             className="fa fa-comments"
-            style={undefined}
           />
         </div>
       </button>
@@ -409,11 +410,11 @@ exports[`<Card /> should render with Card Action 1`] = `
         <div
           className="c4"
           color={undefined}
+          style={undefined}
         >
           <span
             aria-hidden={true}
             className="fa fa-bookmark"
-            style={undefined}
           />
         </div>
       </button>
@@ -436,7 +437,7 @@ exports[`<Card /> should render with Card Content 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -446,14 +447,14 @@ exports[`<Card /> should render with Card Content 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: 33rem;
-  background: #fff;
+  background: #fafafa;
   height: 100%;
   padding: 0;
 }
 
 .c1 {
   clear: both;
-  color: rgba(0,0,0,.68);
+  color: rgba(0,0,0,.64);
   padding: 1.4rem;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -533,7 +534,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -543,7 +544,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: 33rem;
-  background: #fff;
+  background: #fafafa;
   height: 100%;
   padding: 0;
 }
@@ -644,10 +645,10 @@ exports[`<Card /> should render with Card Header 1`] = `
   list-style: none;
   text-transform: uppercase;
   box-sizing: border-box;
-  margin-right: 0.8rem;
+  margin-right: .8rem;
   background: transparent;
   color: #fafafa;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   width: 3.2rem;
   height: 3.2rem;
@@ -707,9 +708,9 @@ exports[`<Card /> should render with Card Header 1`] = `
   text-align: center;
   font-size: 1.2rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.5rem 0.9rem;
   border-radius: .2rem;
@@ -824,7 +825,7 @@ exports[`<Card /> should render with Card Loading 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -860,7 +861,7 @@ exports[`<Card /> should render with Card Loading 1`] = `
 }
 
 .c1 div {
-  background: #fff;
+  background: #fafafa;
   position: absolute;
   right: 0;
 }
@@ -1143,7 +1144,7 @@ exports[`<Card /> should render with Card Media 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -1153,7 +1154,7 @@ exports[`<Card /> should render with Card Media 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: 33rem;
-  background: #fff;
+  background: #fafafa;
   height: 100%;
   padding: 0;
 }
@@ -1192,7 +1193,7 @@ exports[`<Card /> should render with full card option 1`] = `
   max-width: 100%;
   position: relative;
   font-size: 1.4rem;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
   -webkit-transition: all .3s;
@@ -1233,7 +1234,7 @@ exports[`<Card /> should render with full card option 1`] = `
 }
 
 .c1 div {
-  background: #fff;
+  background: #fafafa;
   position: absolute;
   right: 0;
 }

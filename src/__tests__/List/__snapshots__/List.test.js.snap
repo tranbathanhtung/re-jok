@@ -9,7 +9,7 @@ exports[`<List /> basic render 1`] = `
   margin: 0;
   padding: 0;
   position: relative;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   box-sizing: border-box;
 }
 
@@ -30,7 +30,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c2 {
@@ -46,7 +46,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c3 {
@@ -62,7 +62,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c4 {
@@ -78,7 +78,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c5 {
@@ -94,7 +94,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c6 {
@@ -110,7 +110,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c7 {
@@ -126,7 +126,7 @@ exports[`<List /> basic render 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 <div
@@ -207,7 +207,7 @@ exports[`<List /> should render full control list 1`] = `
 }
 
 .c8 {
-  color: rgba(0,0,0,.68);
+  color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 400;
@@ -267,10 +267,10 @@ exports[`<List /> should render full control list 1`] = `
   list-style: none;
   text-transform: uppercase;
   box-sizing: border-box;
-  margin-right: 0.8rem;
+  margin-right: .8rem;
   background: transparent;
   color: #fafafa;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   width: 3.2rem;
   height: 3.2rem;
@@ -309,7 +309,7 @@ exports[`<List /> should render full control list 1`] = `
   margin: 0;
   padding: 0;
   position: relative;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   box-sizing: border-box;
 }
 
@@ -330,7 +330,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: .1rem solid #e8e8e8;
-  background: #fff;
+  background: transparent;
 }
 
 .c2 {
@@ -355,7 +355,7 @@ exports[`<List /> should render full control list 1`] = `
   margin: 0;
   padding: 0;
   position: relative;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   box-sizing: border-box;
 }
 
@@ -376,7 +376,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c11 {
@@ -406,7 +406,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c14 {
@@ -431,7 +431,7 @@ exports[`<List /> should render full control list 1`] = `
   margin: 0;
   padding: 0;
   position: relative;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   box-sizing: border-box;
 }
 
@@ -452,7 +452,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c17 {
@@ -482,7 +482,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c19 {
@@ -512,7 +512,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c21 {
@@ -542,7 +542,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: none;
-  background: #fff;
+  background: transparent;
 }
 
 .c23 {
@@ -586,20 +586,20 @@ exports[`<List /> should render full control list 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: rgba(0,0,0,0);
+  background-color: #fff;
   border-color: rgba(0,0,0,.16);
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
 }
 
 .c24 div + span,
@@ -652,7 +652,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: .1rem solid #e8e8e8;
-  background: #fff;
+  background: transparent;
 }
 
 .c27 {
@@ -696,20 +696,20 @@ exports[`<List /> should render full control list 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: rgba(0,0,0,0);
+  background-color: #fff;
   border-color: rgba(0,0,0,.16);
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
 }
 
 .c28 div + span,
@@ -762,7 +762,7 @@ exports[`<List /> should render full control list 1`] = `
   line-height: 1.8rem;
   cursor: default;
   border-bottom: .1rem solid #e8e8e8;
-  background: #fff;
+  background: transparent;
 }
 
 .c30 {
@@ -806,20 +806,20 @@ exports[`<List /> should render full control list 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: rgba(0,0,0,0);
+  background-color: #fff;
   border-color: rgba(0,0,0,.16);
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
 }
 
 .c31 div + span,
@@ -1320,7 +1320,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   margin: 0;
   padding: 0;
   position: relative;
-  color: rgba(0,0,0,.65);
+  color: rgba(0,0,0,.64);
   box-sizing: border-box;
 }
 
@@ -1347,7 +1347,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 .c2 {
@@ -1362,7 +1362,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 .c3 {
@@ -1377,7 +1377,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 .c4 {
@@ -1392,7 +1392,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 .c5 {
@@ -1407,7 +1407,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 .c6 {
@@ -1422,7 +1422,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 .c7 {
@@ -1437,7 +1437,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   padding: 1rem 1rem;
   line-height: 1.8rem;
   cursor: default;
-  background: #fff;
+  background: transparent;
 }
 
 <div

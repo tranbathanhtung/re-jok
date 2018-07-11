@@ -1,12 +1,12 @@
 import React from 'react';
-import Card from '../../Card/Card'
-import Avatar from '../../Avatar/Avatar'
-import Button from '../../Button/Button'
-import {defaultTheme} from '../../theme'
+import Card from '../../Card/Card';
+import Avatar from '../../Avatar/Avatar';
+import Button from '../../Button/Button';
+import {defaultTheme} from '../../theme';
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
 
-import 'jest-enzyme'
-import 'jest-styled-components'
+import 'jest-enzyme';
+import 'jest-styled-components';
 
 // This is just Snap shot test
 

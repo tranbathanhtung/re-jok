@@ -59,6 +59,9 @@ export const defaultTheme = {
     paper: "#fff",
     default: "#fafafa"
   },
+  border: {
+    primary: '#e8e8e8'
+  },
   typography: {
     title: {
       fontSize: "2rem",
@@ -165,6 +168,9 @@ export const cloneTheme = {
   background: {
     paper: "#fff",
     default: "#fafafa"
+  },
+  border: {
+    primary: '#e8e8e8'
   },
   typography: {
     title: {

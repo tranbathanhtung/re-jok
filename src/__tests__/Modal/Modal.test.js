@@ -11,7 +11,7 @@ import 'jest-styled-components';
 
 // this's just snapshot test
 
-describe('<List />', () => {
+describe('<Modal />', () => {
   it('should render basic modal', () => {
     const tree = renderWithTheme(
       <Modal

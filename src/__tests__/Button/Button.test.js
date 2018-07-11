@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from '../../Button/Button'
-import {SpinnerButton} from '../../Button/style'
-import {defaultTheme} from '../../theme'
+import Button from '../../Button/Button';
+import {SpinnerButton} from '../../Button/style';
+import {defaultTheme} from '../../theme';
 import Icon from '../../Icon';
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
-import 'jest-enzyme'
-import 'jest-styled-components'
+import 'jest-enzyme';
+import 'jest-styled-components';
 
 
 describe('<Button />', () => {
@@ -62,7 +62,7 @@ it('renders a button size default', () => {
   expect(wrapper.props().size).toEqual('default');
 
   const tree = renderWithTheme(<Button size="default"/>).toJSON();
-  expect(tree).toHaveStyleRule('font-size', '1.6rem')
+  expect(tree).toHaveStyleRule('font-size', '1.4rem')
   expect(tree).toHaveStyleRule('padding', '0.9rem 1.8rem')
   expect(tree).toHaveStyleRule('line-height', '1.5')
   expect(tree).toHaveStyleRule('border-radius', '.4rem')
@@ -84,7 +84,7 @@ it('renders a button size large', () => {
   expect(wrapper.props().size).toEqual('large');
 
   const tree = renderWithTheme(<Button size="large"/>).toJSON();
-  expect(tree).toHaveStyleRule('font-size', '2.4rem')
+  expect(tree).toHaveStyleRule('font-size', '2rem')
   expect(tree).toHaveStyleRule('padding', '1.8rem 3.6rem')
   expect(tree).toHaveStyleRule('line-height', '2')
   expect(tree).toHaveStyleRule('border-radius', '.6rem')
@@ -154,9 +154,9 @@ it('renders a outline button', () => {
 
   const tree = renderWithTheme(<Button variant="outline"/>).toJSON();
 
-  expect(tree).toHaveStyleRule('background-color', 'rgba(0,0,0,0)')
+  expect(tree).toHaveStyleRule('background-color', '#fff')
   expect(tree).toHaveStyleRule('border-color', 'rgba(0,0,0,.16)')
-  expect(tree).toHaveStyleRule('color', '#0000008a')
+  expect(tree).toHaveStyleRule('color', 'rgba(0,0,0,.68)')
   expect(tree).toHaveStyleRule('border-color', 'rgba(0,0,0,.54)',{
     modifier: ':hover',
   })
@@ -172,9 +172,9 @@ it('renders a inverted button', () => {
 
   const tree = renderWithTheme(<Button variant="inverted"/>).toJSON();
 
-  expect(tree).toHaveStyleRule('background-color', 'rgba(0,0,0,0)')
+  expect(tree).toHaveStyleRule('background-color', '#fff')
   expect(tree).toHaveStyleRule('border-color', 'rgba(0,0,0,.16)')
-  expect(tree).toHaveStyleRule('color', '#0000008a')
+  expect(tree).toHaveStyleRule('color', 'rgba(0,0,0,.68)')
   expect(tree).toHaveStyleRule('background-color', 'rgba(0,0,0,.54)',{
     modifier: ':hover',
   })
@@ -194,7 +194,7 @@ it('renders a icon button', () => {
   expect(tree).toHaveStyleRule('border-radius', '50%')
   expect(tree).toHaveStyleRule('width', '3.2rem')
   expect(tree).toHaveStyleRule('height', '3.2rem')
-  expect(tree).toHaveStyleRule('background-color', '#fff')
+  expect(tree).toHaveStyleRule('background-color', 'transparent')
   expect(tree).toHaveStyleRule('border-color', 'rgba(0,0,0,.54)',{
     modifier: ':hover',
   })

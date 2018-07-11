@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<List /> should render alert modal 1`] = `
+exports[`<Modal /> should render alert modal 1`] = `
 .c5 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  display: inline-block;
 }
 
 .c8 {
@@ -12,6 +13,7 @@ exports[`<List /> should render alert modal 1`] = `
   -ms-flex-order: 0;
   order: 0;
   color: #f5222d;
+  display: inline-block;
 }
 
 .c0 {
@@ -67,7 +69,7 @@ exports[`<List /> should render alert modal 1`] = `
   z-index: 1501;
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0,0,0,0.2),0 2.4rem 3.8rem .3rem rgba(0,0,0,0.14),0 .9rem 4.6rem .8rem rgba(0,0,0,0.12);
   border-radius: .2rem;
-  background-color: #fff;
+  background-color: #fafafa;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -110,7 +112,7 @@ exports[`<List /> should render alert modal 1`] = `
 }
 
 .c9 {
-  color: rgba(0,0,0,.85);
+  color: rgba(0,0,0,0.85);
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.3;
@@ -133,6 +135,7 @@ exports[`<List /> should render alert modal 1`] = `
 
 .c3 {
   position: absolute !important;
+  color: rgba(0,0,0,0.85) !important;
   top: 1rem;
   right: 1rem;
 }
@@ -164,11 +167,11 @@ exports[`<List /> should render alert modal 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
@@ -176,12 +179,12 @@ exports[`<List /> should render alert modal 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
   padding: 0;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .c4 div + span,
@@ -242,11 +245,11 @@ exports[`<List /> should render alert modal 1`] = `
       <div
         className="c5"
         color={undefined}
+        style={undefined}
       >
         <span
           aria-hidden={true}
           className="fa fa-times"
-          style={undefined}
         />
       </div>
     </button>
@@ -260,11 +263,11 @@ exports[`<List /> should render alert modal 1`] = `
         <div
           className="c8"
           color="error"
+          style={undefined}
         >
           <span
             aria-hidden={true}
             className="fa fa-times-circle fa-lg"
-            style={undefined}
           />
         </div>
         <span
@@ -285,7 +288,7 @@ exports[`<List /> should render alert modal 1`] = `
 </div>
 `;
 
-exports[`<List /> should render basic modal 1`] = `
+exports[`<Modal /> should render basic modal 1`] = `
 .c8 {
   display: block;
   -webkit-flex: 0 0 auto;
@@ -352,7 +355,7 @@ exports[`<List /> should render basic modal 1`] = `
   z-index: 1501;
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0,0,0,0.2),0 2.4rem 3.8rem .3rem rgba(0,0,0,0.14),0 .9rem 4.6rem .8rem rgba(0,0,0,0.12);
   border-radius: .2rem;
-  background-color: #fff;
+  background-color: #fafafa;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -373,8 +376,8 @@ exports[`<List /> should render basic modal 1`] = `
 .c3 {
   padding: 1.5rem 3rem;
   border-radius: .4rem .4rem 0 0;
-  background: #fff;
-  color: rgba(0,0,0,.65);
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
   border-bottom: .1rem solid #e5e5e5;
 }
 
@@ -383,7 +386,7 @@ exports[`<List /> should render basic modal 1`] = `
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 500;
-  color: rgba(0,0,0,.85);
+  color: rgba(0,0,0,0.85);
 }
 
 .c5 {
@@ -398,7 +401,7 @@ exports[`<List /> should render basic modal 1`] = `
 .c6 {
   padding: 1.5rem 3rem;
   border-top: .1rem solid #e5e5e5;
-  background: #fff;
+  background: #fafafa;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -441,18 +444,18 @@ exports[`<List /> should render basic modal 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #1c8ffb;
   color: #fff;
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #1c8ffb;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: rgba(0,0,0,0);
+  background-color: #fff;
   border-color: #1c8ffb;
   color: #1c8ffb;
 }
@@ -512,11 +515,11 @@ exports[`<List /> should render basic modal 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #1c8ffb;
   color: #fff;
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #1c8ffb;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
@@ -703,11 +706,12 @@ exports[`<List /> should render basic modal 1`] = `
 </div>
 `;
 
-exports[`<List /> should render fullscreen modal 1`] = `
+exports[`<Modal /> should render fullscreen modal 1`] = `
 .c5 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  display: inline-block;
 }
 
 .c11 {
@@ -776,7 +780,7 @@ exports[`<List /> should render fullscreen modal 1`] = `
   z-index: 1501;
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0,0,0,0.2),0 2.4rem 3.8rem .3rem rgba(0,0,0,0.14),0 .9rem 4.6rem .8rem rgba(0,0,0,0.12);
   border-radius: .2rem;
-  background-color: #fff;
+  background-color: #fafafa;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -796,8 +800,8 @@ exports[`<List /> should render fullscreen modal 1`] = `
 .c6 {
   padding: 1.5rem 3rem;
   border-radius: .4rem .4rem 0 0;
-  background: #fff;
-  color: rgba(0,0,0,.65);
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
   border-bottom: .1rem solid #e5e5e5;
 }
 
@@ -806,7 +810,7 @@ exports[`<List /> should render fullscreen modal 1`] = `
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 500;
-  color: rgba(0,0,0,.85);
+  color: rgba(0,0,0,0.85);
 }
 
 .c8 {
@@ -820,7 +824,7 @@ exports[`<List /> should render fullscreen modal 1`] = `
 .c9 {
   padding: 1.5rem 3rem;
   border-top: .1rem solid #e5e5e5;
-  background: #fff;
+  background: #fafafa;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -838,6 +842,7 @@ exports[`<List /> should render fullscreen modal 1`] = `
 
 .c3 {
   position: absolute !important;
+  color: rgba(0,0,0,0.85) !important;
   top: 1rem;
   right: 1rem;
 }
@@ -869,11 +874,11 @@ exports[`<List /> should render fullscreen modal 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
@@ -881,12 +886,12 @@ exports[`<List /> should render fullscreen modal 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: none;
-  color: #0000008a;
+  color: rgba(0,0,0,.68);
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
   padding: 0;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .c4 div + span,
@@ -944,18 +949,18 @@ exports[`<List /> should render fullscreen modal 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #1c8ffb;
   color: #fff;
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #1c8ffb;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: rgba(0,0,0,0);
+  background-color: #fff;
   border-color: #1c8ffb;
   color: #1c8ffb;
 }
@@ -1015,11 +1020,11 @@ exports[`<List /> should render fullscreen modal 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #1c8ffb;
   color: #fff;
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #1c8ffb;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
@@ -1078,11 +1083,11 @@ exports[`<List /> should render fullscreen modal 1`] = `
       <div
         className="c5"
         color={undefined}
+        style={undefined}
       >
         <span
           aria-hidden={true}
           className="fa fa-times"
-          style={undefined}
         />
       </div>
     </button>

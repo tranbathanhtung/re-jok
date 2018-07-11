@@ -41,11 +41,11 @@ exports[`<Button /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   width: unset;
-  border: .1rem solid rgba(0,0,0,.15);
+  border: .1rem solid transparent;
   border-color: #d9d9d9;
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;

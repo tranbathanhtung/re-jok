@@ -41,15 +41,14 @@ exports[`<TextButton /> should render TextButton 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   -webkit-letter-spacing: 0.08rem;
   -moz-letter-spacing: 0.08rem;
   -ms-letter-spacing: 0.08rem;
   letter-spacing: 0.08rem;
   background: transparent;
   background-image: none;
-  font-weight: 600;
-  color: #000000a6;
+  color: rgba(0,0,0,.68);
   padding: 0.9rem 1.8rem;
 }
 
@@ -59,12 +58,12 @@ exports[`<TextButton /> should render TextButton 1`] = `
 }
 
 .c0:hover {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0,0,0,.85);
   border-color: transparent;
 }
 
 .c0:active {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0,0,0,.85);
   border-color: transparent;
 }
 

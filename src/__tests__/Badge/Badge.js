@@ -3,8 +3,8 @@ import Badge from '../../Badge'
 import {defaultTheme} from '../../theme'
 import Icon from '../../Icon';
 import {shallowWithTheme, mountWithTheme, renderWithTheme} from '../../helpers/withTheme';
-import 'jest-enzyme'
-import 'jest-styled-components'
+import 'jest-enzyme';
+import 'jest-styled-components';
 
 describe('<Badge />', () => {
   it('should render Badge', () => {

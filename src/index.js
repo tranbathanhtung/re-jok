@@ -48,6 +48,9 @@ const yourCustomTheme1 = {
     hint: "rgba(62, 39, 25, .38)",
     default: "#fff",
   },
+  border: {
+    primary: "#00000026"
+  },
   background: {
     default: "#f7ebd7"
   }
@@ -66,6 +69,9 @@ const yourCustomTheme2 = {
     secondary: "rgba(227, 227, 229, .64)",
     hint: "rgba(227, 227, 229, .48)",
     default: "#fff",
+  },
+  border: {
+    primary: "#ffffff1a"
   },
   background: {
     default: "#4e4e4e"

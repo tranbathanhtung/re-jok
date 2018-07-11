@@ -3,8 +3,8 @@ import Avatar from '../../Avatar/Avatar'
 import {defaultTheme} from '../../theme'
 import Icon from '../../Icon';
 import { shallowWithTheme, mountWithTheme, renderWithTheme } from '../../helpers/withTheme';
-import 'jest-enzyme'
-import 'jest-styled-components'
+import 'jest-enzyme';
+import 'jest-styled-components';
 
 
 describe('<Avatar />', () => {
@@ -29,7 +29,7 @@ describe('<Avatar />', () => {
 
     const tree = renderWithTheme(<Avatar>T</Avatar>).toJSON();
     expect(tree).toHaveStyleRule('border-radius', '50%');
-    expect(tree).toHaveStyleRule('font-size', '1.6rem');
+    expect(tree).toHaveStyleRule('font-size', '1.4rem');
     expect(tree).toHaveStyleRule('line-height', '1.5');
     expect(tree).toHaveStyleRule('width', '3.2rem');
     expect(tree).toHaveStyleRule('height', '3.2rem');
@@ -44,7 +44,7 @@ describe('<Avatar />', () => {
 
     const tree = renderWithTheme(<Avatar shape="square">T</Avatar>).toJSON();
     expect(tree).toHaveStyleRule('border-radius', '.4rem');
-    expect(tree).toHaveStyleRule('font-size', '1.6rem');
+    expect(tree).toHaveStyleRule('font-size', '1.4rem');
     expect(tree).toHaveStyleRule('line-height', '1.5');
     expect(tree).toHaveStyleRule('width', '3.2rem');
     expect(tree).toHaveStyleRule('height', '3.2rem');

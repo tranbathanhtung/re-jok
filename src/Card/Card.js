@@ -4,12 +4,17 @@ import {
   StyledCard
 } from './style';
 
+import {CardContext} from './CardContext';
+
 import CardHeader from './CardHeader';
 import CardMedia from './CardMedia';
 import CardContent from './CardContent';
 import CardAction from './CardAction';
 import CardGroup from './CardGroup';
 import CardLoading  from './CardLoading';
+
+import { isChild } from '../helpers/typeUtils';
+
 
 type Props = {
   /**Number of card in a row**/
@@ -57,15 +62,23 @@ class Card extends React.Component<Props> {
       ...rest
     } = this.props;
 
-    return (
-      <StyledCard {...rest} loading={loading} onClick={(e)=>this.handleClick(e)}>
-        {
-          loading
-          ? <CardLoading/>
-        : children
-        }
+    const hasChild = !isChild(children);
 
-      </StyledCard>
+
+    return (
+      <CardContext.Consumer>
+        {
+          context => <StyledCard {...rest} numberCard={context.numberCard} loading={loading} onClick={this.handleClick}>
+              {
+                loading
+                ? <CardLoading/>
+              : hasChild && children
+              }
+
+            </StyledCard>
+        }
+      </CardContext.Consumer>
+
     )
   }
 }

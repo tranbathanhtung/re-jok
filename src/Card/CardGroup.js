@@ -4,6 +4,11 @@ import {
   StyledCardGroup
 } from './style';
 
+import { CardContext } from './CardContext';
+
+import { isChild } from '../helpers/typeUtils';
+
+
 
 type Props = {
   /****/
@@ -33,17 +38,24 @@ class CardGroup extends React.Component<Props> {
       center,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
-      <StyledCardGroup {...rest} center={center}>
-        {
-          React.Children.map(children, (ch, i)=>(
-            React.cloneElement(ch, {
-              key: i,
-              numberCard
-            })
-          ))
-        }
-      </StyledCardGroup>
+      <CardContext.Provider value={{
+          numberCard
+        }}>
+        <StyledCardGroup {...rest} center={center}>
+          {
+            hasChild && React.Children.map(children, (ch, i)=>(
+              React.cloneElement(ch, {
+                key: i,
+              })
+            ))
+          }
+        </StyledCardGroup>
+      </CardContext.Provider>
+
     )
   }
 }

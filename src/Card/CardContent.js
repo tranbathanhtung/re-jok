@@ -6,6 +6,9 @@ import {
   StyledCardContentSubTitle,
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 
 type Props = {
   /**title of card content**/
@@ -27,16 +30,23 @@ class CardContent extends React.Component<Props> {
   }
   render(){
     const {
+      children,
       title,
       subtitle,
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
     return (
       <StyledCardContent {...rest}>
-        <StyledCardContentTitle>{title}</StyledCardContentTitle>
-        <StyledCardContentSubTitle>{subtitle}</StyledCardContentSubTitle>
-        {this.props.children}
+        {
+          title && <StyledCardContentTitle>{title}</StyledCardContentTitle>
+        }
+        {
+          subtitle && <StyledCardContentSubTitle>{subtitle}</StyledCardContentSubTitle>
+        }
+        {hasChild && children}
       </StyledCardContent>
     )
   }

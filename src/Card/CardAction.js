@@ -7,6 +7,9 @@ import {
   StyledActionLeft
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Right element of card action**/
   actionRight?: Array<any>,
@@ -34,11 +37,13 @@ class CardAction extends React.Component<Props>{
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
     return (
       <StyledCardAction {...rest}>
         <StyledActionRight>
           {
-            React.Children.map(actionRight, (ar, i)=>(
+           actionRight &&  React.Children.map(actionRight, (ar, i)=>(
               React.cloneElement(ar, {
                 key: i
               })
@@ -47,14 +52,14 @@ class CardAction extends React.Component<Props>{
         </StyledActionRight>
         <StyledActionLeft>
           {
-            React.Children.map(actionLeft, (al, i)=>(
+           actionLeft &&  React.Children.map(actionLeft, (al, i)=>(
               React.cloneElement(al, {
                 key: i
               })
             ))
           }
         </StyledActionLeft>
-        {children}
+        {hasChild && children}
       </StyledCardAction>
     )
   }

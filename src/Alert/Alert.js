@@ -11,6 +11,7 @@ import {
 
 
 
+
 import { isFunction, isChild } from '../helpers/typeUtils';
 import { noop } from '../helpers';
 
@@ -36,7 +37,7 @@ type Props = {
   /** Set icon of Alert**/
   icon?: string,
   /** Set Alert has box shadow or not**/
-  hasBoxshadow: boolean,
+  hasBoxShadow: boolean,
 }
 
 type State = {
@@ -47,7 +48,7 @@ const defaultProps = {
   closable: false,
   onClose: noop,
   type: 'none',
-  hasBoxshadow: false
+  hasBoxShadow: false
 }
 
 
@@ -98,7 +99,7 @@ class Alert extends React.Component<Props, State>{
 
         <StyledAlert closable={closable} {...rest} type={type}>
           {type !== "none" && !icon && !rest.color && listIcon[type]}
-
+           {type === "none" && icon && <StyledAlertIcon style={{color: "#fff"}} name={icon} size="lg"/> }
             {title && <StyledAlertTitle hasColor={hasColor}>{title}!</StyledAlertTitle>}
             <StyledAlertContent>
               {hasChild && children}

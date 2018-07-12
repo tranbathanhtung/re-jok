@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 import Icon from '../Icon';
-import { shadeColor } from '../globals';
+import { shadeColor, hexa } from '../globals';
 
 export const StyledIconClose = styled(Icon)`
  text-align: center;
@@ -30,12 +30,15 @@ export const StyledAlertIcon = styled(Icon)`
 `
 
 const returnType = props => {
+
   if(!props.color){
     switch (props.type) {
       case 'none':
         return `
           color: ${props.theme.text.regular};
           background: ${shadeColor(props.theme.background.default, -5)};
+          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.background.default, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.background.default, .12)}`};
+
 
         `
       case 'success':
@@ -43,7 +46,9 @@ const returnType = props => {
 
           color: ${props.theme.text.default};
 
-          background: ${props.theme.success.main};
+          background: ${hexa(props.theme.success.main, .85)};
+          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.success.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.success.main, .12)}`};
+
 
         `
       case 'info':
@@ -51,7 +56,10 @@ const returnType = props => {
 
           color: ${props.theme.text.default};
 
-          background: ${props.theme.info.main};
+          background: ${hexa(props.theme.info.main, .85)};
+
+          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.info.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.info.main, .12)}`};
+
 
 
         `
@@ -60,7 +68,9 @@ const returnType = props => {
         color: ${props.theme.text.default};
 
 
-          background: ${props.theme.warning.main};
+          background: ${hexa(props.theme.warning.main, .85)};
+          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.warning.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.warning.main, .12)}`};
+
 
 
         `
@@ -68,14 +78,17 @@ const returnType = props => {
         return`
         color: ${props.theme.text.default};
 
-          background: ${props.theme.error.main};
+          background: ${hexa(props.theme.error.main, .85)};
+          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.error.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.error.main, .12)}`};
+
 
 
         `
       default:
         return `
           color: ${props.theme.text.regular};
-          background: ${ ({theme}) => theme.background.default};
+          background: ${ ({theme}) => shadeColor(theme.background.default, -5)};
+          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.background.default, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.background.default, .12)}`};
 
 
          `
@@ -85,7 +98,10 @@ const returnType = props => {
   else {
     return `
     color: ${props.theme.text.default};
-    background: ${props.color};
+    background: ${hexa(props.color, .85)};
+    box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.color, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.color, .12)}`};
+
+
     `
   }
 
@@ -98,11 +114,8 @@ export const StyledAlert = styled.div`
   align-items: center;
   padding: 1.5rem 3rem 1.5rem 1.5rem;
   margin-bottom: 20px;
-  ${
-    props => props.hasBoxshadow && css`
-        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-    `
-  }
+  border-radius: .2rem;
+
   ${props => returnType(props)};
 `
 

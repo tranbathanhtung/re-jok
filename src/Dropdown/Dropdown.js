@@ -4,8 +4,9 @@ import {
   StyledDropdownWrapper,
   StyledDropdown
 } from './style';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
+import { isChild } from '../helpers/typeUtils';
 
 
 type Props = {
@@ -241,6 +242,9 @@ class Dropdown extends React.Component<Props, State>{
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
+
 
     const mouseEvent = {
       onMouseLeave: trigger === 'click' ? null : this.onMouseLeave,
@@ -253,7 +257,7 @@ class Dropdown extends React.Component<Props, State>{
         innerRef={this.refParent}>
 
           {
-            React.Children.count(children) === 1
+           hasChild && React.Children.count(children) === 1
               ? <children.type
 
                 {...children.props}

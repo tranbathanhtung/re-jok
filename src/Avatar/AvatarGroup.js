@@ -3,6 +3,8 @@ import * as React from 'react';
 import Avatar from './Avatar';
 import Tooltip from '../Tooltip/Tooltip';
 import {StyledAvatarGroup, StyledAvatarItem} from './style';
+import { isChild } from '../helpers/typeUtils';
+
 
 type Props = {
   /** Children must be Avatar**/
@@ -19,9 +21,11 @@ class AvatarGroup extends React.Component<Props> {
   static defaultProps = defaultProps;
   render() {
     const {size, children} = this.props;
+    const hasChild = !isChild(children)
+
     return (<StyledAvatarGroup>
       {
-        children && React.Children.count(children) > 0 && React.Children.map(children, (c, i) =>
+        hasChild && React.Children.count(children) > 0 && React.Children.map(children, (c, i) =>
         (<StyledAvatarItem size={size} key={i}>
           {React.cloneElement(c, {
             key: i,

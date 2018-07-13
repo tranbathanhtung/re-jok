@@ -11,6 +11,7 @@ import Menu from '../../Menu/Menu';
 import Divider from '../../Divider';
 import Input from '../../Input/Input';
 import Sidebar from '../../Sidebar/Sidebar';
+import Section from '../../Section/Section';
 
 const MenuDemo = ()=> (
   <div style={{ width: 256 }}>
@@ -175,6 +176,19 @@ class NavDemo extends React.Component<{}, State>{
 
 
         </div>
+
+        <Section type="background" backgroundUrl="https://www.wallpaperup.com/uploads/wallpapers/2013/04/09/73143/d2c0f4c5943c94fccdad2866782ded2f-700.jpg">
+        <div style={{
+          top: 0,
+          left: 0,
+          right: 0,
+          position: "absolute"
+          }}>
+          <Nav transparent elementRight={<ActionRight3/>}>
+            Left Element
+          </Nav>
+        </div>
+        </Section>
       </React.Fragment>
 
     )

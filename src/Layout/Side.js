@@ -1,5 +1,7 @@
 // @flow
 import * as React from 'react';
+import {isChild} from '../helpers/typeUtils';
+
 import {
   StyledSide
 } from './style';
@@ -21,9 +23,12 @@ class Side extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledSide {...rest}>
-        {children}
+        {hasChild && children}
       </StyledSide>
     )
   }

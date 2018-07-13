@@ -9,6 +9,9 @@ import {
   StyledNavBarCenter
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 
 type Props = {
   /**Override style of nav bar**/
@@ -56,11 +59,13 @@ class Nav extends React.Component<Props> {
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
     return (
       <StyledNavBar {...rest}>
         <StyledNavBarContainer>
           <StyledNavBarLeft>
-            {children}
+            {hasChild && children}
           </StyledNavBarLeft>
 
           {

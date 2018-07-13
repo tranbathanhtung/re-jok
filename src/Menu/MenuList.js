@@ -6,6 +6,9 @@ import {
   StyledMenuListTitle
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Children of Menu List is anything but it should be MenuItem**/
   children?: any,
@@ -35,6 +38,9 @@ class MenuList extends React.Component<Props>{
     let style = {};
 
     style.paddingLeft = level ? level * paddingLeft : paddingLeft;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledMenuListWrapper>
         {
@@ -47,7 +53,7 @@ class MenuList extends React.Component<Props>{
         }
         <StyledMenuList>
           {
-            React.Children.map(children, (ch, i)=>(
+            hasChild && React.Children.map(children, (ch, i)=>(
               React.cloneElement(ch, {
                 key: i,
                 level: level && level,

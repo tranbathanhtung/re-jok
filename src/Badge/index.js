@@ -1,7 +1,10 @@
 // @flow
-import * as React from 'react'
-import ReactDOM from 'react-dom'
-import {StyledBadge, StyledSup} from './style'
+import * as React from 'react';
+import ReactDOM from 'react-dom';
+import {StyledBadge, StyledSup} from './style';
+
+import { isChild } from '../helpers/typeUtils';
+
 
 type Props = {
   /** number will display in badge**/
@@ -56,13 +59,15 @@ class Badge extends React.Component<Props, State> {
 
     const {widthChildren} = this.state;
 
+    const hasChild = !isChild(children);
+
     const label = count > maxCount
       ? `${maxCount}+`
       : count;
 
     return (<StyledBadge>
       {
-        React.Children.count(children) === 1
+        hasChild && React.Children.count(children) === 1
           ? <children.type {...children.props} ref={this.refChildren}/>
           : null
       }

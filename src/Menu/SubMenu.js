@@ -3,6 +3,9 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 
 import Icon from '../Icon';
+
+import { isChild } from '../helpers/typeUtils';
+
 import {
   StyledSubMenuWrapper,
   StyledSubMenuTitle,
@@ -159,9 +162,13 @@ class SubMenu extends React.Component<Props, State>{
     let style = {};
 
     style.paddingLeft = level * 24;
+
     const {openKeys} = rest.context;
 
     let isOpen = openKeys.includes(this.props.openKey);
+
+    const hasChild = !isChild(children);
+
 
 
     return (
@@ -183,7 +190,7 @@ class SubMenu extends React.Component<Props, State>{
           >
           <div ref={this.refSubMenu}>
             {
-              React.Children.map(children, (ch, i)=>(
+              hasChild && React.Children.map(children, (ch, i)=>(
                 React.cloneElement(ch, {
                   key: i,
                   level: level+1,

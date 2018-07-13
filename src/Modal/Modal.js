@@ -12,6 +12,9 @@ import {
 
 import Icon from '../Icon';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 
 import ModalHeader from './ModalHeader';
 import ModalContent from './ModalContent';
@@ -98,6 +101,9 @@ class Modal extends React.Component<Props>{
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
+
     const listIcon = {
       info: <Icon color="info" name="info-circle" size="lg"/>,
       success: <Icon color="success" name="check-circle" size="lg"/>,
@@ -130,12 +136,12 @@ class Modal extends React.Component<Props>{
 
                  </StyledAlert>
                  <StyledAlertDescription alert={alert}>
-                   {children}
+                   {hasChild && children}
                  </StyledAlertDescription>
                </React.Fragment>
 
 
-             ) : children
+             ) : hasChild && children
           }
 
 

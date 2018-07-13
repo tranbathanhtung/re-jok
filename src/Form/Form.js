@@ -77,9 +77,12 @@ class Form extends React.Component<Props> {
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledForm {...rest}>
-        {children}
+        {hasChild && children}
       </StyledForm>
     )
   }

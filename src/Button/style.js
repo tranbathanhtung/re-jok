@@ -1,6 +1,6 @@
 import styled, {css, keyframes} from 'styled-components';
 
-import {Transition, hexa, shadeColor} from '../globals';
+import { hexa, shadeColor} from '../globals';
 
 
 
@@ -19,6 +19,7 @@ export const baseButton = css `
     text-align: center;
 
     font-size: ${props => props.theme.size[props.size].fontSize};
+
 
       div + span,
       span + span {
@@ -138,7 +139,7 @@ props => !props.shape
         line-height: ${props => props.theme.size[props.size].lineHeight};
     `}
 
-     transition: ${Transition.base.on};
+     transition: all .2s;
 ${
   props => props.variant === 'icon'
   ? null
@@ -171,7 +172,6 @@ opacity: .35;
 content: "";
 border-radius: inherit;
 z-index: 1;
--webkit-transition: opacity .2s;
 transition: opacity .2s;
 pointer-events: none;
 display: ${props => props.disabled || props.loading

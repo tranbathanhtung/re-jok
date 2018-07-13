@@ -62,9 +62,11 @@ class Collapse extends React.Component<Props, State> {
       const isActive = index > -1;
       if (isActive) {
 
-        activeKeys.splice(index, 1);
+
+        activeKeys = activeKeys.filter(key => key !== event.key);
       } else {
-        activeKeys.push(event.key);
+      
+        activeKeys = [...activeKeys, event.key];
       }
     }
     this.setState({
@@ -74,6 +76,7 @@ class Collapse extends React.Component<Props, State> {
     onOpen && onOpen({...event})
 
   }
+
 
   render(){
     const {

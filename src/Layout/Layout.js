@@ -1,6 +1,9 @@
 // @flow
 import * as React from 'react';
 
+import {isChild} from '../helpers/typeUtils';
+
+
 import Header from './Header';
 import Container from './Container';
 import Footer from './Footer';
@@ -43,9 +46,13 @@ class Layout extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledLayout {...rest}>
-        {children}
+        {hasChild && children}
+
       </StyledLayout>
     )
   }

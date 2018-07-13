@@ -6,6 +6,9 @@ import {
   StyledMenuLeftIcon
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 import {connectMenu} from './MenuContext';
 
 type Props = {
@@ -93,6 +96,9 @@ class MenuItem extends React.Component<Props>{
 
     style.paddingLeft = level ? level * paddingLeft : paddingLeft;
 
+    const hasChild = !isChild(children);
+
+
 
 
     const {selectedKeys, activeColor, activeNormal} = rest.context;
@@ -115,7 +121,7 @@ class MenuItem extends React.Component<Props>{
          {
            primaryText && <StyledMenuItemText>{primaryText}</StyledMenuItemText>
          }
-         {children}
+         {hasChild && children}
       </StyledMenuItem>
     )
   }

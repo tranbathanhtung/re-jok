@@ -4,7 +4,7 @@ import {
   StyledMenu
 } from './style';
 
-import { isArray } from '../helpers/typeUtils';
+import { isArray, isChild } from '../helpers/typeUtils';
 
 
 import MenuList from './MenuList';
@@ -102,7 +102,7 @@ class Menu extends React.Component<Props, State>{
       const selectedKey = itemInfo.key;
 
       if (multiple) {
-        selectedKeys = selectedKeys.concat([selectedKey]);
+        selectedKeys = [...selectedKeys, selectedKey];
       } else {
         selectedKeys = [selectedKey];
       }
@@ -185,6 +185,8 @@ class Menu extends React.Component<Props, State>{
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
     const { selectedKeys, openKeys } = this.state;
     return (
       <MenuContext.Provider value={{
@@ -198,7 +200,7 @@ class Menu extends React.Component<Props, State>{
           activeNormal: activeNormal,
         }}>
         <StyledMenu {...rest}>
-          {children}
+          {hasChild && children}
         </StyledMenu>
       </MenuContext.Provider>
 

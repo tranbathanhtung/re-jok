@@ -21,10 +21,12 @@ class ModalAction extends React.Component<Props>{
       ...rest
     } = this.props;
 
+
+
     return (
       <StyledModalAction {...rest}>
         {
-          React.Children.map(action, (at, i)=>(
+         action && React.Children.map(action, (at, i)=>(
             React.cloneElement(at, {
               key: i
             })

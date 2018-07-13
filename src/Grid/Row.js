@@ -4,7 +4,9 @@ import {
   StyledRow
 } from './style';
 
-import Col from './Col'
+import Col from './Col';
+
+import {isChild} from '../helpers/typeUtils';
 
 type Props = {
   /** Override style of Row**/
@@ -37,10 +39,13 @@ class Row extends React.Component<Props> {
       gutter,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledRow {...rest}>
         {
-          React.Children.map(children, (ch, i)=>(
+          hasChild && React.Children.map(children, (ch, i)=>(
             React.cloneElement(ch, {
               key: i,
               gutter

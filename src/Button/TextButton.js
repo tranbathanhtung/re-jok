@@ -4,6 +4,8 @@ import Icon from '../Icon';
 
 
 import {TextBtn, Label, SpinnerButton} from './style';
+import { isChild } from '../helpers/typeUtils';
+
 
 type Props = {
   /** Set button unable to click or not **/
@@ -77,6 +79,8 @@ class TextButton extends React.Component<Props> {
       iconPosition
     } = this.props;
 
+    const hasChild = !isChild(children);
+
     const ElementType = !hrefString ? TextBtn.withComponent(tag) : TextBtn.withComponent('a')
 
     return (
@@ -91,7 +95,7 @@ class TextButton extends React.Component<Props> {
         }
         {loading && !icon && <SpinnerButton size={size} iconPosition={iconPosition} primary={primary} secondary={secondary}/>}
         {
-           children && <Label>
+           hasChild && <Label>
               {children}
             </Label>
         }

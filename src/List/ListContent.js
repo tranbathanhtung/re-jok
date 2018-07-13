@@ -2,7 +2,10 @@
 import * as React from 'react';
 import {StyledListContent, StyledListContentHeader, StyledListContentDescription, StyledListContentAction} from './style';
 
-import {PrimaryText, SecondaryText} from '../globals'
+import {PrimaryText, SecondaryText} from '../globals';
+
+import { isChild } from '../helpers/typeUtils';
+
 
 type Props = {
   /** Override style of List Content**/
@@ -42,6 +45,7 @@ class ListContent extends React.Component<Props> {
       action,
       tag
     } = this.props;
+    const hasChild = !isChild(children);
 
     const ElementType = StyledListContent.withComponent(tag);
 
@@ -49,14 +53,14 @@ class ListContent extends React.Component<Props> {
     return (<ElementType>
 
       {media}
-      
+
         <StyledListContentHeader>
           <PrimaryText>{primaryHeader}</PrimaryText>
           <SecondaryText>{secondaryHeader}</SecondaryText>
             <StyledListContentDescription>
               {description}
             </StyledListContentDescription>
-              {children}
+              {hasChild && children}
         </StyledListContentHeader>
 
       <StyledListContentAction>

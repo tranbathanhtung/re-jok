@@ -26,7 +26,7 @@ export const StyledCard = styled.div `
   z-index: ${({theme}) => theme.zIndex.card};
 
 
-  transition: all .3s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   animation: ${opacityCard} .5s;

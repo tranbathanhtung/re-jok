@@ -36,7 +36,7 @@ class MenuDemo extends React.Component<{}, State>{
             </Menu>
 
         {/* Basic */}
-        <Menu activeNormal={false} style={{marginBottom: 20}} defaultSelectedKeys={["3"]} defaultOpenKeys={["sub1"]}>
+        <Menu multiple activeNormal={false} style={{marginBottom: 20}} defaultSelectedKeys={["3"]} defaultOpenKeys={["sub1"]}>
           <Menu.Item keyActive="1" primaryText="Option 1" />
         <Menu.Item keyActive="2" primaryText="Option 2" />
             <Menu.List key="g1" title="Item 1">

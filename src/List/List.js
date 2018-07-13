@@ -5,6 +5,9 @@ import {
   StyledList,
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 import ListItem from './ListItem';
 import ListContent from './ListContent';
 
@@ -58,6 +61,8 @@ class List extends React.Component<Props>{
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
 
 
 
@@ -67,7 +72,7 @@ class List extends React.Component<Props>{
 
         <ElementType horizontal={horizontal} {...rest}>
           {
-            React.Children.map(children, (ch, i)=>(
+            hasChild && React.Children.map(children, (ch, i)=>(
               React.cloneElement(ch, {
                 key: i,
                 divided,

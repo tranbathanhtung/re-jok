@@ -5,6 +5,9 @@ import {
   StyledHeader
 } from './style';
 
+import {isChild} from '../helpers/typeUtils';
+
+
 type Props = {
   /** Style of header component**/
   style?: Object,
@@ -31,9 +34,13 @@ class Header extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledHeader {...rest}>
-        {children}
+        {hasChild && children}
+
       </StyledHeader>
     )
   }

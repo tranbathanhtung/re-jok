@@ -4,6 +4,9 @@ import {
   StyledListItem
 }from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Override style of List Item**/
   style?: Object,
@@ -55,12 +58,14 @@ class ListItem extends React.Component<Props>{
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
 
     const ElementType = !hrefString ?StyledListItem.withComponent(tag) : StyledListItem.withComponent('a')
 
     return (
       <ElementType onClick={this.handleClick} hrefString={hrefString} {...rest}>
-        {children}
+        {hasChild && children}
       </ElementType>
     )
   }

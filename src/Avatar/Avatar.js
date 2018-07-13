@@ -5,6 +5,8 @@ import Icon from '../Icon';
 import AvatarGroup from './AvatarGroup';
 import {StyledAvatar, StyledAvatarImage} from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
 type Props = {
   /** Set size of avatar.The default size is default **/
   size: 'small' | 'default' | 'medium' | 'large',
@@ -36,18 +38,21 @@ class Avatar extends React.Component<Props> {
 
   render() {
     const {
+      children,
       imgAlt,
       imgSrc,
       icon,
       ...rest
-    } = this.props
+    } = this.props;
+
+    const hasChild = !isChild(children);
     return (<StyledAvatar imgSrc={imgSrc} {...rest}>
       {
         imgSrc
           ? (<StyledAvatarImage imgAlt={imgAlt} imgSrc={imgSrc}/>)
           : icon
             ? (<Icon name={icon}/>)
-            : this.props.children
+            : hasChild && children
 
       }
 

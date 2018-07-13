@@ -5,6 +5,9 @@ import {
 
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Override style of modal content**/
   style?: Object,
@@ -23,9 +26,12 @@ class ModalContent extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledModalContent {...rest}>
-       {children}
+       {hasChild && children}
       </StyledModalContent>
     )
   }

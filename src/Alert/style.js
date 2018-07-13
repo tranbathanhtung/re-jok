@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import Icon from '../Icon';
 import { shadeColor, hexa } from '../globals';
 
@@ -12,12 +12,6 @@ export const StyledIconClose = styled(Icon)`
  vertical-align: middle;
  top: 1.6rem;
  right: 1.6rem;
-
-
-
-
-
- transition: all .2s;
 
 `
 

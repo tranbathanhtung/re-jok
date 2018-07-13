@@ -11,6 +11,9 @@ import {
   IconBtn
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Set button unable to click or not **/
   disabled?: boolean,
@@ -101,6 +104,7 @@ class Button extends React.Component<Props> {
      inverted: OutlineBtn,
      icon: IconBtn
    }
+   const hasChild = !isChild(children);
 
     const ElementType = !hrefString ? ListButton[variant].withComponent(tag) : ListButton[variant].withComponent('a')
 
@@ -118,7 +122,7 @@ class Button extends React.Component<Props> {
         {
           shape === "circle" || variant === "icon"
             ? (null)
-            : (children && <Label>
+            : (hasChild && <Label>
               {children}
             </Label>)
         }

@@ -1,9 +1,12 @@
 //  @flow
-import * as React from 'react'
+import * as React from 'react';
 import {
   StyledModalHeader,
   StyledModalHeaderTitle
-} from './style'
+} from './style';
+
+import { isChild } from '../helpers/typeUtils';
+
 
 
 type Props = {
@@ -23,10 +26,12 @@ class ModalHeader extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
     return (
       <StyledModalHeader {...rest}>
         <StyledModalHeaderTitle>
-          {children}
+          {hasChild && children}
         </StyledModalHeaderTitle>
 
       </StyledModalHeader>

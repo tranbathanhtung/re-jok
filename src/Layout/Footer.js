@@ -4,6 +4,8 @@ import {
   StyledFooter
 } from './style';
 
+import {isChild} from '../helpers/typeUtils';
+
 
 type Props = {
   /** Style of footer component**/
@@ -21,9 +23,12 @@ class Footer extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledFooter {...rest}>
-        {children}
+        {hasChild && children}
       </StyledFooter>
     )
   }

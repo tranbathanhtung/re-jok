@@ -27,7 +27,7 @@ export const StyledDivider = styled.div `
   ${
 props => !props.hasChild || props.type === "vertical"
   ? css `
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.5;
     color: ${({theme}) => theme.text.regular};
     box-sizing: border-box;
@@ -102,6 +102,6 @@ props => props.textPosition === "left"
 
 export const StyledDividerContent = styled.div `
   display: inline-block;
-  padding: 0 24px;
+  padding: 0 2.4rem;
   font-size: 1.4rem;
   `

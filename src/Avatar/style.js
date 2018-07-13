@@ -64,5 +64,5 @@ export const StyledAvatarItem = styled.li `
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px;
   position: relative;
   border-radius: 50%;
-  transition: transform 0.2s ease-in-out;
+  
 `

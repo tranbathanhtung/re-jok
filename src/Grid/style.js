@@ -1,5 +1,42 @@
 import styled, {css} from 'styled-components';
 
+
+const returnGridMedia = (props, type) => {
+
+      return props[type]
+       ? typeof props[type] === "number"
+         ? css`
+           @media (min-width: ${props.theme.grid[type]}px) {
+             flex: ${props => `0 0 ${ (props[type] / 24) * 100}%`};
+             max-width: ${props => `${ (props[type] / 24) * 100}%`};
+           }
+         `
+        : typeof props[type] === "object"
+          ? css`
+          @media (min-width: ${props.theme.grid[type]}px) {
+            flex: ${props => `0 0 ${ (props[type].span / 24) * 100}%`};
+            max-width: ${props => `${ (props[type].span / 24) * 100}%`};
+
+            order: ${props => props[type].order ? props[type].order : 0};
+
+            left: ${props => props[type].push !== 0 || props[type].push
+              ? `${ (props[type].push / 24) * 100}%`
+              : null};
+            right: ${props => props[type].pull !== 0 || props[type].pull
+                ? `${ (props[type].pull / 24) * 100}%`
+                : null};
+
+            margin-left: ${props => props[type].offset !== 0 || props[type].offet
+                  ? `${ (props[type].offset / 24) * 100}%`
+                  : null};
+
+          }
+          `
+            : null
+       : null
+
+}
+
 export const StyledRow = styled.div `
   display: flex;
   flex-direction: row;
@@ -108,155 +145,11 @@ ${
         }
 
 
-        ${
-          props =>
-             props.sm
-             ? typeof props.sm === "number"
-               ? css`
-                 @media (min-width: ${props.theme.grid.sm}px) {
-                   flex: ${props => `0 0 ${ (props.sm / 24) * 100}%`};
-                   max-width: ${props => `${ (props.sm / 24) * 100}%`};
-                 }
-               `
-              : typeof props.sm === "object"
-                ? css`
-                @media (min-width: ${props.theme.grid.sm}px) {
-                  flex: ${props => `0 0 ${ (props.sm.span / 24) * 100}%`};
-                  max-width: ${props => `${ (props.sm.span / 24) * 100}%`};
 
-                  order: ${props => props.sm.order ? props.sm.order : 0};
-
-                  left: ${props => props.sm.push !== 0 || props.sm.push
-                    ? `${ (props.sm.push / 24) * 100}%`
-                    : null};
-                  right: ${props => props.sm.pull !== 0 || props.sm.pull
-                      ? `${ (props.sm.pull / 24) * 100}%`
-                      : null};
-
-                  margin-left: ${props => props.sm.offset !== 0 || props.sm.offet
-                        ? `${ (props.sm.offset / 24) * 100}%`
-                        : null};
-
-                }
-                `
-                  : null
-             : null
-
-        }
-
-    ${
-      props =>
-         props.md
-         ? typeof props.md === "number"
-           ? css`
-             @media (min-width: ${props.theme.grid.md}px) {
-               flex: ${props => `0 0 ${ (props.md / 24) * 100}%`};
-               max-width: ${props => `${ (props.md / 24) * 100}%`};
-             }
-           `
-          : typeof props.md === "object"
-            ? css`
-            @media (min-width: ${props.theme.grid.md}px) {
-              flex: ${props => `0 0 ${ (props.md.span / 24) * 100}%`};
-              max-width: ${props => `${ (props.md.span / 24) * 100}%`};
-
-              order: ${props => props.md.order ? props.md.order : 0};
-
-              left: ${props => props.md.push !== 0 || props.md.push
-                ? `${ (props.md.push / 24) * 100}%`
-                : null};
-              right: ${props => props.md.pull !== 0 || props.md.pull
-                  ? `${ (props.md.pull / 24) * 100}%`
-                  : null};
-
-              margin-left: ${props => props.md.offset !== 0 || props.md.offet
-                    ? `${ (props.md.offset / 24) * 100}%`
-                    : null};
-
-            }
-            `
-              : null
-         : null
-
-    }
-
-
-    ${
-      props =>
-         props.lg
-         ? typeof props.lg === "number"
-           ? css`
-             @media (min-width: ${props.theme.grid.lg}px) {
-               flex: ${props => `0 0 ${ (props.lg / 24) * 100}%`};
-               max-width: ${props => `${ (props.lg / 24) * 100}%`};
-             }
-           `
-          : typeof props.lg === "object"
-            ? css`
-            @media(min-width: ${props.theme.grid.lg}px) {
-              flex: ${props => `0 0 ${ (props.lg.span / 24) * 100}%`};
-              max-width: ${props => `${ (props.lg.span / 24) * 100}%`};
-
-              order: ${props => props.lg.order ? props.lg.order : 0};
-
-              left: ${props => props.lg.push !== 0 || props.lg.push
-                ? `${ (props.lg.push / 24) * 100}%`
-                : null};
-              right: ${props => props.lg.pull !== 0 || props.lg.pull
-                  ? `${ (props.lg.pull / 24) * 100}%`
-                  : null};
-
-              margin-left: ${props => props.lg.offset !== 0 || props.lg.offet
-                    ? `${ (props.lg.offset / 24) * 100}%`
-                    : null};
-
-
-
-
-            }
-            `
-              : null
-         : null
-
-    }
-
-
-            ${
-              props =>
-                 props.xl
-                 ? typeof props.xl === "number"
-                   ? css`
-                     @media (min-width: ${props.theme.grid.xl}px) {
-                       flex: ${props => `0 0 ${ (props.xl / 24) * 100}%`};
-                       max-width: ${props => `${ (props.xl / 24) * 100}%`};
-                     }
-                   `
-                  : typeof props.xl === "object"
-                    ? css`
-                    @media (min-width: ${props.theme.grid.xl}px) {
-                      flex: ${props => `0 0 ${ (props.xl.span / 24) * 100}%`};
-                      max-width: ${props => `${ (props.xl.span / 24) * 100}%`};
-
-                      order: ${props => props.xl.order ? props.xl.order : 0};
-
-                      left: ${props => props.xl.push !== 0 || props.xl.push
-                        ? `${ (props.xl.push / 24) * 100}%`
-                        : null};
-                      right: ${props => props.xl.pull !== 0 || props.xl.pull
-                          ? `${ (props.xl.pull / 24) * 100}%`
-                          : null};
-
-                      margin-left: ${props => props.xl.offset !== 0 || props.xl.offet
-                            ? `${ (props.xl.offset / 24) * 100}%`
-                            : null};
-
-                    }
-                    `
-                      : null
-                 : null
-
-            }
-
+  ${props => returnGridMedia(props, 'sm')};
+  ${props => returnGridMedia(props, 'md')};
+  ${props => returnGridMedia(props, 'lg')};
+  ${props => returnGridMedia(props, 'xl')};
 
 
 

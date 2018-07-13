@@ -3,6 +3,8 @@ import * as React from 'react';
 
 import ReactDOM from 'react-dom';
 import Icon from '../Icon';
+import { isChild } from '../helpers/typeUtils';
+
 
 import {
   StyledCollapseItem,
@@ -33,7 +35,7 @@ type Props = {
   iconArrow: boolean,
   /** Set collapse item disable or not**/
   disabled: boolean,
-  
+
 }
 
 const defaultProps = {
@@ -199,6 +201,8 @@ class CollapseItem extends React.Component<Props, State> {
 
 
     let isOpen = activeKeys.includes(collKey);
+    const hasChild = !isChild(children);
+
 
 
     return (
@@ -218,7 +222,7 @@ class CollapseItem extends React.Component<Props, State> {
 
           >
             <Div innerRef={this.refContent}>
-              {children}
+              {hasChild && children}
             </Div>
 
         </StyledCollapseItemContent>

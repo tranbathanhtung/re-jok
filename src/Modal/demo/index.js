@@ -100,6 +100,7 @@ class ModalDemo extends React.Component<{}, State>{
           open={this.state.openAlertModal}
           alert="error"
           alertTitle="Delete Box"
+          action={[<Button onClick={this.handleCloseAlertModal} backgroundColor="#f44336">Ok</Button>]}
           onClose={this.handleCloseAlertModal}>
 
             <p>Are you sure to delete this?</p>

@@ -4,6 +4,8 @@ import {
   StyledCol
 } from './style';
 
+import {isChild} from '../helpers/typeUtils';
+
 type Props = {
   /**Number of col in a row **/
   span?: number,
@@ -49,9 +51,12 @@ class Col extends React.Component<Props> {
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledCol {...rest}>
-        {children}
+        {hasChild && children}
       </StyledCol>
     )
   }

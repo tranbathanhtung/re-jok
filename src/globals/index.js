@@ -35,23 +35,6 @@ export const shadeColor = (color, percent) => {
 }
 
 
-export const Transition = {
-  base: {
-    on: 'all 0.2s ',
-    off: 'all 0.2s ',
-  },
-  hover: {
-    on: 'all 0.2s ease-in',
-    off: 'all 0.2s ease-out',
-  },
-  reaction: {
-    on: 'all 0.15s ease-in',
-    off: 'all 0.1s ease-out',
-  },
-  dropdown: {
-    off: 'all 0.35s ease-out',
-  },
-};
 
 export const PrimaryText = styled.span `
   color: ${({theme}) => theme.text.primary};

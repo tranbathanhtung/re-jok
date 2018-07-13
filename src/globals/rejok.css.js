@@ -2,7 +2,7 @@
 import { injectGlobal } from 'styled-components';
 
 
-injectGlobal`
+export const globalConfig = () => injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
@@ -22,7 +22,7 @@ injectGlobal`
  body {
    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
    font-weight: 400;
-   
+
    line-height: 1.7;
    color: #777;
     }

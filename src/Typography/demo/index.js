@@ -1,34 +1,23 @@
 // @flow
 import * as React from 'react';
 
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  P,
-  Span
-} from '../index';
+import Typography from '../Typography';
 
-class TypographyDemo extends React.Component<{}>{
+class TypographyDemo extends React.Component < {} > {
   render() {
     return (<React.Fragment>
-      <H1>Heading Primary</H1>
-      <H2>Heading Primary</H2>
+      <Typography tag="h1">Heading Primary</Typography>
+      <Typography tag="h2">Heading Primary</Typography>
 
-      <H3>Heading Primary</H3>
-      <H4>Heading Primary</H4>
-      <H5>Heading Primary</H5>
-      <H6>Heading Primary</H6>
-      <P>Heading Primary</P>
-      <Span>Heading Primary</Span>
-
+      <Typography tag="h3">Heading Primary</Typography>
+      <Typography tag="h4">Heading Primary</Typography>
+      <Typography tag="h5">Heading Primary</Typography>
+      <Typography tag="h6">Heading Primary</Typography>
+      <Typography tag="p">Heading Primary</Typography>
+      <Typography tag="span">Heading Primary</Typography>
 
     </React.Fragment>)
   }
 }
-
 
 export default TypographyDemo

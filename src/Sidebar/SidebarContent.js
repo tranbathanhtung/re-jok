@@ -6,6 +6,9 @@ import {
 
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Set mode of sidebar to push**/
   mode?: 'push',
@@ -25,9 +28,11 @@ type Props = {
 
 const SidebarContent = (props: Props) => {
 
+  const hasChild = !isChild(props.children);
+
   return (
     <StyledSidebarContent {...props}>
-      {props.children}
+      {hasChild && props.children}
     </StyledSidebarContent>
   )
 }

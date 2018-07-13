@@ -8,6 +8,9 @@ import {
   StyledPaginationContent
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Style of Page**/
   style?: Object,
@@ -45,13 +48,15 @@ class Page extends React.Component<Props> {
       ...rest
     } = this.props;
 
+    const hasChild = !isChild(children);
+
     return (
       <StyledPaginationItem
        onClick={this.onClick}
         >
         <StyledPaginationContent
           {...rest}
-          active={active}>{children}</StyledPaginationContent>
+          active={active}>{hasChild && children}</StyledPaginationContent>
       </StyledPaginationItem>
     )
   }

@@ -10,7 +10,9 @@ export type Props = {
   /** Set size of spinner component... default value is default**/
   size: 'small' | 'default' | 'medium' | 'large',
   /** Set type of spinner component... default value is default**/
-  type: 'default' | 'bounce'
+  type: 'default' | 'bounce',
+  /** Set color of Spiner**/
+  color?: string
 }
 
 const defaultProps = {

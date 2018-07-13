@@ -5,9 +5,9 @@ export const StyledSelect = styled.select`
   max-width: 100%;
   width: 100%;
   border: 0 none;
-  padding: 0 10px;
+  padding: 0 1rem;
   background: #fff;
-  color: ${({validateStatus, theme}) => validateStatus ? `${theme[validateStatus].main}` :  theme.text.regular} ;
+  color: ${({validateStatus, theme}) => validateStatus ? `${theme[validateStatus].main}` :  "rgba(0, 0, 0,.68)"} ;
   border: ${({validateStatus, theme}) => validateStatus ? `1px solid ${theme[validateStatus].main}` :  "1px solid #e5e5e5"};
   transition: .2s ease-in-out;
   transition-property: color,background-color,border;

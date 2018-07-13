@@ -133,13 +133,15 @@ export const StyledNotificationWrapper = styled.div`
 
 export const StyledNotification = styled.div`
    padding: 1.6rem 2.4rem;
-   background: ${({color, theme}) =>color ? color : theme.background.paper};
+   background: ${({color, theme}) =>color ? color : theme.background.default};
 
    box-shadow: 0 .4rem 1.2rem rgba(0,0,0,.15);
    border-radius: .4rem;
    margin-bottom: 1.6rem;
    position: relative;
    font-size: 1.4rem;
+   z-index: ${ ({theme}) => theme.zIndex.notification};
+
    ${props => returnEffect(props.config)};
 
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import './globals/rejok.css.js';
+import { globalConfig } from './globals/rejok.css.js';
 import styled from 'styled-components';
 
 import { setTheme } from './theme/utils';
@@ -32,6 +32,10 @@ import TypographyDemo from './Typography/demo';
 import ImageDemo from './Image/demo';
 import SpinnerDemo from './Spinner/demo';
 import ProgressDemo from './Progress/demo';
+import SectionDemo from './Section/demo';
+import Button from './Button/Button';
+
+globalConfig();
 
 
 const yourCustomTheme1 = {
@@ -101,16 +105,22 @@ class App extends React.Component<{}, State> {
   state = {
     theme: {},
     currentTheme: 0,
+    loading: false,
   }
   toggleTheme = ()=>{
 
     const { currentTheme } = this.state;
+    this.setState({
+      loading: true,
+    })
     if(currentTheme === 0){
 
 
       this.setState({
         theme: theme1,
         currentTheme: 1,
+        loading: false,
+
       })
     }
     if(currentTheme === 1){
@@ -133,39 +143,41 @@ class App extends React.Component<{}, State> {
 
   }
   render(){
+    console.log(this.state.loading)
     return (
       <JokTheme theme={this.state.theme}>
 
              <React.Fragment>
                <Body>
-                 <button onClick={this.toggleTheme}>Change theme</button>
+                 <Button primary onClick={this.toggleTheme}>Change theme</Button>
 
 
-                 <ButtonDemo/>
-                 <AvatarDemo/>
-                 <BadgeDemo/>
-                 <CardDemo/>
-                 <ListDemo/>
-                 <GridDemo/>
-                 <ModalDemo/>
-                 <MenuDemo/>
-                 <DividerDemo/>
-                 <NavDemo/>
-                 <DropdownDemo/>
-                 <FormDemo/>
-                 <SidebarDemo/>
-                 <TooltipDemo/>
-                 <TabDemo/>
-                 <CollapseDemo/>
-                 <LayoutDemo/>
-                 <PaginationDemo/>
-                 <TagDemo />
-                 <AlertDemo/>
-                 <NotificationDemo/>
-                 <TypographyDemo/>
-                 <ImageDemo/>
-                 <SpinnerDemo/>
-                 <ProgressDemo/>
+                 {/* <ButtonDemo/> */}
+                 {/* <AvatarDemo/> */}
+                 {/* <BadgeDemo/> */}
+                 {/* <CardDemo/> */}
+                 {/* <ListDemo/> */}
+                 {/* <GridDemo/> */}
+                 {/* <ModalDemo/> */}
+                 {/* <MenuDemo/> */}
+                 {/* <DividerDemo/> */}
+                 {/* <NavDemo/> */}
+                 {/* <DropdownDemo/> */}
+                 {/* <FormDemo/> */}
+                 {/* <SidebarDemo/> */}
+                 {/* <TooltipDemo/> */}
+                 {/* <TabDemo/> */}
+                 {/* <CollapseDemo/> */}
+                 {/* <LayoutDemo/> */}
+                 {/* <PaginationDemo/> */}
+                 {/* <TagDemo /> */}
+                 {/* <AlertDemo/> */}
+                 {/* <NotificationDemo/> */}
+                 {/* <TypographyDemo/> */}
+                 {/* <ImageDemo/> */}
+                 {/* <SpinnerDemo/> */}
+                 {/* <ProgressDemo/> */}
+                 {/* <SectionDemo/> */}
                </Body>
              </React.Fragment>
 

@@ -5,7 +5,7 @@ import {
   StyledOption
 } from './style';
 
-import { isFunction } from '../helpers/typeUtils';
+import { isFunction, isChild } from '../helpers/typeUtils';
 
 import { noop } from '../helpers';
 
@@ -21,9 +21,10 @@ type PropsSelect = {
 
 const Option = (props: PropsSelect) => {
   const { children, ...rest } = props;
+  const hasChild = !isChild(children);
 
   return (
-    <StyledOption {...rest}>{children}</StyledOption>
+    <StyledOption {...rest}>{hasChild && children}</StyledOption>
 
   )
 }
@@ -75,13 +76,16 @@ class Select extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledSelect onChange={this.handleChange} {...rest}>
         {
           placeholder && <Option value={-1} disabled>{placeholder}</Option>
         }
         {
-          children
+          hasChild && children
         }
 
 

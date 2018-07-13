@@ -50,11 +50,10 @@ const skBouncedelay = keyframes`
 
 export const StyledSpinnerContainer = styled.div`
 
- ${'' /* width: 80px; */}
- ${'' /* text-align: center; */}
+
  & > div{
     ${props => returnSizeSpinner(props)};
-    background-color: #333;
+    background-color: ${props => props.color ? props.color : "rgba(0, 0, 0, .85)"};
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: ${skBouncedelay} 1.4s ease-in-out 0s infinite both;
@@ -87,7 +86,7 @@ height: ${props => props.theme.size[props.size].fontSize};
 min-width: ${props => props.theme.size[props.size].fontSize};
 min-height: ${props => props.theme.size[props.size].fontSize};
 position: relative;
-color: inherit;
+color: ${props => props.color ? props.color : "rgba(0, 0, 0, .85)"};
 
   &::before{
     content: '';

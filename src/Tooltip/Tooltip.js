@@ -5,6 +5,9 @@ import {
   StyledTooltip
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 type Props = {
   /** Children of tooltip could be anything**/
   children?: any,
@@ -30,9 +33,12 @@ class Tooltip extends React.Component<Props>{
       children,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledTooltip {...rest}>
-        {children}
+        {hasChild && children}
       </StyledTooltip>
     )
   }

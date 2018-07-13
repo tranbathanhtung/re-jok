@@ -7,7 +7,7 @@ import {
 
 
 
-import { isFunction } from '../helpers/typeUtils';
+import { isFunction,isChild } from '../helpers/typeUtils';
 import { noop } from '../helpers';
 
 
@@ -54,9 +54,12 @@ class Tag extends React.Component<Props>{
       closable,
       ...rest
     } =  this.props;
+
+    const hasChild = !isChild(children);
+
     return (
       <StyledTag closable={closable} {...rest}>
-        {children}
+        {hasChild && children}
         { closable && <StyledIconClose onClick={this.handleClose} name="times"/> }
       </StyledTag>
     )

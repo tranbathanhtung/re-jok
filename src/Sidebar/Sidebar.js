@@ -6,6 +6,9 @@ import {
   StyledSidebar
 } from './style';
 
+import { isChild } from '../helpers/typeUtils';
+
+
 import SidebarContent from './SidebarContent';
 
 
@@ -67,6 +70,9 @@ class Sidebar extends React.Component<Props>{
       onToggle,
       ...rest
     } = this.props;
+
+    const hasChild = !isChild(children);
+
     return (
 
       <StyledSidebarWrapper openSidebar={open}>
@@ -75,7 +81,7 @@ class Sidebar extends React.Component<Props>{
           onClick={this.handleToggle}
           openSidebar={open}/>
         <StyledSidebar openSidebar={open} {...rest}>
-           {children}
+           {hasChild && children}
         </StyledSidebar>
       </StyledSidebarWrapper>
 

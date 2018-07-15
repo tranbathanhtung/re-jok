@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> should render Dropdown 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c3 {
+  max-width: 25.6rem;
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  padding: 1rem 0;
+  background-color: #fafafa;
+  border: #e8e8e8;
+  font-size: 1.4rem;
+  border-radius: .4rem;
+  box-shadow: 0 .5rem 1.2rem rgba(0,0,0,0.15);
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  background: #fafafa;
+  color: rgba(0,0,0,.64);
+  font-size: 1.4rem;
+  -webkit-transition: background .3s,width .2s;
+  transition: background .3s,width .2s;
+  border-right: .1rem solid #e8e8e8;
+}
+
+.c4::before {
+  content: "";
+  display: table;
+}
+
+.c4::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.c7 {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  line-height: 4rem;
+  height: 4rem;
+  padding-right: 1.6rem;
+  padding-left: 2.4rem;
+  box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c7:hover {
+  background-color: rgba(200,200,200,0.2);
+  outline: none;
+  box-shadow: none;
+}
+
+.c5 {
+  color: rgba(0,0,0,0.48);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: .8rem 1.6rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c5:first-child {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c8 {
+  display: block;
+  height: .1rem;
+  width: 100%;
+  margin: 1.6rem 0;
+  clear: both;
+  vertical-align: middle;
+  position: relative;
+  top: -.06em;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,.64);
+  box-sizing: border-box;
+  list-style: none;
+  background: #e8e8e8;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin-right: .8rem;
+  background: transparent;
+  color: #fafafa;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.c2 {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+<div
+  className="c0"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="c1"
+    shape="circle"
+    size="default"
+    style={
+      Object {
+        "cursor": "pointer",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="c2"
+      src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"
+    />
+  </div>
+  <div
+    className="c3"
+    open={false}
+  >
+    <div
+      style={
+        Object {
+          "width": 256,
+        }
+      }
+    >
+      <ul
+        className="c4"
+        style={
+          Object {
+            "marginBottom": 20,
+          }
+        }
+      >
+        <li
+          className=""
+        >
+          <div
+            className="c5"
+            style={
+              Object {
+                "paddingLeft": 16,
+              }
+            }
+          >
+            Header
+          </div>
+          <ul
+            className="c6"
+          >
+            <li
+              className="c7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 24,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Item 1
+              </span>
+            </li>
+            <li
+              className="c7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 24,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Item 2
+              </span>
+            </li>
+            <li
+              className="c7"
+              onClick={[Function]}
+              style={
+                Object {
+                  "paddingLeft": 24,
+                }
+              }
+            >
+              <span
+                className=""
+              >
+                Item 3
+              </span>
+            </li>
+          </ul>
+        </li>
+        <div
+          className="c8"
+          type="horizontal"
+        />
+        <li
+          className="c7"
+          onClick={[Function]}
+          style={
+            Object {
+              "paddingLeft": 24,
+            }
+          }
+        >
+          <span
+            className=""
+          >
+            Item 4
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

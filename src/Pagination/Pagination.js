@@ -6,6 +6,8 @@ import {
   StyledPagination,
 } from './style';
 
+import Icon from '../Icon';
+
 import { noop } from '../helpers';
 import { isFunction } from '../helpers/typeUtils';
 
@@ -107,6 +109,27 @@ class Pagination extends React.Component<Props, State> {
 
   }
 
+  handleFirstPage = () => {
+    const { onPageChange } = this.props;
+
+    this.setState({
+      currentPage: 0
+    }, ()=>{
+      isFunction(onPageChange) && onPageChange(this.state.currentPage, {...this.props});
+    })
+  }
+
+  handleLastPage = () => {
+    const { pages, onPageChange } = this.props;
+
+
+    this.setState({
+      currentPage: pages -1
+    }, ()=>{
+      isFunction(onPageChange) && onPageChange(this.state.currentPage, {...this.props});
+    })
+  }
+
   renderPage = () => {
 
     const { pages, type, color, stylePage, classNamePage } = this.props;
@@ -180,8 +203,16 @@ class Pagination extends React.Component<Props, State> {
           style={stylePage}
           className={classNamePage}
           page={currentPage}
-          handleClick={this.handlePrevPage}
+          handleClick={this.handleFirstPage}
           >&laquo;</Page>
+
+          <Page
+            style={stylePage}
+            className={classNamePage}
+            page={currentPage}
+            handleClick={this.handlePrevPage}
+            ><Icon name="angle-left"/></Page>
+
 
         {this.renderPage()}
 
@@ -190,6 +221,13 @@ class Pagination extends React.Component<Props, State> {
           className={classNamePage}
           page={currentPage}
           handleClick={this.handleNextPage}
+          ><Icon name="angle-right"/></Page>
+
+        <Page
+          style={stylePage}
+          className={classNamePage}
+          page={currentPage}
+          handleClick={this.handleLastPage}
           >&raquo;</Page>
 
       </StyledPagination>

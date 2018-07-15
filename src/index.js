@@ -98,7 +98,8 @@ const Body = styled.div`
 
 type State = {
   theme: Object,
-  currentTheme: number
+  currentTheme: number,
+  loading: boolean,
 }
 
 class App extends React.Component<{}, State> {
@@ -152,32 +153,32 @@ class App extends React.Component<{}, State> {
                  <Button primary onClick={this.toggleTheme}>Change theme</Button>
 
 
-                 {/* <ButtonDemo/> */}
-                 {/* <AvatarDemo/> */}
-                 {/* <BadgeDemo/> */}
-                 {/* <CardDemo/> */}
-                 {/* <ListDemo/> */}
-                 {/* <GridDemo/> */}
-                 {/* <ModalDemo/> */}
-                 {/* <MenuDemo/> */}
-                 {/* <DividerDemo/> */}
-                 {/* <NavDemo/> */}
-                 {/* <DropdownDemo/> */}
-                 {/* <FormDemo/> */}
-                 {/* <SidebarDemo/> */}
-                 {/* <TooltipDemo/> */}
-                 {/* <TabDemo/> */}
-                 {/* <CollapseDemo/> */}
-                 {/* <LayoutDemo/> */}
-                 {/* <PaginationDemo/> */}
-                 {/* <TagDemo /> */}
-                 {/* <AlertDemo/> */}
-                 {/* <NotificationDemo/> */}
-                 {/* <TypographyDemo/> */}
-                 {/* <ImageDemo/> */}
-                 {/* <SpinnerDemo/> */}
-                 {/* <ProgressDemo/> */}
-                 {/* <SectionDemo/> */}
+                 <ButtonDemo/>
+                 <AvatarDemo/>
+                 <BadgeDemo/>
+                 <CardDemo/>
+                 <ListDemo/>
+                 <GridDemo/>
+                 <ModalDemo/>
+                 <MenuDemo/>
+                 <DividerDemo/>
+                 <NavDemo/>
+                 <DropdownDemo/>
+                 <FormDemo/>
+                 <SidebarDemo/>
+                 <TooltipDemo/>
+                 <TabDemo/>
+                 <CollapseDemo/>
+                 <LayoutDemo/>
+                 <PaginationDemo/>
+                 <TagDemo />
+                 <AlertDemo/>
+                 <NotificationDemo/>
+                 <TypographyDemo/>
+                 <ImageDemo/>
+                 <SpinnerDemo/>
+                 <ProgressDemo/>
+                 <SectionDemo/>
                </Body>
              </React.Fragment>
 

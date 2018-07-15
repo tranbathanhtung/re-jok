@@ -1,5 +1,9 @@
 import styled, {css} from 'styled-components';
-import { hexa} from '../globals'
+import { hexa} from '../globals';
+
+const returnBoxShadow = color => {
+  return `0 .3rem .5rem 0 ${hexa(color, .28)}, 0 .1rem 1rem 0 ${hexa(color, .12)}, 0 .2rem .4rem -.1rem ${hexa(color, .2)}`;
+}
 
 export const StyledPagination = styled.ul`
   list-style: none;
@@ -45,8 +49,8 @@ export const StyledPaginationContent = styled.a`
     props => props.type === "effect" && css`
        box-shadow: ${
          ({active, theme, color}) => active
-         ? color ? `0 .3rem .5rem 0 ${hexa(color, .28)}, 0 .1rem 1rem 0 ${hexa(color, .12)}, 0 .2rem .4rem -.1rem ${hexa(color, .2)}`
-         : `0 .3rem .5rem 0 ${hexa(theme.primary.main, .28)}, 0 .1rem 1rem 0 ${hexa(theme.primary.main, .12)}, 0 .2rem .4rem -.1rem ${hexa(theme.primary.main, .2)}`
+         ? color ? returnBoxShadow(color)
+         : returnBoxShadow(theme.primary.main)
            : null
        };
 

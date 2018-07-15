@@ -74,7 +74,7 @@ const basicAnimated = css `
                 : props.secondary
                   ? returnBoxShadow(props.theme.secondary.main)
 
-                  : props.theme.boxShadow.button};
+                  : "0 1.4rem 2.6rem -1.2rem rgba(0, 0, 0, 0.42), 0 .4rem 2.3rem 0 rgba(0,0,0,0.12), 0 .8rem 1rem -.5rem rgba(0, 0, 0, 0.2)"};
 
 }
 

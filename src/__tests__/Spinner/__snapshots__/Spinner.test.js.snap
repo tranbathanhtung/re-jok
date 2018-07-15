@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Spinner /> should render default 1`] = `
+.c0 {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  min-width: 1.4rem;
+  min-height: 1.4rem;
+  position: relative;
+  color: rgba(0,0,0,.85);
+}
+
+.c0::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: calc(1.4rem / -2);
+  margin-left: calc(1.4rem / -2);
+  border-radius: 50%;
+  border-top: 2px solid;
+  border-right: 2px solid transparent;
+  -webkit-animation: ibwhYF .6s linear infinite;
+  animation: ibwhYF .6s linear infinite;
+}
+
+<div
+  className="c0"
+  size="default"
+  type="default"
+/>
+`;
+
+exports[`<Spinner /> should render type bounce 1`] = `
+.c0 > div {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: rgba(0,0,0,.85);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: ghjfcd 1.4s ease-in-out 0s infinite both;
+  -webkit-animation: ghjfcd 1.4s ease-in-out 0s infinite both;
+  animation: ghjfcd 1.4s ease-in-out 0s infinite both;
+}
+
+.c1 {
+  -webkit-animation-delay: -0.32s !important;
+  animation-delay: -0.32s !important;
+}
+
+.c2 {
+  -webkit-animation-delay: -0.16s !important;
+  animation-delay: -0.16s !important;
+}
+
+<div
+  className="c0"
+  size="default"
+  type="bounce"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+  <div
+    className=""
+  />
+</div>
+`;
+
+exports[`<Spinner /> should render type bounce with size 1`] = `
+.c0 > div {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: rgba(0,0,0,.85);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: ghjfcd 1.4s ease-in-out 0s infinite both;
+  -webkit-animation: ghjfcd 1.4s ease-in-out 0s infinite both;
+  animation: ghjfcd 1.4s ease-in-out 0s infinite both;
+}
+
+.c1 {
+  -webkit-animation-delay: -0.32s !important;
+  animation-delay: -0.32s !important;
+}
+
+.c2 {
+  -webkit-animation-delay: -0.16s !important;
+  animation-delay: -0.16s !important;
+}
+
+<div
+  className="c0"
+  size="medium"
+  type="bounce"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+  <div
+    className=""
+  />
+</div>
+`;
+
+exports[`<Spinner /> should render with size 1`] = `
+.c0 {
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+  position: relative;
+  color: rgba(0,0,0,.85);
+}
+
+.c0::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: calc(1.8rem / -2);
+  margin-left: calc(1.8rem / -2);
+  border-radius: 50%;
+  border-top: 2px solid;
+  border-right: 2px solid transparent;
+  -webkit-animation: ibwhYF .6s linear infinite;
+  animation: ibwhYF .6s linear infinite;
+}
+
+<div
+  className="c0"
+  size="medium"
+  type="default"
+/>
+`;

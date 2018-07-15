@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render 1`] = `
+.c0 {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,.64);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  visibility: visible;
+}
+
+.c0::after {
+  position: absolute;
+  opacity: 0;
+  text-transform: none;
+  -webkit-transition: all 0.216s ease;
+  transition: all 0.216s ease;
+  max-width: 25rem;
+  min-width: 4rem;
+  padding: .6rem .8rem;
+  color: #fff;
+  text-align: left;
+  z-index: 3000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgba(0,0,0,.75);
+  border-radius: .4rem;
+  box-shadow: 0 .2rem .8rem rgba(0,0,0,.15);
+  min-height: 3.2rem;
+  content: 'Tooltip';
+}
+
+.c0::before {
+  position: absolute;
+  opacity: 0;
+  text-transform: none;
+  -webkit-transition: all 0.216s ease;
+  transition: all 0.216s ease;
+  content: "";
+  border-width: .5rem;
+  border-image: initial;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  z-index: 3000;
+}
+
+.c0::after {
+  top: 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.c0::before {
+  bottom: 100%;
+  top: calc(100% - 5px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-top-width: 0px;
+  border-bottom-color: rgba(0,0,0,.75);
+}
+
+.c0:hover:after,
+.c0:hover:before {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(5px);
+  -ms-transform: translateX(-50%) translateY(5px);
+  transform: translateX(-50%) translateY(5px);
+}
+
+.c2 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  line-height: inherit;
+  color: inherit;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: rgba(0,0,0,.68);
+  width: unset;
+  border: .1rem solid transparent;
+  border-color: #d9d9d9;
+  padding: 0.9rem 1.8rem;
+  border-radius: .4rem;
+  line-height: 1.5;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1 div + span,
+.c1 span + span {
+  margin: 0 .8rem;
+}
+
+.c1:hover {
+  background-color: #fff;
+}
+
+.c1::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+<div
+  className="c0"
+  label="Tooltip"
+>
+  <button
+    className="c1"
+    disabled={false}
+    href={null}
+    size="default"
+    type="button"
+  >
+    
+    <span
+      className="c2"
+    >
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Tooltip /> should render with position 1`] = `
+.c0 {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,.64);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  visibility: visible;
+}
+
+.c0::after {
+  position: absolute;
+  opacity: 0;
+  text-transform: none;
+  -webkit-transition: all 0.216s ease;
+  transition: all 0.216s ease;
+  max-width: 25rem;
+  min-width: 4rem;
+  padding: .6rem .8rem;
+  color: #fff;
+  text-align: left;
+  z-index: 3000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgba(0,0,0,.75);
+  border-radius: .4rem;
+  box-shadow: 0 .2rem .8rem rgba(0,0,0,.15);
+  min-height: 3.2rem;
+  content: 'Tooltip position';
+}
+
+.c0::before {
+  position: absolute;
+  opacity: 0;
+  text-transform: none;
+  -webkit-transition: all 0.216s ease;
+  transition: all 0.216s ease;
+  content: "";
+  border-width: .5rem;
+  border-image: initial;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  z-index: 3000;
+}
+
+.c0::after {
+  bottom: 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.c0::before {
+  bottom: calc(100% - 5px);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  border-bottom-width: 0px;
+  border-top-color: rgba(0,0,0,.75);
+}
+
+.c0:hover:after,
+.c0:hover:before {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-5px);
+  -ms-transform: translateX(-50%) translateY(-5px);
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.c2 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  line-height: inherit;
+  color: inherit;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: rgba(0,0,0,.68);
+  width: unset;
+  border: .1rem solid transparent;
+  border-color: #d9d9d9;
+  padding: 0.9rem 1.8rem;
+  border-radius: .4rem;
+  line-height: 1.5;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1 div + span,
+.c1 span + span {
+  margin: 0 .8rem;
+}
+
+.c1:hover {
+  background-color: #fff;
+}
+
+.c1::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+<div
+  className="c0"
+  label="Tooltip position"
+>
+  <button
+    className="c1"
+    disabled={false}
+    href={null}
+    size="default"
+    type="button"
+  >
+    
+    <span
+      className="c2"
+    >
+      Button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Tooltip /> should render with position and color 1`] = `
+.c0 {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,.64);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  visibility: visible;
+}
+
+.c0::after {
+  position: absolute;
+  opacity: 0;
+  text-transform: none;
+  -webkit-transition: all 0.216s ease;
+  transition: all 0.216s ease;
+  max-width: 25rem;
+  min-width: 4rem;
+  padding: .6rem .8rem;
+  color: #fff;
+  text-align: left;
+  z-index: 3000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #11D3BC;
+  border-radius: .4rem;
+  box-shadow: 0 .2rem .8rem rgba(0,0,0,.15);
+  min-height: 3.2rem;
+  content: 'Tooltip position';
+}
+
+.c0::before {
+  position: absolute;
+  opacity: 0;
+  text-transform: none;
+  -webkit-transition: all 0.216s ease;
+  transition: all 0.216s ease;
+  content: "";
+  border-width: .5rem;
+  border-image: initial;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  z-index: 3000;
+}
+
+.c0::after {
+  bottom: 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.c0::before {
+  bottom: calc(100% - 5px);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  border-bottom-width: 0px;
+  border-top-color: #11D3BC;
+}
+
+.c0:hover:after,
+.c0:hover:before {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(-5px);
+  -ms-transform: translateX(-50%) translateY(-5px);
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.c2 {
+  display: block;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  line-height: inherit;
+  color: inherit;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  word-break: keep-all;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: rgba(0,0,0,.68);
+  width: unset;
+  border: .1rem solid transparent;
+  border-color: #d9d9d9;
+  padding: 0.9rem 1.8rem;
+  border-radius: .4rem;
+  line-height: 1.5;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c1 div + span,
+.c1 span + span {
+  margin: 0 .8rem;
+}
+
+.c1:hover {
+  background-color: #fff;
+}
+
+.c1::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  background: #fff;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  pointer-events: none;
+  display: none;
+}
+
+<div
+  className="c0"
+  label="Tooltip position"
+>
+  <button
+    className="c1"
+    disabled={false}
+    href={null}
+    size="default"
+    type="button"
+  >
+    
+    <span
+      className="c2"
+    >
+      Button
+    </span>
+  </button>
+</div>
+`;

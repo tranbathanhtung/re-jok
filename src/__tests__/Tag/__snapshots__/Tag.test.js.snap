@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should render 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1.1rem;
+  margin-right: .8rem;
+  margin-bottom: .8rem;
+  background-color: #ededed;
+  border: .1rem solid transparent;
+  border-radius: .2rem;
+  color: rgba(0,0,0,0.48);
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c0:hover {
+  color: rgba(0,0,0,.64);
+}
+
+<span
+  className="c0"
+  size="default"
+>
+  Tag 1
+</span>
+`;
+
+exports[`<Tag /> should render with close icon 1`] = `
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+.c2 {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  height: 1.6rem;
+  width: 0;
+  line-height: 1.6rem;
+  vertical-align: middle;
+  top: -.1rem;
+  right: -.5rem;
+  opacity: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1.1rem;
+  margin-right: .8rem;
+  margin-bottom: .8rem;
+  background-color: #ededed;
+  border: .1rem solid transparent;
+  border-radius: .2rem;
+  color: rgba(0,0,0,0.48);
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c0:hover {
+  color: rgba(0,0,0,.64);
+  padding-right: 14px;
+}
+
+.c0:hover .c1 {
+  width: 1.6rem;
+  opacity: 1;
+}
+
+<span
+  className="c0"
+  size="default"
+>
+  Tag 1
+  <div
+    className="c1 c2 c3"
+    color={undefined}
+    onClick={[Function]}
+    style={undefined}
+  >
+    <span
+      aria-hidden={true}
+      className="fa fa-times"
+    />
+  </div>
+</span>
+`;
+
+exports[`<Tag /> should render with color 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1.1rem;
+  margin-right: .8rem;
+  margin-bottom: .8rem;
+  background-color: #9c27b0;
+  border: .1rem solid transparent;
+  border-radius: .2rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c0:hover {
+  color: #fff;
+}
+
+<span
+  className="c0"
+  color="#9c27b0"
+  size="default"
+>
+  Tag 3
+</span>
+`;
+
+exports[`<Tag /> should render with size 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 4rem;
+  line-height: 4rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1.1rem;
+  margin-right: .8rem;
+  margin-bottom: .8rem;
+  background-color: #ededed;
+  border: .1rem solid transparent;
+  border-radius: .2rem;
+  color: rgba(0,0,0,0.48);
+  cursor: pointer;
+  font-size: 1.8rem;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.c0:hover {
+  color: rgba(0,0,0,.64);
+}
+
+<span
+  className="c0"
+  size="medium"
+>
+  Tag 3
+</span>
+`;

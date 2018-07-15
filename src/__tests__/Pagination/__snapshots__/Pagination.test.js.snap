@@ -1,0 +1,1137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should render 1`] = `
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > * {
+  font-size: 1.4rem;
+}
+
+.c0 > * > * {
+  display: block;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+}
+
+.c1 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  position: relative;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,0.48);
+}
+
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #1c8ffb;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+  type="default"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-left"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      7
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      8
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      9
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color={undefined}
+      style={undefined}
+      type="default"
+    >
+      10
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-right"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Pagination /> should render with pagination color 1`] = `
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > * {
+  font-size: 1.4rem;
+}
+
+.c0 > * > * {
+  display: block;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+}
+
+.c1 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  position: relative;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,0.48);
+}
+
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #9c27b0;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+  color="#9c27b0"
+  type="default"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-left"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      7
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      8
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      9
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      color="#9c27b0"
+      style={undefined}
+      type="default"
+    >
+      10
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-right"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Pagination /> should render with pagination color type effect 1`] = `
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > * {
+  font-size: 1.4rem;
+}
+
+.c0 > * > * {
+  display: block;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+}
+
+.c1 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  position: relative;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,0.48);
+}
+
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,0.48);
+  color: rgba(0,0,0,0.85);
+  background-color: #fafafa;
+  border: 0;
+  border-radius: 3rem;
+  padding: 0 1.1rem;
+  margin: 0 .3rem;
+  min-width: 3rem;
+  height: 3rem;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #9c27b0;
+  box-shadow: 0 .3rem .5rem 0 rgba(156,39,176,0.28),0 .1rem 1rem 0 rgba(156,39,176,0.12),0 .2rem .4rem -.1rem rgba(156,39,176,0.2);
+  color: #fff;
+  background-color: #9c27b0;
+  border: 0;
+  border-radius: 3rem;
+  padding: 0 1.1rem;
+  margin: 0 .3rem;
+  min-width: 3rem;
+  height: 3rem;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+  color="#9c27b0"
+  type="effect"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-left"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c5"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      7
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      8
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      9
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color="#9c27b0"
+      style={undefined}
+      type="effect"
+    >
+      10
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-right"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<Pagination /> should render with type effect 1`] = `
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c0 > * {
+  font-size: 1.4rem;
+}
+
+.c0 > * > * {
+  display: block;
+  -webkit-transition: color .1s;
+  transition: color .1s;
+}
+
+.c1 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  position: relative;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  padding: 0;
+  text-align: center;
+}
+
+.c2 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,0.48);
+}
+
+.c4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,0.48);
+  color: rgba(0,0,0,0.85);
+  background-color: #fafafa;
+  border: 0;
+  border-radius: 3rem;
+  padding: 0 1.1rem;
+  margin: 0 .3rem;
+  min-width: 3rem;
+  height: 3rem;
+}
+
+.c5 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #1c8ffb;
+  box-shadow: 0 .3rem .5rem 0 rgba(28,143,251,0.28),0 .1rem 1rem 0 rgba(28,143,251,0.12),0 .2rem .4rem -.1rem rgba(28,143,251,0.2);
+  color: #fff;
+  background-color: #1c8ffb;
+  border: 0;
+  border-radius: 3rem;
+  padding: 0 1.1rem;
+  margin: 0 .3rem;
+  min-width: 3rem;
+  height: 3rem;
+}
+
+.c3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+<ul
+  className="c0"
+  type="effect"
+>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      «
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-left"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      2
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      3
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      4
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      5
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c5"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      6
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      7
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      8
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      9
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c4"
+      color={undefined}
+      style={undefined}
+      type="effect"
+    >
+      10
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      <div
+        className="c3"
+        color={undefined}
+        style={undefined}
+      >
+        <span
+          aria-hidden={true}
+          className="fa fa-angle-right"
+        />
+      </div>
+    </a>
+  </li>
+  <li
+    className="c1"
+    onClick={[Function]}
+  >
+    <a
+      className="c2"
+      style={undefined}
+    >
+      »
+    </a>
+  </li>
+</ul>
+`;

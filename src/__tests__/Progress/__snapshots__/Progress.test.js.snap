@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Progress /> should render 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  background-color: #ebeef5;
+  line-height: 1.4;
+  height: .5rem;
+  border-radius: 10rem;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.c1 {
+  border: none;
+  outline: none;
+  background: #1c8ffb;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+.c1::after,
+.c1::before {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left,right;
+}
+
+.c1::before {
+  -webkit-animation: wwaAf 2.1s cubic-bezier(0.65,0.815,0.735,0.395) infinite;
+  animation: wwaAf 2.1s cubic-bezier(0.65,0.815,0.735,0.395) infinite;
+}
+
+.c1::after {
+  -webkit-animation: kBRfEP 2.1s cubic-bezier(0.165,0.84,0.44,1) infinite;
+  animation: kBRfEP 2.1s cubic-bezier(0.165,0.84,0.44,1) infinite;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+
+<div
+  className="c0"
+  size="small"
+>
+  <div
+    className="c1"
+  />
+</div>
+`;
+
+exports[`<Progress /> should render with color 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  background-color: #ebeef5;
+  line-height: 1.4;
+  height: .5rem;
+  border-radius: 10rem;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.c1 {
+  border: none;
+  outline: none;
+  background: #9c27b0;
+  border-radius: 10rem;
+  color: #fff;
+  top: 0;
+  width: 40%;
+  bottom: 0;
+  -webkit-transition: width .3s linear;
+  transition: width .3s linear;
+}
+
+<div
+  className="c0"
+  size="small"
+>
+  <div
+    className="c1"
+    color="#9c27b0"
+  />
+</div>
+`;
+
+exports[`<Progress /> should render with size 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  background-color: #ebeef5;
+  line-height: 1.4;
+  height: 1.8rem;
+  border-radius: 10rem;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.c1 {
+  border: none;
+  outline: none;
+  background: #1c8ffb;
+  border-radius: 10rem;
+  color: #fff;
+  top: 0;
+  width: 40%;
+  bottom: 0;
+  -webkit-transition: width .3s linear;
+  transition: width .3s linear;
+}
+
+<div
+  className="c0"
+  size="large"
+>
+  <div
+    className="c1"
+  />
+</div>
+`;
+
+exports[`<Progress /> should render with width determinate mode 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  background-color: #ebeef5;
+  line-height: 1.4;
+  height: .5rem;
+  border-radius: 10rem;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.c1 {
+  border: none;
+  outline: none;
+  background: #1c8ffb;
+  border-radius: 10rem;
+  color: #fff;
+  top: 0;
+  width: 40%;
+  bottom: 0;
+  -webkit-transition: width .3s linear;
+  transition: width .3s linear;
+}
+
+<div
+  className="c0"
+  size="small"
+>
+  <div
+    className="c1"
+  />
+</div>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Divider /> should render Divider 1`] = `
+.c0 {
+  display: block;
+  height: .1rem;
+  width: 100%;
+  margin: 1.6rem 0;
+  clear: both;
+  vertical-align: middle;
+  position: relative;
+  top: -.06em;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,.64);
+  box-sizing: border-box;
+  list-style: none;
+  background: #e8e8e8;
+}
+
+<div
+  className="c0"
+  type="horizontal"
+/>
+`;

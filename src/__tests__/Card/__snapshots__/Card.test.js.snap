@@ -9,7 +9,7 @@ exports[`<Card /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -17,13 +17,13 @@ exports[`<Card /> should render 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   background: #fafafa;
   height: 100%;
   padding: 0;
@@ -46,7 +46,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -54,13 +54,13 @@ exports[`<Card /> should render with Card Action 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   background: #fafafa;
   height: 100%;
   padding: 0;
@@ -158,8 +158,8 @@ exports[`<Card /> should render with Card Action 1`] = `
   padding: 1.4rem 2.7rem;
   border-radius: .6rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   border: none;
   color: rgba(0,0,0,.68);
   width: 4rem;
@@ -185,7 +185,6 @@ exports[`<Card /> should render with Card Action 1`] = `
   content: "";
   border-radius: inherit;
   z-index: 1;
-  -webkit-transition: opacity .2s;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
@@ -233,8 +232,8 @@ exports[`<Card /> should render with Card Action 1`] = `
   padding: 1.4rem 2.7rem;
   border-radius: .6rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   border: none;
   color: rgba(0,0,0,.68);
   width: 4rem;
@@ -260,7 +259,6 @@ exports[`<Card /> should render with Card Action 1`] = `
   content: "";
   border-radius: inherit;
   z-index: 1;
-  -webkit-transition: opacity .2s;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
@@ -308,8 +306,8 @@ exports[`<Card /> should render with Card Action 1`] = `
   padding: 1.4rem 2.7rem;
   border-radius: .6rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   border: none;
   color: rgba(0,0,0,.68);
   width: 4rem;
@@ -335,7 +333,6 @@ exports[`<Card /> should render with Card Action 1`] = `
   content: "";
   border-radius: inherit;
   z-index: 1;
-  -webkit-transition: opacity .2s;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
@@ -432,7 +429,7 @@ exports[`<Card /> should render with Card Content 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -440,13 +437,13 @@ exports[`<Card /> should render with Card Content 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   background: #fafafa;
   height: 100%;
   padding: 0;
@@ -529,7 +526,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -537,13 +534,13 @@ exports[`<Card /> should render with Card Header 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   background: #fafafa;
   height: 100%;
   padding: 0;
@@ -715,8 +712,8 @@ exports[`<Card /> should render with Card Header 1`] = `
   padding: 0.5rem 0.9rem;
   border-radius: .2rem;
   line-height: 1;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .c9 div + span,
@@ -739,7 +736,6 @@ exports[`<Card /> should render with Card Header 1`] = `
   content: "";
   border-radius: inherit;
   z-index: 1;
-  -webkit-transition: opacity .2s;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
@@ -820,7 +816,7 @@ exports[`<Card /> should render with Card Loading 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -828,13 +824,13 @@ exports[`<Card /> should render with Card Loading 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   padding: 1.4rem;
   height: 40rem;
   border-radius: .5rem;
@@ -1139,7 +1135,7 @@ exports[`<Card /> should render with Card Media 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -1147,13 +1143,13 @@ exports[`<Card /> should render with Card Media 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   background: #fafafa;
   height: 100%;
   padding: 0;
@@ -1188,7 +1184,7 @@ exports[`<Card /> should render with full card option 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: .1rem solid rgba(0,0,0,0.1);
+  border: .1rem solid #e8e8e8;
   border-radius: .5rem;
   max-width: 100%;
   position: relative;
@@ -1196,13 +1192,13 @@ exports[`<Card /> should render with full card option 1`] = `
   color: rgba(0,0,0,.64);
   margin: 0;
   z-index: 2;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   box-sizing: border-box;
   list-style: none;
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
-  width: 33rem;
+  width: calc(25% - 2.4rem);
   padding: 1.4rem;
   height: 40rem;
   border-radius: .5rem;
@@ -1210,7 +1206,7 @@ exports[`<Card /> should render with full card option 1`] = `
 
 .c0:hover {
   box-shadow: 0 .2rem .8rem rgba(0,0,0,.09);
-  border-color: rgba(0,0,0,.09);
+  border-color: #e8e8e8;
 }
 
 .c1 {

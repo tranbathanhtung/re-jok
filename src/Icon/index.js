@@ -27,6 +27,7 @@ type Props = {
   color?: string,
   /** set postion of icon right or left**/
   iconPosition: 'left' | 'right',
+  /****/
   onClick?: Function,
 }
 

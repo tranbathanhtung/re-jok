@@ -1,6 +1,10 @@
 import styled, {css} from 'styled-components';
 
-import { hexa} from '../globals'
+import { hexa} from '../globals';
+
+const returnBoxShadow = color => {
+  return `0 1.2rem 2rem -1rem ${hexa(color, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,0.12), 0 .7rem .8rem -.5rem ${hexa(color, 0.2)}`;
+}
 
 
 const baseMenuItem = css`
@@ -57,8 +61,8 @@ export const StyledMenuItem = styled.li`
       background-color: ${props => props.active ? props.activeColor ? props.activeColor :  props.theme.primary.main : null};
       box-shadow: ${props => props.active ?
         props.activeColor
-        ? (`0 1.2rem 2rem -1rem ${hexa(props.activeColor, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,0.12), 0 .7rem .8rem -.5rem ${hexa(props.activeColor, 0.2)}`)
-        : `0 1.2rem 2rem -1rem ${hexa(props.theme.primary.main, 0.28)}, 0 .4rem 2rem 0 rgba(0,0,0,.12), 0 .7rem .8rem -.5rem ${hexa(props.theme.primary.main, 0.2)}`
+        ? returnBoxShadow(props.activeColor)
+        : returnBoxShadow(props.theme.primary.main)
          : null};
          color: ${props => props.active && props.theme.text.default};
       `

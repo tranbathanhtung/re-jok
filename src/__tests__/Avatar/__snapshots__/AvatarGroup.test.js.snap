@@ -51,9 +51,6 @@ exports[`<AvatarGroup /> should render AvatarGroup 1`] = `
   box-shadow: rgb(255,255,255) 0px 0px 0px 2px;
   position: relative;
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  -webkit-transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
 }
 
 <ul

@@ -3,6 +3,10 @@ import styled, {css, keyframes} from 'styled-components';
 import { hexa, shadeColor} from '../globals';
 
 
+const returnBoxShadow = color => {
+
+  return `0 1.4rem 2.6rem -1.2rem ${hexa(color, 0.42)}, 0 .4rem 2.3rem 0 rgba(0,0,0,0.12), 0 .8rem 1rem -.5rem ${hexa(color, 0.2)}`;
+}
 
 export const baseButton = css `
     display: flex;
@@ -62,17 +66,18 @@ const basicAnimated = css `
             ? hexa(props.theme.secondary.main, 0.9)
             : "#fff"};
   box-shadow: ${props => props.backgroundColor
-              ? (`0 14px 26px -12px ${hexa(props.backgroundColor, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.backgroundColor, 0.2)}`)
+              ? returnBoxShadow(props.backgroundColor)
 
               : props.primary
-                ? (`0 14px 26px -12px ${hexa(props.theme.primary.main, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.theme.primary.main, 0.2)}`)
+                ? returnBoxShadow(props.theme.primary.main)
 
                 : props.secondary
-                  ? (`0 14px 26px -12px ${hexa(props.theme.secondary.main, 0.42)}, 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px ${hexa(props.theme.secondary.main, 0.2)}`)
+                  ? returnBoxShadow(props.theme.secondary.main)
 
-                  : (`0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0 rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)`)};
+                  : props.theme.boxShadow.button};
 
 }
+
 
 &:active{
   box-shadow: -.1rem .1rem .4rem rgba(0, 0, 0, 0.4);

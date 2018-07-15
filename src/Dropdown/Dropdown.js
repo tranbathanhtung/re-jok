@@ -120,8 +120,6 @@ class Dropdown extends React.Component<Props, State>{
           this.setState({
             top,
             left,
-            // width,
-            // height,
             open: true
           })
         }

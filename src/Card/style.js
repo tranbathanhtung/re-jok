@@ -1,6 +1,8 @@
 import styled, {css, keyframes} from 'styled-components'
 
 // ================ Card =================
+
+
 const opacityCard = keyframes `
 0% {
 
@@ -53,12 +55,12 @@ export const StyledCard = styled.div `
 
               case "sm":
                return css`
-                @media(min-width: ${props.theme.grid.sm}px){
-                  width: ${props => `calc(${ 100 / props.numberCard.sm}% - 2.4rem)`};
+               @media(min-width: ${props.theme.grid.sm}px){
+                 width: ${props => `calc(${ 100 / props.numberCard.sm}% - 2.4rem)`};
 
-                  }
+                 }
                   `
-
+              
               case "md":
                 return css`
                  @media(min-width: ${props.theme.grid.md}px){

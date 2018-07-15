@@ -1,6 +1,10 @@
 import styled, {css} from 'styled-components';
 
-import { hexa} from '../globals'
+import { hexa} from '../globals';
+
+const returnBoxShadow = color => {
+  return `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(color, 0.46)}`;
+}
 
 
 
@@ -75,11 +79,11 @@ export const StyledNavBar = styled.nav`
     color: ${props => props.backgroundColor || props.primary || props.secondary ? props.theme.text.default : props.theme.text.regular};
     box-shadow: ${props =>
       props.primary
-      ? `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(props.theme.primary.main, 0.46)}`
+      ? returnBoxShadow(props.theme.primary.main, 0.46)
       : props.secondary
-      ? `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(props.theme.secondary.main, 0.46)}`
+      ? returnBoxShadow(props.theme.secondary.main, 0.46)
       : props.backgroundColor
-      ? `0 .4rem 2rem 0 rgba(0,0,0,0.14), 0 .7rem 1.2rem -.5rem ${hexa(props.backgroundColor, 0.46)}`
+      ? returnBoxShadow(props.backgroundColor, 0.46)
       : "0 .4rem 1.8rem 0 rgba(0,0,0,0.12), 0 .7rem 1rem -.5rem rgba(0,0,0,0.15)"};
 
     `

@@ -12,7 +12,7 @@ exports[`<Menu /> should render Menu 1`] = `
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: .1rem solid #e8e8e8;
 }
 
 .c0::before {
@@ -78,7 +78,7 @@ exports[`<Menu /> should render Menu 1`] = `
   vertical-align: middle;
   position: relative;
   top: -.06em;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.5;
   color: rgba(0,0,0,.64);
   box-sizing: border-box;
@@ -186,7 +186,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: .1rem solid #e8e8e8;
 }
 
 .c0::before {
@@ -674,7 +674,7 @@ exports[`<Menu /> should render Menu has active background item 1`] = `
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: .1rem solid #e8e8e8;
 }
 
 .c0::before {
@@ -719,7 +719,7 @@ exports[`<Menu /> should render Menu has active background item 1`] = `
   padding-left: 2.4rem;
   box-sizing: border-box;
   background-color: #1c8ffb;
-  box-shadow: 0 1.2rem 2rem -1rem rgba(28,143,251,0.28),0 .4rem 2rem 0 rgba(0,0,0,.12),0 .7rem .8rem -.5rem rgba(28,143,251,0.2);
+  box-shadow: 0 1.2rem 2rem -1rem rgba(28,143,251,0.28),0 .4rem 2rem 0 rgba(0,0,0,0.12),0 .7rem .8rem -.5rem rgba(28,143,251,0.2);
   color: #fff;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -773,7 +773,7 @@ exports[`<Menu /> should render Menu has active default item 1`] = `
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: .1rem solid #e8e8e8;
 }
 
 .c0::before {
@@ -870,7 +870,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: .1rem solid #e8e8e8;
 }
 
 .c0::before {
@@ -915,7 +915,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
   padding-left: 2.4rem;
   box-sizing: border-box;
   background-color: #1c8ffb;
-  box-shadow: 0 1.2rem 2rem -1rem rgba(28,143,251,0.28),0 .4rem 2rem 0 rgba(0,0,0,.12),0 .7rem .8rem -.5rem rgba(28,143,251,0.2);
+  box-shadow: 0 1.2rem 2rem -1rem rgba(28,143,251,0.28),0 .4rem 2rem 0 rgba(0,0,0,0.12),0 .7rem .8rem -.5rem rgba(28,143,251,0.2);
   color: #fff;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -1222,7 +1222,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
   transition: background .3s,width .2s;
-  border-right: 0.1rem solid #e6e6e6;
+  border-right: .1rem solid #e8e8e8;
 }
 
 .c0::before {

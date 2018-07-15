@@ -50,8 +50,8 @@ exports[`<Button /> should render 1`] = `
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .c0 div + span,
@@ -74,7 +74,6 @@ exports[`<Button /> should render 1`] = `
   content: "";
   border-radius: inherit;
   z-index: 1;
-  -webkit-transition: opacity .2s;
   -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;

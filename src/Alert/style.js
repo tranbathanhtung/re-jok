@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import Icon from '../Icon';
 import { shadeColor, hexa } from '../globals';
 
+const returnBoxShadow = color => {
+  return `0 .3rem .5rem -.1rem ${hexa(color, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(color, .12)}`
+}
+
 export const StyledIconClose = styled(Icon)`
  text-align: center;
  position: absolute;
@@ -16,12 +20,13 @@ export const StyledIconClose = styled(Icon)`
 `
 
 export const StyledAlertIcon = styled(Icon)`
-  margin-right: 10px;
+  margin-right: 1rem;
   height: 1.6rem;
   width: 1.6rem;
   line-height: 1.6rem;
   vertical-align: middle;
 `
+
 
 const returnType = props => {
 
@@ -31,7 +36,7 @@ const returnType = props => {
         return `
           color: ${props.theme.text.regular};
           background: ${shadeColor(props.theme.background.default, -5)};
-          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.background.default, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.background.default, .12)}`};
+          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.background.default)};
 
 
         `
@@ -41,7 +46,7 @@ const returnType = props => {
           color: ${props.theme.text.default};
 
           background: ${hexa(props.theme.success.main, .85)};
-          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.success.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.success.main, .12)}`};
+          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.success.main)};
 
 
         `
@@ -52,7 +57,7 @@ const returnType = props => {
 
           background: ${hexa(props.theme.info.main, .85)};
 
-          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.info.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.info.main, .12)}`};
+          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.info.main)};
 
 
 
@@ -61,11 +66,8 @@ const returnType = props => {
         return`
         color: ${props.theme.text.default};
 
-
           background: ${hexa(props.theme.warning.main, .85)};
-          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.warning.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.warning.main, .12)}`};
-
-
+          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.warning.main)};
 
         `
       case 'error':
@@ -73,16 +75,14 @@ const returnType = props => {
         color: ${props.theme.text.default};
 
           background: ${hexa(props.theme.error.main, .85)};
-          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.error.main, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.error.main, .12)}`};
-
-
+          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.error.main)};
 
         `
       default:
         return `
           color: ${props.theme.text.regular};
           background: ${ ({theme}) => shadeColor(theme.background.default, -5)};
-          box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.theme.background.default, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.theme.background.default, .12)}`};
+          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.background.default)};
 
 
          `
@@ -93,7 +93,7 @@ const returnType = props => {
     return `
     color: ${props.theme.text.default};
     background: ${hexa(props.color, .85)};
-    box-shadow: ${props.hasBoxShadow && `0 .3rem .5rem -.1rem ${hexa(props.color, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(props.color, .12)}`};
+    box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.color)};
 
 
     `

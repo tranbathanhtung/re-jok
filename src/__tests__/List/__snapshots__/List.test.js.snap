@@ -595,8 +595,8 @@ exports[`<List /> should render full control list 1`] = `
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #fff;
   border-color: rgba(0,0,0,.16);
   color: rgba(0,0,0,.68);
@@ -619,7 +619,6 @@ exports[`<List /> should render full control list 1`] = `
   border-radius: inherit;
   z-index: 1;
   -webkit-transition: opacity .2s;
-  -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
   display: none;
@@ -632,7 +631,7 @@ exports[`<List /> should render full control list 1`] = `
 
 .c24:hover {
   border-color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(0,0,0,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.2);
+  box-shadow: 0 1.4rem 2.6rem -1.2rem rgba(0,0,0,0.42),0 .4rem 2.3rem 0 rgba(0,0,0,0.12),0 .8rem 1rem -.5rem rgba(0,0,0,0.2);
 }
 
 .c24:active {
@@ -705,8 +704,8 @@ exports[`<List /> should render full control list 1`] = `
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #fff;
   border-color: rgba(0,0,0,.16);
   color: rgba(0,0,0,.68);
@@ -729,7 +728,6 @@ exports[`<List /> should render full control list 1`] = `
   border-radius: inherit;
   z-index: 1;
   -webkit-transition: opacity .2s;
-  -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
   display: none;
@@ -742,7 +740,7 @@ exports[`<List /> should render full control list 1`] = `
 
 .c28:hover {
   border-color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(0,0,0,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.2);
+  box-shadow: 0 1.4rem 2.6rem -1.2rem rgba(0,0,0,0.42),0 .4rem 2.3rem 0 rgba(0,0,0,0.12),0 .8rem 1rem -.5rem rgba(0,0,0,0.2);
 }
 
 .c28:active {
@@ -815,8 +813,8 @@ exports[`<List /> should render full control list 1`] = `
   padding: 0.9rem 1.8rem;
   border-radius: .4rem;
   line-height: 1.5;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #fff;
   border-color: rgba(0,0,0,.16);
   color: rgba(0,0,0,.68);
@@ -839,7 +837,6 @@ exports[`<List /> should render full control list 1`] = `
   border-radius: inherit;
   z-index: 1;
   -webkit-transition: opacity .2s;
-  -webkit-transition: opacity .2s;
   transition: opacity .2s;
   pointer-events: none;
   display: none;
@@ -852,7 +849,7 @@ exports[`<List /> should render full control list 1`] = `
 
 .c31:hover {
   border-color: #fff;
-  box-shadow: 0 14px 26px -12px rgba(0,0,0,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.2);
+  box-shadow: 0 1.4rem 2.6rem -1.2rem rgba(0,0,0,0.42),0 .4rem 2.3rem 0 rgba(0,0,0,0.12),0 .8rem 1rem -.5rem rgba(0,0,0,0.2);
 }
 
 .c31:active {

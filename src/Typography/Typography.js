@@ -19,7 +19,7 @@ type Props = {
   /** Children of Typography could be anything**/
   children?: any,
   /** Set tag name of Typography .. default is tag p**/
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h5' | 'h6' | 'p' | 'span',
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h5' | 'h6' | 'p' | 'span',
   /** Add style of Typography**/
   style?: Object,
   /** Add class of Typography**/

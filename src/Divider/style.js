@@ -8,7 +8,7 @@ const baseDividerHorizontal = css `
   clear: both;
 `
 
-export const baseDividerVertical = css`
+export const baseDividerVertical = css `
   margin: 0 .8rem;
   display: inline-block;
   height: 1rem;
@@ -18,7 +18,9 @@ export const baseDividerVertical = css`
 
 export const StyledDivider = styled.div `
 
-  ${props => props.type === "vertical" ? baseDividerVertical :baseDividerHorizontal};
+  ${props => props.type === "vertical"
+  ? baseDividerVertical
+  : baseDividerHorizontal};
 
   vertical-align: middle;
   position: relative;
@@ -29,23 +31,24 @@ props => !props.hasChild || props.type === "vertical"
   ? css `
     font-size: 1.4rem;
     line-height: 1.5;
-    color: ${({theme}) => theme.text.regular};
+    color: ${ ({
+    theme}) => theme.text.regular};
     box-sizing: border-box;
 
     list-style: none;
     background: ${props => props.theme.border.primary};
-    ${
-props => props.dashed && css `
+    ${props => props.dashed && css `
       background: none;
       border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
       `}
-    ` : css `
+    `: css `
     display: table;
     white-space: nowrap;
     text-align: center;
     background: transparent;
     font-weight: 500;
-    color: ${({theme}) => theme.text.primary};
+    color: ${ ({
+      theme}) => theme.text.primary};
     font-size: 1.6rem;
     margin: 1.6rem 0;
     padding: 0;
@@ -60,47 +63,42 @@ props => props.dashed && css `
               width: 50%;
               border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
               transform: translateY(50%);
-             ${
-                props => props.textPosition === "left"
-                       ? css `
+             ${props => props.textPosition === "left"
+        ? css `
 
                           width: 5%;
                           `
-                       : props.textPosition === "right"
-                          ? css `
+        : props.textPosition === "right"
+          ? css `
 
                              width: 95%;
                            `
-                        : null}
+          : null}
                }
             &::after{
               content: "";
-display: table-cell;
-position: relative;
-top: 50%;
-width: 50%;
-border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
-transform: translateY(50%);
-${
-props => props.textPosition === "left"
-  ? css `
-
-   width: 95%;
-  `
-  : props.textPosition === "right"
-    ? css `
-
-    width: 5%;
-  `
-    : null}
+              display: table-cell;
+              position: relative;
+              top: 50%;
+              width: 50%;
+              border-top: ${props => `.1rem solid ${props.theme.border.primary}`};
+              transform: translateY(50%);
+              ${props => props.textPosition === "left"
+                    ? css `
+                      width: 95%;
+                          `
+                    : props.textPosition === "right"
+                    ? css `
+                      width: 5%;
+                       `
+              : null}
             }
     `}
 
 
 
 `
-
-export const StyledDividerContent = styled.div `
+  export const StyledDividerContent = styled.div `
   display: inline-block;
   padding: 0 2.4rem;
   font-size: 1.4rem;

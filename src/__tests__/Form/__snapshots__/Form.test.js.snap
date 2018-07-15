@@ -1,0 +1,658 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> should render Form 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  position: relative;
+  max-width: 100%;
+  color: rgba(0,0,0,.64);
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+<form
+  className="c0"
+/>
+`;
+
+exports[`<Input component /> renders a blank input 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: none;
+  border-color: transparent;
+}
+
+.c1:focus {
+  outline: 0;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="default"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a disabled input 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={true}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="default"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a input as a area 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+  font-family: sans-serif;
+  height: auto;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<div
+  className="c0"
+>
+  <textarea
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="default"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a input size default 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="default"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a input size large 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 4.8rem;
+  padding: 1.8rem 3.6rem;
+  font-size: 2rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="large"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a input size medium 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 4rem;
+  padding: 1.4rem 2.7rem;
+  font-size: 1.8rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="medium"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a input size small 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 2.4rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 1.2rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="small"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a input with Icon 1`] = `
+.c2 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  display: inline-block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c3 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+  padding-left: 3.2rem;
+}
+
+.c3:hover {
+  border-color: #c0c4cc;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.2rem;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0,0,0,.64);
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      color={undefined}
+      style={
+        Object {
+          "fontSize": "1.4rem",
+        }
+      }
+    >
+      <span
+        aria-hidden={true}
+        className="fa fa-rocket"
+      />
+    </div>
+  </div>
+  <input
+    className="c3"
+    disabled={false}
+    icon="rocket"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="default"
+  />
+</div>
+`;
+
+exports[`<Input component /> renders a underline input 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c1 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+}
+
+.c1:hover {
+  border-color: #c0c4cc;
+}
+
+.c1:focus {
+  outline: none;
+  border-bottom: .2rem solid #1c8ffb;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={false}
+    icon={undefined}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    size="default"
+  />
+</div>
+`;
+
+exports[`<Input component /> should render Form and Input component 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  position: relative;
+  max-width: 100%;
+  color: rgba(0,0,0,.64);
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  font-size: 1.4rem;
+  position: relative;
+  max-width: 100%;
+  color: rgba(0,0,0,.64);
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.4rem;
+  clear: both;
+  vertical-align: top;
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: table;
+}
+
+.c3 {
+  max-width: 100%;
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.64);
+  background-image: none;
+  box-sizing: border-box;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  border: .1rem solid #e8e8e8;
+  background: #fff;
+  border-radius: .4rem;
+}
+
+.c3:hover {
+  border-color: #c0c4cc;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #1c8ffb;
+}
+
+<form
+  className="c0"
+>
+  <div
+    className="c1"
+    required={false}
+  >
+    <div
+      className=""
+    >
+      <div
+        className="c2"
+      >
+        <input
+          className="c3"
+          disabled={false}
+          icon={undefined}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          required={false}
+          size="default"
+        />
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`<Select /> should render Select 1`] = `
+.c0 {
+  max-width: 100%;
+  width: 100%;
+  border: 0 none;
+  padding: 0 1rem;
+  background: #fff;
+  color: rgba(0,0,0,.68);
+  border: 1px solid #e5e5e5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -webkit-transition-property: color,background-color,border;
+  transition-property: color,background-color,border;
+  height: 3.2rem;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: .2rem;
+}
+
+.c0:hover {
+  border-color: #c0c4cc;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+<select
+  className="c0"
+  onChange={[Function]}
+>
+  <option
+    className=""
+    disabled={true}
+    value={-1}
+  >
+    Choose option
+  </option>
+  <option
+    className=""
+    disabled={false}
+    value={1}
+  >
+    Option 1
+  </option>
+  <option
+    className=""
+    disabled={true}
+    value={2}
+  >
+    Option 2
+  </option>
+  <option
+    className=""
+    disabled={false}
+    value={3}
+  >
+    Option 3
+  </option>
+</select>
+`;

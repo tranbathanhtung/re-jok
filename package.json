@@ -1,9 +1,12 @@
 {
   "name": "re-jok",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "core/index.js",
   "module": "core/index.js",
-  "files": [ "core", "README.md" ],
+  "files": [
+    "core",
+    "README.md"
+  ],
   "author": {
     "name": "Tran Ba Thanh Tung",
     "email": "tranbathanhtung222@gmail.com"

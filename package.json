@@ -1,25 +1,42 @@
 {
   "name": "re-jok",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "main": "core/index.js",
+  "module": "core/index.js",
+  "files": [ "core", "README.md" ],
+  "author": {
+    "name": "Tran Ba Thanh Tung",
+    "email": "tranbathanhtung222@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tranbathanhtung/re-jok.git"
+  },
   "dependencies": {
+    "react-fontawesome": "^1.6.1",
+    "react-transition-group": "^1.2.1",
+    "source-map-explorer": "^1.5.0"
+  },
+  "peerDependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-fontawesome": "^1.6.1",
-    "react-scripts": "1.1.4",
-    "react-transition-group": "^1.2.1",
-    "source-map-explorer": "^1.5.0",
     "styled-components": "^3.2.6"
   },
   "scripts": {
     "flow": "flow",
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-scripts": "react-scripts build",
+    "build": "rm -rf core && NODE_ENV=production babel src/lib --out-dir core --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.2.6",
+    "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",

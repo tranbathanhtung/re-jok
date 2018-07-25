@@ -1,0 +1,107 @@
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+import * as React from 'react';
+import { StyledRadioGroup } from './style';
+
+import Radio from './Radio';
+
+import { isUndef, isChild } from '../helpers/typeUtils';
+
+var defaultProps = {
+  defaultValue: void 0,
+  value: void 0
+
+};
+
+var RadioGroup = function (_React$Component) {
+  _inherits(RadioGroup, _React$Component);
+
+  function RadioGroup(props) {
+    _classCallCheck(this, RadioGroup);
+
+    var _this = _possibleConstructorReturn(this, (RadioGroup.__proto__ || Object.getPrototypeOf(RadioGroup)).call(this, props));
+
+    _this.getValue = function () {
+
+      return isUndef(_this.props.value) ? _this.state.value : _this.props.value;
+    };
+
+    _this.handleChange = function (e, propsRadio) {
+      var onChange = _this.props.onChange;
+
+
+      var currentValue = _this.getValue();
+
+      if (currentValue === propsRadio.value) return;
+
+      if (isUndef(_this.props.value)) {
+        _this.setState({
+          value: propsRadio.value
+        });
+      }
+
+      if (onChange) onChange(e, Object.assign({}, propsRadio));
+    };
+
+    _this.state = {
+      value: isUndef(props.value) ? props.defaultValue : props.value
+    };
+    return _this;
+  }
+
+  _createClass(RadioGroup, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.value !== this.props.value && isUndef(nextProps.value)) {
+        this.setState({
+          value: this.props.value
+        });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props = this.props,
+          children = _props.children,
+          name = _props.name,
+          color = _props.color,
+          onChange = _props.onChange,
+          rest = _objectWithoutProperties(_props, ['children', 'name', 'color', 'onChange']);
+
+      var hasChild = !isChild(children);
+      var value = this.getValue();
+
+      var radios = hasChild && React.Children.map(children, function (radio) {
+        return React.cloneElement(radio, {
+          checked: value === radio.props.value,
+          name: name,
+          color: color,
+          onChange: _this2.handleChange
+        });
+      });
+
+      return React.createElement(
+        StyledRadioGroup,
+        rest,
+        radios
+      );
+    }
+  }]);
+
+  return RadioGroup;
+}(React.Component);
+
+RadioGroup.defaultProps = defaultProps;
+
+
+export default RadioGroup;

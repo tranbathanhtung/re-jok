@@ -1,10 +1,10 @@
 import { TextButton, Button } from './Button';
 import { Row, Col } from './Grid';
 import { globalConfig } from './globals/rejok.css.js';
-
 import { configTheme } from './theme/utils';
 import JokTheme from './theme/JokTheme';
 
+export { default as JokBody } from './globals/JokBody';
 export { default as Alert } from './Alert';
 export { default as Avatar } from './Avatar';
 export { TextButton, Button };

@@ -3,7 +3,7 @@ import Button from './Button';
 import TextButton from './TextButton';
 
 
-export default {
+export {
   Button,
   TextButton
-};
+}

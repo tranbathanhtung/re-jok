@@ -2,7 +2,7 @@ import Row from './Row';
 import Col from './Col';
 
 
-export default {
+export {
   Row,
   Col
-};
+}

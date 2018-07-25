@@ -27,7 +27,7 @@
     "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build-scripts": "react-scripts build",
-    "build": "rm -rf core && NODE_ENV=production babel src/lib --out-dir core --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build": "rm -rf core && set NODE_ENV=production babel src/lib --out-dir core --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

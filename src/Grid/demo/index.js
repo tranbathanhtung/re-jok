@@ -2,7 +2,6 @@
 import  * as React from 'react';
 import Row from '../Row';
 import Col from '../Col';
-import '../../index.css';
 import styled from 'styled-components';
 
 const DemoBox = styled.div `

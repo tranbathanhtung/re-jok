@@ -605,7 +605,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
   align-items: center;
   color: rgba(0,0,0,0.48);
   color: rgba(0,0,0,0.85);
-  background-color: #fafafa;
+  background-color: #fff;
   border: 0;
   border-radius: 3rem;
   padding: 0 1.1rem;
@@ -907,7 +907,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
   align-items: center;
   color: rgba(0,0,0,0.48);
   color: rgba(0,0,0,0.85);
-  background-color: #fafafa;
+  background-color: #fff;
   border: 0;
   border-radius: 3rem;
   padding: 0 1.1rem;

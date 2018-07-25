@@ -134,11 +134,6 @@ class Input extends React.Component<Props> {
     onKeyDown && onKeyDown(e, {...this.props});
   }
 
-
-
-
-
-
   render(){
     const {
       children,

@@ -601,8 +601,8 @@ exports[`<Select /> should render Select 1`] = `
   border: 0 none;
   padding: 0 1rem;
   background: #fff;
-  color: rgba(0,0,0,.68);
-  border: 1px solid #e5e5e5;
+  color: rgba(0,0,0,.64);
+  border: 1px solid #e8e8e8;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   -webkit-transition-property: color,background-color,border;

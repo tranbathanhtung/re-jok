@@ -1,7 +1,7 @@
 /** Check element has child or not**/
 export const isChild = children => children === null
     || children === undefined
-    || (Array.isArray(children) && children.length === 0)
+    || (Array.isArray(children) && children.length === 0);
 
 /** Check undefined**/
 
@@ -18,4 +18,4 @@ export const isObject = value =>
 export const isArray = value => Array.isArray(value);
 
 /** Check Number or not**/
-export const isNumber = value => Number.isInteger(value) && typeof value === "number"
+export const isNumber = value => Number.isInteger(value) && typeof value === "number";

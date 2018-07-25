@@ -32,7 +32,7 @@ export const StyledTag = styled.span`
   padding: 0 1.1rem;
   margin-right: .8rem;
   margin-bottom: .8rem;
-  background-color: ${ ({theme, color}) => color ? color : shadeColor(theme.background.default, -5)};
+  background-color: ${ ({theme, color}) => color ? color : shadeColor(theme.background.paper, -5)};
   border: .1rem solid transparent;
   border-radius: .2rem;
   color: ${ ({theme, color}) => color ? theme.text.default : theme.text.secondary};
@@ -45,7 +45,7 @@ export const StyledTag = styled.span`
     color: ${ ({theme, color}) => color ? theme.text.default : theme.text.regular};
     ${
       props => props.closable && css`
-         padding-right: 14px;
+         padding-right: 1.4rem;
          & ${StyledIconClose}{
            width: 1.6rem;
            opacity: 1;

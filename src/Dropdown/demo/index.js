@@ -26,16 +26,52 @@ class DropdownDemo extends React.Component<{}>{
   render(){
     return (
       <React.Fragment>
-        <Dropdown content={<MenuDemo/>} position="bottomLeft">
+        {/* <Dropdown content={<MenuDemo/>} position="bottomLeft">
         <Avatar style={{cursor: "pointer"}} imgSrc="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-1/c8.0.160.160/p160x160/13256326_1693157114242503_1952158310037985017_n.jpg?_nc_cat=0&_nc_eui2=AeHxGBHGerdp_tpPrKAqCXG_dT5O7zEHBxGSVtiqVcY-NJyK4OXo7i_pH-6207vmY_0yJ4iocMGa3IgmYhgSfCYPuAPyLQQBTnP-vPg-U_wZtw&oh=a421582f63736bf60c96f745a7ef9aa2&oe=5B843852"/>
 
-        </Dropdown>
+        </Dropdown> */}
         <Dropdown
-          trigger="click"
-          content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
-          position="bottomCenter">
-            <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
-        </Dropdown>
+                     trigger="click"
+                     content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
+                     position="bottomLeft">
+                      <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
+                  </Dropdown>
+
+                  <Dropdown
+                     trigger="click"
+                     content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
+                     position="bottomCenter">
+                      <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
+                  </Dropdown>
+
+                  <Dropdown
+                     trigger="click"
+                     content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
+                     position="bottomRight">
+                      <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
+                  </Dropdown>
+
+                  <Dropdown
+                     trigger="click"
+                     content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
+                     position="topLeft">
+                      <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
+                  </Dropdown>
+
+                  <Dropdown
+                     trigger="click"
+                     content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
+                     position="topCenter">
+                      <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
+                  </Dropdown>
+
+                  <Dropdown
+                     trigger="click"
+                     content={<div style={{padding: 30}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>}
+                     position="topRight">
+                      <a style={{marginTop: 40,color: "rgba(0,0,0,.5)", cursor: "pointer", fontSize: 14}}>Click me</a>
+                  </Dropdown>
+
       </React.Fragment>
 
     )

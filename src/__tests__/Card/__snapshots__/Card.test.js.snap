@@ -24,7 +24,7 @@ exports[`<Card /> should render 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: calc(25% - 2.4rem);
-  background: #fafafa;
+  background: #fff;
   height: 100%;
   padding: 0;
 }
@@ -61,7 +61,7 @@ exports[`<Card /> should render with Card Action 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: calc(25% - 2.4rem);
-  background: #fafafa;
+  background: #fff;
   height: 100%;
   padding: 0;
 }
@@ -444,7 +444,7 @@ exports[`<Card /> should render with Card Content 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: calc(25% - 2.4rem);
-  background: #fafafa;
+  background: #fff;
   height: 100%;
   padding: 0;
 }
@@ -541,7 +541,7 @@ exports[`<Card /> should render with Card Header 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: calc(25% - 2.4rem);
-  background: #fafafa;
+  background: #fff;
   height: 100%;
   padding: 0;
 }
@@ -857,7 +857,7 @@ exports[`<Card /> should render with Card Loading 1`] = `
 }
 
 .c1 div {
-  background: #fafafa;
+  background: #fff;
   position: absolute;
   right: 0;
 }
@@ -1150,7 +1150,7 @@ exports[`<Card /> should render with Card Media 1`] = `
   -webkit-animation: bcCCNc .5s;
   animation: bcCCNc .5s;
   width: calc(25% - 2.4rem);
-  background: #fafafa;
+  background: #fff;
   height: 100%;
   padding: 0;
 }
@@ -1230,7 +1230,7 @@ exports[`<Card /> should render with full card option 1`] = `
 }
 
 .c1 div {
-  background: #fafafa;
+  background: #fff;
   position: absolute;
   right: 0;
 }

@@ -60,6 +60,7 @@ export const StyledList = styled.div`
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
   color: ${({theme}) => theme.text.regular};
   box-sizing: border-box;

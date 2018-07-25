@@ -7,7 +7,7 @@ exports[`<Menu /> should render Menu 1`] = `
   padding: 0;
   outline: none;
   list-style: none;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
@@ -260,7 +260,6 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
 }
 
 .c6 {
-  padding-bottom: 0.01px;
   -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
   transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
 }
@@ -669,7 +668,7 @@ exports[`<Menu /> should render Menu has active background item 1`] = `
   padding: 0;
   outline: none;
   list-style: none;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
@@ -768,7 +767,7 @@ exports[`<Menu /> should render Menu has active default item 1`] = `
   padding: 0;
   outline: none;
   list-style: none;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
@@ -865,7 +864,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
   padding: 0;
   outline: none;
   list-style: none;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
@@ -945,7 +944,6 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
 }
 
 .c3 {
-  padding-bottom: 0.01px;
   -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
   transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
 }
@@ -1217,7 +1215,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
   padding: 0;
   outline: none;
   list-style: none;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;
@@ -1280,7 +1278,6 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
 }
 
 .c4 {
-  padding-bottom: 0.01px;
   -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
   transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
 }

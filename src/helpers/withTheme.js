@@ -17,7 +17,7 @@ export const shallowWithTheme = (tree, theme) => {
     .instance()
     .getChildContext()
   return shallow(tree, { context })
-}
+};
 
 export const mountWithTheme = (tree, theme) => {
   const context = shallow(<ThemeProvider theme={theme} />)
@@ -28,4 +28,4 @@ export const mountWithTheme = (tree, theme) => {
     context,
     childContextTypes: ThemeProvider.childContextTypes
   })
-}
+};

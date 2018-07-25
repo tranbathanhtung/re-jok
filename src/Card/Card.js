@@ -1,10 +1,9 @@
 // @flow
 import * as React from 'react';
-import {
-  StyledCard
-} from './style';
 
-import {CardContext} from './CardContext';
+import { StyledCard } from './style';
+
+import { CardContext } from './CardContext';
 
 import CardHeader from './CardHeader';
 import CardMedia from './CardMedia';
@@ -14,7 +13,6 @@ import CardGroup from './CardGroup';
 import CardLoading  from './CardLoading';
 
 import { isChild } from '../helpers/typeUtils';
-
 
 type Props = {
   /**Number of card in a row**/

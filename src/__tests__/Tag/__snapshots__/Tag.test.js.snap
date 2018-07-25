@@ -102,7 +102,7 @@ exports[`<Tag /> should render with close icon 1`] = `
 
 .c0:hover {
   color: rgba(0,0,0,.64);
-  padding-right: 14px;
+  padding-right: 1.4rem;
 }
 
 .c0:hover .c1 {

@@ -4,6 +4,7 @@ import Notification from '../Notification';
 import Button from '../../Button/Button';
 import Select from '../../Select/Select';
 import Avatar from '../../Avatar/Avatar';
+import JokBody from '../../globals/JokBody';
 
 const { Option } = Select;
 
@@ -11,7 +12,7 @@ const options = ['topRight' , 'topLeft' , 'topCenter' , 'bottomRight' , 'bottomL
 
 
 
-class NotificationDemo extends React.Component<{}>{
+class NotificationDemo extends React.Component<{theme: Object}>{
 
   handleOpen = () => {
     const key = `open${Date.now()}`;
@@ -94,8 +95,9 @@ class NotificationDemo extends React.Component<{}>{
 
 
       </Select>
-      <Notification />
-
+      <JokBody theme={this.props.theme}>
+        <Notification />
+      </JokBody>
   </div>
     )
   }

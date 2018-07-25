@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
-import Icon from '../Icon';
 
+import Icon from '../Icon';
 
 import {
   Btn,
@@ -12,7 +12,6 @@ import {
 } from './style';
 
 import { isChild } from '../helpers/typeUtils';
-
 
 type Props = {
   /** Set button unable to click or not **/
@@ -51,17 +50,11 @@ type Props = {
   variant: 'outline' | 'inverted' | 'raised' | 'icon',
   /** create button with box shadow or not**/
   hasBoxShadow: boolean,
-
-  /**
-   * Defines HTML button type attribute
-   * @defaultValue 'button'
-   */
+  /** Set type of button **/
   rule: 'button' | 'reset' | 'submit',
   /**Children element can be string, number, HTML node anything you want**/
   children?: any,
 }
-
-
 
 const defaultProps = {
   disabled: false,

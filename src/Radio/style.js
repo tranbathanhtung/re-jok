@@ -34,7 +34,7 @@ export const StyledRadioButton = styled.span`
 
   border:  ${props => props.checked ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : `1px solid ${props.theme.border.primary}`};
   border-radius: 50%;
-  background: #fff;
+  background: ${({theme}) => theme.background.default};
   display: inline-block;
   position: absolute;
   left: 0;

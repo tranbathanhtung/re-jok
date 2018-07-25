@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+
 import {
   StyledAlert,
   StyledIconClose,
@@ -8,14 +9,17 @@ import {
   StyledAlertContent
 } from './style';
 
-
-
-
-
 import { isFunction, isChild } from '../helpers/typeUtils';
+
 import { noop } from '../helpers';
 
+const listIcon = {
+  info: <StyledAlertIcon style={{color: "#fff"}} name="info-circle" size="lg"/>,
+  success: <StyledAlertIcon style={{color: "#fff"}} name="check-circle" size="lg"/>,
+  error: <StyledAlertIcon style={{color: "#fff"}} name="times-circle" size="lg"/>,
+  warning: <StyledAlertIcon style={{color: "#fff"}} name="exclamation-circle" size="lg"/>,
 
+}
 
 type Props = {
   /** Style of Tag Component**/
@@ -85,14 +89,6 @@ class Alert extends React.Component<Props, State>{
 
     const hasColor = rest.color || type !== "none";
     const hasChild = !isChild(children);
-
-    const listIcon = {
-      info: <StyledAlertIcon style={{color: "#fff"}} name="info-circle" size="lg"/>,
-      success: <StyledAlertIcon style={{color: "#fff"}} name="check-circle" size="lg"/>,
-      error: <StyledAlertIcon style={{color: "#fff"}} name="times-circle" size="lg"/>,
-      warning: <StyledAlertIcon style={{color: "#fff"}} name="exclamation-circle" size="lg"/>,
-
-    }
 
     return (
       show ? (

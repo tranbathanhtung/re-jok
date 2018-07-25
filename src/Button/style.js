@@ -94,6 +94,7 @@ export const Btn = styled.button.attrs({
   disabled: props => props.disabled || props.loading
 })`
   ${baseButton}
+  
 
 
   background-color: ${props => props.backgroundColor
@@ -218,19 +219,19 @@ props => props.variant === "outline"
   ? css `
        &:hover{
             border-color: ${props => props.backgroundColor
-    ? shadeColor(props.backgroundColor, -15)
+    ? shadeColor(props.backgroundColor, -5)
     : props.primary
-      ? shadeColor(props.theme.primary.main, -15)
+      ? shadeColor(props.theme.primary.main, -5)
       : props.secondary
-        ? shadeColor(props.theme.secondary.main, -15)
+        ? shadeColor(props.theme.secondary.main, -5)
         : "rgba(0,0,0,.54)"};
 
             color: ${props => props.backgroundColor
-          ? shadeColor(props.backgroundColor, -15)
+          ? shadeColor(props.backgroundColor, -5)
           : props.primary
-            ? shadeColor(props.theme.primary.main, -15)
+            ? shadeColor(props.theme.primary.main, -5)
             : props.secondary
-              ? shadeColor(props.theme.secondary.main, -15)
+              ? shadeColor(props.theme.secondary.main, -5)
               : "rgba(0, 0, 0, .68)"};
        }
      `
@@ -302,7 +303,7 @@ position: absolute;
 bottom: 0;
 left: 0;
 right: 100%;
-border-bottom: 1px solid #222;
+border-bottom: .1rem solid #222;
 transition: right .3s ease-out;
   }
   &:hover:before{
@@ -418,8 +419,8 @@ order: ${props => props.shape !== "circle"
   border-color: ${props => props.primary || props.secondary
       ? "#fff"
       : "#d9d9d9"};
-  border-top: 2px solid;
-  border-right: 2px solid transparent;
+  border-top: .2rem solid;
+  border-right: .2rem solid transparent;
   animation: ${spin} .6s linear infinite;
   }
 `

@@ -69,7 +69,7 @@ export const returnPosition = config => {
          right: auto
          top: 2.4rem;
          bottom: auto;
-         // margin-top: 12px;
+         
 
          transform: translateX(-50%);
        `
@@ -95,8 +95,6 @@ export const returnPosition = config => {
         right: auto
         top: auto;
         bottom: 2.4rem;
-        // margin-bottom: 12px;
-
         transform: translateX(-50%);
        `
 

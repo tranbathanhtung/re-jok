@@ -97,7 +97,7 @@ class FormDemo extends React.Component<{}, State>{
     return (
       <Form onSubmit={this.onSubmit}>
         {/* Basic Input */}
-        {/* <Form.Item
+        <Form.Item
           label="Username"
           required
           >
@@ -125,7 +125,7 @@ class FormDemo extends React.Component<{}, State>{
            iconPosition="right"
             disabled
            placeholder="Hello World"/>
-       </Form.Item> */}
+       </Form.Item>
 
        <Form.Item
          >
@@ -178,9 +178,7 @@ class FormDemo extends React.Component<{}, State>{
          helper="This field is required"
          >
          <Input
-
-           iconPosition="right"
-           icon="times-circle"
+         
            addonBefore="Https://"
            addonAfter=".com"
            placeholder="Hello World"/>
@@ -309,6 +307,15 @@ class FormDemo extends React.Component<{}, State>{
 
        </Checkbox.Group>
 
+       </Form.Item>
+
+       <Form.Item label="Choose option">
+         <Select placeholder="Choose option">
+           <Select.Option value={1}>Option 1</Select.Option>
+           <Select.Option value={2}>Option 2</Select.Option>
+           <Select.Option value={3}>Option 3</Select.Option>
+
+         </Select>
        </Form.Item>
 
        <Form.Item validateStatus="error" label="Choose option" helper="This field is required">

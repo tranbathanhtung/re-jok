@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react';
 import Modal from '../Modal';
-import Button from '../../Button/Button'
+import Button from '../../Button/Button';
+import JokBody from '../../globals/JokBody';
 
 
 type State = {
@@ -14,7 +15,7 @@ type State = {
 
 
 
-class ModalDemo extends React.Component<{}, State>{
+class ModalDemo extends React.Component<{theme: Object}, State>{
   state = {
     open: false,
     openAlertModal: false,
@@ -63,7 +64,7 @@ class ModalDemo extends React.Component<{}, State>{
         <Button style={{marginBottom: 20}} onClick={this.handleOpen} hasBoxShadow primary>Open Modal</Button>
       <Button style={{marginBottom: 20}} onClick={this.handleOpenAlertModal} hasBoxShadow secondary>Open Alert Modal</Button>
     <Button style={{marginBottom: 20}} onClick={this.handleOpenFullscreenModal} variant="outline" hasBoxShadow>Open Alert Modal</Button>
-
+    <JokBody theme={this.props.theme}>
       <Modal
         slide="left"
         action={[
@@ -94,6 +95,9 @@ class ModalDemo extends React.Component<{}, State>{
 
         </Modal>
 
+        </JokBody>
+        <JokBody theme={this.props.theme}>
+
         <Modal
           closable
           slide="top"
@@ -107,7 +111,9 @@ class ModalDemo extends React.Component<{}, State>{
 
           </Modal>
 
+           </JokBody>
 
+           <JokBody theme={this.props.theme}>
           <Modal
             closable
             fullscreen
@@ -138,6 +144,7 @@ class ModalDemo extends React.Component<{}, State>{
 
 
             </Modal>
+            </JokBody>
       </React.Fragment>
 
     )

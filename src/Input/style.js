@@ -22,7 +22,6 @@ padding: ${props => props.theme.size[props.size].padding};
 font-size: ${props => props.theme.size[props.size].fontSize};
 
 color: ${({theme}) => theme.text.regular};
-${'' /* color: rgba(0,0,0,.64); */}
 background-image: none;
 
 
@@ -40,7 +39,7 @@ ${
     `
     : css`
     border: ${({theme}) => `.1rem solid ${theme.border.primary}`};
-    background: #fff;
+    background: ${({theme}) => `${theme.background.default}`};
     border-radius: ${props => props.addonAfter || props.addonBefore ? "" : ".4rem"};
     border-color: ${({theme, validateStatus, underline}) => validateStatus && !underline && theme[validateStatus].main};
     border-bottom: ${({theme, validateStatus, underline}) => validateStatus && underline && `.2rem solid ${theme[validateStatus].main}`};
@@ -139,7 +138,7 @@ const baseAddon = css`
   line-height: 1;
   color: ${({theme}) => theme.text.regular};
   text-align: center;
-  background-color: ${({theme}) => theme.background.primary};
+  background-color: ${({theme}) => theme.background.default};
   border: ${({theme}) => `.1rem solid ${theme.border.primary}`};
   position: relative;
   transition: all .3s;
@@ -148,7 +147,7 @@ const baseAddon = css`
     ({validateStatus, theme}) => validateStatus && css`
       color: ${theme[validateStatus].main};
       border-color: ${theme[validateStatus].main};
-      background-color: #fff;
+      background-color: ${({theme}) => theme.background.primary};
     `
   }
 `

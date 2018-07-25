@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const hexa = (hex, alpha) => {
   var r = parseInt(hex.slice(1, 3), 16),
@@ -32,7 +32,7 @@ export const shadeColor = (color, percent) => {
     var BB = ((B.toString(16).length===1)?"0"+B.toString(16):B.toString(16));
 
     return "#"+RR+GG+BB;
-}
+};
 
 
 
@@ -41,7 +41,7 @@ export const PrimaryText = styled.span `
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5rem;
-`
+`;
 
 export const SecondaryText = styled.span `
   color:${({theme}) => theme.text.secondary};
@@ -49,4 +49,4 @@ export const SecondaryText = styled.span `
   font-weight: 200;
   line-height: 2.5rem;
 
-`
+`;

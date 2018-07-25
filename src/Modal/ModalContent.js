@@ -1,11 +1,12 @@
 //  @flow
-import * as React from 'react'
+import * as React from 'react';
 import {
   StyledModalContent,
 
 } from './style';
 
 import { isChild } from '../helpers/typeUtils';
+
 
 
 type Props = {

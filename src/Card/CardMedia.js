@@ -4,9 +4,6 @@ import {
   StyledCardMedia
 } from './style';
 
-
-
-
 type Props = {
   /** class of card header**/
   className?: string,
@@ -14,8 +11,6 @@ type Props = {
   src?: string,
   /** add more style to card media**/
   style?: Object,
-
-
 }
 
 

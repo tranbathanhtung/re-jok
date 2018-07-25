@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled, {css} from 'styled-components';
 
 const returnTooltip = props => {
   switch (props.position) {
@@ -16,7 +16,7 @@ const returnTooltip = props => {
           top: calc(100% - 5px);
           left: 50%;
           transform: translateX(-50%);
-          border-top-width: 0px;
+          border-top-width: 0;
           border-bottom-color: ${props.tooltipColor};
         }
         &:hover:after,
@@ -41,7 +41,7 @@ const returnTooltip = props => {
           transform: translateX(-50%);
           left: 50%;
 
-          border-bottom-width: 0px;
+          border-bottom-width: 0;
           border-top-color: ${props.tooltipColor};
         }
         &:hover:after,
@@ -67,7 +67,7 @@ const returnTooltip = props => {
          transform: translateY(-50%);
 
 
-         border-right-width: 0px;
+         border-right-width: 0;
          border-left-color: ${props.tooltipColor};
         }
        &:hover:after,
@@ -93,7 +93,7 @@ const returnTooltip = props => {
          transform: translateY(-50%);
 
 
-         border-left-width: 0px;
+         border-left-width: 0;
          border-right-color: ${props.tooltipColor};
         }
        &:hover:after,
@@ -117,7 +117,7 @@ const returnTooltip = props => {
              left: 25%;
              transform: translateX(-50%);
 
-             border-top-width: 0px;
+             border-top-width: 0;
              border-bottom-color: ${props.tooltipColor};
            }
            &:hover:after,
@@ -140,7 +140,7 @@ const returnTooltip = props => {
               left: 75%;
               transform: translateX(-50%);
 
-             border-top-width: 0px;
+             border-top-width: 0;
              border-bottom-color: ${props.tooltipColor};
              }
             &:hover:after,
@@ -164,7 +164,7 @@ const returnTooltip = props => {
                transform: translateX(-50%);
                left: 25%;
 
-               border-bottom-width: 0px;
+               border-bottom-width: 0;
                border-top-color: ${props.tooltipColor};
              }
              &:hover:after,
@@ -188,7 +188,7 @@ const returnTooltip = props => {
                    transform: translateX(-50%);
                    left: 75%;
 
-                   border-bottom-width: 0px;
+                   border-bottom-width: 0;
                    border-top-color: ${props.tooltipColor};
                  }
                  &:hover:after,
@@ -213,7 +213,7 @@ const returnTooltip = props => {
         left: 50%;
         transform: translateX(-50%);
 
-        border-top-width: 0px;
+        border-top-width: 0;
         border-bottom-color: ${props.tooltipColor};
       }
       &:hover:after,

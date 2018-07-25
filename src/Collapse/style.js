@@ -1,7 +1,4 @@
-import styled from 'styled-components'
-
-
-
+import styled from 'styled-components';
 
 export const StyledCollapse = styled.ul`
     font-size: 1.4rem;

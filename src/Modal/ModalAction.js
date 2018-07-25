@@ -1,8 +1,8 @@
 //  @flow
-import * as React from 'react'
+import * as React from 'react';
 import {
   StyledModalAction
-} from './style'
+} from './style';
 
 
 type Props = {

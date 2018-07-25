@@ -13,8 +13,8 @@ export const StyledNavBarContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   flex: 1;

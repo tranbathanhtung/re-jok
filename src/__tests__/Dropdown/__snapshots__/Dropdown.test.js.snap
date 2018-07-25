@@ -13,7 +13,7 @@ exports[`<Dropdown /> should render Dropdown 1`] = `
   left: 0px;
   z-index: 500;
   padding: 1rem 0;
-  background-color: #fafafa;
+  background-color: #fff;
   border: #e8e8e8;
   font-size: 1.4rem;
   border-radius: .4rem;
@@ -26,7 +26,7 @@ exports[`<Dropdown /> should render Dropdown 1`] = `
   padding: 0;
   outline: none;
   list-style: none;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   font-size: 1.4rem;
   -webkit-transition: background .3s,width .2s;

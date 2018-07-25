@@ -1,6 +1,8 @@
 // @flow
 import * as React from 'react';
+
 import ReactDOM from 'react-dom';
+
 import {StyledBadge, StyledSup} from './style';
 
 import { isChild } from '../helpers/typeUtils';

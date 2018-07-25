@@ -2,8 +2,8 @@ import {
   defaultTheme
 } from './index';
 
-export const setTheme = (theme: Object) => {
-  let jokTheme = {...defaultTheme, ...theme};
 
+export const configTheme = (theme: Object) => {
+  let jokTheme = {...defaultTheme, ...theme};
   return jokTheme;
 }

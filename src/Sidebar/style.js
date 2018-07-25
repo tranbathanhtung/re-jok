@@ -4,9 +4,7 @@ import styled, { css} from 'styled-components';
 
 export const StyledSidebarWrapper = styled.div`
 
- ${'' /* visibility: ${props => props.openSidebar ? "visible" : "hidden" }; */}
  transition: visibility .3s ease;
-
 
 `
 
@@ -34,9 +32,8 @@ export const StyledSidebar = styled.div`
   position: fixed;
   top: ${props => props.direction !== "bottom" && "0"};
   bottom: ${props => props.direction !== "top" && "0"};
-
-  left: ${props => props.direction === "left" && "0"};
-  right: ${props => props.direction === "right" && "0"};
+  left: ${props => props.direction !== "right" && "0"};
+  right: ${props => props.direction !== "left" && "0"};
   width: ${props =>
     props.direction === "left" || props.direction === "right" ?
     props.fullScreen ? "100%"

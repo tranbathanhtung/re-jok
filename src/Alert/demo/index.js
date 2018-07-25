@@ -19,7 +19,7 @@ class AlertDemo extends React.Component<{}>{
       <Alert closable type="info">Info Alert</Alert>
       <Alert closable type="error">Error Alert</Alert>
       <Alert closable hasBoxShadow icon="rocket" color="#9c27b0">Color Alert</Alert>
-     <Alert closable type="success" title="Oops">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Alert>
+      <Alert closable type="success" title="Oops">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Alert>
 
 
 

@@ -100,8 +100,8 @@ color: ${props => props.color ? props.color : "rgba(0, 0, 0, .85)"};
   margin-left: calc(${props => props.theme.size[props.size].fontSize} / -2);
   border-radius: 50%;
 
-  border-top: 2px solid;
-  border-right: 2px solid transparent;
+  border-top: .2rem solid;
+  border-right: .2rem solid transparent;
   animation: ${spin} .6s linear infinite;
   }
 `

@@ -1,10 +1,4 @@
 // @flow
-// export our theme to the provider
-// This is globally available in styled-components when interpolating a function like so:
-// ${(props) => props.theme}
-// Or using import { withTheme } from 'styled-components';
-
-
 export const defaultTheme = {
   size: {
     small: {
@@ -56,8 +50,8 @@ export const defaultTheme = {
     default: "#fff",
   },
   background: {
-    paper: "#fff",
-    default: "#fafafa"
+    paper: "#fafafa",
+    default: "#fff"
   },
   border: {
     primary: '#e8e8e8'
@@ -89,7 +83,7 @@ export const defaultTheme = {
     main: "#f5222d"
   },
   success: {
-    main: "#52c41a"
+    main: "#17c671"
   },
   warning: {
     main: "#faad14"

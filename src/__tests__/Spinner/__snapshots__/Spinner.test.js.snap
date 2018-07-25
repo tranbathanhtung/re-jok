@@ -22,8 +22,8 @@ exports[`<Spinner /> should render default 1`] = `
   margin-top: calc(1.4rem / -2);
   margin-left: calc(1.4rem / -2);
   border-radius: 50%;
-  border-top: 2px solid;
-  border-right: 2px solid transparent;
+  border-top: .2rem solid;
+  border-right: .2rem solid transparent;
   -webkit-animation: ibwhYF .6s linear infinite;
   animation: ibwhYF .6s linear infinite;
 }
@@ -135,8 +135,8 @@ exports[`<Spinner /> should render with size 1`] = `
   margin-top: calc(1.8rem / -2);
   margin-left: calc(1.8rem / -2);
   border-radius: 50%;
-  border-top: 2px solid;
-  border-right: 2px solid transparent;
+  border-top: .2rem solid;
+  border-right: .2rem solid transparent;
   -webkit-animation: ibwhYF .6s linear infinite;
   animation: ibwhYF .6s linear infinite;
 }

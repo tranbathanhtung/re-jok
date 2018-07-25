@@ -61,7 +61,7 @@ export const StyledAvatarItem = styled.li `
   width: ${props => props.theme.size[props.size].width};
   height: ${props => props.theme.size[props.size].height};
   pointer-events: auto;
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px;
+  box-shadow: rgb(255, 255, 255) 0 0 0 .2rem;
   position: relative;
   border-radius: 50%;
   

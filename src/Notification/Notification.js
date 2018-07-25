@@ -134,8 +134,6 @@ class Notification extends React.Component<Props, State>{
 
           }
 
-
-
           this.setState({queue, config});
       })
     };

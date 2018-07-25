@@ -1,8 +1,12 @@
 // @flow
 import * as React from 'react';
+
 import Avatar from './Avatar';
+
 import Tooltip from '../Tooltip/Tooltip';
+
 import {StyledAvatarGroup, StyledAvatarItem} from './style';
+
 import { isChild } from '../helpers/typeUtils';
 
 

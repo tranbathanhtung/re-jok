@@ -69,7 +69,7 @@ exports[`<Modal /> should render alert modal 1`] = `
   z-index: 1501;
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0,0,0,0.2),0 2.4rem 3.8rem .3rem rgba(0,0,0,0.14),0 .9rem 4.6rem .8rem rgba(0,0,0,0.12);
   border-radius: .2rem;
-  background-color: #fafafa;
+  background-color: #fff;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -354,7 +354,7 @@ exports[`<Modal /> should render basic modal 1`] = `
   z-index: 1501;
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0,0,0,0.2),0 2.4rem 3.8rem .3rem rgba(0,0,0,0.14),0 .9rem 4.6rem .8rem rgba(0,0,0,0.12);
   border-radius: .2rem;
-  background-color: #fafafa;
+  background-color: #fff;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -375,7 +375,7 @@ exports[`<Modal /> should render basic modal 1`] = `
 .c3 {
   padding: 1.5rem 3rem;
   border-radius: .4rem .4rem 0 0;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   border-bottom: .1rem solid #e8e8e8;
 }
@@ -400,7 +400,7 @@ exports[`<Modal /> should render basic modal 1`] = `
 .c6 {
   padding: 1.5rem 3rem;
   border-top: .1rem solid #e8e8e8;
-  background: #fafafa;
+  background: #fff;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -482,8 +482,8 @@ exports[`<Modal /> should render basic modal 1`] = `
 }
 
 .c7:hover {
-  border-color: #1779d5;
-  color: #1779d5;
+  border-color: #1a87ee;
+  color: #1a87ee;
 }
 
 .c9 {
@@ -777,7 +777,7 @@ exports[`<Modal /> should render fullscreen modal 1`] = `
   z-index: 1501;
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0,0,0,0.2),0 2.4rem 3.8rem .3rem rgba(0,0,0,0.14),0 .9rem 4.6rem .8rem rgba(0,0,0,0.12);
   border-radius: .2rem;
-  background-color: #fafafa;
+  background-color: #fff;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -797,7 +797,7 @@ exports[`<Modal /> should render fullscreen modal 1`] = `
 .c6 {
   padding: 1.5rem 3rem;
   border-radius: .4rem .4rem 0 0;
-  background: #fafafa;
+  background: #fff;
   color: rgba(0,0,0,.64);
   border-bottom: .1rem solid #e8e8e8;
 }
@@ -821,7 +821,7 @@ exports[`<Modal /> should render fullscreen modal 1`] = `
 .c9 {
   padding: 1.5rem 3rem;
   border-top: .1rem solid #e8e8e8;
-  background: #fafafa;
+  background: #fff;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -984,8 +984,8 @@ exports[`<Modal /> should render fullscreen modal 1`] = `
 }
 
 .c10:hover {
-  border-color: #1779d5;
-  color: #1779d5;
+  border-color: #1a87ee;
+  color: #1a87ee;
 }
 
 .c12 {

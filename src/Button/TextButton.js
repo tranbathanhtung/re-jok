@@ -1,9 +1,10 @@
 // @flow
-import * as React from 'react'
+import * as React from 'react';
+
 import Icon from '../Icon';
 
-
 import {TextBtn, Label, SpinnerButton} from './style';
+
 import { isChild } from '../helpers/typeUtils';
 
 
@@ -32,7 +33,6 @@ type Props = {
   secondary?: boolean,
   /** move icon to left or right label. The default is left **/
   iconPosition: 'left' | 'right',
-
   /** Change tag name of button ... span, div, a v..v **/
   tag?: string,
   /** color of text button**/
@@ -41,10 +41,7 @@ type Props = {
   colorWhenHover?: string,
   /** animated when hover button**/
   hoverable: boolean,
-  /**
-   * Defines HTML button type attribute
-   * @defaultValue 'button'
-   */
+  /** Set type of button **/
   rule: 'button' | 'reset' | 'submit',
   /****/
   children?: any,

@@ -12,9 +12,8 @@ import {
 
 import Icon from '../Icon';
 
+
 import { isChild } from '../helpers/typeUtils';
-
-
 
 import ModalHeader from './ModalHeader';
 import ModalContent from './ModalContent';
@@ -100,6 +99,7 @@ class Modal extends React.Component<Props>{
       classNameAction,
       ...rest
     } = this.props;
+ 
 
     const hasChild = !isChild(children);
 
@@ -115,7 +115,7 @@ class Modal extends React.Component<Props>{
       <StyledModalWrapper openModal={open} onClick={this.handleClose}>
         <StyledModalBackGround openModal={open}/>
       <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={this.handleStopEvent}>
-        { closable && <CloseButton onClick={this.handleClose} variant="icon" icon="times"/> }
+        { closable && <CloseButton  onClick={this.handleClose} variant="icon" icon="times"/> }
 
         {
           title && alert === "none"
@@ -130,12 +130,12 @@ class Modal extends React.Component<Props>{
             alert !== "none"
              ? (
                <React.Fragment>
-                 <StyledAlert>
+                 <StyledAlert >
                    {listIcon[alert]}
-                   {alertTitle && <StyledAlertTitle>{alertTitle}</StyledAlertTitle>}
+                   {alertTitle && <StyledAlertTitle >{alertTitle}</StyledAlertTitle>}
 
                  </StyledAlert>
-                 <StyledAlertDescription alert={alert}>
+                 <StyledAlertDescription  alert={alert}>
                    {hasChild && children}
                  </StyledAlertDescription>
                </React.Fragment>
@@ -147,7 +147,7 @@ class Modal extends React.Component<Props>{
 
         </ModalContent>
         {
-          action && <ModalAction style={styleAction} className={classNameAction} action={action}/>
+          action && <ModalAction  style={styleAction} className={classNameAction} action={action}/>
         }
 
 

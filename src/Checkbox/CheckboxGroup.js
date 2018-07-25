@@ -8,9 +8,6 @@ import Checkbox from './Checkbox';
 
 import {isUndef, isChild} from '../helpers/typeUtils';
 
-
-
-
 type Props = {
   /**Override style of Radio**/
   style?: Object,

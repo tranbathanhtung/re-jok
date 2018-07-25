@@ -130,7 +130,7 @@ padding: 0;
 `
 // =============== Sub Menu =================
 export const StyledSubMenuWrapper = styled.li`
-    padding-bottom: 0.01px;
+    
     transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 `
 

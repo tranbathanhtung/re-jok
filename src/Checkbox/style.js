@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 
 
 const baseCheckbox = css`
-font-size: 14px;
+font-size: 1.4rem;
 line-height: 1.5;
 color: ${({theme}) => theme.text.regular};
 box-sizing: border-box;
@@ -18,11 +18,11 @@ cursor: pointer;
 const baseCheckboxButton = css`
 height: 1.6rem;
 width: 1.6rem;
-border:  ${props => props.checked || props.indeterminate ? props.color ? `1px solid ${props.color}` : `1px solid ${props.theme.primary.main}` : `1px solid ${props.theme.border.primary}`};
+border:  ${props => props.checked || props.indeterminate ? props.color ? `.1rem solid ${props.color}` : `.1rem solid ${props.theme.primary.main}` : `.1rem solid ${props.theme.border.primary}`};
 display: inline-block;
 position: absolute;
 left: 0;
-background-color: ${({color, theme, checked, indeterminate}) => checked  || indeterminate ? color ? color : theme.primary.main : "#fff"};
+background-color: ${({color, theme, checked, indeterminate}) => checked  || indeterminate ? color ? color : theme.primary.main : theme.background.default};
 top: 0;
 ${
   props => props.disabled && css`
@@ -109,7 +109,7 @@ const baseToggleButton = css`
       ${
         props => props.checked && css`
           left: 100%;
-          margin-left: -17px;
+          margin-left: -1.7rem;
         `
       }
     }
@@ -167,7 +167,7 @@ export const StyledCheckboxLabel = styled.label.attrs({
   &:hover ${StyledCheckboxButton}{
     ${
       props => !props.disabled && !props.toggle && css`
-      border: ${({color, theme}) => color ? `1px solid ${color}` : `1px solid ${theme.primary.main}`};
+      border: ${({color, theme}) => color ? `.1rem solid ${color}` : `.1rem solid ${theme.primary.main}`};
 
       `
     }

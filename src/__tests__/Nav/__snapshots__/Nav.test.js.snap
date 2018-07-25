@@ -12,8 +12,8 @@ exports[`<Nav /> should render Nav 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   -webkit-flex: 1;
@@ -46,7 +46,7 @@ exports[`<Nav /> should render Nav 1`] = `
   font-size: 1.4rem;
   padding: 1rem 0;
   z-index: 400;
-  background-color: #fafafa;
+  background-color: #fff;
   color: rgba(0,0,0,.64);
   box-shadow: 0 .4rem 1.8rem 0 rgba(0,0,0,0.12),0 .7rem 1rem -.5rem rgba(0,0,0,0.15);
 }
@@ -96,8 +96,8 @@ exports[`<Nav /> should render Nav with background color 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   -webkit-flex: 1;
@@ -180,8 +180,8 @@ exports[`<Nav /> should render Nav with primary color 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   -webkit-flex: 1;
@@ -264,8 +264,8 @@ exports[`<Nav /> should render Nav with secondary color 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   -webkit-flex: 1;
@@ -348,8 +348,8 @@ exports[`<Nav /> should render Nav with transparent background 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
   -webkit-flex: 1;

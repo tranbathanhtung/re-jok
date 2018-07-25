@@ -8,6 +8,7 @@ exports[`<List /> basic render 1`] = `
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
   color: rgba(0,0,0,.64);
   box-sizing: border-box;
@@ -308,6 +309,7 @@ exports[`<List /> should render full control list 1`] = `
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
   color: rgba(0,0,0,.64);
   box-sizing: border-box;
@@ -354,6 +356,7 @@ exports[`<List /> should render full control list 1`] = `
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
   color: rgba(0,0,0,.64);
   box-sizing: border-box;
@@ -430,6 +433,7 @@ exports[`<List /> should render full control list 1`] = `
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
   color: rgba(0,0,0,.64);
   box-sizing: border-box;
@@ -1316,6 +1320,7 @@ exports[`<List /> should render with horizontal layout 1`] = `
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   position: relative;
   color: rgba(0,0,0,.64);
   box-sizing: border-box;

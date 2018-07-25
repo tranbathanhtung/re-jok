@@ -48,7 +48,7 @@ exports[`<AvatarGroup /> should render AvatarGroup 1`] = `
   width: 3.2rem;
   height: 3.2rem;
   pointer-events: auto;
-  box-shadow: rgb(255,255,255) 0px 0px 0px 2px;
+  box-shadow: rgb(255,255,255) 0 0 0 .2rem;
   position: relative;
   border-radius: 50%;
 }

@@ -1,9 +1,19 @@
 import styled from 'styled-components';
+
 import Icon from '../Icon';
+
 import { shadeColor, hexa } from '../globals';
 
 const returnBoxShadow = color => {
-  return `0 .3rem .5rem -.1rem ${hexa(color, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(color, .12)}`
+  return `0 .3rem .5rem -.1rem ${hexa(color, .2)}, 0 .6rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .1rem 1.8rem 0 ${hexa(color, .12)}`;
+}
+
+const returnColor = (color, background, hasBoxShadow) => {
+  return `
+    color: ${color};
+    background: ${shadeColor(background, -5)};
+    box-shadow: ${hasBoxShadow && returnBoxShadow(background)};
+  `;
 }
 
 export const StyledIconClose = styled(Icon)`
@@ -33,59 +43,28 @@ const returnType = props => {
   if(!props.color){
     switch (props.type) {
       case 'none':
-        return `
-          color: ${props.theme.text.regular};
-          background: ${shadeColor(props.theme.background.default, -5)};
-          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.background.default)};
 
-
-        `
+        return returnColor(props.theme.text.regular, props.theme.background.paper, props.hasBoxShadow);
       case 'success':
-        return`
 
-          color: ${props.theme.text.default};
+        return returnColor(props.theme.text.default, props.theme.success.main, props.hasBoxShadow);
 
-          background: ${hexa(props.theme.success.main, .85)};
-          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.success.main)};
-
-
-        `
       case 'info':
-        return`
 
-          color: ${props.theme.text.default};
+        return returnColor(props.theme.text.default, props.theme.info.main, props.hasBoxShadow);
 
-          background: ${hexa(props.theme.info.main, .85)};
-
-          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.info.main)};
-
-
-
-        `
       case 'warning':
-        return`
-        color: ${props.theme.text.default};
 
-          background: ${hexa(props.theme.warning.main, .85)};
-          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.warning.main)};
+        return returnColor(props.theme.text.default, props.theme.warning.main, props.hasBoxShadow);
 
-        `
       case 'error':
-        return`
-        color: ${props.theme.text.default};
 
-          background: ${hexa(props.theme.error.main, .85)};
-          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.error.main)};
+        return returnColor(props.theme.text.default, props.theme.error.main, props.hasBoxShadow);
 
-        `
       default:
-        return `
-          color: ${props.theme.text.regular};
-          background: ${ ({theme}) => shadeColor(theme.background.default, -5)};
-          box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.theme.background.default)};
 
+        return returnColor(props.theme.text.regular, props.theme.background.paper, props.hasBoxShadow);
 
-         `
 
     }
   }
@@ -107,7 +86,7 @@ export const StyledAlert = styled.div`
   display: flex;
   align-items: center;
   padding: 1.5rem 3rem 1.5rem 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   border-radius: .2rem;
 
   ${props => returnType(props)};

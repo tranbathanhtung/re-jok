@@ -20,7 +20,7 @@ export const StyledLayout = styled.div`
 
   & * {
     box-sizing: border-box;
-    font-size: 1.4rem;
+   
   }
 `
 
@@ -48,7 +48,7 @@ const returnContainerResponsive = props => {
     if(key === "xs"){
       return css`
       @media(max-width: ${grid.sm}px){
-         max-width: 540px;
+         max-width: 54rem;
       }
       `
     }

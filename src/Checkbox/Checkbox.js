@@ -11,12 +11,8 @@ import CheckboxGroup from './CheckboxGroup';
 
 import { withTheme } from 'styled-components';
 
-
 import { isUndef, isChild } from '../helpers/typeUtils';
 import { generalId } from '../helpers';
-
-
-
 
 type Props = {
   /**Override style of Checkbox**/

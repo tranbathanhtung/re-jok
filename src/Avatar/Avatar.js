@@ -2,7 +2,9 @@
 import * as React from 'react'
 
 import Icon from '../Icon';
+
 import AvatarGroup from './AvatarGroup';
+
 import {StyledAvatar, StyledAvatarImage} from './style';
 
 import { isChild } from '../helpers/typeUtils';

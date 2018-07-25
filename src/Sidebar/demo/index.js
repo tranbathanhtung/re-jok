@@ -2,13 +2,15 @@
 import * as React from 'react';
 import Sidebar from '../Sidebar';
 import Button from '../../Button/Button';
-import MenuDemo from '../../Menu/demo'
+import MenuDemo from '../../Menu/demo';
+import JokBody from '../../globals/JokBody';
+
 
 type State = {
   open: boolean
 }
 
-class SidebarDemo extends React.Component<{}, State>{
+class SidebarDemo extends React.Component<{theme: Object}, State>{
   state = {
     open: false
   }
@@ -30,12 +32,15 @@ class SidebarDemo extends React.Component<{}, State>{
           <Button onClick={this.toggleSidebar}>Toggle</Button>
 
         </div>
+        <JokBody theme={this.props.theme}>
         <Sidebar
           direction="left"
+          opacity
           onToggle={this.toggleSidebar}
           open={open}>
             <MenuDemo/>
         </Sidebar>
+        </JokBody>
         <Sidebar.Content
           direction="left"
 

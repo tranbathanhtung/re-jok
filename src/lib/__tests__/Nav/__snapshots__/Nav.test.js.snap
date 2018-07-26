@@ -42,13 +42,12 @@ exports[`<Nav /> should render Nav 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  min-height: 7rem;
+  min-height: 6.4rem;
   font-size: 1.4rem;
   padding: 1rem 0;
   z-index: 400;
   background-color: #fff;
   color: rgba(0,0,0,.64);
-  box-shadow: 0 .4rem 1.8rem 0 rgba(0,0,0,0.12),0 .7rem 1rem -.5rem rgba(0,0,0,0.15);
 }
 
 .c0 .sc-bZQynM {
@@ -126,13 +125,12 @@ exports[`<Nav /> should render Nav with background color 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  min-height: 7rem;
+  min-height: 6.4rem;
   font-size: 1.4rem;
   padding: 1rem 0;
   z-index: 400;
   background-color: #bababa;
   color: #fff;
-  box-shadow: 0 .4rem 2rem 0 rgba(0,0,0,0.14),0 .7rem 1.2rem -.5rem rgba(186,186,186,0.46);
 }
 
 .c0 .sc-bZQynM {
@@ -210,13 +208,12 @@ exports[`<Nav /> should render Nav with primary color 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  min-height: 7rem;
+  min-height: 6.4rem;
   font-size: 1.4rem;
   padding: 1rem 0;
   z-index: 400;
   background-color: #1c8ffb;
   color: #fff;
-  box-shadow: 0 .4rem 2rem 0 rgba(0,0,0,0.14),0 .7rem 1.2rem -.5rem rgba(28,143,251,0.46);
 }
 
 .c0 .sc-bZQynM {
@@ -294,13 +291,12 @@ exports[`<Nav /> should render Nav with secondary color 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  min-height: 7rem;
+  min-height: 6.4rem;
   font-size: 1.4rem;
   padding: 1rem 0;
   z-index: 400;
   background-color: #1b1c1d;
   color: #fff;
-  box-shadow: 0 .4rem 2rem 0 rgba(0,0,0,0.14),0 .7rem 1.2rem -.5rem rgba(27,28,29,0.46);
 }
 
 .c0 .sc-bZQynM {
@@ -378,7 +374,7 @@ exports[`<Nav /> should render Nav with transparent background 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  min-height: 7rem;
+  min-height: 6.4rem;
   font-size: 1.4rem;
   padding: 1rem 0;
   z-index: 400;

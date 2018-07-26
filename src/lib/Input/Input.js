@@ -11,9 +11,6 @@ import {
 import Icon from '../Icon';
 import { withTheme } from 'styled-components';
 
-
-
-
 type Props = {
   /**Override style of Input**/
   style?: Object,

@@ -52,7 +52,7 @@ export const StyledNavBarRes = styled.div`
 export const StyledNavBar = styled.nav`
   display: flex;
   position: relative;
-  min-height: 7rem;
+  min-height: 6.4rem;
   font-size: 1.4rem;
 
   padding: 1rem 0;
@@ -77,14 +77,19 @@ export const StyledNavBar = styled.nav`
       ? props.backgroundColor
       : props.theme.background.default};
     color: ${props => props.backgroundColor || props.primary || props.secondary ? props.theme.text.default : props.theme.text.regular};
-    box-shadow: ${props =>
-      props.primary
-      ? returnBoxShadow(props.theme.primary.main, 0.46)
-      : props.secondary
-      ? returnBoxShadow(props.theme.secondary.main, 0.46)
-      : props.backgroundColor
-      ? returnBoxShadow(props.backgroundColor, 0.46)
-      : "0 .4rem 1.8rem 0 rgba(0,0,0,0.12), 0 .7rem 1rem -.5rem rgba(0,0,0,0.15)"};
+    
+    ${
+      props => props.hasBoxShadow && css`
+       box-shadow: ${props =>
+        props.primary
+        ? returnBoxShadow(props.theme.primary.main, 0.46)
+        : props.secondary
+        ? returnBoxShadow(props.theme.secondary.main, 0.46)
+        : props.backgroundColor
+        ? returnBoxShadow(props.backgroundColor, 0.46)
+        : "0 .4rem 1.8rem 0 rgba(0,0,0,0.12), 0 .7rem 1rem -.5rem rgba(0,0,0,0.15)"};
+      `
+    }
 
     `
   }

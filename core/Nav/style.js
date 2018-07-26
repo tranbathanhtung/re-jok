@@ -4,10 +4,11 @@ var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  displa
     _templateObject4 = _taggedTemplateLiteral(['\n  ', ';\n  margin-left: auto;\n'], ['\n  ', ';\n  margin-left: auto;\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  position: absolute;\n  left: 50%;\n  right: auto;\n  transform: translateX(-50%);\n\n'], ['\n  position: absolute;\n  left: 50%;\n  right: auto;\n  transform: translateX(-50%);\n\n']),
     _templateObject6 = _taggedTemplateLiteral(['\n    margin-left: auto;\n'], ['\n    margin-left: auto;\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  display: flex;\n  position: relative;\n  min-height: 7rem;\n  font-size: 1.4rem;\n\n  padding: 1rem 0;\n  z-index: ', ';\n\n\n\n  ', '\n\n  & ', '{\n    display: none;\n  }\n\n  ', '\n\n\n\n'], ['\n  display: flex;\n  position: relative;\n  min-height: 7rem;\n  font-size: 1.4rem;\n\n  padding: 1rem 0;\n  z-index: ', ';\n\n\n\n  ', '\n\n  & ', '{\n    display: none;\n  }\n\n  ', '\n\n\n\n']),
+    _templateObject7 = _taggedTemplateLiteral(['\n  display: flex;\n  position: relative;\n  min-height: 6.4rem;\n  font-size: 1.4rem;\n\n  padding: 1rem 0;\n  z-index: ', ';\n\n\n\n  ', '\n\n  & ', '{\n    display: none;\n  }\n\n  ', '\n\n\n\n'], ['\n  display: flex;\n  position: relative;\n  min-height: 6.4rem;\n  font-size: 1.4rem;\n\n  padding: 1rem 0;\n  z-index: ', ';\n\n\n\n  ', '\n\n  & ', '{\n    display: none;\n  }\n\n  ', '\n\n\n\n']),
     _templateObject8 = _taggedTemplateLiteral(['\n       background: transparent;\n       color: ', ';\n    '], ['\n       background: transparent;\n       color: ', ';\n    ']),
-    _templateObject9 = _taggedTemplateLiteral(['\n\n    background-color: ', ';\n    color: ', ';\n    box-shadow: ', ';\n\n    '], ['\n\n    background-color: ', ';\n    color: ', ';\n    box-shadow: ', ';\n\n    ']),
-    _templateObject10 = _taggedTemplateLiteral(['\n    @media (max-width: ', 'px) {\n       & ', '{\n         display: none;\n       }\n       & ', '{\n         display: none;\n       }\n\n       & ', '{\n         display: block;\n       }\n    }\n    '], ['\n    @media (max-width: ', 'px) {\n       & ', '{\n         display: none;\n       }\n       & ', '{\n         display: none;\n       }\n\n       & ', '{\n         display: block;\n       }\n    }\n    ']);
+    _templateObject9 = _taggedTemplateLiteral(['\n\n    background-color: ', ';\n    color: ', ';\n    \n    ', '\n\n    '], ['\n\n    background-color: ', ';\n    color: ', ';\n    \n    ', '\n\n    ']),
+    _templateObject10 = _taggedTemplateLiteral(['\n       box-shadow: ', ';\n      '], ['\n       box-shadow: ', ';\n      ']),
+    _templateObject11 = _taggedTemplateLiteral(['\n    @media (max-width: ', 'px) {\n       & ', '{\n         display: none;\n       }\n       & ', '{\n         display: none;\n       }\n\n       & ', '{\n         display: block;\n       }\n    }\n    '], ['\n    @media (max-width: ', 'px) {\n       & ', '{\n         display: none;\n       }\n       & ', '{\n         display: none;\n       }\n\n       & ', '{\n         display: block;\n       }\n    }\n    ']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -43,8 +44,10 @@ export var StyledNavBar = styled.nav(_templateObject7, function (_ref) {
   }, function (props) {
     return props.backgroundColor || props.primary || props.secondary ? props.theme.text.default : props.theme.text.regular;
   }, function (props) {
-    return props.primary ? returnBoxShadow(props.theme.primary.main, 0.46) : props.secondary ? returnBoxShadow(props.theme.secondary.main, 0.46) : props.backgroundColor ? returnBoxShadow(props.backgroundColor, 0.46) : "0 .4rem 1.8rem 0 rgba(0,0,0,0.12), 0 .7rem 1rem -.5rem rgba(0,0,0,0.15)";
+    return props.hasBoxShadow && css(_templateObject10, function (props) {
+      return props.primary ? returnBoxShadow(props.theme.primary.main, 0.46) : props.secondary ? returnBoxShadow(props.theme.secondary.main, 0.46) : props.backgroundColor ? returnBoxShadow(props.backgroundColor, 0.46) : "0 .4rem 1.8rem 0 rgba(0,0,0,0.12), 0 .7rem 1rem -.5rem rgba(0,0,0,0.15)";
+    });
   });
 }, StyledNavBarRes, function (props) {
-  return typeof props.responsive === "number" && css(_templateObject10, props.responsive, StyledNavBarRight, StyledNavBarCenter, StyledNavBarRes);
+  return typeof props.responsive === "number" && css(_templateObject11, props.responsive, StyledNavBarRight, StyledNavBarCenter, StyledNavBarRes);
 });

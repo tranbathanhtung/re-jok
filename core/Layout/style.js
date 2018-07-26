@@ -1,12 +1,12 @@
 var _templateObject = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n  position: relative;\n\n"], ["\n  width: 100%;\n  margin: 0 auto;\n  position: relative;\n\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  box-sizing: border-box;\n  flex-direction: ", ";\n  flex: 1;\n  margin: 0;\n  padding: 0;\n  font-size: 1.4rem;\n\n  & * {\n    box-sizing: border-box;\n   \n  }\n"], ["\n  display: flex;\n  box-sizing: border-box;\n  flex-direction: ", ";\n  flex: 1;\n  margin: 0;\n  padding: 0;\n  font-size: 1.4rem;\n\n  & * {\n    box-sizing: border-box;\n   \n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n   min-height: 7rem;\n   margin: 0;\n   line-height: 7rem;\n\n   ", "\n\n"], ["\n   min-height: 7rem;\n   margin: 0;\n   line-height: 7rem;\n\n   ", "\n\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n   min-height: 6.4rem;\n   margin: 0;\n\n   ", "\n\n"], ["\n   min-height: 6.4rem;\n   margin: 0;\n\n   ", "\n\n"]),
     _templateObject4 = _taggedTemplateLiteral(["\n        position: fixed;\n        width: 100%;\n        z-index: ", ";\n        top: 0;\n     "], ["\n        position: fixed;\n        width: 100%;\n        z-index: ", ";\n        top: 0;\n     "]),
     _templateObject5 = _taggedTemplateLiteral(["\n      @media(max-width: ", "px){\n         max-width: 54rem;\n      }\n      "], ["\n      @media(max-width: ", "px){\n         max-width: 54rem;\n      }\n      "]),
     _templateObject6 = _taggedTemplateLiteral(["\n      @media(min-width: ", "px){\n         max-width: ", "px;\n      }\n    "], ["\n      @media(min-width: ", "px){\n         max-width: ", "px;\n      }\n    "]),
     _templateObject7 = _taggedTemplateLiteral(["\n   ", ";\n   flex: 1;\n   flex-basis: auto;\n\n   ", ";\n   ", "\n\n\n\n"], ["\n   ", ";\n   flex: 1;\n   flex-basis: auto;\n\n   ", ";\n   ", "\n\n\n\n"]),
     _templateObject8 = _taggedTemplateLiteral(["\n     width: 100vw;\n     left: 50%;\n     right: 50%;\n     margin-left: -50vw;\n     margin-right: -50vw;\n   "], ["\n     width: 100vw;\n     left: 50%;\n     right: 50%;\n     margin-left: -50vw;\n     margin-right: -50vw;\n   "]),
-    _templateObject9 = _taggedTemplateLiteral(["\n   min-height: 7rem;\n   margin: 0;\n   line-height: 7rem;\n\n\n"], ["\n   min-height: 7rem;\n   margin: 0;\n   line-height: 7rem;\n\n\n"]),
+    _templateObject9 = _taggedTemplateLiteral(["\n   min-height: 6.4rem;\n   margin: 0;\n\n\n"], ["\n   min-height: 6.4rem;\n   margin: 0;\n\n\n"]),
     _templateObject10 = _taggedTemplateLiteral(["\n      flex-shrink: 0;\n    \n      overflow: auto;\n"], ["\n      flex-shrink: 0;\n    \n      overflow: auto;\n"]);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }

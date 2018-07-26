@@ -26,9 +26,8 @@ export const StyledLayout = styled.div`
 
 //=============== Header ==================
 export const StyledHeader = styled.header`
-   min-height: 7rem;
+   min-height: 6.4rem;
    margin: 0;
-   line-height: 7rem;
 
    ${
      props => props.fixed && css`
@@ -83,9 +82,8 @@ export const StyledContainer = styled.div`
 
 //============== Footer =================
 export const StyledFooter = styled.footer`
-   min-height: 7rem;
+   min-height: 6.4rem;
    margin: 0;
-   line-height: 7rem;
 
 
 `

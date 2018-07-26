@@ -17,7 +17,8 @@ var defaultProps = {
   transparent: false,
   responsive: 1000,
   primary: false,
-  secondary: false
+  secondary: false,
+  hasBoxShadow: false
 };
 
 var Nav = function (_React$Component) {

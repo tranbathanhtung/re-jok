@@ -71,7 +71,6 @@ export const defaultTheme = {
   },
   primary: {
     main: "#1c8ffb",
-
   },
   secondary: {
     main: "#1b1c1d",

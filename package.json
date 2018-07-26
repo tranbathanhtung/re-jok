@@ -16,15 +16,13 @@
     "url": "https://github.com/tranbathanhtung/re-jok.git"
   },
   "dependencies": {
-    "react-scripts": "1.1.4",
     "react-fontawesome": "^1.6.1",
-    "react-transition-group": "^1.2.1",
-    "source-map-explorer": "^1.5.0",
-    "styled-components": "^3.2.6"
+    "react-transition-group": "^1.2.1"
   },
   "peerDependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
   },
   "scripts": {
     "flow": "flow",
@@ -36,6 +34,11 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.2.6",
+    "source-map-explorer": "^1.5.0",
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "enzyme": "^3.3.0",

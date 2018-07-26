@@ -46,14 +46,13 @@ export const StyledList = styled.div`
     props =>
      props.horizontal
       ?  css`
-        // width: 100%;
+        
         > ${StyledListItem} {
           display: inline-flex;
         }
       `
       : null
   }
-
 
   font-size: 1.4rem;
   line-height: 1.5;
@@ -64,9 +63,6 @@ export const StyledList = styled.div`
   position: relative;
   color: ${({theme}) => theme.text.regular};
   box-sizing: border-box;
-
-
-
   & * {
     outline: none;
 

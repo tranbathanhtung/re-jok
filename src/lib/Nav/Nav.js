@@ -36,13 +36,16 @@ type Props = {
   responsive: number,
   /** Element display when responsive work**/
   elementResponsive?: any,
+  /** Set navbar has box-shadow or not **/
+  hasBoxShadow: boolean
 }
 
 const defaultProps = {
   transparent: false,
   responsive: 1000,
   primary: false,
-  secondary: false
+  secondary: false,
+  hasBoxShadow: false
 }
 
 

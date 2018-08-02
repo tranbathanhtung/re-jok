@@ -1,13 +1,12 @@
 // @flow
 import * as React from 'react';
 import NotificationContent from './NotificationContent';
-
-
 import {
   StyledNotificationWrapper,
   notifTransition
 } from './style';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import JokBody from '../globals/JokBody';
 
 
 import { generalId } from '../helpers';
@@ -172,7 +171,7 @@ class Notification extends React.Component<Props, State>{
 
 
     return (
-
+     <JokBody>
         <StyledNotificationWrapper {...this.props} config={config}>
           <CSSTransitionGroup
             transitionName={notifTransition}
@@ -183,9 +182,7 @@ class Notification extends React.Component<Props, State>{
           </CSSTransitionGroup>
 
        </StyledNotificationWrapper>
-
-
-
+     </JokBody>
     )
   }
 }

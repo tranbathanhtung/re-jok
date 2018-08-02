@@ -21,7 +21,9 @@ export const globalConfig = () => injectGlobal`
    font-weight: 400;
    box-sizing: border-box;
    line-height: 1.7;
-   
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
   }
 
 `

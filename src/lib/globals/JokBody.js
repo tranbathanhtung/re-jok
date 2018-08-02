@@ -1,40 +1,33 @@
 // @flow
 import * as React from 'react';
-import ReactDOM from 'react-dom';
-import { withTheme } from 'styled-components';
+import ReactDOM, { createPortal } from 'react-dom';
 import Modal from '../Modal';
 import Notification from '../Notification';
 import Sidebar from '../Sidebar';
-import JokTheme from '../theme/JokTheme';
+
 
 
 type Props = {
     /* Children shoube be Modal or Notification */
     children: React.Element < typeof Modal > | React.Element < typeof Notification > | React.Element < typeof Sidebar >,
-    /*This theme must be equal theme what you passed theme provider */
-    theme: Object
 }
 
-const defaultProps = {
-    theme: {}
-}
 
 class JokBody extends React.PureComponent<Props> {
 
-    static defaultProps  = defaultProps;
 
     _popup: HTMLDivElement;
+
+    constructor(props) {
+       super(props);
+       this._popup = document.createElement('div');
+     }
 
     componentDidMount() {
         if (!document.body) throw new Error("Unexpectedly missing <body>.");
         const body: HTMLElement = document.body;
         this._popup = document.createElement('div');
         body.appendChild(this._popup);
-        this._render();
-    }
-
-    componentDidUpdate() {
-        this._render();
     }
 
     componentWillUnmount() {
@@ -45,18 +38,20 @@ class JokBody extends React.PureComponent<Props> {
     }
 
     _render() {
-        const { children, theme, ...rest} = this.props;
-        
-        ReactDOM.render(
-        <JokTheme theme={theme}>
+        const { children, ...rest} = this.props;
+
+        createPortal(
           <children.type {...children.props} {...rest} />
-        </JokTheme>
         , this._popup);
     }
 
     render() {
-        return null;
+        const { children, ...rest} = this.props;
+
+        return createPortal(
+          <children.type {...children.props} {...rest} />
+        , this._popup)
     }
 }
 
-export default withTheme(JokBody)
+export default JokBody

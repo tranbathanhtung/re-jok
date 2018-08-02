@@ -18,6 +18,7 @@ import { isChild } from '../helpers/typeUtils';
 import ModalHeader from './ModalHeader';
 import ModalContent from './ModalContent';
 import ModalAction from './ModalAction';
+import JokBody from '../globals/JokBody';
 
 type Props = {
   /** Set modal open or not**/
@@ -55,7 +56,9 @@ type Props = {
   /** Override style of modal action**/
   styleAction?: Object,
   /** Add more class to modal action**/
-  classNameAction?: string
+  classNameAction?: string,
+  /** Set modal has scroll or not**/
+  scrollable: boolean
 
 
 }
@@ -65,6 +68,7 @@ const defaultProps = {
   alert: 'none',
   closable: false,
   fullscreen: false,
+  scrollable: false
 }
 class Modal extends React.Component<Props>{
   static defaultProps = defaultProps;
@@ -97,9 +101,10 @@ class Modal extends React.Component<Props>{
       classNameContent,
       styleAction,
       classNameAction,
+      scrollable,
       ...rest
     } = this.props;
- 
+
 
     const hasChild = !isChild(children);
 
@@ -112,6 +117,7 @@ class Modal extends React.Component<Props>{
 
     }
     return (
+      <JokBody>
       <StyledModalWrapper openModal={open} onClick={this.handleClose}>
         <StyledModalBackGround openModal={open}/>
       <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={this.handleStopEvent}>
@@ -125,7 +131,7 @@ class Modal extends React.Component<Props>{
             </ModalHeader>
           ) : null
         }
-        <ModalContent fullscreen={fullscreen} style={styleContent} className={classNameContent}>
+        <ModalContent scrollable={scrollable} fullscreen={fullscreen} style={styleContent} className={classNameContent}>
           {
             alert !== "none"
              ? (
@@ -153,6 +159,7 @@ class Modal extends React.Component<Props>{
 
       </StyledModal>
       </StyledModalWrapper>
+    </JokBody>
     )
   }
 }

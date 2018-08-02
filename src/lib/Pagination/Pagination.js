@@ -28,7 +28,7 @@ type Props = {
   /** Callback function when page change**/
   onPageChange: Function,
   /** Type of Pagination**/
-  type: 'default' | 'effect',
+  type: 'default' | 'hasBackground',
   /** Set color when active pagination**/
   color?: string,
 }

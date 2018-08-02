@@ -24,4 +24,13 @@ export const StyledImage = styled.img`
    ${props => props.hasBoxshadow && css`
        box-shadow: 0 .5rem 1.5rem -.8rem rgba(0,0,0,.24), 0 .8rem 1rem -.5rem rgba(0,0,0,.2);
      `}
+
+    ${
+      props => props.thumbnail && css`
+       padding: .25rem;
+       background-color: #fff;
+       border: 1px solid #dee2e6;
+       border-radius: .25rem;
+      `
+    }
 `

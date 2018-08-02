@@ -12,7 +12,7 @@ const returnColor = (color, background, hasBoxShadow) => {
   return `
     color: ${color};
     background: ${shadeColor(background, -5)};
-    box-shadow: ${hasBoxShadow && returnBoxShadow(background)};
+    box-shadow: ${hasBoxShadow ? returnBoxShadow(background) : ''};
   `;
 }
 
@@ -72,7 +72,7 @@ const returnType = props => {
     return `
     color: ${props.theme.text.default};
     background: ${hexa(props.color, .85)};
-    box-shadow: ${props.hasBoxShadow && returnBoxShadow(props.color)};
+    box-shadow: ${props.hasBoxShadow ? returnBoxShadow(props.color) : ''};
 
 
     `
@@ -84,7 +84,7 @@ export const StyledAlert = styled.div`
   font-size: 1.4rem;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   padding: 1.5rem 3rem 1.5rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: .2rem;
@@ -95,7 +95,7 @@ export const StyledAlert = styled.div`
 export const StyledAlertTitle = styled.strong`
   font-size: 1.4rem;
   color: ${ ({theme,hasColor}) =>hasColor? theme.text.default : theme.text.primary};
-  margin-right: .5rem;
+  margin-right: 1rem;
 `
 
 export const StyledAlertContent =  styled.div`

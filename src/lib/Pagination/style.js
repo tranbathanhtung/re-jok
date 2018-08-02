@@ -46,7 +46,7 @@ export const StyledPaginationContent = styled.a`
   color: ${ ({theme, active, color}) => active ? color ? color : theme.primary.main : theme.text.secondary};
 
   ${
-    props => props.type === "effect" && css`
+    props => props.type === "hasBackground" && css`
        box-shadow: ${
          ({active, theme, color}) => active
          ? color ? returnBoxShadow(color)

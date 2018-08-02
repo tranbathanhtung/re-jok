@@ -18,11 +18,14 @@ type Props = {
   hasBoxshadow: boolean,
   /** Set alt of image**/
   alt?: string,
+  /** Set image is thumbnail or not**/
+  thumbnail: boolean,
 
 }
 
 const defaultProps = {
-  hasBoxshadow: false
+  hasBoxshadow: false,
+  thumbnail: false
 }
 
 class Image extends React.Component<Props>{

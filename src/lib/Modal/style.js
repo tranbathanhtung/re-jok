@@ -61,7 +61,8 @@ export const StyledModal = styled.div`
   background-color: ${({theme}) => theme.background.default};
   flex: 0 1 auto;
   margin: ${props => props.fullscreen ? "0" : "3.2rem"};
-  width: ${props => props.fullscreen ? "100%": "550px"};
+  width: ${props => props.fullscreen ? "100%": "75%"};
+  max-width: 76.8rem;
   display: flex;
   outline: none;
   height: ${props => props.fullscreen ? "100%": "auto"};
@@ -70,25 +71,15 @@ export const StyledModal = styled.div`
 
 
 
-  ${
-    ({theme, fullscreen}) => !fullscreen && css`
-    @media (max-width: ${theme.grid.xs}px) {
-      width: auto !important;
-      margin: 1rem;
-    }
-
-    `
-  }
-
-
 `
 //================== Modal Header ==================
 export const StyledModalHeader = styled.div`
-padding: 1.5rem 3rem;
+padding: 1.6rem 2.4rem;
 border-radius: .4rem .4rem 0 0;
 background: ${({theme}) => theme.background.default};
 color: ${({theme}) => theme.text.regular};
 border-bottom: ${({theme}) => `.1rem solid ${theme.border.primary}`};
+
 `
 
 export const StyledModalHeaderTitle = styled.div`
@@ -101,12 +92,20 @@ color: ${({theme}) => theme.text.primary};
 
 // ================== Modal Content ==================
 export const StyledModalContent = styled.div`
-padding: 3rem 3rem;
-font-size: 1.6rem;
+padding: 2.4rem
+font-size: 1.4rem;
 line-height: 1.5;
 word-wrap: break-word;
 max-height: ${props => props.fullscreen ? null : "35rem"};
-overflow: auto;
+
+${
+  props => props.scrollable && css`
+    overflow: auto;
+    max-height: 80vh;
+  `
+}
+height: 100%;
+
 `
 
 export const StyledAlert = styled.div`
@@ -119,7 +118,7 @@ export const StyledAlert = styled.div`
 export const StyledAlertTitle = styled.span`
     color: ${({theme}) => theme.text.primary};
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.3;
     margin-left: 1rem;
     text-transform: uppercase;
@@ -134,7 +133,7 @@ export const StyledAlertDescription = styled.div`
 `
 //============= Modal Footer ==============
 export const StyledModalAction = styled.div`
-  padding: 1.5rem 3rem;
+  padding: 1rem 1.6rem;
   border-top: ${({theme}) => `.1rem solid ${theme.border.primary}`};
   background: ${({theme}) => theme.background.default};
   display: inline-flex;

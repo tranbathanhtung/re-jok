@@ -36,8 +36,8 @@ type Props = {
   primaryText?: string,
   /** left icon**/
   leftIcon?: React.Node,
-  /** disable menu item**/
-  disable?: boolean,
+  /** disabled menu item**/
+  disabled?: boolean,
   /** data from menu parent**/
   context: Object,
   /** from SubMenu with <3**/
@@ -46,7 +46,7 @@ type Props = {
 
 const defaultProps = {
   paddingLeft: 24,
-  disable: false
+  disabled: false
 }
 
 
@@ -54,9 +54,9 @@ class MenuItem extends React.Component<Props>{
   static defaultProps = defaultProps;
 
   handleClick = (e: SyntheticEvent<HTMLElement>) => {
-    const { keyActive, onClick, disable, ...rest } = this.props;
+    const { keyActive, onClick, disabled, ...rest } = this.props;
 
-    if(disable) return;
+    if(disabled) return;
 
     const { multiple, onSelect, selectedKeys, onDeselect } = rest.context;
 
@@ -87,7 +87,7 @@ class MenuItem extends React.Component<Props>{
       paddingLeft,
       primaryText,
       leftIcon,
-      disable,
+      disabled,
       ...rest
     } = this.props;
 
@@ -108,7 +108,7 @@ class MenuItem extends React.Component<Props>{
     return (
       <StyledMenuItem
         level={level}
-        disable={disable}
+        disabled={disabled}
         activeColor={activeColor}
         activeNormal={activeNormal}
         style={style}

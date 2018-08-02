@@ -23,7 +23,7 @@ type Props = {
   /** from Pagination with <3**/
   handleClick?: Function,
   /** from Pagination with <3**/
-  type?: 'default' | 'effect',
+  type?: 'default' | 'hasBackground',
   /** from Pagination with <3**/
   color?: string,
   /** from Pagination with <3**/

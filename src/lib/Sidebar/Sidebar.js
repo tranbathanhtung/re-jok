@@ -10,8 +10,7 @@ import { isChild } from '../helpers/typeUtils';
 
 
 import SidebarContent from './SidebarContent';
-
-
+import JokBody from '../globals/JokBody';
 
 type Props = {
   /** Override style in Sidebar**/
@@ -74,7 +73,7 @@ class Sidebar extends React.Component<Props>{
     const hasChild = !isChild(children);
 
     return (
-
+    <JokBody>
       <StyledSidebarWrapper openSidebar={open}>
         <StyledSidebarBackground
           opacityMode={opacity}
@@ -84,7 +83,7 @@ class Sidebar extends React.Component<Props>{
            {hasChild && children}
         </StyledSidebar>
       </StyledSidebarWrapper>
-
+    </JokBody>
     )
   }
 }

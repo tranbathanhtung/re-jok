@@ -25,7 +25,7 @@ type Props = {
   /** primary text**/
   title?: React.Node | string,
   /** secondary text**/
-  subheader?: React.Node | string,
+  subHeader?: React.Node | string,
   /** action **/
   action?: any,
   /** Add more style to card**/
@@ -45,7 +45,7 @@ class CardHeader extends React.Component<Props> {
     const {
       avatar,
       title,
-      subheader,
+      subHeader,
       action,
       ...rest
     } = this.props;
@@ -56,7 +56,7 @@ class CardHeader extends React.Component<Props> {
           {avatar}
           <StyledCardHeaderText>
             <PrimaryText>{title}</PrimaryText>
-          <SecondaryText>{subheader}</SecondaryText>
+          <SecondaryText>{subHeader}</SecondaryText>
           </StyledCardHeaderText>
 
         </StyledCardHeaderInfo>

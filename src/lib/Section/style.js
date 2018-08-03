@@ -17,7 +17,6 @@ export const StyledSection = styled.div`
       background-image: url(${props.backgroundUrl});
       background-size: cover;
       color: ${({theme}) => theme.text.default};
-
       background-position: 50% 50%;
       background-repeat: no-repeat;
       height: auto;

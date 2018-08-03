@@ -65,7 +65,7 @@ class Collapse extends React.Component<Props, State> {
 
         activeKeys = activeKeys.filter(key => key !== event.key);
       } else {
-      
+
         activeKeys = [...activeKeys, event.key];
       }
     }

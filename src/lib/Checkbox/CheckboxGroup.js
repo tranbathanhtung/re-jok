@@ -9,9 +9,9 @@ import Checkbox from './Checkbox';
 import {isUndef, isChild} from '../helpers/typeUtils';
 
 type Props = {
-  /**Override style of Radio**/
+  /**Override style of Checkbox**/
   style?: Object,
-  /** Add more class to Radio**/
+  /** Add more class to Checkbox**/
   className?: string,
   /****/
   children: React.ChildrenArray < React.Element < typeof Checkbox >>,
@@ -21,9 +21,9 @@ type Props = {
   name: string,
   /** Set default value**/
   values: Array<mixed>,
-  /** Set color of all radio**/
+  /** Set color of all Checkbox**/
   color?: string,
-  /** Set layout of radio button**/
+  /** Set layout of Checkbox**/
   layout?: 'horizontal' | 'vertical',
   /**Set all toggle mode to Checkbox**/
   toggle?: boolean,

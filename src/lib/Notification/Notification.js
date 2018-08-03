@@ -22,9 +22,9 @@ const {
 
 
 type Props = {
-  /** Style of Tag Component**/
+  /** Style of Notification Component**/
   style?: Object,
-  /** Class of Tag Component**/
+  /** Class of Notification Component**/
   className?: string,
   /** Set position of Notification**/
   position?: 'topRight' | 'topLeft' | 'topCenter' | 'bottomRight' | 'bottomLeft' | 'bottomCenter',

@@ -2,7 +2,7 @@
 import styled, {css} from 'styled-components';
 
 const baseTypography = css`
-  color: ${({ theme }) => theme.text.primary};
+  color: ${({ theme, color }) => color ? color : theme.text.primary};
   margin: 0 0 1rem 0;
   padding: 0;
 

@@ -22,19 +22,19 @@ const listIcon = {
 }
 
 type Props = {
-  /** Style of Tag Component**/
+  /** Style of Alert Component**/
   style?: Object,
-  /** Class of Tag Component**/
+  /** Class of Alert Component**/
   className?: string,
-  /** Children of Tag Component could be anything**/
+  /** Children of Alert Component could be anything**/
   children?: any,
   /** Set title of Alert**/
   title?: string,
-  /** Set color of Tag **/
+  /** Set color of Alert **/
   color?: string,
   /** Set tag is closable or not**/
   closable: boolean,
-  /** Callback function when close Tag... it must be work with closable**/
+  /** Callback function when close Alert... it must be work with closable - function(e: Event, props: Object)**/
   onClose: Function,
   /** Set type of Alert Component **/
   type: 'none' | 'success' | 'info' | 'warning' | 'error',

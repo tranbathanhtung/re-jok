@@ -14,6 +14,8 @@ export const StyledInputWrapper = styled.div`
 
 
 export const StyledInput = styled.input`
+
+appearance: none;
 max-width: 100%;
 width: 100%;
 height: ${props => props.theme.size[props.size].height};

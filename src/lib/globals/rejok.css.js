@@ -5,7 +5,6 @@ import { injectGlobal } from 'styled-components';
 export const globalConfig = () => injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-
  *,
  *::after,
  *::before {
@@ -22,8 +21,7 @@ export const globalConfig = () => injectGlobal`
    box-sizing: border-box;
    line-height: 1.7;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-
   }
+
 
 `

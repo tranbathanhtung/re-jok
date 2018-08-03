@@ -13,7 +13,7 @@ import SubMenu from './SubMenu';
 import {MenuContext} from './MenuContext';
 
 type Props = {
-  /** Override style of Menu**/
+  /** Add style to Menu**/
   style?: Object,
   /** Add more class to Menu**/
   className?:string,

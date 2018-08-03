@@ -24,6 +24,8 @@ type Props = {
   style?: Object,
   /** Add class of Typography**/
   className?: string,
+  /** Set color of text**/
+  color?: string,
 }
 
 const defaultProps = {

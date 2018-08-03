@@ -19,7 +19,7 @@ type Props = {
   numberCard?: number | {|number?: number, xs?: number, sm?: number, md?: number, lg?: number, xl?: number|},
   /** Children of card**/
   children?: any,
-  /** add hover affect **/
+  /** add hover effect **/
   hoverable: boolean,
   /**add more style to card**/
   style?: Object,

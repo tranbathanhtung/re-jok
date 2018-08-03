@@ -17,7 +17,7 @@ type Props = {
   children: any,
   /** Type of Section**/
   type: 'default' | 'background',
-  /** backgroundUrl work only when tyoe of section is background**/
+  /** backgroundUrl work only when type of section is background**/
   backgroundUrl?: string
 }
 

@@ -29,8 +29,8 @@ type Props = {
   selection: boolean,
   /** Change tagName of List. Default value is div tag**/
   tag: string,
-  /** Children of List must be List Item**/
-  children: React.ChildrenArray < React.Element < typeof ListItem >>
+  /** Children of List could be anything**/
+  children: any
 
 }
 

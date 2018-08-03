@@ -8,7 +8,7 @@ import Sidebar from '../Sidebar';
 
 
 type Props = {
-    /* Children shoube be Modal or Notification */
+    /* Children shoube be Modal, Notification or Sidebar */
     children: React.Element < typeof Modal > | React.Element < typeof Notification > | React.Element < typeof Sidebar >,
 }
 
@@ -18,7 +18,7 @@ class JokBody extends React.PureComponent<Props> {
 
     _popup: HTMLDivElement;
 
-    constructor(props) {
+    constructor(props: Props) {
        super(props);
        this._popup = document.createElement('div');
      }

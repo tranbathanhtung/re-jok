@@ -25,7 +25,7 @@ var defaultProps = {
   alert: 'none',
   closable: false,
   fullscreen: false,
-  scrollable: false
+  scrollable: true
 };
 
 var Modal = function (_React$Component) {

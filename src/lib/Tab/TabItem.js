@@ -28,8 +28,6 @@ type Props = {
   /** from Tab with <3 **/
   color?: string
 
-
-
 }
 
 const defaultProps = {
@@ -45,17 +43,12 @@ class TabItem extends React.Component<Props>{
 
     const info = {
       key: tabKey,
-      item: this,
-      domEvent: e,
+      event: e,
     };
 
     !disabled && onSelect && onSelect(info);
 
-
-
   }
-
-
 
   render(){
     const {
@@ -72,7 +65,6 @@ class TabItem extends React.Component<Props>{
       <StyledTabItem
         active={active}
         onClick={this.handleClick}
-
         >
         <StyledTabItemInner
           {...rest}

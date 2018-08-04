@@ -11,7 +11,8 @@ import * as React from 'react';
 import { StyledImage } from './style';
 
 var defaultProps = {
-  hasBoxshadow: false
+  hasBoxshadow: false,
+  thumbnail: false
 };
 
 var Image = function (_React$Component) {

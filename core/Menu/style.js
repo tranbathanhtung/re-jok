@@ -9,7 +9,7 @@ var _templateObject = _taggedTemplateLiteral(['\ncursor: pointer;\nwidth: 100%;\
     _templateObject9 = _taggedTemplateLiteral(['\n\n'], ['\n\n']),
     _templateObject10 = _taggedTemplateLiteral(['\ncolor: ', ';\nfont-size: 1.4rem;\nfont-weight: ', ';\nline-height: 1.5;\npadding: .8rem 1.6rem;\ntransition: all .3s;\n\n &:first-child{\n   display: inline-flex;\n }\n'], ['\ncolor: ', ';\nfont-size: 1.4rem;\nfont-weight: ', ';\nline-height: 1.5;\npadding: .8rem 1.6rem;\ntransition: all .3s;\n\n &:first-child{\n   display: inline-flex;\n }\n']),
     _templateObject11 = _taggedTemplateLiteral(['\nlist-style: none;\nmargin: 0;\npadding: 0;\n'], ['\nlist-style: none;\nmargin: 0;\npadding: 0;\n']),
-    _templateObject12 = _taggedTemplateLiteral(['\n    \n    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);\n'], ['\n    \n    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);\n']),
+    _templateObject12 = _taggedTemplateLiteral(['\n\n    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);\n'], ['\n\n    transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);\n']),
     _templateObject13 = _taggedTemplateLiteral(['\n  ', ';\n'], ['\n  ', ';\n']),
     _templateObject14 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: 0;\n  right: 1.6rem;\n  transition: transform .3s;\n  transform: ', ';\n'], ['\n  position: absolute;\n  top: 0;\n  right: 1.6rem;\n  transition: transform .3s;\n  transform: ', ';\n']),
     _templateObject15 = _taggedTemplateLiteral(['\n  padding: 0;\n  border: 0;\n  list-style: none;\n  margin: 0;\n\n  overflow: hidden;\n  height: ', ';\n\n  transition: all .25s ease-out;\n\n  border-radius: 0;\n\n\n'], ['\n  padding: 0;\n  border: 0;\n  list-style: none;\n  margin: 0;\n\n  overflow: hidden;\n  height: ', ';\n\n  transition: all .25s ease-out;\n\n  border-radius: 0;\n\n\n']);
@@ -48,7 +48,7 @@ export var StyledMenuItem = styled.li(_templateObject3, baseMenuItem, function (
     return props.active && props.theme.text.default;
   });
 }, function (props) {
-  return props.disable ? css(_templateObject6) : !props.active ? css(_templateObject7) : null;
+  return props.disabled ? css(_templateObject6) : !props.active ? css(_templateObject7) : null;
 });
 
 export var StyledMenuLeftIcon = styled.div(_templateObject8);

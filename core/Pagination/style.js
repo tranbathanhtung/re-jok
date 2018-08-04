@@ -22,7 +22,7 @@ export var StyledPaginationContent = styled.a(_templateObject3, function (_ref) 
       color = _ref.color;
   return active ? color ? color : theme.primary.main : theme.text.secondary;
 }, function (props) {
-  return props.type === "effect" && css(_templateObject4, function (_ref2) {
+  return props.type === "hasBackground" && css(_templateObject4, function (_ref2) {
     var active = _ref2.active,
         theme = _ref2.theme,
         color = _ref2.color;

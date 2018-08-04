@@ -603,42 +603,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: rgba(0,0,0,0.48);
-  color: rgba(0,0,0,0.85);
-  background-color: #fff;
-  border: 0;
-  border-radius: 3rem;
-  padding: 0 1.1rem;
-  margin: 0 .3rem;
-  min-width: 3rem;
-  height: 3rem;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: #9c27b0;
-  box-shadow: 0 .3rem .5rem 0 rgba(156,39,176,0.28),0 .1rem 1rem 0 rgba(156,39,176,0.12),0 .2rem .4rem -.1rem rgba(156,39,176,0.2);
-  color: #fff;
-  background-color: #9c27b0;
-  border: 0;
-  border-radius: 3rem;
-  padding: 0 1.1rem;
-  margin: 0 .3rem;
-  min-width: 3rem;
-  height: 3rem;
 }
 
 .c3 {
@@ -689,7 +654,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -702,7 +667,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -715,7 +680,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -728,7 +693,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -741,7 +706,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c5"
+      className="c4"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -754,7 +719,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -767,7 +732,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -780,7 +745,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -793,7 +758,7 @@ exports[`<Pagination /> should render with pagination color type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color="#9c27b0"
       style={undefined}
       type="effect"
@@ -905,42 +870,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: rgba(0,0,0,0.48);
-  color: rgba(0,0,0,0.85);
-  background-color: #fff;
-  border: 0;
-  border-radius: 3rem;
-  padding: 0 1.1rem;
-  margin: 0 .3rem;
-  min-width: 3rem;
-  height: 3rem;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: #1c8ffb;
-  box-shadow: 0 .3rem .5rem 0 rgba(28,143,251,0.28),0 .1rem 1rem 0 rgba(28,143,251,0.12),0 .2rem .4rem -.1rem rgba(28,143,251,0.2);
-  color: #fff;
-  background-color: #1c8ffb;
-  border: 0;
-  border-radius: 3rem;
-  padding: 0 1.1rem;
-  margin: 0 .3rem;
-  min-width: 3rem;
-  height: 3rem;
 }
 
 .c3 {
@@ -990,7 +920,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1003,7 +933,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1016,7 +946,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1029,7 +959,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1042,7 +972,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c5"
+      className="c4"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1055,7 +985,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1068,7 +998,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1081,7 +1011,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"
@@ -1094,7 +1024,7 @@ exports[`<Pagination /> should render with type effect 1`] = `
     onClick={[Function]}
   >
     <a
-      className="c4"
+      className="c2"
       color={undefined}
       style={undefined}
       type="effect"

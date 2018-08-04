@@ -34,11 +34,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "styled-components": "^3.2.6",
-    "source-map-explorer": "^1.5.0",
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "enzyme": "^3.3.0",
@@ -46,6 +41,11 @@
     "flow-bin": "^0.73.0",
     "jest-enzyme": "^6.0.1",
     "jest-styled-components": "^5.0.1",
-    "react-test-renderer": "^16.4.0"
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.4.0",
+    "source-map-explorer": "^1.5.0",
+    "styled-components": "^3.2.6"
   }
 }

@@ -4,6 +4,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import Icon from '../Icon';
 import { isChild } from '../helpers/typeUtils';
+import { generalId, noop } from '../helpers';
 
 
 import {
@@ -24,7 +25,7 @@ type Props = {
   /** Label of collapse item**/
   label?: string | React.Node,
   /** collKey is required**/
-  collKey: string,
+  collKey?: string,
   /** from Collapse with <3**/
   activeKeys: Array<string>,
   /** from Collapse with <3**/
@@ -46,15 +47,13 @@ const defaultProps = {
 }
 
 type State = {
-  childHeight: string
+  childHeight: string,
+  collKey: string
 }
 
 class CollapseItem extends React.Component<Props, State> {
 
   static defaultProps = defaultProps;
-
-  state = { childHeight: "0" };
-
 
   refContent: {
     current: null | React$ElementRef<any>
@@ -64,11 +63,18 @@ class CollapseItem extends React.Component<Props, State> {
     current: null | React$ElementRef<any>
   } = React.createRef();
 
+  constructor(props: Props){
+    super(props);
+    this.state = {
+      childHeight: "0",
+      collKey: props.collKey || generalId(),
+    }
+  }
+
 
   componentDidMount(){
     const childHeight = this.getHeightRaw();
     this.setState({ childHeight });
-
 
   }
 
@@ -76,8 +82,8 @@ class CollapseItem extends React.Component<Props, State> {
   componentDidUpdate(prevProps: Props, prevState: State){
 
     // This set transition when close collapse in accordion mode
-    const { accordion, collKey } = this.props;
-    const {childHeight} = this.state;
+    const { accordion } = this.props;
+    const { childHeight, collKey } = this.state;
 
 
 
@@ -107,9 +113,7 @@ class CollapseItem extends React.Component<Props, State> {
     if (node && node instanceof HTMLElement && wrapper && wrapper instanceof HTMLElement) {
       const childHeightRaw = node.offsetHeight || node.clientHeight;
 
-
       const childHeight = `${childHeightRaw / 10}rem`;
-
 
       return childHeight;
 
@@ -123,7 +127,6 @@ class CollapseItem extends React.Component<Props, State> {
 
        const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
 
-
        if (wrapper && wrapper instanceof HTMLElement) {
 
          wrapper.style.height = `${!open ? childHeight : "0"}`;
@@ -135,9 +138,7 @@ class CollapseItem extends React.Component<Props, State> {
     let { childHeight } = this.state;
     const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
 
-
     if(wrapper && wrapper instanceof HTMLElement){
-
 
       wrapper.style.height = childHeight;
 
@@ -151,9 +152,10 @@ class CollapseItem extends React.Component<Props, State> {
 
   }
 
-  handleClick = (open: boolean) => {
+  handleClick = (e: SyntheticEvent<HTMLElement>,open: boolean) => {
 
-    const { onOpenChange, collKey, disabled } = this.props;
+    const { onOpenChange, disabled } = this.props;
+    const { collKey } = this.state;
 
       if(!disabled){
         if(!open){
@@ -166,18 +168,12 @@ class CollapseItem extends React.Component<Props, State> {
 
         }
 
-
        onOpenChange && onOpenChange({
         key: collKey,
-        item: this,
+        event: e,
         open,
-        });
-      }
-
-
-
-
-
+      });
+    }
   }
 
   onTransitionEnd = (e: SyntheticEvent<HTMLInputElement>, isOpen: boolean)=> {
@@ -194,20 +190,17 @@ class CollapseItem extends React.Component<Props, State> {
       children,
       label,
       activeKeys,
-      collKey,
       iconArrow,
       ...rest
     } = this.props;
-
+    const { collKey } = this.state;
 
     let isOpen = activeKeys.includes(collKey);
     const hasChild = !isChild(children);
 
-
-
     return (
       <StyledCollapseItem>
-        <StyledCollapseItemTitle {...rest} onClick={()=> this.handleClick(isOpen)}>
+        <StyledCollapseItemTitle {...rest} onClick={(e)=> this.handleClick(e,isOpen)}>
           {label}
          {iconArrow && <StyledArrow open={isOpen}>
             <Icon name="angle-down"/>

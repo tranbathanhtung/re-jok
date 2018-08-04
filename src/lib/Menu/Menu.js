@@ -31,6 +31,8 @@ type Props = {
   onSelect?: Function,
   /** Callback function when deselect menu item**/
   onDeselect?: Function,
+  /** Callback function when open sub menu**/
+  onOpen?: Function,
   /****/
   activeKey?: string,
   /** Allow Menu is select or not**/
@@ -120,7 +122,7 @@ class Menu extends React.Component<Props, State>{
   }
 
   onOpenChange = (event: Object) => {
-
+    const { onOpen } = this.props;
     let {openKeys} = this.state;
     let changed = false;
     const processSingle = (e) => {
@@ -150,7 +152,7 @@ class Menu extends React.Component<Props, State>{
 
         this.setState({ openKeys });
       }
-      // props.onOpenChange(openKeys);
+      onOpen && onOpen(event)
     }
   }
 

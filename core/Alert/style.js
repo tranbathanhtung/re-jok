@@ -1,7 +1,7 @@
 var _templateObject = _taggedTemplateLiteral(['\n text-align: center;\n position: absolute;\n cursor: pointer;\n height: 1.6rem;\n width: 1.6rem;\n line-height: 1.6rem;\n vertical-align: middle;\n top: 1.6rem;\n right: 1.6rem;\n\n'], ['\n text-align: center;\n position: absolute;\n cursor: pointer;\n height: 1.6rem;\n width: 1.6rem;\n line-height: 1.6rem;\n vertical-align: middle;\n top: 1.6rem;\n right: 1.6rem;\n\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  margin-right: 1rem;\n  height: 1.6rem;\n  width: 1.6rem;\n  line-height: 1.6rem;\n  vertical-align: middle;\n'], ['\n  margin-right: 1rem;\n  height: 1.6rem;\n  width: 1.6rem;\n  line-height: 1.6rem;\n  vertical-align: middle;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  font-size: 1.4rem;\n  position: relative;\n  display: flex;\n  align-items: center;\n  padding: 1.5rem 3rem 1.5rem 1.5rem;\n  margin-bottom: 2rem;\n  border-radius: .2rem;\n\n  ', ';\n'], ['\n  font-size: 1.4rem;\n  position: relative;\n  display: flex;\n  align-items: center;\n  padding: 1.5rem 3rem 1.5rem 1.5rem;\n  margin-bottom: 2rem;\n  border-radius: .2rem;\n\n  ', ';\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  font-size: 1.4rem;\n  color: ', ';\n  margin-right: .5rem;\n'], ['\n  font-size: 1.4rem;\n  color: ', ';\n  margin-right: .5rem;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  font-size: 1.4rem;\n  position: relative;\n  display: flex;\n  flex-wrap: wrap;\n  padding: 1.5rem 3rem 1.5rem 1.5rem;\n  margin-bottom: 2rem;\n  border-radius: .2rem;\n\n  ', ';\n'], ['\n  font-size: 1.4rem;\n  position: relative;\n  display: flex;\n  flex-wrap: wrap;\n  padding: 1.5rem 3rem 1.5rem 1.5rem;\n  margin-bottom: 2rem;\n  border-radius: .2rem;\n\n  ', ';\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  font-size: 1.4rem;\n  color: ', ';\n  margin-right: 1rem;\n'], ['\n  font-size: 1.4rem;\n  color: ', ';\n  margin-right: 1rem;\n']),
     _templateObject5 = _taggedTemplateLiteral(['\n  font-size: 1.4rem;\n'], ['\n  font-size: 1.4rem;\n']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -17,7 +17,7 @@ var returnBoxShadow = function returnBoxShadow(color) {
 };
 
 var returnColor = function returnColor(color, background, hasBoxShadow) {
-  return '\n    color: ' + color + ';\n    background: ' + shadeColor(background, -5) + ';\n    box-shadow: ' + (hasBoxShadow && returnBoxShadow(background)) + ';\n  ';
+  return '\n    color: ' + color + ';\n    background: ' + shadeColor(background, -5) + ';\n    box-shadow: ' + (hasBoxShadow ? returnBoxShadow(background) : '') + ';\n  ';
 };
 
 export var StyledIconClose = styled(Icon)(_templateObject);
@@ -53,7 +53,7 @@ var returnType = function returnType(props) {
 
     }
   } else {
-    return '\n    color: ' + props.theme.text.default + ';\n    background: ' + hexa(props.color, .85) + ';\n    box-shadow: ' + (props.hasBoxShadow && returnBoxShadow(props.color)) + ';\n\n\n    ';
+    return '\n    color: ' + props.theme.text.default + ';\n    background: ' + hexa(props.color, .85) + ';\n    box-shadow: ' + (props.hasBoxShadow ? returnBoxShadow(props.color) : '') + ';\n\n\n    ';
   }
 };
 

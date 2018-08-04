@@ -8,9 +8,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 import * as React from 'react';
 import NotificationContent from './NotificationContent';
-
 import { StyledNotificationWrapper, notifTransition } from './style';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import JokBody from '../globals/JokBody';
 
 import { generalId } from '../helpers';
 
@@ -132,16 +132,20 @@ var Notification = function (_React$Component) {
 
 
       return React.createElement(
-        StyledNotificationWrapper,
-        Object.assign({}, this.props, { config: config }),
+        JokBody,
+        null,
         React.createElement(
-          CSSTransitionGroup,
-          {
-            transitionName: notifTransition,
-            transitionEnterTimeout: 250,
-            transitionLeaveTimeout: 250
-          },
-          this.renderNotification()
+          StyledNotificationWrapper,
+          Object.assign({}, this.props, { config: config }),
+          React.createElement(
+            CSSTransitionGroup,
+            {
+              transitionName: notifTransition,
+              transitionEnterTimeout: 250,
+              transitionLeaveTimeout: 250
+            },
+            this.renderNotification()
+          )
         )
       );
     }

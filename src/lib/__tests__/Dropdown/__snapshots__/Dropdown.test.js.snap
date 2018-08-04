@@ -203,6 +203,7 @@ exports[`<Dropdown /> should render Dropdown 1`] = `
           >
             <li
               className="c7"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -218,6 +219,7 @@ exports[`<Dropdown /> should render Dropdown 1`] = `
             </li>
             <li
               className="c7"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -233,6 +235,7 @@ exports[`<Dropdown /> should render Dropdown 1`] = `
             </li>
             <li
               className="c7"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -254,6 +257,7 @@ exports[`<Dropdown /> should render Dropdown 1`] = `
         />
         <li
           className="c7"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {

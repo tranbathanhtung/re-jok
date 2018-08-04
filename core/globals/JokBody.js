@@ -9,24 +9,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 import * as React from 'react';
-import ReactDOM from 'react-dom';
-import { withTheme } from 'styled-components';
+import ReactDOM, { createPortal } from 'react-dom';
 import Modal from '../Modal';
 import Notification from '../Notification';
 import Sidebar from '../Sidebar';
-import JokTheme from '../theme/JokTheme';
-
-var defaultProps = {
-    theme: {}
-};
 
 var JokBody = function (_React$PureComponent) {
     _inherits(JokBody, _React$PureComponent);
 
-    function JokBody() {
+    function JokBody(props) {
         _classCallCheck(this, JokBody);
 
-        return _possibleConstructorReturn(this, (JokBody.__proto__ || Object.getPrototypeOf(JokBody)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (JokBody.__proto__ || Object.getPrototypeOf(JokBody)).call(this, props));
+
+        _this._popup = document.createElement('div');
+        return _this;
     }
 
     _createClass(JokBody, [{
@@ -36,12 +33,6 @@ var JokBody = function (_React$PureComponent) {
             var body = document.body;
             this._popup = document.createElement('div');
             body.appendChild(this._popup);
-            this._render();
-        }
-    }, {
-        key: 'componentDidUpdate',
-        value: function componentDidUpdate() {
-            this._render();
         }
     }, {
         key: 'componentWillUnmount',
@@ -56,26 +47,22 @@ var JokBody = function (_React$PureComponent) {
         value: function _render() {
             var _props = this.props,
                 children = _props.children,
-                theme = _props.theme,
-                rest = _objectWithoutProperties(_props, ['children', 'theme']);
+                rest = _objectWithoutProperties(_props, ['children']);
 
-            ReactDOM.render(React.createElement(
-                JokTheme,
-                { theme: theme },
-                React.createElement(children.type, Object.assign({}, children.props, rest))
-            ), this._popup);
+            createPortal(React.createElement(children.type, Object.assign({}, children.props, rest)), this._popup);
         }
     }, {
         key: 'render',
         value: function render() {
-            return null;
+            var _props2 = this.props,
+                children = _props2.children,
+                rest = _objectWithoutProperties(_props2, ['children']);
+
+            return createPortal(React.createElement(children.type, Object.assign({}, children.props, rest)), this._popup);
         }
     }]);
 
     return JokBody;
 }(React.PureComponent);
 
-JokBody.defaultProps = defaultProps;
-
-
-export default withTheme(JokBody);
+export default JokBody;

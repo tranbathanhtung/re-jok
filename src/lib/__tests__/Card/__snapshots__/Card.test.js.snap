@@ -780,9 +780,7 @@ exports[`<Card /> should render with Card Header 1`] = `
         </span>
         <span
           className="c7"
-        >
-          @tungtbt
-        </span>
+        />
       </div>
     </div>
     <div

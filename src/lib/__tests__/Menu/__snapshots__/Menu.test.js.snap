@@ -107,6 +107,7 @@ exports[`<Menu /> should render Menu 1`] = `
     >
       <li
         className="c3"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -122,6 +123,7 @@ exports[`<Menu /> should render Menu 1`] = `
       </li>
       <li
         className="c3"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -137,6 +139,7 @@ exports[`<Menu /> should render Menu 1`] = `
       </li>
       <li
         className="c3"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -158,6 +161,7 @@ exports[`<Menu /> should render Menu 1`] = `
   />
   <li
     className="c3"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -200,7 +204,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   display: table;
 }
 
-.c5 {
+.c4 {
   cursor: pointer;
   width: 100%;
   position: relative;
@@ -214,7 +218,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   transition: all .2s;
 }
 
-.c5:hover {
+.c4:hover {
   background-color: rgba(200,200,200,0.2);
   outline: none;
   box-shadow: none;
@@ -237,34 +241,18 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   transition: all .2s;
 }
 
-.c4 {
-  cursor: pointer;
-  width: 100%;
-  position: relative;
-  text-overflow: ellipsis;
-  line-height: 4rem;
-  height: 4rem;
-  padding-right: 1.6rem;
-  padding-left: 2.4rem;
-  box-sizing: border-box;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  opacity: .25;
-  cursor: not-allowed;
-}
-
 .c2 {
   min-width: 1.4rem;
   display: inline-block;
   margin-right: 1rem;
 }
 
-.c6 {
+.c5 {
   -webkit-transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
   transition: border-color 0.3s cubic-bezier(0.645,0.045,0.355,1),background 0.3s cubic-bezier(0.645,0.045,0.355,1),padding 0.15s cubic-bezier(0.645,0.045,0.355,1);
 }
 
-.c7 {
+.c6 {
   cursor: pointer;
   width: 100%;
   position: relative;
@@ -276,7 +264,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c9 {
   position: absolute;
   top: 0;
   right: 1.6rem;
@@ -288,7 +276,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   transform: rotate(0deg);
 }
 
-.c8 {
+.c7 {
   position: absolute;
   top: 0;
   right: 1.6rem;
@@ -300,7 +288,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   transform: rotate(180deg);
 }
 
-.c11 {
+.c10 {
   padding: 0;
   border: 0;
   list-style: none;
@@ -312,7 +300,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   border-radius: 0;
 }
 
-.c9 {
+.c8 {
   padding: 0;
   border: 0;
   list-style: none;
@@ -335,6 +323,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
 >
   <li
     className="c1"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -364,6 +353,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
   </li>
   <li
     className="c4"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -392,7 +382,8 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
     </span>
   </li>
   <li
-    className="c5"
+    className="c4"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -421,10 +412,10 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
     </span>
   </li>
   <li
-    className="c6"
+    className="c5"
   >
     <div
-      className="c7"
+      className="c6"
       onClick={[Function]}
       style={
         Object {
@@ -452,7 +443,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
         </span>
       </span>
       <div
-        className="c8"
+        className="c7"
         open={true}
       >
         <div
@@ -468,13 +459,14 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
       </div>
     </div>
     <ul
-      className="c9"
+      className="c8"
       onTransitionEnd={[Function]}
       open={true}
     >
       <div>
         <li
-          className="c5"
+          className="c4"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -485,7 +477,8 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
           Option 5
         </li>
         <li
-          className="c5"
+          className="c4"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -496,7 +489,8 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
           Option 6
         </li>
         <li
-          className="c5"
+          className="c4"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -507,7 +501,8 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
           Option 7
         </li>
         <li
-          className="c5"
+          className="c4"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -521,10 +516,10 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
     </ul>
   </li>
   <li
-    className="c6"
+    className="c5"
   >
     <div
-      className="c7"
+      className="c6"
       onClick={[Function]}
       style={
         Object {
@@ -552,7 +547,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
         </span>
       </span>
       <div
-        className="c10"
+        className="c9"
         open={false}
       >
         <div
@@ -568,13 +563,14 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
       </div>
     </div>
     <ul
-      className="c11"
+      className="c10"
       onTransitionEnd={[Function]}
       open={false}
     >
       <div>
         <li
-          className="c5"
+          className="c4"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -585,7 +581,8 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
           Option 9
         </li>
         <li
-          className="c5"
+          className="c4"
+          disabled={false}
           onClick={[Function]}
           style={
             Object {
@@ -596,10 +593,10 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
           Option 10
         </li>
         <li
-          className="c6"
+          className="c5"
         >
           <div
-            className="c7"
+            className="c6"
             onClick={[Function]}
             style={
               Object {
@@ -609,7 +606,7 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
           >
             Submenu
             <div
-              className="c10"
+              className="c9"
               open={false}
             >
               <div
@@ -625,13 +622,14 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
             </div>
           </div>
           <ul
-            className="c11"
+            className="c10"
             onTransitionEnd={[Function]}
             open={false}
           >
             <div>
               <li
-                className="c5"
+                className="c4"
+                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -642,7 +640,8 @@ exports[`<Menu /> should render Menu controlled background, active color 1`] = `
                 Option 11
               </li>
               <li
-                className="c5"
+                className="c4"
+                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -729,6 +728,7 @@ exports[`<Menu /> should render Menu has active background item 1`] = `
 >
   <li
     className="c1"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -744,6 +744,7 @@ exports[`<Menu /> should render Menu has active background item 1`] = `
   </li>
   <li
     className="c2"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -826,6 +827,7 @@ exports[`<Menu /> should render Menu has active default item 1`] = `
 >
   <li
     className="c1"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -841,6 +843,7 @@ exports[`<Menu /> should render Menu has active default item 1`] = `
   </li>
   <li
     className="c2"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -1019,6 +1022,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
 >
   <li
     className="c1"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -1034,6 +1038,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
   </li>
   <li
     className="c2"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -1102,6 +1107,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
           >
             <li
               className="c1"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -1117,6 +1123,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
             </li>
             <li
               className="c1"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -1171,6 +1178,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
             <div>
               <li
                 className="c1"
+                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -1186,6 +1194,7 @@ exports[`<Menu /> should render Menu has active item and open submenu 1`] = `
               </li>
               <li
                 className="c1"
+                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -1330,6 +1339,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
 >
   <li
     className="c1"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -1345,6 +1355,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
   </li>
   <li
     className="c1"
+    disabled={false}
     onClick={[Function]}
     style={
       Object {
@@ -1376,6 +1387,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
     >
       <li
         className="c1"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -1391,6 +1403,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
       </li>
       <li
         className="c1"
+        disabled={false}
         onClick={[Function]}
         style={
           Object {
@@ -1461,6 +1474,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
           >
             <li
               className="c1"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -1476,6 +1490,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
             </li>
             <li
               className="c1"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -1530,6 +1545,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
             <div>
               <li
                 className="c1"
+                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -1545,6 +1561,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
               </li>
               <li
                 className="c1"
+                disabled={false}
                 onClick={[Function]}
                 style={
                   Object {
@@ -1619,6 +1636,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
           >
             <li
               className="c1"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
@@ -1634,6 +1652,7 @@ exports[`<Menu /> should render Menu has sub menu 1`] = `
             </li>
             <li
               className="c1"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {

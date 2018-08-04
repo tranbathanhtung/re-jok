@@ -30,9 +30,9 @@ var CardHeader = function (_React$Component) {
       var _props = this.props,
           avatar = _props.avatar,
           title = _props.title,
-          subheader = _props.subheader,
+          subHeader = _props.subHeader,
           action = _props.action,
-          rest = _objectWithoutProperties(_props, ['avatar', 'title', 'subheader', 'action']);
+          rest = _objectWithoutProperties(_props, ['avatar', 'title', 'subHeader', 'action']);
 
       return React.createElement(
         StyledCardHeader,
@@ -52,7 +52,7 @@ var CardHeader = function (_React$Component) {
             React.createElement(
               SecondaryText,
               null,
-              subheader
+              subHeader
             )
           )
         ),

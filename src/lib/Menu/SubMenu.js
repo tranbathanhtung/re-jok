@@ -12,6 +12,7 @@ import {
   StyledSubMenu,
   StyledSubMenuArrow
 } from './style';
+import { generalId } from '../helpers';
 
 import {connectMenu} from './MenuContext';
 
@@ -33,7 +34,8 @@ const defaultProps = {
 }
 
 type State = {
-  childHeight: string
+  childHeight: string,
+  openKey: string
 }
 
 
@@ -41,10 +43,13 @@ class SubMenu extends React.Component<Props, State>{
 
   static defaultProps = defaultProps;
 
-  state = { childHeight: "0" };
-
-
-
+  constructor(props: Props){
+    super(props);
+    this.state = {
+      childHeight: "0",
+      openKey: props.openKey || generalId(),
+    }
+  }
 
   refWrapper: {
     current: null | React$ElementRef<any>
@@ -66,12 +71,9 @@ class SubMenu extends React.Component<Props, State>{
     if (node && node instanceof HTMLElement && wrapper && wrapper instanceof HTMLElement) {
       const childHeightRaw = node.offsetHeight || node.clientHeight;
 
-
       const childHeight = `${childHeightRaw / 10}rem`;
 
-
       return childHeight;
-
 
     }
     return "0"
@@ -80,7 +82,6 @@ class SubMenu extends React.Component<Props, State>{
   setHeightRaw = (open: boolean) => {
        const childHeight = this.getHeightRaw();
        const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
-
 
        if (wrapper && wrapper instanceof HTMLElement) {
 
@@ -93,9 +94,7 @@ class SubMenu extends React.Component<Props, State>{
     let { childHeight } = this.state;
     const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
 
-
     if(wrapper && wrapper instanceof HTMLElement){
-
 
       wrapper.style.height = childHeight;
 
@@ -109,11 +108,10 @@ class SubMenu extends React.Component<Props, State>{
 
   }
 
-  handleClick = (open: boolean) => {
+  handleClick = (e: SyntheticEvent<HTMLElement>, open: boolean) => {
 
     const {openKey, ...rest} = this.props;
     const {onOpenChange} = rest.context;
-
 
         if(open){
 
@@ -125,17 +123,11 @@ class SubMenu extends React.Component<Props, State>{
 
         }
 
-
        onOpenChange && onOpenChange({
-        key: openKey,
-        item: this,
+        key: this.state.openKey,
         open,
+        event: e
         });
-
-
-
-
-
 
   }
 
@@ -143,7 +135,6 @@ class SubMenu extends React.Component<Props, State>{
     const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
 
     if(wrapper && wrapper instanceof HTMLElement){
-
 
       wrapper.style.height = '';
 
@@ -165,16 +156,14 @@ class SubMenu extends React.Component<Props, State>{
 
     const {openKeys} = rest.context;
 
-    let isOpen = openKeys.includes(this.props.openKey);
+    let isOpen = openKeys.includes(this.state.openKey);
 
     const hasChild = !isChild(children);
-
-
 
     return (
       <StyledSubMenuWrapper>
 
-            <StyledSubMenuTitle style={style} onClick={()=> this.handleClick(!isOpen)}>
+            <StyledSubMenuTitle style={style} onClick={(e)=> this.handleClick(e, !isOpen)}>
                {title}
                <StyledSubMenuArrow open={isOpen}>
                  <Icon name="angle-down"/>

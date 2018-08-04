@@ -18,12 +18,14 @@ import { isChild } from '../helpers/typeUtils';
 import ModalHeader from './ModalHeader';
 import ModalContent from './ModalContent';
 import ModalAction from './ModalAction';
+import JokBody from '../globals/JokBody';
 
 var defaultProps = {
   open: false,
   alert: 'none',
   closable: false,
-  fullscreen: false
+  fullscreen: false,
+  scrollable: false
 };
 
 var Modal = function (_React$Component) {
@@ -68,7 +70,8 @@ var Modal = function (_React$Component) {
           classNameContent = _props.classNameContent,
           styleAction = _props.styleAction,
           classNameAction = _props.classNameAction,
-          rest = _objectWithoutProperties(_props, ['open', 'title', 'alert', 'action', 'alertTitle', 'fullscreen', 'children', 'closable', 'styleHeader', 'classNameHeader', 'styleContent', 'classNameContent', 'styleAction', 'classNameAction']);
+          scrollable = _props.scrollable,
+          rest = _objectWithoutProperties(_props, ['open', 'title', 'alert', 'action', 'alertTitle', 'fullscreen', 'children', 'closable', 'styleHeader', 'classNameHeader', 'styleContent', 'classNameContent', 'styleAction', 'classNameAction', 'scrollable']);
 
       var hasChild = !isChild(children);
 
@@ -80,42 +83,46 @@ var Modal = function (_React$Component) {
 
       };
       return React.createElement(
-        StyledModalWrapper,
-        { openModal: open, onClick: this.handleClose },
-        React.createElement(StyledModalBackGround, { openModal: open }),
+        JokBody,
+        null,
         React.createElement(
-          StyledModal,
-          Object.assign({ fullscreen: fullscreen }, rest, { openModal: open, onClick: this.handleStopEvent }),
-          closable && React.createElement(CloseButton, { onClick: this.handleClose, variant: 'icon', icon: 'times' }),
-          title && alert === "none" ? React.createElement(
-            ModalHeader,
-            { style: styleHeader, className: classNameHeader },
-            title
-          ) : null,
+          StyledModalWrapper,
+          { openModal: open, onClick: this.handleClose },
+          React.createElement(StyledModalBackGround, { openModal: open }),
           React.createElement(
-            ModalContent,
-            { fullscreen: fullscreen, style: styleContent, className: classNameContent },
-            alert !== "none" ? React.createElement(
-              React.Fragment,
-              null,
-              React.createElement(
-                StyledAlert,
+            StyledModal,
+            Object.assign({ fullscreen: fullscreen }, rest, { openModal: open, onClick: this.handleStopEvent }),
+            closable && React.createElement(CloseButton, { onClick: this.handleClose, variant: 'icon', icon: 'times' }),
+            title && alert === "none" ? React.createElement(
+              ModalHeader,
+              { style: styleHeader, className: classNameHeader },
+              title
+            ) : null,
+            React.createElement(
+              ModalContent,
+              { scrollable: scrollable, fullscreen: fullscreen, style: styleContent, className: classNameContent },
+              alert !== "none" ? React.createElement(
+                React.Fragment,
                 null,
-                listIcon[alert],
-                alertTitle && React.createElement(
-                  StyledAlertTitle,
+                React.createElement(
+                  StyledAlert,
                   null,
-                  alertTitle
+                  listIcon[alert],
+                  alertTitle && React.createElement(
+                    StyledAlertTitle,
+                    null,
+                    alertTitle
+                  )
+                ),
+                React.createElement(
+                  StyledAlertDescription,
+                  { alert: alert },
+                  hasChild && children
                 )
-              ),
-              React.createElement(
-                StyledAlertDescription,
-                { alert: alert },
-                hasChild && children
-              )
-            ) : hasChild && children
-          ),
-          action && React.createElement(ModalAction, { style: styleAction, className: classNameAction, action: action })
+              ) : hasChild && children
+            ),
+            action && React.createElement(ModalAction, { style: styleAction, className: classNameAction, action: action })
+          )
         )
       );
     }

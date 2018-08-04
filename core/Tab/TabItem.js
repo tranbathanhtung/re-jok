@@ -39,8 +39,7 @@ var TabItem = function (_React$Component) {
 
       var info = {
         key: tabKey,
-        item: _this,
-        domEvent: e
+        event: e
       };
 
       !disabled && onSelect && onSelect(info);
@@ -64,7 +63,6 @@ var TabItem = function (_React$Component) {
         {
           active: active,
           onClick: this.handleClick
-
         },
         React.createElement(
           StyledTabItemInner,

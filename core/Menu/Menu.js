@@ -137,6 +137,7 @@ var _initialiseProps = function _initialiseProps() {
   };
 
   this.onOpenChange = function (event) {
+    var onOpen = _this2.props.onOpen;
     var openKeys = _this2.state.openKeys;
 
     var changed = false;
@@ -168,7 +169,7 @@ var _initialiseProps = function _initialiseProps() {
 
         _this2.setState({ openKeys: openKeys });
       }
-      // props.onOpenChange(openKeys);
+      onOpen && onOpen(event);
     }
   };
 

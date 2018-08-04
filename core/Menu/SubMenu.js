@@ -16,6 +16,7 @@ import Icon from '../Icon';
 import { isChild } from '../helpers/typeUtils';
 
 import { StyledSubMenuWrapper, StyledSubMenuTitle, StyledSubMenu, StyledSubMenuArrow } from './style';
+import { generalId } from '../helpers';
 
 import { connectMenu } from './MenuContext';
 
@@ -26,18 +27,15 @@ var defaultProps = {
 var SubMenu = function (_React$Component) {
   _inherits(SubMenu, _React$Component);
 
-  function SubMenu() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function SubMenu(props) {
     _classCallCheck(this, SubMenu);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (SubMenu.__proto__ || Object.getPrototypeOf(SubMenu)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SubMenu.__proto__ || Object.getPrototypeOf(SubMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = { childHeight: "0" }, _this.refWrapper = React.createRef(), _this.refSubMenu = React.createRef(), _this.getHeightRaw = function () {
+    _this.refWrapper = React.createRef();
+    _this.refSubMenu = React.createRef();
+
+    _this.getHeightRaw = function () {
       var node = ReactDOM.findDOMNode(_this.refSubMenu.current);
       var wrapper = ReactDOM.findDOMNode(_this.refWrapper.current);
 
@@ -49,7 +47,9 @@ var SubMenu = function (_React$Component) {
         return _childHeight;
       }
       return "0";
-    }, _this.setHeightRaw = function (open) {
+    };
+
+    _this.setHeightRaw = function (open) {
       var childHeight = _this.getHeightRaw();
       var wrapper = ReactDOM.findDOMNode(_this.refWrapper.current);
 
@@ -57,7 +57,9 @@ var SubMenu = function (_React$Component) {
 
         wrapper.style.height = '' + (!open ? childHeight : "0");
       }
-    }, _this.handleCloseCollapse = function (open) {
+    };
+
+    _this.handleCloseCollapse = function (open) {
       var childHeight = _this.state.childHeight;
 
       var wrapper = ReactDOM.findDOMNode(_this.refWrapper.current);
@@ -68,9 +70,13 @@ var SubMenu = function (_React$Component) {
 
         _this.setHeightRaw(open);
       }
-    }, _this.handleOpenCollapse = function (open) {
+    };
+
+    _this.handleOpenCollapse = function (open) {
       _this.setHeightRaw(open);
-    }, _this.handleClick = function (open) {
+    };
+
+    _this.handleClick = function (e, open) {
       var _this$props = _this.props,
           openKey = _this$props.openKey,
           rest = _objectWithoutProperties(_this$props, ['openKey']);
@@ -87,18 +93,26 @@ var SubMenu = function (_React$Component) {
       }
 
       onOpenChange && onOpenChange({
-        key: openKey,
-        item: _this,
-        open: open
+        key: _this.state.openKey,
+        open: open,
+        event: e
       });
-    }, _this.onTransitionEnd = function (e, isOpen) {
+    };
+
+    _this.onTransitionEnd = function (e, isOpen) {
       var wrapper = ReactDOM.findDOMNode(_this.refWrapper.current);
 
       if (wrapper && wrapper instanceof HTMLElement) {
 
         wrapper.style.height = '';
       }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+
+    _this.state = {
+      childHeight: "0",
+      openKey: props.openKey || generalId()
+    };
+    return _this;
   }
 
   _createClass(SubMenu, [{
@@ -126,7 +140,7 @@ var SubMenu = function (_React$Component) {
       var openKeys = rest.context.openKeys;
 
 
-      var isOpen = openKeys.includes(this.props.openKey);
+      var isOpen = openKeys.includes(this.state.openKey);
 
       var hasChild = !isChild(children);
 
@@ -135,8 +149,8 @@ var SubMenu = function (_React$Component) {
         null,
         React.createElement(
           StyledSubMenuTitle,
-          { style: style, onClick: function onClick() {
-              return _this2.handleClick(!isOpen);
+          { style: style, onClick: function onClick(e) {
+              return _this2.handleClick(e, !isOpen);
             } },
           title,
           React.createElement(

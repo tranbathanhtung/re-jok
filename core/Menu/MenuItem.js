@@ -12,36 +12,33 @@ import * as React from 'react';
 import { StyledMenuItem, StyledMenuItemText, StyledMenuLeftIcon } from './style';
 
 import { isChild } from '../helpers/typeUtils';
+import { generalId } from '../helpers';
 
 import { connectMenu } from './MenuContext';
 
 var defaultProps = {
   paddingLeft: 24,
-  disable: false
+  disabled: false
 };
 
 var MenuItem = function (_React$Component) {
   _inherits(MenuItem, _React$Component);
 
-  function MenuItem() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function MenuItem(props) {
     _classCallCheck(this, MenuItem);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MenuItem.__proto__ || Object.getPrototypeOf(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (e) {
+    _this.handleClick = function (e) {
       var _this$props = _this.props,
-          keyActive = _this$props.keyActive,
           onClick = _this$props.onClick,
-          disable = _this$props.disable,
-          rest = _objectWithoutProperties(_this$props, ['keyActive', 'onClick', 'disable']);
+          disabled = _this$props.disabled,
+          rest = _objectWithoutProperties(_this$props, ['onClick', 'disabled']);
 
-      if (disable) return;
+      var keyActive = _this.state.keyActive;
+
+
+      if (disabled) return;
 
       var _rest$context = rest.context,
           multiple = _rest$context.multiple,
@@ -54,8 +51,7 @@ var MenuItem = function (_React$Component) {
       var info = {
         key: keyActive,
         keyPath: [keyActive],
-        item: _this,
-        domEvent: e
+        event: e
       };
       onClick && onClick(info);
       if (multiple) {
@@ -67,7 +63,12 @@ var MenuItem = function (_React$Component) {
       } else if (!isSelected) {
         onSelect(info);
       }
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+
+    _this.state = {
+      keyActive: props.keyActive || generalId()
+    };
+    return _this;
   }
 
   _createClass(MenuItem, [{
@@ -75,13 +76,15 @@ var MenuItem = function (_React$Component) {
     value: function render() {
       var _props = this.props,
           children = _props.children,
-          keyActive = _props.keyActive,
           level = _props.level,
           paddingLeft = _props.paddingLeft,
           primaryText = _props.primaryText,
           leftIcon = _props.leftIcon,
-          disable = _props.disable,
-          rest = _objectWithoutProperties(_props, ['children', 'keyActive', 'level', 'paddingLeft', 'primaryText', 'leftIcon', 'disable']);
+          disabled = _props.disabled,
+          rest = _objectWithoutProperties(_props, ['children', 'level', 'paddingLeft', 'primaryText', 'leftIcon', 'disabled']);
+
+      var keyActive = this.state.keyActive;
+
 
       var style = {};
 
@@ -100,7 +103,7 @@ var MenuItem = function (_React$Component) {
         StyledMenuItem,
         Object.assign({
           level: level,
-          disable: disable,
+          disabled: disabled,
           activeColor: activeColor,
           activeNormal: activeNormal,
           style: style

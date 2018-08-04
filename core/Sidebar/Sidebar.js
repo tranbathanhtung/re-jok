@@ -14,6 +14,7 @@ import { StyledSidebarWrapper, StyledSidebarBackground, StyledSidebar } from './
 import { isChild } from '../helpers/typeUtils';
 
 import SidebarContent from './SidebarContent';
+import JokBody from '../globals/JokBody';
 
 var defaultProps = {
   open: false,
@@ -59,16 +60,20 @@ var Sidebar = function (_React$Component) {
       var hasChild = !isChild(children);
 
       return React.createElement(
-        StyledSidebarWrapper,
-        { openSidebar: open },
-        React.createElement(StyledSidebarBackground, {
-          opacityMode: opacity,
-          onClick: this.handleToggle,
-          openSidebar: open }),
+        JokBody,
+        null,
         React.createElement(
-          StyledSidebar,
-          Object.assign({ openSidebar: open }, rest),
-          hasChild && children
+          StyledSidebarWrapper,
+          { openSidebar: open },
+          React.createElement(StyledSidebarBackground, {
+            opacityMode: opacity,
+            onClick: this.handleToggle,
+            openSidebar: open }),
+          React.createElement(
+            StyledSidebar,
+            Object.assign({ openSidebar: open }, rest),
+            hasChild && children
+          )
         )
       );
     }

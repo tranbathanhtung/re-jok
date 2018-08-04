@@ -7,7 +7,7 @@ import {
 } from './style';
 
 import { isChild } from '../helpers/typeUtils';
-
+import { generalId } from '../helpers';
 
 import {connectMenu} from './MenuContext';
 
@@ -25,7 +25,7 @@ type Props = {
   /** from parent Menu with <3**/
   activeColor?: string,
   /** keyActive must require... should be string**/
-  keyActive: string,
+  keyActive?: string,
   /** Event click of menu item**/
   onClick?: Function,
   /** from parent SubMenu with <3*/
@@ -49,12 +49,25 @@ const defaultProps = {
   disabled: false
 }
 
+type State = {
+  keyActive: string
+}
 
-class MenuItem extends React.Component<Props>{
+
+class MenuItem extends React.Component<Props, State>{
   static defaultProps = defaultProps;
 
+  constructor(props: Props){
+    super(props);
+
+    this.state = {
+      keyActive: props.keyActive || generalId(),
+    }
+  }
+
   handleClick = (e: SyntheticEvent<HTMLElement>) => {
-    const { keyActive, onClick, disabled, ...rest } = this.props;
+    const { onClick, disabled, ...rest } = this.props;
+    const { keyActive } = this.state;
 
     if(disabled) return;
 
@@ -64,8 +77,7 @@ class MenuItem extends React.Component<Props>{
     const info = {
       key: keyActive,
       keyPath: [keyActive],
-      item: this,
-      domEvent: e,
+      event: e,
     };
     onClick && onClick(info);
     if (multiple) {
@@ -82,7 +94,6 @@ class MenuItem extends React.Component<Props>{
   render(){
     const {
       children,
-      keyActive,
       level,
       paddingLeft,
       primaryText,
@@ -90,7 +101,7 @@ class MenuItem extends React.Component<Props>{
       disabled,
       ...rest
     } = this.props;
-
+    const { keyActive } = this.state;
 
     let style = {};
 
@@ -98,11 +109,7 @@ class MenuItem extends React.Component<Props>{
 
     const hasChild = !isChild(children);
 
-
-
-
     const {selectedKeys, activeColor, activeNormal} = rest.context;
-
 
     let active = selectedKeys.includes(keyActive);
     return (

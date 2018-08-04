@@ -13,8 +13,9 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 import styled, { css } from 'styled-components';
 
 var baseTypography = css(_templateObject, function (_ref) {
-  var theme = _ref.theme;
-  return theme.text.primary;
+  var theme = _ref.theme,
+      color = _ref.color;
+  return color ? color : theme.text.primary;
 });
 
 export var H1 = styled.h1(_templateObject2, baseTypography);

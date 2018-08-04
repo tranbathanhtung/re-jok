@@ -15,6 +15,23 @@
     "type": "git",
     "url": "https://github.com/tranbathanhtung/re-jok.git"
   },
+  "bugs": {
+    "url": "https://github.com/tranbathanhtung/re-jok/issues"
+  },
+  "homepage": "https://github.com/tranbathanhtung/re-jok",
+  "keywords": [
+    "components",
+    "react",
+    "react-component",
+    "ui",
+    "design-system",
+    "styled-system",
+    "styled-components",
+    "presentational",
+    "stateless",
+    "functional",
+    "library-ui"
+  ],
   "dependencies": {
     "react-fontawesome": "^1.6.1",
     "react-transition-group": "^1.2.1"

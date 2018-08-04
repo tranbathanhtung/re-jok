@@ -85,6 +85,7 @@ export const StyledAlert = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding: 1.5rem 3rem 1.5rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: .2rem;

@@ -106,10 +106,7 @@ class NotificationContent extends React.Component<Props>{
 
   }
 
-
-
   render(){
-
 
     const {
       notif,
@@ -127,8 +124,6 @@ class NotificationContent extends React.Component<Props>{
       ...rest
 
     } = notif;
-
-
 
     return (
 

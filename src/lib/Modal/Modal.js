@@ -68,7 +68,7 @@ const defaultProps = {
   alert: 'none',
   closable: false,
   fullscreen: false,
-  scrollable: false
+  scrollable: true
 }
 class Modal extends React.Component<Props>{
   static defaultProps = defaultProps;

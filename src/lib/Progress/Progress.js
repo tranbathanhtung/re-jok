@@ -34,7 +34,7 @@ const defaultProps = {
 
 class Progress extends React.Component<Props>{
   static defaultProps = defaultProps;
-  
+
   render(){
 
     const {
@@ -42,7 +42,6 @@ class Progress extends React.Component<Props>{
       fixed,
       ...rest
     } = this.props;
-
 
     return (
       <StyledProgressWrapper fixed={fixed} size={size}>

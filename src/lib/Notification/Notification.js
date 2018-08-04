@@ -20,7 +20,6 @@ const {
   subscribe
 } = store;
 
-
 type Props = {
   /** Style of Notification Component**/
   style?: Object,
@@ -167,8 +166,6 @@ class Notification extends React.Component<Props, State>{
   render(){
 
     const { config } = this.state;
-
-
 
     return (
      <JokBody>

@@ -52,25 +52,20 @@ export const StyledModal = styled.div`
         : "none"
    };
 
-
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   z-index: ${({theme}) => theme.zIndex.modal+1};
-
   box-shadow: 0 1.1rem 1.5rem -.7rem rgba(0, 0, 0, 0.2), 0 2.4rem 3.8rem .3rem rgba(0, 0, 0, 0.14), 0 .9rem 4.6rem .8rem rgba(0, 0, 0, 0.12);
   border-radius: .2rem;
   background-color: ${({theme}) => theme.background.default};
   flex: 0 1 auto;
   margin: ${props => props.fullscreen ? "0" : "3.2rem"};
   width: ${props => props.fullscreen ? "100%": "75%"};
-  max-width: 76.8rem;
+  max-width: ${props => props.fullscreen ? "100%": "76.8rem"};
   display: flex;
   outline: none;
   height: ${props => props.fullscreen ? "100%": "auto"};
   max-height: ${props => props.fullscreen ? null : "90vh"};
   flex-direction: column;
-
-
-
 `
 //================== Modal Header ==================
 export const StyledModalHeader = styled.div`
@@ -101,7 +96,7 @@ max-height: ${props => props.fullscreen ? null : "35rem"};
 ${
   props => props.scrollable && css`
     overflow: auto;
-    max-height: 80vh;
+
   `
 }
 height: 100%;

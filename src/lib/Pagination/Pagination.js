@@ -213,7 +213,6 @@ class Pagination extends React.Component<Props, State> {
             handleClick={this.handlePrevPage}
             ><Icon name="angle-left"/></Page>
 
-
         {this.renderPage()}
 
         <Page

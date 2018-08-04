@@ -85,10 +85,6 @@ class Radio extends React.Component<Props, State> {
     isUndef(this.props.checked) && this.setState({ checked });
   }
 
-
-
-
-
   render(){
     const {
       children,
@@ -101,8 +97,6 @@ class Radio extends React.Component<Props, State> {
     } = this.props;
 
     const hasChild = !isChild(children);
-
-
 
     const checked = isUndef(this.props.checked) ? this.state.checked : this.props.checked;
 

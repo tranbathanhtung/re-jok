@@ -4,8 +4,9 @@
 # Re-jok
 
 Re-jok is a React UI component library
-built with [styled-system][system]
+built with [styled-components][sc]
 
+[sc]: https://github.com/styled-components/styled-components
 
 ```sh
 npm i --save re-jok

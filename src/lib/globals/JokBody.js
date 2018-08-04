@@ -15,7 +15,6 @@ type Props = {
 
 class JokBody extends React.PureComponent<Props> {
 
-
     _popup: HTMLDivElement;
 
     constructor(props: Props) {
@@ -33,7 +32,6 @@ class JokBody extends React.PureComponent<Props> {
     componentWillUnmount() {
         if (!document.body) throw new Error("Unexpectedly missing <body>.");
         const body: HTMLElement = document.body;
-        ReactDOM.unmountComponentAtNode(this._popup);
         body.removeChild(this._popup);
     }
 

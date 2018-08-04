@@ -4,9 +4,17 @@
 # Re-jok
 
 Re-jok is a React UI component library
-built with [styled-components][sc]
+built with [styled-components][sc]. It's a collection of components that help you design websites fast and beautiful easily. Now, it's very young, few components or somewhere looks like stupid but we always try to improve and add more components in the shortest time.
 
 [sc]: https://github.com/styled-components/styled-components
+
+## Why Re-Jok
+
+- Very lightweight... About 38KB min+gzip
+- Easy to customize component
+- Easy to customize theme
+
+## Installed
 
 ```sh
 npm i --save re-jok
@@ -21,9 +29,11 @@ globalConfig();
 
 const App = props => (
   <JokTheme>
-    <React.Fragment>
       <Button>Hello World</Button>
-    </React.Fragment>
   </JokTheme>
 )
 ```
+
+## Documentation
+
+- [Docs](https://re-jok.herokuapp.com/)

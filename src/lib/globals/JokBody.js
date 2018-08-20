@@ -20,27 +20,17 @@ class JokBody extends React.PureComponent<Props> {
     constructor(props: Props) {
        super(props);
        this._popup = document.createElement('div');
-     }
+       if (!document.body) throw new Error("Unexpectedly missing <body>.");
 
-    componentDidMount() {
-        if (!document.body) throw new Error("Unexpectedly missing <body>.");
-        const body: HTMLElement = document.body;
-        this._popup = document.createElement('div');
-        body.appendChild(this._popup);
-    }
+       const body: HTMLElement = document.body;
+       this._popup = document.createElement('div');
+       body.appendChild(this._popup);
+     }
 
     componentWillUnmount() {
         if (!document.body) throw new Error("Unexpectedly missing <body>.");
         const body: HTMLElement = document.body;
         body.removeChild(this._popup);
-    }
-
-    _render() {
-        const { children, ...rest} = this.props;
-
-        createPortal(
-          <children.type {...children.props} {...rest} />
-        , this._popup);
     }
 
     render() {

@@ -23,40 +23,27 @@ var JokBody = function (_React$PureComponent) {
         var _this = _possibleConstructorReturn(this, (JokBody.__proto__ || Object.getPrototypeOf(JokBody)).call(this, props));
 
         _this._popup = document.createElement('div');
+        if (!document.body) throw new Error("Unexpectedly missing <body>.");
+
+        var body = document.body;
+        _this._popup = document.createElement('div');
+        body.appendChild(_this._popup);
         return _this;
     }
 
     _createClass(JokBody, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            if (!document.body) throw new Error("Unexpectedly missing <body>.");
-            var body = document.body;
-            this._popup = document.createElement('div');
-            body.appendChild(this._popup);
-        }
-    }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
             if (!document.body) throw new Error("Unexpectedly missing <body>.");
             var body = document.body;
-            ReactDOM.unmountComponentAtNode(this._popup);
             body.removeChild(this._popup);
-        }
-    }, {
-        key: '_render',
-        value: function _render() {
-            var _props = this.props,
-                children = _props.children,
-                rest = _objectWithoutProperties(_props, ['children']);
-
-            createPortal(React.createElement(children.type, Object.assign({}, children.props, rest)), this._popup);
         }
     }, {
         key: 'render',
         value: function render() {
-            var _props2 = this.props,
-                children = _props2.children,
-                rest = _objectWithoutProperties(_props2, ['children']);
+            var _props = this.props,
+                children = _props.children,
+                rest = _objectWithoutProperties(_props, ['children']);
 
             return createPortal(React.createElement(children.type, Object.assign({}, children.props, rest)), this._popup);
         }

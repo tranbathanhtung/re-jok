@@ -25,7 +25,7 @@ export const baseButton = css `
     font-size: ${props => props.theme.size[props.size].fontSize};
 
 
-      div + span,
+    div + span,
       span + span {
         margin: 0 .8rem;
       }

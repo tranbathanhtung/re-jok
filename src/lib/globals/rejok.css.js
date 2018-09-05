@@ -1,6 +1,9 @@
 //@flow
 import { injectGlobal } from 'styled-components';
-
+import { ClassFlex } from '../classes/flex';
+import { ClassMargin } from '../classes/margin';
+import { ClassPadding } from '../classes/padding';
+import { ClassShadow } from '../classes/shadow';
 
 export const globalConfig = () => injectGlobal`
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -22,6 +25,25 @@ export const globalConfig = () => injectGlobal`
    line-height: 1.7;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+
+  /* Support class*/
+
+
+  /* class for flex */
+
+  ${ClassFlex}
+
+  /* class for margin */
+
+  ${ClassMargin}
+
+  /* class for padding */
+
+  ${ClassPadding}
+
+  /* class for box-shadow */
+
+  ${ClassShadow}
 
 
 `

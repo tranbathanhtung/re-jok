@@ -71,19 +71,35 @@ const defaultProps = {
   scrollable: true
 }
 class Modal extends React.Component<Props>{
+
   static defaultProps = defaultProps;
+
+  componentDidMount(){
+    document.addEventListener('keydown', this.handleKeyDown)
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener('keydown', this.handleKeyDown)
+  }
 
   handleClose = (e: SyntheticEvent<HTMLElement>) => {
     const { onClose } = this.props
+    if (onClose) onClose(e, this.props, 'clickaway')
 
-    if (onClose) onClose(e, this.props)
   }
 
   handleStopEvent = (e: SyntheticEvent<HTMLElement>) => {
     e.stopPropagation();
   }
 
+  handleKeyDown = (e: SyntheticKeyboardEvent<Document>) => {
+    if(e.which !== 27 || e.keyCode !== 27){
+      return;
+    }
+    const { onClose } = this.props
 
+    if (onClose) onClose(e, this.props, 'esc')
+  }
 
   render(){
     const {
@@ -105,9 +121,7 @@ class Modal extends React.Component<Props>{
       ...rest
     } = this.props;
 
-
     const hasChild = !isChild(children);
-
 
     const listIcon = {
       info: <Icon color="info" name="info-circle" size="lg"/>,
@@ -121,7 +135,7 @@ class Modal extends React.Component<Props>{
       <StyledModalWrapper openModal={open} onClick={this.handleClose}>
         <StyledModalBackGround openModal={open}/>
       <StyledModal fullscreen={fullscreen} {...rest} openModal={open} onClick={this.handleStopEvent}>
-        { closable && <CloseButton  onClick={this.handleClose} variant="icon" icon="times"/> }
+        { closable && <CloseButton onClick={this.handleClose} variant="icon" icon="times"/> }
 
         {
           title && alert === "none"
@@ -149,14 +163,10 @@ class Modal extends React.Component<Props>{
 
              ) : hasChild && children
           }
-
-
         </ModalContent>
         {
           action && <ModalAction  style={styleAction} className={classNameAction} action={action}/>
         }
-
-
       </StyledModal>
       </StyledModalWrapper>
     </JokBody>

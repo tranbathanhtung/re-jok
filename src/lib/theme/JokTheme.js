@@ -3,7 +3,6 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './index';
 
-
 type Props = {
   /**Theme of project**/
   theme: Object,

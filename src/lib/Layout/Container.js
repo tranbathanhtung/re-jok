@@ -22,11 +22,10 @@ const defaultProps = {
   isFluid: false
 }
 
-
 class Container extends React.Component<Props>{
 
   static defaultProps = defaultProps;
-  
+
   render(){
     const {
       children,

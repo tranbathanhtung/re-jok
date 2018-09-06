@@ -51,8 +51,6 @@ type State = {
   checked: boolean
 }
 
-
-
 class Radio extends React.Component<Props, State> {
 
   static defaultProps = defaultProps;

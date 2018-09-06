@@ -39,8 +39,6 @@ class Page extends React.Component<Props> {
     handleClick && handleClick(page);
   }
 
-
-
   render(){
     const {
       children,

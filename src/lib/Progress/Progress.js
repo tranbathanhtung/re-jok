@@ -31,7 +31,6 @@ const defaultProps = {
 
 }
 
-
 class Progress extends React.Component<Props>{
   static defaultProps = defaultProps;
 

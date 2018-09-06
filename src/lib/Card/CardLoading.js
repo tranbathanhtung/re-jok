@@ -24,14 +24,14 @@ class CardLoading extends React.Component < {} > {
 
       <DividerLoading height={20} top={40} left={0}/>
 
-    <ContentLoading height={6} top={60} left={178}/>
+      <ContentLoading height={6} top={60} left={178}/>
       <DividerLoading height={13} top={66} left={0}/>
 
-    <ContentLoading height={6} top={79} left={340}/>
+      <ContentLoading height={6} top={79} left={340}/>
 
       <DividerLoading height={13} top={85} left={0}/>
 
-    <ContentLoading height={6} top={98} left={440}/>
+      <ContentLoading height={6} top={98} left={440}/>
       <DividerLoading height={13} top={105} left={0}/>
 
       <ContentLoading height={6} top={118} left={264}/>
@@ -49,10 +49,7 @@ class CardLoading extends React.Component < {} > {
       <ContentLoading height={6} top={194} left={420}/>
       <DividerLoading height={13} top={200} left={0}/>
 
-    <ContentLoading height={6} top={213} left={267}/>
-
-
-
+      <ContentLoading height={6} top={213} left={267}/>
     </PlaceHolder>)
   }
 }

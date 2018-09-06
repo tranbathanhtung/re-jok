@@ -29,10 +29,6 @@ export const baseButton = css `
       span + span {
         margin: 0 .8rem;
       }
-
-
-
-
 // =======================Button=====================
 
 

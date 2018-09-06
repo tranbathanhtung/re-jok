@@ -4,7 +4,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import Icon from '../Icon';
 import { isChild } from '../helpers/typeUtils';
-import { generalId, noop } from '../helpers';
+import { generalId } from '../helpers';
 
 
 import {
@@ -85,13 +85,9 @@ class CollapseItem extends React.Component<Props, State> {
     const { accordion } = this.props;
     const { childHeight, collKey } = this.state;
 
-
-
     if(accordion && prevProps.activeKeys.includes(collKey) && prevState.childHeight === childHeight){
 
-
       const wrapper = ReactDOM.findDOMNode(this.refWrapper.current);
-
 
       const open = prevProps.activeKeys.includes(collKey);
 
@@ -181,7 +177,6 @@ class CollapseItem extends React.Component<Props, State> {
 
     if(wrapper && wrapper instanceof HTMLElement){
       wrapper.style.height = '';
-
     }
 
   }
@@ -211,8 +206,6 @@ class CollapseItem extends React.Component<Props, State> {
           innerRef={this.refWrapper}
           onTransitionEnd={(e) => this.onTransitionEnd(e, isOpen)}
           childHeight={this.state.childHeight}
-
-
           >
             <Div innerRef={this.refContent}>
               {hasChild && children}

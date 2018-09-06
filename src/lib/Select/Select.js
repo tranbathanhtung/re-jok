@@ -55,8 +55,6 @@ const defaultProps = {
   onChange: noop
 }
 
-
-
 class Select extends React.Component<Props>{
 
   static defaultProps = defaultProps;

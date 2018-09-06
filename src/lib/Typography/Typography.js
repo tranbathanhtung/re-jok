@@ -58,7 +58,6 @@ class Typography extends React.Component<Props>{
 
     const hasChild = !isChild(children);
 
-
     return (
       <ElementType {...rest}>
         {hasChild && children}

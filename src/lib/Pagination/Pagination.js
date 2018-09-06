@@ -88,18 +88,13 @@ class Pagination extends React.Component<Props, State> {
         isFunction(onPageChange) && onPageChange(this.state.currentPage, {...this.props});
      })
 
-
-
-
   }
 
   handlePrevPage = () => {
     let { currentPage } = this.state;
     const { onPageChange } = this.props;
 
-
     if(currentPage - 1 < 0) return;
-
 
     this.setState({
       currentPage:currentPage - 1
@@ -121,8 +116,7 @@ class Pagination extends React.Component<Props, State> {
 
   handleLastPage = () => {
     const { pages, onPageChange } = this.props;
-
-
+    
     this.setState({
       currentPage: pages -1
     }, ()=>{

@@ -5,12 +5,8 @@ import {
   StyledIconClose,
 } from './style';
 
-
-
 import { isFunction,isChild } from '../helpers/typeUtils';
 import { noop } from '../helpers';
-
-
 
 type Props = {
   /** Style of Tag Component**/

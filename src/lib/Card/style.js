@@ -1,8 +1,6 @@
 import styled, {css, keyframes} from 'styled-components';
 
 // ================ Card =================
-
-
 const opacityCard = keyframes `
 0% {
 
@@ -33,8 +31,6 @@ export const StyledCard = styled.div `
   list-style: none;
   animation: ${opacityCard} .5s;
 
-
-
   ${
     props =>
       {
@@ -60,7 +56,7 @@ export const StyledCard = styled.div `
 
                  }
                   `
-              
+
               case "md":
                 return css`
                  @media(min-width: ${props.theme.grid.md}px){

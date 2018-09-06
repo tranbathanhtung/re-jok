@@ -13,7 +13,6 @@ type Props = {
   style?: Object,
 }
 
-
 class CardMedia extends React.Component<Props> {
   static _meta = {
     name: 'CardMedia',

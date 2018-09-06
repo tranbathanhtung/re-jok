@@ -6,8 +6,6 @@ import {
 
 import { isChild } from '../helpers/typeUtils';
 
-
-
 type Props = {
   /** Add style to Section**/
   style?: Object,

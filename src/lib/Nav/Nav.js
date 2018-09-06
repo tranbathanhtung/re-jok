@@ -11,8 +11,6 @@ import {
 
 import { isChild } from '../helpers/typeUtils';
 
-
-
 type Props = {
   /**Override style of nav bar**/
   style?: Object,

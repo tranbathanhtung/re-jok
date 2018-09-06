@@ -14,13 +14,9 @@ export const StyledIconClose = styled(Icon)`
  top: -.1rem;
  right: -.5rem;
  opacity: 0;
-
-
  transition: all .2s;
 
 `
-
-
 export const StyledTag = styled.span`
   display: inline-flex;
   height: ${props => props.theme.size[props.size].height};

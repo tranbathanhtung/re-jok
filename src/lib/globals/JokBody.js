@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import ReactDOM, { createPortal } from 'react-dom';
+import { createPortal } from 'react-dom';
 import Modal from '../Modal';
 import Notification from '../Notification';
 import Sidebar from '../Sidebar';

@@ -8,9 +8,6 @@ import Radio from './Radio';
 
 import {isUndef, isChild} from '../helpers/typeUtils';
 
-
-
-
 type Props = {
   /**Override style of Radio**/
   style?: Object,
@@ -42,9 +39,6 @@ const defaultProps = {
 type State = {
   value: string | number
 }
-
-
-
 
 class RadioGroup extends React.Component<Props, State> {
 

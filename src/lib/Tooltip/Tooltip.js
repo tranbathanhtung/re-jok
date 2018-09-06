@@ -7,7 +7,6 @@ import {
 
 import { isChild } from '../helpers/typeUtils';
 
-
 type Props = {
   /** Children of tooltip could be anything**/
   children?: any,

@@ -73,9 +73,6 @@ class NotificationContent extends React.Component<Props>{
 
   closeTimer: TimeoutID;
 
-
-
-
   handleClose = () => {
     const { id } = this.props;
 
@@ -93,16 +90,34 @@ class NotificationContent extends React.Component<Props>{
             this.handleClose()
         }, timeout);
     }
+    this.addEventKeydown();
 
     onShow && onShow({...this.props})
   }
 
   componentWillUnmount() {
-      if (this.closeTimer) {
+    if (this.closeTimer) {
           clearTimeout(this.closeTimer);
-      }
-
+    }
+    this.removeEventKeydown();
     this.props.notif && this.props.notif.onClose && this.props.notif.onClose({...this.props});
+
+  }
+
+  addEventKeydown = () => {
+    document && document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  removeEventKeydown = () => {
+    document && document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown = (e: KeyboardEvent) => {
+
+    if(e.which !== 27 || e.keyCode !== 27){
+      return;
+    }
+    this.handleClose();
 
   }
 

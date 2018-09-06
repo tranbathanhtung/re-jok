@@ -75,16 +75,32 @@ class Modal extends React.Component<Props>{
   static defaultProps = defaultProps;
 
   componentDidMount(){
-    document.addEventListener('keydown', this.handleKeyDown)
+
+    const { open } = this.props;
+
+    open && this.addEventKeydown();
+  }
+
+  componentDidUpdate(prevProps: Props){
+    if(prevProps.open && !this.props.open){
+      this.removeEventKeydown();
+    } else if(!prevProps.open && this.props.open){
+      this.addEventKeydown();
+    }
   }
 
   componentWillUnmount(){
-    document.removeEventListener('keydown', this.handleKeyDown)
+    const { open } = this.props;
+
+    open && this.removeEventKeydown();
   }
 
   handleClose = (e: SyntheticEvent<HTMLElement>) => {
-    const { onClose } = this.props
-    if (onClose) onClose(e, this.props, 'clickaway')
+    const { onClose } = this.props;
+
+    this.removeEventKeydown();
+
+    if (onClose) onClose(e, this.props, 'clickaway');
 
   }
 
@@ -92,13 +108,21 @@ class Modal extends React.Component<Props>{
     e.stopPropagation();
   }
 
-  handleKeyDown = (e: SyntheticKeyboardEvent<Document>) => {
+  addEventKeydown = () => {
+    document && document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  removeEventKeydown = () => {
+    document && document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown = (e: KeyboardEvent) => {
     if(e.which !== 27 || e.keyCode !== 27){
       return;
     }
-    const { onClose } = this.props
+    const { onClose } = this.props;
 
-    if (onClose) onClose(e, this.props, 'esc')
+    if (onClose) onClose(e, this.props, 'esc');
   }
 
   render(){

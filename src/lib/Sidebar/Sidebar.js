@@ -8,7 +8,6 @@ import {
 
 import { isChild } from '../helpers/typeUtils';
 
-
 import SidebarContent from './SidebarContent';
 import JokBody from '../globals/JokBody';
 
@@ -27,8 +26,8 @@ type Props = {
   opacity: boolean,
   /** Set fullScreen mode sidebar... should be use with onToggle**/
   fullScreen: boolean,
-  /** onToggle function like hanlde close side bar**/
-  onToggle?: Function,
+  /** onRequestClose function like hanlde close side bar**/
+  onRequestClose?: Function,
   /** Set width of side bar**/
   width: number,
   /** Set height of side bar**/
@@ -44,21 +43,58 @@ const defaultProps = {
   height: 60,
 }
 
-
-
-
-
-
 class Sidebar extends React.Component<Props>{
 
   static defaultProps = defaultProps;
 
   static Content = SidebarContent;
 
-  handleToggle = (e: SyntheticEvent<HTMLElement>) => {
-    const { onToggle } = this.props;
+  componentDidMount(){
 
-    onToggle && onToggle(e, {...this.props});
+    const { open } = this.props;
+
+    open && this.addEventKeydown();
+  }
+
+  componentDidUpdate(prevProps: Props){
+    if(prevProps.open && !this.props.open){
+      this.removeEventKeydown();
+    } else if(!prevProps.open && this.props.open){
+      this.addEventKeydown();
+    }
+  }
+
+  componentWillUnmount(){
+    const { open } = this.props;
+
+    open && this.removeEventKeydown();
+  }
+
+  handleClose = (e: SyntheticEvent<HTMLElement>) => {
+    const { onRequestClose } = this.props;
+
+    this.removeEventKeydown();
+
+    onRequestClose && onRequestClose(e, {...this.props}, 'clickaway');
+  }
+
+  addEventKeydown = () => {
+    document && document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  removeEventKeydown = () => {
+    document && document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown = (e: KeyboardEvent) => {
+
+    if(e.which !== 27 || e.keyCode !== 27){
+      return;
+    }
+    const { onRequestClose } = this.props;
+
+    onRequestClose && onRequestClose(e, {...this.props}, 'esc');
+
   }
 
   render(){
@@ -66,7 +102,7 @@ class Sidebar extends React.Component<Props>{
       open,
       opacity,
       children,
-      onToggle,
+      onRequestClose,
       ...rest
     } = this.props;
 
@@ -77,7 +113,7 @@ class Sidebar extends React.Component<Props>{
       <StyledSidebarWrapper openSidebar={open}>
         <StyledSidebarBackground
           opacityMode={opacity}
-          onClick={this.handleToggle}
+          onClick={this.handleClose}
           openSidebar={open}/>
         <StyledSidebar openSidebar={open} {...rest}>
            {hasChild && children}
